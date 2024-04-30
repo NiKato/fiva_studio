@@ -27,7 +27,7 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
     <>
       <Layout>
         <Box
-          px={20}
+          px={{ base: 4, md: 20 }}
           bg={colorMode === "dark" ? "#262626" : "#EAEAEC"}
           color={colorMode === "dark" ? "white" : "black"}
           h="100%"
@@ -35,7 +35,7 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
           <Hero />
           <Benefits />
         </Box>
-          <Carousel bg={colorMode === "dark" ? "#262626" : "#EAEAEC"} />
+        <Carousel bg={colorMode === "dark" ? "#262626" : "#EAEAEC"} />
       </Layout>
     </>
   )

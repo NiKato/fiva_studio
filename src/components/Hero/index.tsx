@@ -12,15 +12,33 @@ import hero from "../../images/reel3.jpeg"
 
 export default function Hero() {
   return (
-    <Container maxW={"7xl"}  mt="-60px" pb={20}>
-      <Stack  pt={"144px"} minH={"100%"} direction={{ base: "column", md: "row" }} alignItems="center" justifyContent="space-between" gap={20}>
-        <Flex p={8} flex={1} align={"center"} justify={"center"}>
+    <Container maxW={{ base: "100%", md: "7xl" }} mt="-60px" pb={20}>
+      <Stack
+        pt={"144px"}
+        minH={"100%"}
+        direction={{ base: "column", md: "row" }}
+        alignItems="center"
+        justifyContent="space-between"
+        gap={20}
+      >
+        <Flex
+          p={{ base: 0, md: 8 }}
+          flex={1}
+          align={"center"}
+          justify={"center"}
+        >
           <Stack spacing={6} w={"full"} maxW={"lg"}>
-            <Heading fontSize={{ base: "3xl", md: "4xl", lg: "3.2rem" }} fontWeight={700}>
-                Unleash the power of 2d Animation videos
-              
+            <Heading
+              fontSize={{ base: "3xl", md: "4xl", lg: "3.2rem" }}
+              fontWeight={700}
+            >
+              Unleash the power of 2d Animation videos
             </Heading>
-            <Text fontSize={{ base: "md", lg: "2xl" }} color={"gray.500"} lineHeight={"175%"}>
+            <Text
+              fontSize={{ base: "md", lg: "2xl" }}
+              color={"gray.500"}
+              lineHeight={"175%"}
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
               sit amet commodo magna, ac volutpat mi. Donec eget mi vel ante
               hendrerit pharetra eu vel erat. Ut rhoncus vitae lorem quis
@@ -37,14 +55,16 @@ export default function Hero() {
               >
                 Get in Touch
               </Button>
-              <Button  borderRadius={4} bg="#477EEB" color="#fff">Show Work</Button>
+              <Button borderRadius={4} bg="#477EEB" color="#fff">
+                Show Work
+              </Button>
             </Stack>
           </Stack>
         </Flex>
         <Flex flex={1}>
           <Image
             w="744px"
-            h="692px"
+            h={{ base: "343px", md: "692px" }}
             alt={"hero"}
             objectFit={"cover"}
             src={hero}
