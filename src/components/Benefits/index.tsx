@@ -1,6 +1,15 @@
 import React from "react"
 import { ReactElement } from "react"
-import { Box, SimpleGrid, Icon, Text, Stack, Flex, Heading } from "@chakra-ui/react"
+import {
+  Box,
+  SimpleGrid,
+  Icon,
+  Text,
+  Stack,
+  Flex,
+  Heading,
+  useColorMode,
+} from "@chakra-ui/react"
 import { FcAssistant, FcDonate, FcInTransit } from "react-icons/fc"
 import {
   MdOutlineFlag,
@@ -16,6 +25,7 @@ interface FeatureProps {
 }
 
 const Feature = ({ title, text, icon }: FeatureProps) => {
+  const { colorMode } = useColorMode()
   return (
     <Stack>
       <Flex
@@ -27,11 +37,15 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
         gap={2}
       >
         {icon}
-        <Heading color="#000" fontSize={"28px"} fontWeight={700}>
+        <Heading
+          color={colorMode === "dark" ? "white" : "black"}
+          fontSize={"2xl"}
+          fontWeight={700}
+        >
           {title}
         </Heading>
       </Flex>
-      <Text w="278px" mx="auto" textAlign="center" fontSize="sm" color={"#000"}>
+      <Text mx="auto" textAlign="center" fontSize="sm" color={colorMode === "dark" ? "#dadada" : "black"}>
         {text}
       </Text>
     </Stack>

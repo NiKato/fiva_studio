@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import {
   Box,
   Flex,
@@ -15,7 +15,8 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
-  useColorMode, // Import the hook
+  useColorMode,
+  Image, // Import the hook
 } from "@chakra-ui/react"
 import {
   HamburgerIcon,
@@ -27,22 +28,25 @@ import {
 } from "@chakra-ui/icons"
 import LanguageSwitcher from "../LanguageSwitcher"
 import { Logo } from "../Icons/Logo"
+import logo from "../../images/logo.png"
 
 export default function Header({ toggleColorMode, colorMode }: any) {
   const { isOpen, onToggle } = useDisclosure()
-  const { colorMode: chakraColorMode } = useColorMode()
 
   return (
-    <Box px={5}>
+    <Box
+      px={5}
+      top={0}
+      zIndex={1000}
+      transition="opacity 0.5s ease-in-out"
+      position="fixed"
+      width="100%"
+    >
       <Flex
-        bg="transparent"
-        color={useColorModeValue("#262626", "white")}
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
-        borderBottom={1}
         borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.900")}
         align={"center"}
       >
         <Flex
@@ -60,9 +64,13 @@ export default function Header({ toggleColorMode, colorMode }: any) {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Logo />
-
-          <Flex display={{ base: "none", md: "flex" }} alignItems="center" ml={10}>
+          {/* <Logo /> */}
+          <Image width="72px" h="36px" src={logo} />
+          <Flex
+            display={{ base: "none", md: "flex" }}
+            alignItems="center"
+            ml={5}
+          >
             <DesktopNav />
           </Flex>
         </Flex>
@@ -71,8 +79,17 @@ export default function Header({ toggleColorMode, colorMode }: any) {
           flex={{ base: 1, md: 0 }}
           justify={"flex-end"}
           direction={"row"}
-          spacing={6}
+          spacing={0}
         >
+          <IconButton
+            icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            onClick={toggleColorMode}
+            variant={"ghost"}
+            bg="none"
+            _hover={{ bg: "none" }}
+            // color={colorMode === "light" ? "#666666" : "#fff"}
+            aria-label={"Toggle Dark/Light Mode"}
+          />
           <LanguageSwitcher />
           <Button
             as={"a"}
@@ -88,15 +105,6 @@ export default function Header({ toggleColorMode, colorMode }: any) {
           >
             Contact
           </Button>
-          {/* Add dark/light mode switcher */}
-          <IconButton
-            icon={chakraColorMode === "light" ? <MoonIcon /> : <SunIcon />}
-            onClick={toggleColorMode}
-            variant={"ghost"}
-            bg={chakraColorMode === "light" ? "#262626" : "none"}
-            color={chakraColorMode === "light" ? "white" : "#262626"}
-            aria-label={"Toggle Dark/Light Mode"}
-          />
         </Stack>
       </Flex>
 
@@ -109,55 +117,58 @@ export default function Header({ toggleColorMode, colorMode }: any) {
 
 const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue("white", "gray.800")
-
+  const { colorMode } = useColorMode()
   return (
     <Stack direction={"row"} spacing={4}>
       {NAV_ITEMS.map(navItem => (
-  <Box key={navItem.label}>
-    <Popover trigger={"hover"} placement={"bottom-start"}>
-      <PopoverTrigger>
-        <Flex align={"center"}>
-          <Link
-            p={2}
-            href={navItem.href ?? "#"}
-            fontSize={"md"}
-            fontWeight={600}
-            color={useColorModeValue("gray.800", "#fffff")}
-            _hover={{
-              textDecoration: "none",
-              color: useColorModeValue("gray.600", "gray.200"), 
-            }}
-          >
-            {navItem.label}
-          </Link>
-          {navItem.children && (
-            <Icon
-              as={ChevronDownIcon}
-              color={useColorModeValue("gray.800", "#fffff")}
-            />
-          )}
-        </Flex>
-      </PopoverTrigger>
+        <Box key={navItem.label}>
+          <Popover trigger={"hover"} placement={"bottom-start"}>
+            <PopoverTrigger>
+              <Flex align={"center"}>
+                <Link
+                  bg={"none"}
+                  p={2}
+                  href={navItem.href ?? "#"}
+                  fontSize={"md"}
+                  fontWeight={600}
+                  color={
+                    navItem.color || useColorModeValue("gray.800", "white")
+                  } // Ažuriramo boju slova ovde
+                  _hover={{
+                    textDecoration: "none",
+                    color: useColorModeValue("gray.600", "gray.200"),
+                  }}
+                >
+                  {navItem.label}
+                </Link>
+                {navItem.children && (
+                  <Icon
+                    as={ChevronDownIcon}
+                    color={useColorModeValue("gray.800", "white")}
+                  />
+                )}
+              </Flex>
+            </PopoverTrigger>
 
-      {navItem.children && (
-        <PopoverContent
-          border={0}
-          boxShadow={"xl"}
-          bg={popoverContentBgColor}
-          p={4}
-          rounded={"xl"}
-          minW={"sm"}
-        >
-          <Stack>
-            {navItem.children.map(child => (
-              <DesktopSubNav key={child.label} {...child} />
-            ))}
-          </Stack>
-        </PopoverContent>
-      )}
-    </Popover>
-  </Box>
-))}
+            {navItem.children && (
+              <PopoverContent
+                border={0}
+                boxShadow={"xl"}
+                bg={popoverContentBgColor}
+                p={4}
+                rounded={"xl"}
+                minW={"sm"}
+              >
+                <Stack>
+                  {navItem.children.map(child => (
+                    <DesktopSubNav key={child.label} {...child} />
+                  ))}
+                </Stack>
+              </PopoverContent>
+            )}
+          </Popover>
+        </Box>
+      ))}
     </Stack>
   )
 }
@@ -271,6 +282,7 @@ interface NavItem {
   subLabel?: string
   children?: Array<NavItem>
   href?: string
+  color?: string
 }
 
 const NAV_ITEMS: Array<NavItem> = [

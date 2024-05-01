@@ -1,5 +1,10 @@
 import React, { FC } from "react"
-import { useColorMode, Button, IconButton, HStack } from "@chakra-ui/react"
+import {
+  useColorMode,
+  Button,
+  HStack,
+  useColorModeValue,
+} from "@chakra-ui/react"
 import { Link } from "gatsby"
 import { SunIcon, MoonIcon } from "@chakra-ui/icons"
 import { useTranslation } from "react-i18next"
@@ -9,25 +14,30 @@ const LanguageSwitcher: FC = () => {
   const { colorMode, toggleColorMode } = useColorMode()
   const { i18n } = useTranslation()
 
+  // Get the currently selected language from localStorage  
+  const selectedLanguage =  typeof window !== "undefined" && window.localStorage.getItem("language")
+
   const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang)
     // Store selected language in local storage
     localStorage.setItem("language", lang)
   }
 
+  const linkColor = useColorModeValue("#666666", "#ffffff")
+
   return (
     <>
       <HStack gap={0}>
-        <Lang width="24px" height="24px" />
         <Button
           as={Link}
-          size="xs"
+          size="sm"
           to="/sr"
           onClick={() => changeLanguage("sr")}
-          color={colorMode === "dark" ? "white" : "black"}
+          textDecoration={selectedLanguage === "sr" ? "underline" : "none"}
+          color={selectedLanguage === "sr" ? linkColor : "#666666"}
           bg="none"
           _hover={{
-            bg: "none"
+            bg: "none",
           }}
           borderRight="1px solid #666666"
           h="11px"
@@ -37,13 +47,14 @@ const LanguageSwitcher: FC = () => {
         </Button>
         <Button
           as={Link}
-          size="xs"
+          size="sm"
           to="/"
           onClick={() => changeLanguage("en")}
-          color={colorMode === "dark" ? "white" : "black"}
+          textDecoration={selectedLanguage === "en" ? "underline" : "none"}
+          color={selectedLanguage === "en" ? linkColor : "#666666"}
           bg="none"
           _hover={{
-            bg: "none"
+            bg: "none",
           }}
         >
           EN

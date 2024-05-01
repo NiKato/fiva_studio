@@ -12,7 +12,7 @@ const Headings: React.FC<HeadingsProps> = ({ spanTitle, title, text }) => {
   return (
     <VStack
       py={10}
-      bg={colorMode === "dark" ? "#262626" : "#EAEAEC"}
+      bg={colorMode === "dark" ? "#1F1F1F" : "#EBEBEB"}
       color={colorMode === "dark" ? "white" : "black"}
       alignItems="center"
       gap={0}
@@ -29,7 +29,7 @@ const Headings: React.FC<HeadingsProps> = ({ spanTitle, title, text }) => {
       <Heading as="h2" p={0} fontSize="42px" fontWeight={700}>
         {title}
       </Heading>
-      <Text as="p" fontSize="xl" fontWeight={400} color="#666666" maxW="760px" textAlign="center">
+      <Text as="p" fontSize="xl" fontWeight={400} color="#dadada" maxW="760px" textAlign="center">
         {text}
       </Text>
     </VStack>

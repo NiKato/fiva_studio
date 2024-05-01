@@ -12,7 +12,7 @@ const Layout = ({ children }: any) => {
   const { colorMode, toggleColorMode } = useColorMode() // Access color mode and toggle function
 
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme} >
       <Header toggleColorMode={toggleColorMode} colorMode={colorMode} />
       <ColorModeProvider value={colorMode}>{children}</ColorModeProvider>
     </ChakraProvider>
