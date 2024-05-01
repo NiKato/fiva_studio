@@ -1,6 +1,6 @@
 import React from "react"
 import { ReactElement } from "react"
-import { Box, SimpleGrid, Icon, Text, Stack, Flex } from "@chakra-ui/react"
+import { Box, SimpleGrid, Icon, Text, Stack, Flex, Heading } from "@chakra-ui/react"
 import { FcAssistant, FcDonate, FcInTransit } from "react-icons/fc"
 import {
   MdOutlineFlag,
@@ -27,9 +27,9 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
         gap={2}
       >
         {icon}
-        <Text color="#000" fontSize={"28px"} fontWeight={700}>
+        <Heading color="#000" fontSize={"28px"} fontWeight={700}>
           {title}
-        </Text>
+        </Heading>
       </Flex>
       <Text w="278px" mx="auto" textAlign="center" fontSize="sm" color={"#000"}>
         {text}

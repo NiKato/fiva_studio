@@ -7,6 +7,7 @@ import {
 import theme from "../../theme/theme"
 import Header from "../Header"
 
+
 const Layout = ({ children }: any) => {
   const { colorMode, toggleColorMode } = useColorMode() // Access color mode and toggle function
 

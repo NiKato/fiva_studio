@@ -6,6 +6,7 @@ import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import Carousel from "../components/Carousel"
 import Benefits from "../components/Benefits"
+import Headings from "../components/Headings"
 
 interface HomePageProps {
   pageContext: {
@@ -34,8 +35,18 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
         >
           <Hero />
           <Benefits />
+          <Headings
+            spanTitle={"MOST POPULAR"}
+            title={"Short Form Content"}
+            text={"Click on image for moving forward or backward."}
+          />
         </Box>
         <Carousel bg={colorMode === "dark" ? "#262626" : "#EAEAEC"} />
+        <Headings
+            spanTitle={"TOP RATED"}
+            title={"Long Form Content"}
+            text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet commodo magna, ac volutpat mi."}
+          />
       </Layout>
     </>
   )

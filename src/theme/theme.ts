@@ -1,4 +1,5 @@
 import { extendTheme, type ThemeConfig } from "@chakra-ui/react"
+import "../styles/fonts.css"
 
 // 2. Add your color mode config
 const config: ThemeConfig = {
@@ -6,7 +7,25 @@ const config: ThemeConfig = {
   useSystemColorMode: false,
 }
 
-// 3. extend the theme
-const theme = extendTheme({ config })
+const theme = extendTheme({
+  fonts: {
+    body: "'PoppinsBlack', sans-serif",
+    text: "'PoppinsLight', sans-serif",
+    heading: "'PoppinsBold', sans-serif",
+    // Add more font styles as needed
+  },
+  styles: {
+    global: {
+      // Define default styles for all Text components
+      Text: {
+        fontFamily: "'PoppinsLight', sans-serif",
+      },
+      // Define default styles for all <p> elements
+      p: {
+        fontFamily: "'PoppinsLight', sans-serif",
+      },
+    },
+  },
+})
 
 export default theme
