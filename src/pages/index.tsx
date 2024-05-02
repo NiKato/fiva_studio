@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
-import { Box, useColorMode } from "@chakra-ui/react"
+import { Box, Button, ColorModeScript, useColorMode } from "@chakra-ui/react"
 import { useTranslation } from "react-i18next"
-import LanguageSwitcher from "../components/LanguageSwitcher"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import Carousel from "../components/Carousel"
@@ -15,8 +14,26 @@ interface HomePageProps {
 }
 
 const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
-  const { colorMode } = useColorMode()
+  const { colorMode, toggleColorMode } = useColorMode()
+
   const { t, i18n } = useTranslation()
+
+  useEffect(() => {
+    if (pageContext.language) {
+      i18n.changeLanguage(pageContext.language)
+    }
+  }, [pageContext.language, i18n])
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (localStorage.getItem('chakra-ui-color-mode') === 'light' && colorMode === 'dark') {
+        setTimeout(() => toggleColorMode(), 1500)
+      } else if (localStorage.getItem('chakra-ui-color-mode') === 'dark' && colorMode === 'light') {
+        setTimeout(() => toggleColorMode(), 1500)
+      }
+    }
+  }, [colorMode, toggleColorMode])
+  
 
   useEffect(() => {
     if (pageContext.language) {
@@ -26,6 +43,8 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
 
   return (
     <>
+      <ColorModeScript initialColorMode="light" />
+
       <Layout>
         <Box
           px={{ base: 4, md: 20 }}
@@ -33,7 +52,12 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
           color={colorMode === "dark" ? "white" : "black"}
           h="100%"
         >
-          <Hero />
+          <Hero
+            title={t("hero.title")}
+            text={t("hero.subtitle")}
+            cta={t("hero.cta")}
+            cta2={t("hero.cta2")}
+          />
           <Benefits />
           <Headings
             spanTitle={"MOST POPULAR"}
@@ -43,10 +67,12 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
         </Box>
         <Carousel bg={colorMode === "dark" ? "#1F1F1F" : "#EBEBEB"} />
         <Headings
-            spanTitle={"TOP RATED"}
-            title={"Long Form Content"}
-            text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet commodo magna, ac volutpat mi."}
-          />
+          spanTitle={"TOP RATED"}
+          title={"Long Form Content"}
+          text={
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet commodo magna, ac volutpat mi."
+          }
+        />
       </Layout>
     </>
   )

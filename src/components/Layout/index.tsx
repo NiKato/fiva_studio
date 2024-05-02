@@ -5,6 +5,7 @@ import {
   useColorMode,
 } from "@chakra-ui/react"
 import theme from "../../theme/theme"
+import config from "../../theme/theme"
 import Header from "../Header"
 
 
@@ -13,8 +14,8 @@ const Layout = ({ children }: any) => {
 
   return (
     <ChakraProvider theme={theme} >
-      <Header toggleColorMode={toggleColorMode} colorMode={colorMode} />
-      <ColorModeProvider value={colorMode}>{children}</ColorModeProvider>
+      <Header />
+      <ColorModeProvider >{children}</ColorModeProvider>
     </ChakraProvider>
   )
 }

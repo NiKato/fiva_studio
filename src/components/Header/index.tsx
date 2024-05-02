@@ -27,12 +27,11 @@ import {
   SunIcon, // Import the icon for light mode
 } from "@chakra-ui/icons"
 import LanguageSwitcher from "../LanguageSwitcher"
-import { Logo } from "../Icons/Logo"
 import logo from "../../images/logo.png"
 
-export default function Header({ toggleColorMode, colorMode }: any) {
+export default function Header() {
   const { isOpen, onToggle } = useDisclosure()
-
+  const { colorMode, toggleColorMode } = useColorMode()
   return (
     <Box
       px={5}

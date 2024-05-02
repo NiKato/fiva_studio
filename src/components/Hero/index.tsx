@@ -10,7 +10,8 @@ import {
 } from "@chakra-ui/react"
 import hero from "../../images/reel3.jpeg"
 
-export default function Hero() {
+export default function Hero({title, text, cta, cta2}: any) {
+  
   return (
     <Container maxW={{ base: "100%", md: "7xl" }} mt="-60px" pb={20}>
       <Stack
@@ -32,17 +33,14 @@ export default function Hero() {
               fontSize={{ base: "3xl", md: "4xl", lg: "3.2rem" }}
               fontWeight={700}
             >
-              Unleash the power of 2d Animation videos
+              {title}
             </Heading>
             <Text
               fontSize={{ base: "md", lg: "2xl" }}
               color={"gray.500"}
               lineHeight={"175%"}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              sit amet commodo magna, ac volutpat mi. Donec eget mi vel ante
-              hendrerit pharetra eu vel erat. Ut rhoncus vitae lorem quis
-              aliquet. Interdum et malesuada fames ac.
+              {text}
             </Text>
             <Stack direction={{ base: "column", md: "row" }} spacing={4}>
               <Button
@@ -53,10 +51,10 @@ export default function Hero() {
                   bg: "blue.500",
                 }}
               >
-                Get in Touch
+                {cta}
               </Button>
               <Button borderRadius={4} bg="#477EEB" color="#fff">
-                Show Work
+                {cta2}
               </Button>
             </Stack>
           </Stack>

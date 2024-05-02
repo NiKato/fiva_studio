@@ -4,18 +4,19 @@ import {
   Button,
   HStack,
   useColorModeValue,
+  IconButton,
 } from "@chakra-ui/react"
 import { Link } from "gatsby"
 import { SunIcon, MoonIcon } from "@chakra-ui/icons"
 import { useTranslation } from "react-i18next"
-import { Lang } from "../Icons/Lang"
 
 const LanguageSwitcher: FC = () => {
   const { colorMode, toggleColorMode } = useColorMode()
   const { i18n } = useTranslation()
 
-  // Get the currently selected language from localStorage  
-  const selectedLanguage =  typeof window !== "undefined" && window.localStorage.getItem("language")
+  // Get the currently selected language from localStorage
+  const selectedLanguage =
+    typeof window !== "undefined" && window.localStorage.getItem("language")
 
   const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang)
@@ -28,6 +29,7 @@ const LanguageSwitcher: FC = () => {
   return (
     <>
       <HStack gap={0}>
+       
         <Button
           as={Link}
           size="sm"

@@ -1,16 +1,9 @@
-import { extendTheme, type ThemeConfig } from "@chakra-ui/react"
+import { extendTheme } from "@chakra-ui/react"
 import "../styles/fonts.css"
-
-// 2. Add your color mode config
-const config: ThemeConfig = {
-  initialColorMode: "light",
-  useSystemColorMode: false,
-}
 
 const theme = extendTheme({
   config: {
-    initialColorMode: "light",
-    useSystemColorMode: false,
+    initialColorMode: typeof window !== 'undefined' ? localStorage.getItem("chakra-ui-color-mode") || "dark" : "dark",
   },
   fonts: {
     body: "'PoppinsBlack', sans-serif",
@@ -20,12 +13,12 @@ const theme = extendTheme({
   },
   colors: {
     light: {
-      text: "#262626", 
+      text: "#262626",
       link: "#262626",
     },
     dark: {
-      text: "#FFFFFF", 
-      link: "#FFFFFF", 
+      text: "#FFFFFF",
+      link: "#FFFFFF",
     },
   },
   components: {

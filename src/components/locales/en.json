@@ -1,7 +1,37 @@
 {
-    "hero": {
-      "title": "Welcome to Our Website",
-      "subtitle": "We provide amazing solutions to your problems.",
-      "cta": "Get Started"
+  "hero": {
+    "title": "Unleash the power of 2d Animation videos",
+    "subtitle": "We create amazing solutions for your problems",
+    "cta": "Get in Touch",
+    "cta2": "Show Work"
+  },
+
+  "header": [
+    {
+      "label": "Home"
+    },
+    {
+      "label": "Services",
+      "children": [
+        {
+          "label": "Job Board",
+          "subLabel": "Find your dream design job",
+          "href": "#"
+        },
+        {
+          "label": "Freelance Projects",
+          "subLabel": "An exclusive list for contract work",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "label": "Questions",
+      "href": "#"
+    },
+    {
+      "label": "Contact",
+      "href": "#"
     }
-  }
+  ]
+}
