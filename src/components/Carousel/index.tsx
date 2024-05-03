@@ -13,12 +13,12 @@ import "swiper/css/pagination"
 import "swiper/css/zoom"
 import "./styles.css"
 
-export default function Carousel({ bg }: any) {
+export default function Carousel() {
   const slideImages = [slider1, slider2, slider3, slider4, slider5, slider6]
 
   return (
     <>
-      <Box bg={bg}>
+      <Box>
         <Box py={10} w="100%" h="100%" pos="relative">
           <Swiper
             slidesPerView={1}

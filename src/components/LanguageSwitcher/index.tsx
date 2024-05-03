@@ -4,10 +4,8 @@ import {
   Button,
   HStack,
   useColorModeValue,
-  IconButton,
 } from "@chakra-ui/react"
 import { Link } from "gatsby"
-import { SunIcon, MoonIcon } from "@chakra-ui/icons"
 import { useTranslation } from "react-i18next"
 
 const LanguageSwitcher: FC = () => {

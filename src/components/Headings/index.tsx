@@ -8,15 +8,8 @@ interface HeadingsProps {
 }
 
 const Headings: React.FC<HeadingsProps> = ({ spanTitle, title, text }) => {
-  const { colorMode } = useColorMode()
   return (
-    <VStack
-      py={10}
-      bg={colorMode === "dark" ? "#1F1F1F" : "#EBEBEB"}
-      color={colorMode === "dark" ? "white" : "black"}
-      alignItems="center"
-      gap={0}
-    >
+    <VStack py={10} alignItems="center" gap={0}>
       <Text
         as="span"
         fontSize="xl"
@@ -26,10 +19,23 @@ const Headings: React.FC<HeadingsProps> = ({ spanTitle, title, text }) => {
       >
         {spanTitle}
       </Text>
-      <Heading as="h2" p={0} fontSize="42px" fontWeight={700}>
+      <Heading
+        as="h2"
+        textAlign={"center"}
+        p={0}
+        fontSize={{ base: "30px", md: "42px" }}
+        fontWeight={700}
+      >
         {title}
       </Heading>
-      <Text as="p" fontSize="xl" fontWeight={400} color="#dadada" maxW="760px" textAlign="center">
+      <Text
+        as="p"
+        fontSize={{ base: "lg", md: "xl" }}
+        fontWeight={400}
+        px={{ base: 4, md: 0 }}
+        maxW="760px"
+        textAlign="center"
+      >
         {text}
       </Text>
     </VStack>

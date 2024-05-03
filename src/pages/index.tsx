@@ -1,4 +1,5 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
+import "./global.css"
 import { Box, Button, ColorModeScript, useColorMode } from "@chakra-ui/react"
 import { useTranslation } from "react-i18next"
 import Hero from "../components/Hero"
@@ -6,6 +7,7 @@ import Layout from "../components/Layout"
 import Carousel from "../components/Carousel"
 import Benefits from "../components/Benefits"
 import Headings from "../components/Headings"
+import Preloader from "../components/Loading"
 
 interface HomePageProps {
   pageContext: {
@@ -14,6 +16,14 @@ interface HomePageProps {
 }
 
 const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+
+    return () => clearTimeout(timeout)
+  }, [])
   const { colorMode, toggleColorMode } = useColorMode()
 
   const { t, i18n } = useTranslation()
@@ -25,17 +35,6 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
   }, [pageContext.language, i18n])
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      if (localStorage.getItem('chakra-ui-color-mode') === 'light' && colorMode === 'dark') {
-        setTimeout(() => toggleColorMode(), 1500)
-      } else if (localStorage.getItem('chakra-ui-color-mode') === 'dark' && colorMode === 'light') {
-        setTimeout(() => toggleColorMode(), 1500)
-      }
-    }
-  }, [colorMode, toggleColorMode])
-  
-
-  useEffect(() => {
     if (pageContext.language) {
       i18n.changeLanguage(pageContext.language)
     }
@@ -43,37 +42,43 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
 
   return (
     <>
-      <ColorModeScript initialColorMode="light" />
+      {loading ? (
+        <Preloader />
+      ) : (
+        <>
+          <ColorModeScript initialColorMode="light" />
 
-      <Layout>
-        <Box
-          px={{ base: 4, md: 20 }}
-          bg={colorMode === "dark" ? "#1F1F1F" : "#EBEBEB"}
-          color={colorMode === "dark" ? "white" : "black"}
-          h="100%"
-        >
-          <Hero
-            title={t("hero.title")}
-            text={t("hero.subtitle")}
-            cta={t("hero.cta")}
-            cta2={t("hero.cta2")}
-          />
-          <Benefits />
-          <Headings
-            spanTitle={"MOST POPULAR"}
-            title={"Short Form Content"}
-            text={"Click on image for moving forward or backward."}
-          />
-        </Box>
-        <Carousel bg={colorMode === "dark" ? "#1F1F1F" : "#EBEBEB"} />
-        <Headings
-          spanTitle={"TOP RATED"}
-          title={"Long Form Content"}
-          text={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet commodo magna, ac volutpat mi."
-          }
-        />
-      </Layout>
+          <Layout>
+            <Box
+              px={{ base: 4, md: 20 }}
+              // bg={colorMode === "dark" ? "#1F1F1F" : "#EBEBEB"}
+              // color={colorMode === "dark" ? "white" : "black"}
+              h="100%"
+            >
+              <Hero
+                title={t("hero.title")}
+                text={t("hero.subtitle")}
+                cta={t("hero.cta")}
+                cta2={t("hero.cta2")}
+              />
+              <Benefits />
+              <Headings
+                spanTitle={"MOST POPULAR"}
+                title={"Short Form Content"}
+                text={"Click on image for moving forward or backward."}
+              />
+            </Box>
+            <Carousel />
+            <Headings
+              spanTitle={"TOP RATED"}
+              title={"Long Form Content"}
+              text={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet commodo magna, ac volutpat mi."
+              }
+            />
+          </Layout>
+        </>
+      )}
     </>
   )
 }

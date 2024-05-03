@@ -3,7 +3,10 @@ import "../styles/fonts.css"
 
 const theme = extendTheme({
   config: {
-    initialColorMode: typeof window !== 'undefined' ? localStorage.getItem("chakra-ui-color-mode") || "dark" : "dark",
+    initialColorMode:
+      typeof window !== "undefined"
+        ? localStorage.getItem("chakra-ui-color-mode") || "dark"
+        : "dark",
   },
   fonts: {
     body: "'PoppinsBlack', sans-serif",
@@ -33,11 +36,10 @@ const theme = extendTheme({
   },
   styles: {
     global: {
-      // Define default styles for all Text components
       Text: {
         fontFamily: "'PoppinsLight', sans-serif",
       },
-      // Define default styles for all <p> elements
+
       p: {
         fontFamily: "'PoppinsLight', sans-serif",
       },

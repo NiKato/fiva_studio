@@ -5,33 +5,24 @@
     "cta": "Get in Touch",
     "cta2": "Show Work"
   },
+  "header": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "services": "Services",
+    "questions": "Questions",
+    "contactUs": "Contact Us"
+  },
+  "features": {
+    "title": "Lifetime Support",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 
-  "header": [
-    {
-      "label": "Home"
-    },
-    {
-      "label": "Services",
-      "children": [
-        {
-          "label": "Job Board",
-          "subLabel": "Find your dream design job",
-          "href": "#"
-        },
-        {
-          "label": "Freelance Projects",
-          "subLabel": "An exclusive list for contract work",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "label": "Questions",
-      "href": "#"
-    },
-    {
-      "label": "Contact",
-      "href": "#"
-    }
-  ]
+    "title2": "Unlimited Donations",
+    "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+
+    "title3": "Instant Delivery",
+    "text3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+
+    "title4": "Instant Delivery",
+    "text4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }
 }

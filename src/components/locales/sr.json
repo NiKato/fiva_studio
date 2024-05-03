@@ -5,32 +5,24 @@
     "cta": "Контактирајте нас",
     "cta2": "Прикажи радове"
   },
-  "header": [
-    {
-      "label": "Почетна"
-    },
-    {
-      "label": "Услуге",
-      "children": [
-        {
-          "label": "Огласна Табла",
-          "subLabel": "Пронађите свој посао из сна",
-          "href": "#"
-        },
-        {
-          "label": "Пројекти на Слободној Бази",
-          "subLabel": "Ексклузивна листа за уговорни рад",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "label": "Питања",
-      "href": "#"
-    },
-    {
-      "label": "Контакт",
-      "href": "#"
-    }
-  ]
+  "header": {
+    "home": "Почетна",
+    "aboutUs": "О нама",
+    "services": "Услуге",
+    "questions": "Питања",
+    "contactUs": "Контакт"
+  },
+  "features": {
+    "title": "Подршка за цео живот",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+
+    "title2": "Неограничене донације",
+    "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+
+    "title3": "Брза испорука",
+    "text3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+
+    "title4": "Брза испорука",
+    "text4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }
 }
