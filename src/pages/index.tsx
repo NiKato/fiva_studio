@@ -8,6 +8,9 @@ import Carousel from "../components/Carousel"
 import Benefits from "../components/Benefits"
 import Headings from "../components/Headings"
 import Preloader from "../components/Loading"
+import { SEO } from "../components/Seo"
+import { HeadProps, graphql, useStaticQuery } from "gatsby"
+import { Helmet } from "react-helmet"
 
 interface HomePageProps {
   pageContext: {
@@ -84,3 +87,7 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
 }
 
 export default HomePage
+
+export function Head(props: HeadProps) {
+  return <SEO title="Fiva Studio | Power of 2d Animation videos" description="Power of 2d Animation videos" />
+}

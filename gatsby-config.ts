@@ -9,10 +9,11 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Fiva Studio`,
+    description: ``,
+    author: `@avoKato`,
+    siteUrl: `https://www.fivastudio.com`,
+    image: `src/images/favicon.ico`,
   },
   flags: {
     DEV_SSR: false,

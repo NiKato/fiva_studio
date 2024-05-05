@@ -13,5 +13,5 @@
       "skipLibCheck": true
     },
     
-    "include": ["./src/**/*", "./typings.d.ts", "./gatsby-node.js", "./gatsby-config.ts", "./plugins/**/*"]
+    "include": ["./src/**/*", "./typings.d.ts", "gatsby-node.js", "./gatsby-config.ts", "./plugins/**/*"]
   }
