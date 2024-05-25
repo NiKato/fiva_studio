@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import {
   Avatar,
   Box,
@@ -25,6 +25,21 @@ import { useTranslation } from "react-i18next"
 export const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode()
   const { t } = useTranslation()
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   return (
     <Box
@@ -34,6 +49,13 @@ export const Header = () => {
       transition="opacity 0.5s ease-in-out"
       position="fixed"
       width="100%"
+      backdropFilter={scrolled ? "blur(10px)" : "none"}
+      backgroundColor={scrolled ? "rgba(255, 255, 255, 0.1)" : "transparent"}
+      boxShadow={
+        scrolled
+          ? "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+          : "none"
+      }
     >
       <Flex
         minH={"60px"}
@@ -74,7 +96,13 @@ export const Header = () => {
         <HStack spacing={{ base: "2", md: "4" }}>
           <ButtonGroup variant="tertiary" spacing="1">
             <IconButton
-              icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+              icon={
+                colorMode === "light" ? (
+                  <SunIcon color="yellow.500" />
+                ) : (
+                  <MoonIcon color="gray.500" />
+                )
+              }
               onClick={toggleColorMode}
               variant={"ghost"}
               bg="none"

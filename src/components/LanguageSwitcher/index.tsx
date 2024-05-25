@@ -1,6 +1,5 @@
 import React, { FC } from "react"
 import {
-  useColorMode,
   Button,
   HStack,
   useColorModeValue,
@@ -9,7 +8,6 @@ import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
 
 const LanguageSwitcher: FC = () => {
-  const { colorMode, toggleColorMode } = useColorMode()
   const { i18n } = useTranslation()
 
   // Get the currently selected language from localStorage

@@ -8,7 +8,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react"
-import hero from "../../images/reel3.jpeg"
+import hero from "../../images/reel3.webp"
 
 export default function Hero({title, text, cta, cta2}: any) {
   
