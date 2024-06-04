@@ -1,9 +1,9 @@
 {
   "hero": {
-    "title": "Unleash the power of 2d Animation videos",
-    "subtitle": "We create amazing solutions for your problems",
-    "cta": "Get in Touch",
-    "cta2": "Show Work"
+    "title": "Your trusted video editor",
+    "subtitle": "We create tailored videos for your clients or your projects. Bring your vision to life with us.",
+    "cta": "About us",
+    "cta2": "Show work"
   },
   "header": {
     "home": "Home",
@@ -13,16 +13,18 @@
     "contactUs": "Contact Us"
   },
   "features": {
-    "title": "Lifetime Support",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "title": "Tailored videos",
+    "text": "We craft videos that bring project's essence to surface. Generic videos are not an option.",
 
-    "title2": "Unlimited Donations",
-    "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "title2": "Free consultation",
+    "text2": "We discuss your project with you and find the best solution together. ",
+    "linkText": "Book your free appointment now.",
+    "linkUrl": "/contact-us",
 
-    "title3": "Instant Delivery",
-    "text3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "title3": "Reliability",
+    "text3": "As someone who worked in marketing and smm, we understand importance of deadlines and planning your content.",
 
-    "title4": "Instant Delivery",
-    "text4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "title4": "Selected editors",
+    "text4": "We carefully chose editors for your projects that work best in your niche."
   }
 }

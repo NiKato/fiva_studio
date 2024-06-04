@@ -1,5 +1,6 @@
 import React from "react"
 import {
+  Box,
   Button,
   Container,
   Flex,
@@ -8,12 +9,11 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react"
-import hero from "../../images/reel3.webp"
+import hero from "../../images/hero.webp"
 
-export default function Hero({title, text, cta, cta2}: any) {
-  
+export default function Hero({ title, text, cta, cta2 }: any) {
   return (
-    <Container maxW={{ base: "100%", md: "7xl" }} mt="-60px" pb={20}>
+    <Container maxW={{ base: "100%", md: "7xl" }} my={20}>
       <Stack
         pt={"144px"}
         minH={"100%"}
@@ -28,7 +28,7 @@ export default function Hero({title, text, cta, cta2}: any) {
           align={"center"}
           justify={"center"}
         >
-          <Stack spacing={6} w={"full"} maxW={"lg"}>
+          <Stack spacing={6} w={"full"} maxW={"600px"}>
             <Heading
               fontSize={{ base: "3xl", md: "4xl", lg: "3.2rem" }}
               fontWeight={700}
@@ -37,7 +37,6 @@ export default function Hero({title, text, cta, cta2}: any) {
             </Heading>
             <Text
               fontSize={{ base: "md", lg: "2xl" }}
-              color={"gray.500"}
               lineHeight={"175%"}
             >
               {text}
@@ -59,15 +58,24 @@ export default function Hero({title, text, cta, cta2}: any) {
             </Stack>
           </Stack>
         </Flex>
-        <Flex flex={1}>
+        <Flex flex={1} position="relative">
           <Image
             w="744px"
-            h={{ base: "343px", md: "692px" }}
+            h={{ base: "343px", md: "100%" }}
             alt={"hero"}
             objectFit={"cover"}
             src={hero}
             borderRadius={24}
           />
+          {/* <Box
+          position="absolute"
+          top={0}
+          left={0}
+          w="100%"
+          h="100%"
+          bg="rgba(71, 126, 235, 0.1)" 
+          borderRadius={24}
+        /> */}
         </Flex>
       </Stack>
     </Container>

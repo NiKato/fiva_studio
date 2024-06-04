@@ -9,8 +9,8 @@ import {
   Flex,
   Heading,
   useColorMode,
+  Link,
 } from "@chakra-ui/react"
-import { FcAssistant, FcDonate, FcInTransit } from "react-icons/fc"
 import {
   MdOutlineFlag,
   MdOutlineLocalFireDepartment,
@@ -24,9 +24,11 @@ interface FeatureProps {
   title: string
   text: string
   icon: ReactElement
+  linkText?: string
+  linkUrl?: string
 }
 
-const Feature = ({ title, text, icon }: FeatureProps) => {
+const Feature = ({ title, text, icon, linkText, linkUrl }: FeatureProps) => {
   const { colorMode } = useColorMode()
   return (
     <Stack>
@@ -38,6 +40,11 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
       </Flex>
       <Text mx="auto" textAlign="center" fontSize="sm">
         {text}
+        {linkText && linkUrl && (
+          <Link href={linkUrl} color="#477EEB">
+            {linkText}
+          </Link>
+        )}
       </Text>
     </Stack>
   )
@@ -57,6 +64,8 @@ export default function Benefits() {
           icon={<Icon as={MdOutlineLocalFireDepartment} width={6} height={6} />}
           title={t("features.title2")}
           text={t("features.text2")}
+          linkText={t("features.linkText")}
+          linkUrl={t("features.linkUrl")}
         />
         <Feature
           icon={<Icon as={MdOutlineFlag} width={6} height={6} />}
