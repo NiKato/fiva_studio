@@ -4,7 +4,7 @@ import { VStack, Text, Heading, useColorMode } from "@chakra-ui/react"
 interface HeadingsProps {
   spanTitle: string
   title: string
-  text: string
+  text?: string
 }
 
 const Headings: React.FC<HeadingsProps> = ({ spanTitle, title, text }) => {
@@ -12,7 +12,7 @@ const Headings: React.FC<HeadingsProps> = ({ spanTitle, title, text }) => {
     <VStack py={10} alignItems="center" gap={0}>
       <Text
         as="span"
-        fontSize="xl"
+        fontSize={{ base: "lg", md: "xl" }}
         fontWeight={700}
         textTransform={"uppercase"}
         color="#3377FF"

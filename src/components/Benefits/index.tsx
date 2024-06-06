@@ -34,11 +34,11 @@ const Feature = ({ title, text, icon, linkText, linkUrl }: FeatureProps) => {
     <Stack>
       <Flex align={"center"} justify={"center"} rounded={"full"} mb={1} gap={2}>
         <Text color="#477EEB">{icon}</Text>
-        <Heading fontSize={"xl"} fontWeight={700}>
+        <Heading fontSize={"2xl"} fontWeight={700}>
           {title}
         </Heading>
       </Flex>
-      <Text mx="auto" textAlign="center" fontSize="sm">
+      <Text mx="auto" textAlign="center" fontSize="lg">
         {text}
         {linkText && linkUrl && (
           <Link href={linkUrl} color="#477EEB">
@@ -54,7 +54,7 @@ export default function Benefits() {
   const { t } = useTranslation()
   return (
     <Box py={20}>
-      <SimpleGrid columns={{ base: 1, md: 4 }} spacing={3.5}>
+      <SimpleGrid columns={{ base: 1, md: 4 }} spacing={10}>
         <Feature
           icon={<Icon as={MdOutlineLocalMovies} width={6} height={6} />}
           title={t("features.title")}

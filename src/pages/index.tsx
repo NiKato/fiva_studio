@@ -11,6 +11,10 @@ import Preloader from "../components/Loading"
 import { SEO } from "../components/Seo"
 import { HeadProps } from "gatsby"
 import BasicStatistics from "../components/LongForm"
+import CustomGrid from "../components/CustomGrid"
+import FAQ from "../components/FAQ"
+import { faqData } from "../constants/faqData"
+import Testimonials  from "../components/organisms/Testimonials"
 // import Geolocation from "../components/LocationBased"
 
 interface HomePageProps {
@@ -82,6 +86,24 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
               }
             />
             <BasicStatistics />
+            <Headings
+              spanTitle={"MOST REQUESTED"}
+              title={"2D Animations"}
+              text={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet commodo magna, ac volutpat mi."
+              }
+            />
+            <CustomGrid />
+            <Headings
+              spanTitle={"MOST ASKED"}
+              title={"Frequently asked questions"}
+            />
+            <FAQ props={faqData} />
+            <Headings
+              spanTitle={"WHAT OUR CLIENTS SAY"}
+              title={"100+ satisfied clients"}
+            />
+            <Testimonials />
           </Layout>
         </>
       )}
