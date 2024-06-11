@@ -2,12 +2,13 @@ import React from "react"
 import { VStack, Text, Heading, useColorMode } from "@chakra-ui/react"
 
 interface HeadingsProps {
+  id: number
   spanTitle: string
   title: string
   text?: string
 }
 
-const Headings: React.FC<HeadingsProps> = ({ spanTitle, title, text }) => {
+const Headings: React.FC<HeadingsProps> = ({ id, spanTitle, title, text }) => {
   return (
     <VStack py={10} alignItems="center" gap={0}>
       <Text

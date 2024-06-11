@@ -14,7 +14,9 @@ import BasicStatistics from "../components/LongForm"
 import CustomGrid from "../components/CustomGrid"
 import FAQ from "../components/FAQ"
 import { faqData } from "../constants/faqData"
-import Testimonials  from "../components/organisms/Testimonials"
+import Testimonials from "../components/organisms/Testimonials"
+import { HEADINGS_SORT_ITEMS, getHeadingById } from "../constants/headings"
+
 // import Geolocation from "../components/LocationBased"
 
 interface HomePageProps {
@@ -48,6 +50,19 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
     }
   }, [pageContext.language, i18n])
 
+  const renderHeading = (id: number) => {
+    const headingData = getHeadingById(id)
+    return headingData ? (
+      <Headings
+        key={headingData.id}
+        id={headingData.id}
+        spanTitle={headingData.spanTitle}
+        title={headingData.title}
+        text={headingData.text}
+      />
+    ) : null
+  }
+
   return (
     <>
       {loading ? (
@@ -57,52 +72,24 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
           <ColorModeScript initialColorMode="light" />
 
           <Layout>
-            <Box
-              px={{ base: 4, md: 20 }}
-              // bg={colorMode === "dark" ? "#1F1F1F" : "#EBEBEB"}
-              // color={colorMode === "dark" ? "white" : "black"}
-              h="100%"
-            >
+            <Box px={{ base: 4, md: 20 }} h="100%">
               <Hero
                 title={t("hero.title")}
                 text={t("hero.subtitle")}
                 cta={t("hero.cta")}
                 cta2={t("hero.cta2")}
               />
-
               <Benefits />
-              <Headings
-                spanTitle={"MOST POPULAR"}
-                title={"Short Form Content"}
-                text={"Click on image for moving forward or backward."}
-              />
+              {renderHeading(1)}
             </Box>
             <Carousel />
-            <Headings
-              spanTitle={"TOP RATED"}
-              title={"Long Form Content"}
-              text={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet commodo magna, ac volutpat mi."
-              }
-            />
+            {renderHeading(2)}
             <BasicStatistics />
-            <Headings
-              spanTitle={"MOST REQUESTED"}
-              title={"2D Animations"}
-              text={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet commodo magna, ac volutpat mi."
-              }
-            />
+            {renderHeading(3)}
             <CustomGrid />
-            <Headings
-              spanTitle={"MOST ASKED"}
-              title={"Frequently asked questions"}
-            />
+            {renderHeading(5)}
             <FAQ props={faqData} />
-            <Headings
-              spanTitle={"WHAT OUR CLIENTS SAY"}
-              title={"100+ satisfied clients"}
-            />
+            {renderHeading(4)}
             <Testimonials />
           </Layout>
         </>
