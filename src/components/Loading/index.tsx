@@ -1,10 +1,11 @@
 import React from 'react';
-import loadingGif from "../../images/Loading.gif";
+import loadingGif from "../../images/fivastudio.gif";
+import { Image } from '@chakra-ui/react';
 
 const Preloader = () => {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <img src={loadingGif} alt="Loading" />
+    <div style={{ maxWidth: "100%", width: "100%", height: '100vh' }}>
+      <Image w="100%" h="100vh" backgroundSize="cover" objectFit="contain" src={loadingGif} alt="Loading" />
     </div>
   );
 };

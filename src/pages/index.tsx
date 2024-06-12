@@ -26,14 +26,14 @@ interface HomePageProps {
 }
 
 const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
-  const [loading, setLoading] = useState(true)
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setLoading(false)
-    }, 2000)
+  // const [loading, setLoading] = useState(true)
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setLoading(false)
+  //   }, 3000)
 
-    return () => clearTimeout(timeout)
-  }, [])
+  //   return () => clearTimeout(timeout)
+  // }, [])
   const { colorMode, toggleColorMode } = useColorMode()
 
   const { t, i18n } = useTranslation()
@@ -65,9 +65,9 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
 
   return (
     <>
-      {loading ? (
+      {/* {loading ? (
         <Preloader />
-      ) : (
+      ) : ( */}
         <>
           <ColorModeScript initialColorMode="light" />
 
@@ -93,7 +93,7 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
             <Testimonials />
           </Layout>
         </>
-      )}
+      {/* )} */}
     </>
   )
 }
