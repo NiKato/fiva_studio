@@ -68,31 +68,31 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
       {/* {loading ? (
         <Preloader />
       ) : ( */}
-        <>
-          <ColorModeScript initialColorMode="light" />
+      <>
+        <ColorModeScript initialColorMode="light" />
 
-          <Layout>
-            <Box px={{ base: 4, md: 20 }} h="100%">
-              <Hero
-                title={t("hero.title")}
-                text={t("hero.subtitle")}
-                cta={t("hero.cta")}
-                cta2={t("hero.cta2")}
-              />
-              <Benefits />
-              {renderHeading(1)}
-            </Box>
-            <Carousel />
-            {renderHeading(2)}
-            <BasicStatistics />
-            {renderHeading(3)}
-            <CustomGrid />
-            {renderHeading(5)}
-            <FAQ props={faqData} />
-            {renderHeading(4)}
-            <Testimonials />
-          </Layout>
-        </>
+        <Layout>
+          <Box px={{ base: 4, md: 20 }} h="100%">
+            <Hero
+              title={t("hero.title")}
+              text={t("hero.subtitle")}
+              cta={t("hero.cta")}
+              cta2={t("hero.cta2")}
+            />
+            <Benefits />
+            <Box id="anchor">{renderHeading(1)}</Box>
+          </Box>
+          <Carousel />
+          {renderHeading(2)}
+          <BasicStatistics />
+          {renderHeading(3)}
+          <CustomGrid />
+          <Box id="faq">{renderHeading(5)}</Box>
+          <FAQ props={faqData} />
+          {renderHeading(4)}
+          <Testimonials />
+        </Layout>
+      </>
       {/* )} */}
     </>
   )

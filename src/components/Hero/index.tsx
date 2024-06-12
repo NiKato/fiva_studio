@@ -10,6 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 import hero from "../../images/hero.webp"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export default function Hero({ title, text, cta, cta2 }: any) {
   return (
@@ -42,6 +43,7 @@ export default function Hero({ title, text, cta, cta2 }: any) {
               {text}
             </Text>
             <Stack direction={{ base: "column", md: "row" }} spacing={4}>
+              <AnchorLink to="/#anchor">
               <Button
                 borderRadius={4}
                 bg={"#333333"}
@@ -52,6 +54,7 @@ export default function Hero({ title, text, cta, cta2 }: any) {
               >
                 {cta}
               </Button>
+              </AnchorLink>
               <Button borderRadius={4} bg="#477EEB" color="#fff">
                 {cta2}
               </Button>

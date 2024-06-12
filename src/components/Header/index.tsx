@@ -13,6 +13,7 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
+  Link,
   useColorMode,
 } from "@chakra-ui/react"
 import { DocumentPopover } from "./DocumentPopover"
@@ -21,6 +22,7 @@ import { MobileDrawer } from "./MobileDrawer"
 import LanguageSwitcher from "../LanguageSwitcher"
 import { MoonIcon, SunIcon } from "@chakra-ui/icons"
 import { useTranslation } from "react-i18next"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -78,17 +80,45 @@ export const Header = () => {
             ml={4}
             display={{ base: "none", lg: "flex" }}
           >
-            <Button bg={"none"} p={2} fontSize={"md"} fontWeight={600}>
+            <Button
+              bg={"none"}
+              p={2}
+              fontSize={"md"}
+              fontWeight={600}
+              _hover={{ textDecoration: "underline", color: "#3377FF" }}
+            >
               {t("header.home")}
             </Button>
-            <Button bg={"none"} p={2} fontSize={"md"} fontWeight={600}>
-              {t("header.aboutUs")}
-            </Button>
+            <Link href="/about-us">
+              <Button
+                bg={"none"}
+                p={2}
+                fontSize={"md"}
+                fontWeight={600}
+                _hover={{ textDecoration: "underline", color: "#3377FF" }}
+              >
+                {t("header.aboutUs")}
+              </Button>
+            </Link>
             <DocumentPopover />
-            <Button bg={"none"} p={2} fontSize={"md"} fontWeight={600}>
-              {t("header.questions")}
-            </Button>
-            <Button bg={"none"} p={2} fontSize={"md"} fontWeight={600}>
+            <AnchorLink to="/#faq">
+              <Button
+                bg={"none"}
+                p={2}
+                fontSize={"md"}
+                fontWeight={600}
+                _hover={{ textDecoration: "underline", color: "#3377FF" }}
+              >
+                {t("header.questions")}
+              </Button>
+            </AnchorLink>
+            <Button
+              bg={"none"}
+              p={2}
+              fontSize={"md"}
+              fontWeight={600}
+              _hover={{ textDecoration: "underline", color: "#3377FF" }}
+            >
               {t("header.contactUs")}
             </Button>
           </ButtonGroup>
