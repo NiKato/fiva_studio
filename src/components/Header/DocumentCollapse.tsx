@@ -7,13 +7,24 @@ export const DocumentCollapse = () => {
   return (
     <>
       <Button justifyContent="space-between" variant="tertiary" size="lg" onClick={onToggle}>
-        <Text as="span">Documents</Text>
+        <Text as="span">Services</Text>
         <PopoverIcon isOpen={isOpen} />
       </Button>
       <Collapse in={isOpen} animateOpacity>
         <Stack spacing="1" alignItems="stretch" ps="4">
-          {['Resumes', 'Cover Letter', 'Personal', 'Education', 'Essay'].map((item) => (
-            <Button key={item} variant="tertiary" size="lg" justifyContent="start">
+        {[
+            "Short Form",
+            "Educational Videos",
+            "2D Animation",
+            "Meme videos",
+            "Content for Children",
+          ].map(item => (
+            <Button
+              key={item}
+              variant="tertiary"
+              justifyContent="start"
+              _hover={{ textDecoration: "underline", color: "#3377FF" }}
+            >
               {item}
             </Button>
           ))}

@@ -43,6 +43,14 @@ export const Header = () => {
     }
   }, [])
 
+  // Define your links array
+  const links = [
+    { href: "/", label: t("header.home") },
+    { href: "/about-us", label: t("header.aboutUs") },
+    { href: "/#faq", label: t("header.questions") },
+    // Add other links as needed
+  ]
+
   return (
     <Box
       px={5}
@@ -69,7 +77,7 @@ export const Header = () => {
       >
         <Flex>
           <HStack spacing="3">
-            <MobileDrawer />
+            <MobileDrawer links={links} />
             <Image width="72px" h="36px" src={logo} />
           </HStack>
           <ButtonGroup
@@ -80,38 +88,20 @@ export const Header = () => {
             ml={4}
             display={{ base: "none", lg: "flex" }}
           >
-            <Button
-              bg={"none"}
-              p={2}
-              fontSize={"md"}
-              fontWeight={600}
-              _hover={{ textDecoration: "underline", color: "#3377FF" }}
-            >
-              {t("header.home")}
-            </Button>
-            <Link href="/about-us">
-              <Button
-                bg={"none"}
-                p={2}
-                fontSize={"md"}
-                fontWeight={600}
-                _hover={{ textDecoration: "underline", color: "#3377FF" }}
-              >
-                {t("header.aboutUs")}
-              </Button>
-            </Link>
+            {links.map((link, index) => (
+              <Link key={index} href={link.href}>
+                <Button
+                  bg={"none"}
+                  p={2}
+                  fontSize={"md"}
+                  fontWeight={600}
+                  _hover={{ textDecoration: "underline", color: "#3377FF" }}
+                >
+                  {link.label}
+                </Button>
+              </Link>
+            ))}
             <DocumentPopover />
-            <AnchorLink to="/#faq">
-              <Button
-                bg={"none"}
-                p={2}
-                fontSize={"md"}
-                fontWeight={600}
-                _hover={{ textDecoration: "underline", color: "#3377FF" }}
-              >
-                {t("header.questions")}
-              </Button>
-            </AnchorLink>
             <Button
               bg={"none"}
               p={2}
@@ -126,6 +116,7 @@ export const Header = () => {
         <HStack spacing={{ base: "2", md: "4" }}>
           <ButtonGroup variant="tertiary" spacing="1">
             <IconButton
+              mr={3}
               icon={
                 colorMode === "light" ? (
                   <SunIcon color="yellow.500" />
@@ -140,7 +131,7 @@ export const Header = () => {
               aria-label={"Toggle Dark/Light Mode"}
               className="color-mode-button"
             />
-            <LanguageSwitcher />
+            {/* <LanguageSwitcher /> */}
             <Button
               as={"a"}
               display={{ base: "none", md: "inline-flex" }}

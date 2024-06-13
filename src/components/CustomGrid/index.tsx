@@ -1,10 +1,27 @@
 import React from "react"
-
 import { Box, Container, Flex, HStack, Text } from "@chakra-ui/react"
+import VideoBg from "../Video/VideoBg"
+
+// Define your video URLs
+const videoUrls = {
+  video1: "https://fivastudio.b-cdn.net/2D%20animation.mp4",
+  video2: "https://fivastudio.b-cdn.net/wedding-video.mp4",
+  video3: "https://fivastudio.b-cdn.net/hotel-pool-bar.mp4",
+  video4: "https://fivastudio.b-cdn.net/Baby%20video.mp4",
+}
+const textStyles = {
+  pos: "absolute",
+  bg: "rgba(0, 0, 0, 0.5)",
+  p: 4,
+  mb: 2,
+  borderRadius: "2xl",
+  fontSize: { base: "md", md: "xl" },
+  fontWeight: "bold",
+}
 
 const CustomGrid = () => {
   return (
-    <Container maxW={{ base: "100%", md: "7xl" }} my={20}>
+    <Container maxW={{ base: "100%", md: "7xl" }} pb={{base: 0, md: 10}}>
       <Flex
         direction="column"
         w="100%"
@@ -15,32 +32,41 @@ const CustomGrid = () => {
       >
         <Flex
           gap={4}
-          h="450px"
-          minH="450px"
+          h={{ base: "85vh", md: "450px" }}
+          minH={{ base: "85vh", md: "450px" }}
           w="100%"
           flexFlow={{ base: "column", md: "row" }}
         >
           <Box
-            w={{ base: "100", md: "650px" }}
+            w={{ base: "100%", md: "650px" }}
+            h={{base: "156px", md: "auto"}}
+            minH={{base: "156px", md: "auto"}}
             flex={1}
             bg="gray.700"
-            p={4}
             borderRadius="2xl"
             display="flex"
             flexFlow="column"
             alignItems="center"
             justifyContent="flex-end"
+            position="relative"
+            overflow="hidden"
           >
-            <Text fontSize={{ base: "md", md: "xl" }} fontWeight="bold">
-              FIRST BOX
-            </Text>
-            <Text mt={2} textAlign="center" fontSize={{ base: "sm", md: "md" }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac
-              nunc felis. Aliquam nec rhoncus leo, a dictum odio.
+            <VideoBg src={videoUrls.video1} />
+            <Text
+              pos="absolute"
+              bg="rgba(0, 0, 0, 0.5)"
+              px={4}
+              py={2.5}
+              mb={2}
+              borderRadius="2xl"
+              fontSize={{ base: "md", md: "xl" }}
+              fontWeight="bold"
+            >
+              2D animation / Meme video
             </Text>
           </Box>
           <Flex
-            w={{ base: "100", md: "650px" }}
+            w={{ base: "100%", md: "650px" }}
             flexDir="column"
             gap={4}
             h="100%"
@@ -50,69 +76,80 @@ const CustomGrid = () => {
                 h="225px"
                 flex={1}
                 bg="gray.700"
-                p={4}
                 borderRadius="2xl"
                 display="flex"
                 flexFlow="column"
                 alignItems="center"
                 justifyContent="flex-end"
+                position="relative"
+                overflow="hidden"
               >
-                <Text fontSize={{ base: "md", md: "xl" }} fontWeight="bold">
-                  SECOND ONE
-                </Text>
+                <VideoBg src={videoUrls.video2} />
                 <Text
-                  mt={2}
-                  textAlign="center"
-                  fontSize={{ base: "sm", md: "md" }}
+                  pos="absolute"
+                  bg="rgba(0, 0, 0, 0.5)"
+                  px={4}
+                  py={2.5}
+                  mb={2}
+                  borderRadius="2xl"
+                  fontSize={{ base: "md", md: "xl" }}
+                  fontWeight="bold"
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Wedding video
                 </Text>
               </Box>
               <Box
                 h="225px"
-                w={{ base: "100", md: "280px" }}
-                maxW={{ base: "100", md: "280px" }}
+                w={{ base: "100%", md: "280px" }}
+                maxW={{ base: "100%", md: "280px" }}
                 flex={1}
                 bg="gray.700"
-                p={4}
                 borderRadius="2xl"
                 display="flex"
                 flexFlow="column"
                 alignItems="center"
                 justifyContent="flex-end"
+                position="relative"
+                overflow="hidden"
               >
-                <Text fontSize={{ base: "md", md: "xl" }} fontWeight="bold">
-                  THIRD ONE
-                </Text>
+                <VideoBg src={videoUrls.video3} />
                 <Text
-                  mt={2}
-                  textAlign="center"
-                  fontSize={{ base: "sm", md: "md" }}
+                  pos="absolute"
+                  bg="rgba(0, 0, 0, 0.5)"
+                  px={4}
+                  py={2.5}
+                  mb={2}
+                  borderRadius="2xl"
+                  fontSize={{ base: "md", md: "xl" }}
+                  fontWeight="bold"
                 >
-                  Lorem ipsum dolor sit amet, consectetur.
+                  Promo video
                 </Text>
               </Box>
             </HStack>
             <Box
               flex={1}
               bg="gray.700"
-              p={4}
               borderRadius="2xl"
               display="flex"
               flexFlow="column"
               alignItems="center"
               justifyContent="flex-end"
+              position="relative"
+              overflow="hidden"
             >
-              <Text fontSize={{ base: "md", md: "xl" }} fontWeight="bold">
-                Forth
-              </Text>
+              <VideoBg src={videoUrls.video4} />
               <Text
-                mt={2}
-                textAlign="center"
-                fontSize={{ base: "sm", md: "md" }}
+                pos="absolute"
+                bg="rgba(0, 0, 0, 0.5)"
+                px={4}
+                py={2.5}
+                mb={2}
+                borderRadius="2xl"
+                fontSize={{ base: "md", md: "xl" }}
+                fontWeight="bold"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                ac nunc felis. Aliquam nec rhoncus leo, a dictum odio.
+                Fourth video
               </Text>
             </Box>
           </Flex>

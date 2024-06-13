@@ -6,7 +6,7 @@ import { Testimonial } from "./Testimonials";
 
 const Testimonials = () => {
   return (
-    <Container maxW={{ base: "100%", md: "100%" }} my={20}>
+    <Container maxW={{ base: "100%", md: "100%" }} my={10}>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

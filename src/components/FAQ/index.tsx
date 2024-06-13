@@ -13,7 +13,8 @@ const FAQ = ({ props }: FAQProps) => {
   return (
     <Container
       maxW={{ base: "100%", md: "4xl" }}
-      my={20}
+      mt={5}
+      mb={20}
       position="relative"
       _before={{
         content: '""',

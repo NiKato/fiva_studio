@@ -17,25 +17,25 @@ export const HEADINGS_SORT_ITEMS: HeadingsSortItem[] = [
     id: 2,
     spanTitle: "TOP RATED",
     title: "Long Form Content",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet commodo magna, ac volutpat mi.",
+    text: "Transform your video content with our expert tips to captivate, engage, and retain your audience from start to finish.",
   },
   {
     id: 3,
     spanTitle: "MOST REQUESTED",
     title: "2D Animations",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet commodo magna, ac volutpat mi.",
+    text: "Level up your 2D animation videos with our expert techniques to captivate your audience and leave a lasting impression that resonates.",
   },
   {
     id: 4,
     spanTitle: "TESTIMONIALS",
     title: "What did people say?",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    text: "Discover what people are saying about us in their own words.",
   },
   {
     id: 5,
     spanTitle: "MOST ASKED",
     title: "Frequently asked questions",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    text: "Explore answers to common questions to get the information you need quickly and easily.",
   },
 ]
 

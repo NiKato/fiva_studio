@@ -13,7 +13,7 @@ module.exports = {
     description: ``,
     author: `@avoKato`,
     siteUrl: `https://www.fivastudio.com`,
-    image: `src/images/favicon.ico`,
+    image: `src/images/favicon-32x32.png`,
   },
   flags: {
     DEV_SSR: false,
@@ -43,7 +43,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/favicon.png`,
       },
     },
     {

@@ -1,13 +1,20 @@
 import React, { useEffect, useState } from "react"
 import "./global.css"
-import { Box, Button, ColorModeScript, useColorMode } from "@chakra-ui/react"
+import {
+  Box,
+  Button,
+  ColorModeScript,
+  useColorMode,
+  CircularProgress,
+  Flex,
+  Spinner,
+} from "@chakra-ui/react"
 import { useTranslation } from "react-i18next"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import Carousel from "../components/Carousel"
 import Benefits from "../components/Benefits"
 import Headings from "../components/Headings"
-import Preloader from "../components/Loading"
 import { SEO } from "../components/Seo"
 import { HeadProps } from "gatsby"
 import BasicStatistics from "../components/LongForm"
@@ -16,6 +23,8 @@ import FAQ from "../components/FAQ"
 import { faqData } from "../constants/faqData"
 import Testimonials from "../components/organisms/Testimonials"
 import { HEADINGS_SORT_ITEMS, getHeadingById } from "../constants/headings"
+import { ping } from "ldrs"
+import styled from "styled-components"
 
 // import Geolocation from "../components/LocationBased"
 
@@ -25,24 +34,71 @@ interface HomePageProps {
   }
 }
 
+const Div = styled.div`
+  .container {
+    --uib-size: 80px;
+    --uib-color: #477eeb;
+    --uib-speed: 1.75s;
+    --uib-stroke: 5px;
+    --uib-bg-opacity: 0.1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--uib-stroke);
+    width: var(--uib-size);
+    border-radius: calc(var(--uib-stroke) / 2);
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--uib-color);
+    opacity: var(--uib-bg-opacity);
+    transition: background-color 0.3s ease;
+  }
+
+  .container::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: calc(var(--uib-stroke) / 2);
+    animation: wobble var(--uib-speed) ease-in-out infinite;
+    transform: translateX(-95%);
+    background-color: var(--uib-color);
+    transition: background-color 0.3s ease;
+  }
+
+  @keyframes wobble {
+    0%,
+    100% {
+      transform: translateX(-95%);
+    }
+    50% {
+      transform: translateX(95%);
+    }
+  }
+`
+
 const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
-  // const [loading, setLoading] = useState(true)
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     setLoading(false)
-  //   }, 3000)
-
-  //   return () => clearTimeout(timeout)
-  // }, [])
-  const { colorMode, toggleColorMode } = useColorMode()
-
-  const { t, i18n } = useTranslation()
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    if (pageContext.language) {
-      i18n.changeLanguage(pageContext.language)
-    }
-  }, [pageContext.language, i18n])
+    const timeout = setTimeout(() => {
+      setLoading(false)
+    }, 3000)
+
+    return () => clearTimeout(timeout)
+  }, [])
+
+  const { colorMode, toggleColorMode } = useColorMode()
+  const { t, i18n } = useTranslation()
 
   useEffect(() => {
     if (pageContext.language) {
@@ -65,35 +121,48 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
 
   return (
     <>
-      {/* {loading ? (
-        <Preloader />
-      ) : ( */}
-      <>
-        <ColorModeScript initialColorMode="light" />
-
-        <Layout>
-          <Box px={{ base: 4, md: 20 }} h="100%">
-            <Hero
-              title={t("hero.title")}
-              text={t("hero.subtitle")}
-              cta={t("hero.cta")}
-              cta2={t("hero.cta2")}
-            />
-            <Benefits />
-            <Box id="anchor">{renderHeading(1)}</Box>
-          </Box>
-          <Carousel />
-          {renderHeading(2)}
-          <BasicStatistics />
-          {renderHeading(3)}
-          <CustomGrid />
-          <Box id="faq">{renderHeading(5)}</Box>
-          <FAQ props={faqData} />
-          {renderHeading(4)}
-          <Testimonials />
-        </Layout>
-      </>
-      {/* )} */}
+      {loading ? (
+        <Div>
+          <Flex
+            align="center"
+            justify="center"
+            height="100vh"
+            width="100vw"
+            position="fixed"
+            top="0"
+            left="0"
+            bg="#1A202C"
+            zIndex="9999"
+          >
+            <div className="container"></div>
+          </Flex>
+        </Div>
+      ) : (
+        <>
+          <ColorModeScript initialColorMode="light" />
+          <Layout>
+            <Box px={{ base: 4, md: 20 }} h="100%">
+              <Hero
+                title={t("hero.title")}
+                text={t("hero.subtitle")}
+                cta={t("hero.cta")}
+                cta2={t("hero.cta2")}
+              />
+              <Benefits />
+              {renderHeading(1)}
+            </Box>
+            <Box id="anchor"><Carousel /></Box>
+            {renderHeading(2)}
+            <BasicStatistics />
+            {renderHeading(3)}
+            <CustomGrid />
+            <Box id="faq">{renderHeading(5)}</Box>
+            <FAQ props={faqData} />
+            {/* {renderHeading(4)}
+            <Testimonials /> */}
+          </Layout>
+        </>
+      )}
     </>
   )
 }

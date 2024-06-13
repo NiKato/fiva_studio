@@ -10,7 +10,7 @@ interface HeadingsProps {
 
 const Headings: React.FC<HeadingsProps> = ({ id, spanTitle, title, text }) => {
   return (
-    <VStack py={10} alignItems="center" gap={0}>
+    <VStack py={{base: 10, md: 20 }} alignItems="center" gap={0}>
       <Text
         as="span"
         fontSize={{ base: "lg", md: "xl" }}
@@ -26,6 +26,7 @@ const Headings: React.FC<HeadingsProps> = ({ id, spanTitle, title, text }) => {
         p={0}
         fontSize={{ base: "30px", md: "42px" }}
         fontWeight={700}
+        my={3}
       >
         {title}
       </Heading>
