@@ -174,8 +174,8 @@ export default HomePage
 export function Head(props: HeadProps) {
   return (
     <SEO
-      title="Fiva Studio | Power of 2d Animation videos"
-      description="Power of 2d Animation videos"
+      title="Fiva Studio | Your trusted video editor"
+      description="Video editing services for your business and personal projects."
     />
   )
 }

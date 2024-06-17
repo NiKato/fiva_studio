@@ -15,7 +15,7 @@ export const PageHero = ({ title, subtitle }: any) => {
   return (
     <Box
       as="section"
-      bg="linear-gradient(to bottom, #3377FF, #171923)"
+      bg="linear-gradient(to bottom, #8c9bb8, #171923)"
       py={{ base: 10, md: 9 }}
       minH={{ base: "auto", md: "80vh" }}
       display="flex"

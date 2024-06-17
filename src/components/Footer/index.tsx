@@ -120,10 +120,10 @@ export default function Footer() {
           <Stack align={"flex-start"}>
             <ListHeader>Services</ListHeader>
             <Text fontWeight={400}>
-              <Link href={"#"}>Short Form</Link>
+              <Link href={"/short-form"}>Short Form</Link>
             </Text>
             <Text fontWeight={400}>
-              <Link href={"#"}>Educational Videos</Link>
+              <Link href={"/educational-videos"}>Educational Videos</Link>
             </Text>
             <Text fontWeight={400}>
               <Link href={"#"}>2D Animations</Link>

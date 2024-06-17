@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import { VStack, Heading, Text, Container, Link, Box } from "@chakra-ui/react"
 import { MdOutlinePlayCircle } from "react-icons/md"
 import styled from "styled-components"
+import Cta from "../components/Cta"
 
 const VideoWrapper = ({ onClick, children }: any) => (
   <div onClick={onClick} style={{ position: "relative", cursor: "pointer" }}>
@@ -63,14 +64,12 @@ const EducationalVideos = () => {
         title="Educational Videos"
         subtitle="You need a video editor for your educational niche video content like corsues, youtube channel, or instagram, facebook and tiktok? Our video editors are here to bring your vision to life and give your video the desired effect!"
       />
-      <Container maxW="container.xl" p={{ base: "4", md: "12" }} mb={{base: 10, md: 0 }}>
-        <VStack
-          paddingTop="40px"
-          spacing={10}
-          alignItems="center"
-          textAlign="center"
-        >
-          <Heading as="h2">What is the process?</Heading>
+      <Container
+        maxW="container.xl"
+        p={{ base: "4", md: "12" }}
+        mb={{ base: 10, md: 0 }}
+      >
+        <VStack py="40px" spacing={10} alignItems="center" textAlign="center">
           <Text id="text" as="p" fontSize="lg">
             We work with you closely so that we can come up with the best visual
             solution according to your vision. Upon reaching the desired
@@ -102,21 +101,8 @@ const EducationalVideos = () => {
               </PlayButton>
             </VideoWrapper>
           </Box>
-          <Text
-            as="p"
-            fontSize={{ base: "md", md: "lg" }}
-            fontWeight={600}
-            p={8}
-            color="#fff"
-            bg="#3377FF"
-            borderRadius="md"
-          >
-            Have questions? Just{" "}
-            <Link href="/contact-us" color="#fff" textDecoration="underline">
-              reach out to us
-            </Link>{" "}
-            and we'd be happy to discuss details with you, free of charge!
-          </Text>
+          <Heading as="h2">What is the process?</Heading>
+          <Cta />
         </VStack>
       </Container>
     </Layout>
