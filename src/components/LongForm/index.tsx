@@ -26,6 +26,7 @@ function StatsCard(props: StatsCardProps) {
       alignContent="center"
       textAlign="center"
       px={{ base: 4, md: 0 }}
+      mx={{ base: 6, md: 0 }}
       py={"5"}
       shadow={"xl"}
       border={"1px solid"}
@@ -37,7 +38,6 @@ function StatsCard(props: StatsCardProps) {
       borderColor={useColorModeValue("gray.800", "#fff")}
       rounded={"lg"}
       position="relative"
-
     >
       {/* Gradient overlay */}
       <Box
@@ -46,10 +46,10 @@ function StatsCard(props: StatsCardProps) {
         left="0"
         width="100%"
         height="100%"
-        bgGradient="linear(to-b, rgba(0,0,0,0), rgba(0,0,0,0.3))"
+        bgGradient="linear(to-b, rgba(0,0,0,0), rgba(0,0,0,0.5))"
         bgClip="content-box"
         _hover={{
-          bgGradient: "linear(to-b, rgba(0,0,0,0), rgba(255,255,255,0.3))",
+          bgGradient: "linear(to-b, rgba(0,0,0,0), rgba(255,255,255,0.1))",
         }}
       />
       <StatLabel
@@ -58,10 +58,18 @@ function StatsCard(props: StatsCardProps) {
         pb={"24px"}
         fontWeight={700}
         isTruncated
+        pos="relative"
+        zIndex="999"
       >
         {title}
       </StatLabel>
-      <StatNumber color="#fff" fontSize={"md"} fontWeight={300}>
+      <StatNumber
+        pos="relative"
+        zIndex="999"
+        color="#fff"
+        fontSize={"md"}
+        fontWeight={300}
+      >
         {stat}
       </StatNumber>
     </Stat>

@@ -11,17 +11,17 @@ interface StatData {
 export const statsData: StatData[] = [
   {
     title: "Wedding Video",
-    stat: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet.",
-    imageSrc:  stat3 ,
+    stat: "Capture the magic and joy of your special day with our professional wedding videography",
+    imageSrc: stat3,
   },
   {
     title: "Corporate Video",
-    stat: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet.",
-    imageSrc:  stat2 ,
+    stat: "Enhance your brand's image with our high-quality corporate videos",
+    imageSrc: stat2,
   },
   {
     title: "Movie Video",
-    stat: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet.",
-    imageSrc:  stat1 ,
+    stat: "Bring your cinematic vision to life with our movie production services",
+    imageSrc: stat1,
   },
 ]

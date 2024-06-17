@@ -25,7 +25,7 @@ const PlayButton = styled.div`
   transform: translate(-50%, -50%);
   width: 80px;
   height: 80px;
-  pointer-events: none;
+  pointer-events: none !important;
   display: ${({ isPlaying }: any) => (isPlaying ? "none" : "block")};
 `
 
@@ -71,18 +71,23 @@ const VideoPlayer = ({ src, onPlay, stopPlaying }: any) => {
       if (stopPlaying) stopPlaying()
     }
 
+    const currentVideoRef = videoRef.current
     // @ts-ignore
-    videoRef.current.addEventListener("ended", handleEnded)
+    currentVideoRef.addEventListener("ended", handleEnded)
 
     return () => {
       // @ts-ignore
-      videoRef.current.removeEventListener("ended", handleEnded)
+      currentVideoRef.removeEventListener("ended", handleEnded)
     }
-  }, [])
+  }, [stopPlaying])
+
+  useEffect(() => {
+    setIsPlaying(false)
+  }, [src])
 
   return (
     <VideoWrapper onClick={handleVideoClick}>
-      <Video ref={videoRef} src={src} />
+      <Video ref={videoRef} src={src} playsInline />
       {/* @ts-ignore */}
       <PlayButton isPlaying={isPlaying}>
         <PlayIcon />

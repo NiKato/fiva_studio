@@ -151,7 +151,9 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
               <Benefits />
               {renderHeading(1)}
             </Box>
-            <Box id="anchor"><Carousel /></Box>
+            <Box id="anchor">
+              <Carousel />
+            </Box>
             {renderHeading(2)}
             <BasicStatistics />
             {renderHeading(3)}

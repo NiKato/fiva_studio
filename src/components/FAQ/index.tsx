@@ -29,6 +29,7 @@ const FAQ = ({ props }: FAQProps) => {
         filter: "blur(30px)",
         zIndex: -1,
         opacity: 1,
+        overflow: "hidden",
       }}
     >
       <Accordion
