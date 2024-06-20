@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"
 import {
   Button,
   Popover,
@@ -6,29 +6,29 @@ import {
   PopoverTrigger,
   Stack,
   useDisclosure,
-} from "@chakra-ui/react";
-import { PopoverIcon } from "./PopoverIcon";
-import { useTranslation } from "react-i18next";
+} from "@chakra-ui/react"
+import { PopoverIcon } from "./PopoverIcon"
+import { useTranslation } from "react-i18next"
 
 export const DocumentPopover = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const { t } = useTranslation();
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { t } = useTranslation()
 
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
-        setScrolled(true);
+        setScrolled(true)
       } else {
-        setScrolled(false);
+        setScrolled(false)
       }
-    };
-    window.addEventListener("scroll", handleScroll);
+    }
+    window.addEventListener("scroll", handleScroll)
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   return (
     <Popover
@@ -52,9 +52,7 @@ export const DocumentPopover = () => {
         p="2"
         maxW="fit-content"
         backdropFilter={scrolled ? "blur(10px)" : "none"}
-        backgroundColor={
-          scrolled ? "rgba(255, 255, 255, 0.1)" : "transparent"
-        }
+        backgroundColor={"rgba(0, 0, 0, 0.5)"}
         boxShadow={
           scrolled
             ? "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
@@ -65,10 +63,10 @@ export const DocumentPopover = () => {
           {[
             { label: "Short Form", href: "/short-form" },
             { label: "Educational Videos", href: "/educational-videos" },
-            "2D Animation",
-            "Meme videos",
-            "Content for Children",
-          ].map((item) =>
+            { label: "2d Animation", href: "/2d-animations-meme-videos" },
+            { label: "Meme Videos", href: "/2d-animations-meme-videos" },
+            { label: "Content for Children", href: "/content-for-children" },
+          ].map(item =>
             typeof item === "string" ? (
               <Button
                 key={item}
@@ -79,11 +77,7 @@ export const DocumentPopover = () => {
                 {item}
               </Button>
             ) : (
-              <a
-                key={item.label}
-                href={item.href}
-                rel="noopener noreferrer"
-              >
+              <a key={item.label} href={item.href} rel="noopener noreferrer">
                 <Button
                   variant="tertiary"
                   justifyContent="start"
@@ -97,5 +91,5 @@ export const DocumentPopover = () => {
         </Stack>
       </PopoverContent>
     </Popover>
-  );
-};
+  )
+}

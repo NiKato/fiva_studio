@@ -21,9 +21,9 @@ export const HEADINGS_SORT_ITEMS: HeadingsSortItem[] = [
   },
   {
     id: 3,
-    spanTitle: "MOST REQUESTED",
-    title: "2D Animations",
-    text: "Level up your 2D animation videos with our expert techniques to captivate your audience and leave a lasting impression that resonates.",
+    spanTitle: "AND MORE",
+    title: "Mixed videos",
+    text: "Discover a variety of videos, including wedding highlights, promotional clips, cartoons, and educational content",
   },
   {
     id: 4,

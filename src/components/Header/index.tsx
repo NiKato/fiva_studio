@@ -78,7 +78,7 @@ export const Header = () => {
         <Flex>
           <HStack spacing="3">
             <MobileDrawer links={links} />
-            <Image width="72px" h="36px" src={logo} />
+            <Link href="/"><Image width="72px" h="36px" src={logo} /></Link>
           </HStack>
           <ButtonGroup
             size="sm"
