@@ -43,12 +43,11 @@ export const Header = () => {
     }
   }, [])
 
-  // Define your links array
   const links = [
     { href: "/", label: t("header.home") },
     { href: "/about-us", label: t("header.aboutUs") },
     { href: "/#faq", label: t("header.questions") },
-    // Add other links as needed
+    { href: "/contact-us", label: "Cntact Us"},
   ]
 
   return (
@@ -102,15 +101,7 @@ export const Header = () => {
               </Link>
             ))}
             <DocumentPopover />
-            <Button
-              bg={"none"}
-              p={2}
-              fontSize={"md"}
-              fontWeight={600}
-              _hover={{ textDecoration: "underline", color: "#3377FF" }}
-            >
-              {t("header.contactUs")}
-            </Button>
+          
           </ButtonGroup>
         </Flex>
         <HStack spacing={{ base: "2", md: "4" }}>
@@ -132,6 +123,7 @@ export const Header = () => {
               className="color-mode-button"
             />
             {/* <LanguageSwitcher /> */}
+            <Link href="/contact-us">
             <Button
               as={"a"}
               display={{ base: "none", md: "inline-flex" }}
@@ -139,13 +131,13 @@ export const Header = () => {
               fontWeight={600}
               color={"white"}
               bg={"#477EEB"}
-              href={"#"}
               _hover={{
                 bg: "#33333",
               }}
             >
               {t("header.contactUs")}
             </Button>
+            </Link>
           </ButtonGroup>
         </HStack>
       </Flex>

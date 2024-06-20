@@ -1,44 +1,25 @@
-import React from "react"
-import { useRef, useState } from "react"
-import { PageHero } from "../components/PageHero"
-import Layout from "../components/Layout"
-import {
-  VStack,
-  Heading,
-  Text,
-  Container,
-  SimpleGrid,
-  Box,
-} from "@chakra-ui/react"
-import VideoPlayer from "../components/Video"
-import Cta from "../components/Cta"
-import Carousel from "../components/Carousel"
+// src/pages/short-form.tsx
+import React from "react";
+import PageTemplate from "../components/templates/PageTemplate";
+import { Text, SimpleGrid, Box } from "@chakra-ui/react";
+import VideoPlayer from "../components/Video";
+import Carousel from "../components/Carousel";
 
 const ShortForm = () => {
-  const videos = [
-    "https://fivastudio.b-cdn.net/construction-scaffolding.mp4",
-    "https://fivastudio.b-cdn.net/instagram-vertical.mp4",
-  ]
 
   return (
-    <Layout>
-      <PageHero
-        title="Short Form"
-        subtitle="You own a marketing agency, or you're SMM or a content creator that needs someone to process their content and deliver tailored short form videos for yourself or your clients?"
-      />
-      <Container
-        maxW="container.xl"
-        p={{ base: "4", md: "12" }}
-        mb={{ base: 10, md: 0 }}
-      >
-        <VStack py="40px" spacing={10} alignItems="center" textAlign="center">
+    <PageTemplate
+      title="Short Form"
+      subtitle="You own a marketing agency, or you're SMM or a content creator that needs someone to process their content and deliver tailored short form videos for yourself or your clients?"
+      content={
+        <>
           <Text id="text" as="p" fontSize="lg">
             We're here to process your videos for you and deliver them under
             agreed deadlines.
           </Text>
           <Text as="p" fontSize="lg">
             We're a team of experienced editors who also have experience in
-            managing social media accounts, digital marketing and content
+            managing social media accounts, digital marketing, and content
             creation, so we understand your needs and the importance of having a
             reliable editor who understands the vision behind your or your
             client's project.
@@ -55,21 +36,11 @@ const ShortForm = () => {
               </Box>
             ))}
           </SimpleGrid> */}
-        </VStack>
-      </Container>
-      <Carousel />
-      <Container
-        maxW="container.xl"
-        p={{ base: "4", md: "12" }}
-        mb={{ base: 10, md: 0 }}
-      >
-        <VStack py="40px" spacing={10} alignItems="center" textAlign="center">
-          <Heading as="h2">What is the process?</Heading>
-          <Cta />
-        </VStack>
-      </Container>
-    </Layout>
-  )
-}
+        </>
+      }
+      carousel={<Carousel />}
+    />
+  );
+};
 
-export default ShortForm
+export default ShortForm;

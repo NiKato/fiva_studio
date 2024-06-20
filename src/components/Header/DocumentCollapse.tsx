@@ -1,33 +1,50 @@
 import React from "react"
-import { Button, Collapse, Stack, Text, useDisclosure } from '@chakra-ui/react'
-import { PopoverIcon } from './PopoverIcon'
+import { Button, Collapse, Stack, Text, useDisclosure } from "@chakra-ui/react"
+import { PopoverIcon } from "./PopoverIcon"
 
 export const DocumentCollapse = () => {
   const { isOpen, onToggle } = useDisclosure()
   return (
     <>
-      <Button justifyContent="space-between" variant="tertiary" size="lg" onClick={onToggle}>
+      <Button
+        justifyContent="space-between"
+        variant="tertiary"
+        size="lg"
+        onClick={onToggle}
+      >
         <Text as="span">Services</Text>
         <PopoverIcon isOpen={isOpen} />
       </Button>
       <Collapse in={isOpen} animateOpacity>
         <Stack spacing="1" alignItems="stretch" ps="4">
-        {[
-            "Short Form",
-            "Educational Videos",
-            "2D Animation",
-            "Meme videos",
-            "Content for Children",
-          ].map(item => (
-            <Button
-              key={item}
-              variant="tertiary"
-              justifyContent="start"
-              _hover={{ textDecoration: "underline", color: "#3377FF" }}
-            >
-              {item}
-            </Button>
-          ))}
+          {[
+            { label: "Short Form", href: "/short-form" },
+            { label: "Educational Videos", href: "/educational-videos" },
+            { label: "2d Animation", href: "/2d-animations-meme-videos" },
+            { label: "Meme Videos", href: "/2d-animations-meme-videos" },
+            { label: "Content for Children", href: "/content-for-children" },
+          ].map(item =>
+            typeof item === "string" ? (
+              <Button
+                key={item}
+                variant="tertiary"
+                justifyContent="start"
+                _hover={{ textDecoration: "underline", color: "#3377FF" }}
+              >
+                {item}
+              </Button>
+            ) : (
+              <a key={item.label} href={item.href} rel="noopener noreferrer">
+                <Button
+                  variant="tertiary"
+                  justifyContent="start"
+                  _hover={{ textDecoration: "underline", color: "#3377FF" }}
+                >
+                  {item.label}
+                </Button>
+              </a>
+            )
+          )}
         </Stack>
       </Collapse>
     </>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {
   Container,
   Accordion,
@@ -6,7 +6,7 @@ import {
   AccordionIcon,
   AccordionItem,
   AccordionPanel,
-} from "@chakra-ui/react";
+} from "@chakra-ui/react"
 import bgImg from "../../images/fiva.svg"
 
 const FAQ = ({ props }: FAQProps) => {
@@ -23,7 +23,7 @@ const FAQ = ({ props }: FAQProps) => {
         left: 0,
         width: "100%",
         height: "100%",
-        backgroundImage: `url(${bgImg})`,  
+        backgroundImage: `url(${bgImg})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         filter: "blur(30px)",
@@ -32,12 +32,7 @@ const FAQ = ({ props }: FAQProps) => {
         overflow: "hidden",
       }}
     >
-      <Accordion
-        w="100%"
-        defaultIndex={[0]}
-        allowToggle
-        position="relative"
-      >
+      <Accordion w="100%" defaultIndex={[0]} allowToggle position="relative">
         {props.questionsrepeater?.map((item, index) => (
           <AccordionItem w="100%" key={index}>
             <AccordionButton
@@ -48,18 +43,15 @@ const FAQ = ({ props }: FAQProps) => {
               {item.question}
               <AccordionIcon width="1.88rem" height="1.88rem" color="#3377FF" />
             </AccordionButton>
-            <AccordionPanel
-              mx={2}
-              fontSize="sm"
-              fontWeight={400}
-              dangerouslySetInnerHTML={{ __html: item.answer }}
-            />
+            <AccordionPanel mx={2} fontSize="sm" fontWeight={400}>
+              {item.answer}
+            </AccordionPanel>
           </AccordionItem>
         ))}
       </Accordion>
     </Container>
-  );
-};
+  )
+}
 
 type FAQProps = {
   props: {
@@ -70,4 +62,4 @@ type FAQProps = {
   }
 }
 
-export default FAQ;
+export default FAQ
