@@ -100,7 +100,6 @@ export default function ContactForm() {
             <Text fontSize="lg" mb={2}>
               info@fivastudio.com
             </Text>
-            <Text fontSize="lg">9AM - 5PM EST</Text>
             <Text fontSize="xl" mt={6}>
               Feel free to contact us!
             </Text>
