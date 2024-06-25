@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useForm, ValidationError } from "@formspree/react"
-import { PhoneIcon } from "@chakra-ui/icons"
+import { PhoneIcon, EmailIcon, InfoOutlineIcon } from "@chakra-ui/icons"
 
 // Chakra UI components
 import {
@@ -18,7 +18,11 @@ import {
   Flex,
   Text,
   Container,
+  Image,
 } from "@chakra-ui/react"
+
+// Import the Bg component here
+import { Bg } from "../Bg"
 
 export default function ContactForm() {
   var toast = useToast()
@@ -56,28 +60,37 @@ export default function ContactForm() {
   useEffect(() => {
     console.log(formErrors)
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      // useForm("xwpeekpd")
+      // Handle form submission here if needed
     }
   }, [formErrors])
 
   const validate = (values: any) => {
-    type errorType = {
-      fullName?: string
-      message?: string
-    }
+    // Define your validation rules here if needed
   }
 
   return (
     <>
-      <Container maxW="7xl" py={20}>
+      {/* Bg component as background */}
+      <Box pos="absolute" top="0" left="0" zIndex="-1" width="100%" height="100%" filter={"blur(1px)"}>
+        <Bg />
+      </Box>
+
+      <Container maxW="7xl" py={20} pos="relative">
         <Flex
           direction={{ base: "column", md: "row" }}
           p={8}
           gap={8}
           alignItems="center"
           justifyContent="center"
+          position="relative"
         >
-          <Box flex="1" p={4} bg="gray.100" borderRadius="md">
+          <Box
+            flex="1"
+            p={4}
+            borderRadius="lg"
+            bg="rgba(255, 255, 255, 0.2)"
+            boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+          >
             <Heading as="h2" size="lg" mb={4}>
               Need Anything?
             </Heading>
@@ -86,9 +99,6 @@ export default function ContactForm() {
             </Text>
             <Text fontSize="lg" mb={2}>
               info@fivastudio.com
-            </Text>
-            <Text fontSize="xl" mb={4}>
-              Monday to Friday
             </Text>
             <Text fontSize="lg">9AM - 5PM EST</Text>
             <Text fontSize="xl" mt={6}>
@@ -106,16 +116,27 @@ export default function ContactForm() {
 
                 <FormControl isRequired>
                   <FormLabel>Full Name</FormLabel>
-                  <Input
-                    variant="outline"
-                    size="lg"
-                    placeholder="John Doe"
-                    id="fullName"
-                    name="fullName"
-                    type="text"
-                    defaultValue={formValues.fullName}
-                    onChange={handleChange("fullName")}
-                  />
+                  <InputGroup
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                  >
+                    <InputLeftElement
+                      pt={2}
+                      pointerEvents="none"
+                      children={<InfoOutlineIcon />}
+                    />
+                    <Input
+                      variant="outline"
+                      size="lg"
+                      placeholder="Your name"
+                      id="fullName"
+                      name="fullName"
+                      type="text"
+                      defaultValue={formValues.fullName}
+                      onChange={handleChange("fullName")}
+                    />
+                  </InputGroup>
                   <ValidationError
                     prefix="FullName"
                     field="fullName"
@@ -123,19 +144,20 @@ export default function ContactForm() {
                   />
                 </FormControl>
 
-                <FormControl isRequired>
+                <FormControl>
                   <FormLabel>Phone Number</FormLabel>
                   <InputGroup>
                     <InputLeftElement
+                      pt={2}
                       pointerEvents="none"
-                      children={<PhoneIcon color="gray.300" />}
+                      children={<PhoneIcon />}
                     />
                     <Input
                       id="phone"
                       name="phone"
                       variant="outline"
                       size="lg"
-                      placeholder="00 38 69 123 456 789"
+                      placeholder="+123 456 789"
                       type="number"
                       defaultValue={formValues.phone}
                       onChange={handleChange("phone")}
@@ -150,16 +172,23 @@ export default function ContactForm() {
 
                 <FormControl isRequired>
                   <FormLabel>Email</FormLabel>
-                  <Input
-                    id="email"
-                    type="email"
-                    name="email"
-                    variant="outline"
-                    size="lg"
-                    placeholder="johndoe@email.com"
-                    defaultValue={formValues.email}
-                    onChange={handleChange("email")}
-                  />
+                  <InputGroup>
+                    <InputLeftElement
+                      pt={2}
+                      pointerEvents="none"
+                      children={<EmailIcon />}
+                    />
+                    <Input
+                      id="email"
+                      type="email"
+                      name="email"
+                      variant="outline"
+                      size="lg"
+                      placeholder="your@email.com"
+                      defaultValue={formValues.email}
+                      onChange={handleChange("email")}
+                    />
+                  </InputGroup>
                   <ValidationError
                     prefix="Email"
                     field="email"
@@ -174,7 +203,7 @@ export default function ContactForm() {
                     name="message"
                     variant="outline"
                     size="lg"
-                    placeholder="Text Area"
+                    placeholder="Write to us"
                     defaultValue={formValues.message}
                     onChange={handleChange("message")}
                   />
