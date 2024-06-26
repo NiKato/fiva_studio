@@ -41,7 +41,7 @@ const FAQ = ({ props }: FAQProps) => {
               _hover={{ background: "transparent" }}
             >
               {item.question}
-              <AccordionIcon width="1.88rem" height="1.88rem" color="hsl(220, 100%, 60%)" />
+              <AccordionIcon width="1.88rem" height="1.88rem" color="#3377FF" />
             </AccordionButton>
             <AccordionPanel mx={2} fontSize="sm" fontWeight={400}>
               {item.answer}

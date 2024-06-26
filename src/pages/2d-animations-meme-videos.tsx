@@ -2,6 +2,8 @@
 import React from "react"
 import PageTemplate from "../components/templates/PageTemplate"
 import { Text } from "@chakra-ui/react"
+import { HeadProps } from "gatsby"
+import { SEO } from "../components/Seo"
 
 const Meme = () => {
   return (
@@ -31,3 +33,13 @@ const Meme = () => {
 }
 
 export default Meme
+
+
+export function Head(props: HeadProps) {
+  return (
+    <SEO
+      title="Fiva Studio | 2D animation"
+      description="Transform your brand with stunning 2D animation videos! Our expert team provides high-quality video editing services for content creators, crafting engaging stories and captivating visuals that drive audience engagement and brand awareness."
+    />
+  )
+}

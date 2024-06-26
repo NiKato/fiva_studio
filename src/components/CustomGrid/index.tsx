@@ -149,7 +149,7 @@ const CustomGrid = () => {
                 fontSize={{ base: "md", md: "xl" }}
                 fontWeight="bold"
               >
-                Cartoon video
+                Content for Children
               </Text>
             </Box>
           </Flex>

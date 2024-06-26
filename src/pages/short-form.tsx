@@ -4,6 +4,8 @@ import PageTemplate from "../components/templates/PageTemplate"
 import { Text, SimpleGrid, Box } from "@chakra-ui/react"
 import VideoPlayer from "../components/Video"
 import Carousel from "../components/Carousel"
+import { HeadProps } from "gatsby"
+import { SEO } from "../components/Seo"
 
 const ShortForm = () => {
   return (
@@ -38,3 +40,12 @@ const ShortForm = () => {
 }
 
 export default ShortForm
+
+export function Head(props: HeadProps) {
+  return (
+    <SEO
+      title="Fiva Studio | Short Form"
+      description="Transform your short-form content with our expert video editing services. From social media clips to YouTube videos, we'll elevate your brand's visual storytelling and engagement with our fast-paced, high-quality edits."
+    />
+  )
+}

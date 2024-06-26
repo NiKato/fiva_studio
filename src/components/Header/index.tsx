@@ -46,8 +46,8 @@ export const Header = () => {
   const links = [
     { href: "/", label: t("header.home") },
     { href: "/about-us", label: t("header.aboutUs") },
-    { href: "/#faq", label: t("header.questions") },
-    { href: "/contact-us", label: "Cntact Us"},
+    { href: "https://fiva-studio.vercel.app/#faq", label: t("header.questions") },
+    { href: "/contact-us", label: "Contact Us"},
   ]
 
   return (

@@ -159,6 +159,7 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
             {renderHeading(3)}
             <CustomGrid />
             <Box id="faq">{renderHeading(5)}</Box>
+            {/* @ts-ignore */}
             <FAQ props={faqData} />
             {/* {renderHeading(4)}
             <Testimonials /> */}

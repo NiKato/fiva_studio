@@ -21,6 +21,8 @@ import { StaticImage } from "gatsby-plugin-image"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { MdKeyboardArrowDown } from "react-icons/md"
 import bgImg from "../images/hero.webp"
+import { HeadProps } from "gatsby"
+import { SEO } from "../components/Seo"
 
 const About = () => (
   <>
@@ -174,3 +176,12 @@ const About = () => (
 )
 
 export default About
+
+export function Head(props: HeadProps) {
+  return (
+    <SEO
+      title="Fiva Studio | About"
+      description="team of experienced video editors"
+    />
+  )
+}
