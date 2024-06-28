@@ -10,7 +10,11 @@ const Meme = () => {
     <PageTemplate
       title="Meme Videos"
       subtitle="Boost your engagement on Social Media with memes, our editors will craft memes for your social media."
-      videoSrc="https://fivastudio.b-cdn.net/2D%20animation.mp4"
+      videoSources={[
+        "https://fivastudio.b-cdn.net/meme1.mp4",
+        "https://fivastudio.b-cdn.net/meme2.mp4",
+        "https://fivastudio.b-cdn.net/meme3.mp4",
+      ]}
       content={
         <>
           <Text id="text" as="p" fontSize="lg">

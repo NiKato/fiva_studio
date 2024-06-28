@@ -15,7 +15,7 @@ export const PageHero = ({ title, subtitle }: any) => {
       backgroundRepeat="no-repeat"
       w="100%"
       py={{ base: 10, md: 9 }}
-      minH={{ base: "auto", md: "80vh" }}
+      minH={{ base: "auto", md: "60vh" }}
       display="flex"
       alignItems="center"
       justifyContent="center"

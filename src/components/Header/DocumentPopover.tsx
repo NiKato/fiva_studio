@@ -66,6 +66,8 @@ export const DocumentPopover = () => {
             { label: "2d Animation", href: "/2d-animations" },
             { label: "Meme Videos", href: "/meme-videos" },
             { label: "Content for Children", href: "/content-for-children" },
+            { label: "Podcasts", href: "/podcasts" },
+            { label: "Ecology Videos", href: "/ecology-videos" },
           ].map(item =>
             typeof item === "string" ? (
               <Button

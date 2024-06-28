@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react"
+import ReactPlayer from "react-player"
 import { PageHero } from "../PageHero"
 import Layout from "../Layout"
 import { VStack, Heading, Container, Box, Stack } from "@chakra-ui/react"
@@ -47,56 +48,44 @@ interface PageTemplateProps {
   title: string
   subtitle: string
   content: React.ReactNode
-  videoSrc?: any
-  videoSrc2?: any
+  videoSources?: string[]
+  podcastUrl?: string
   carousel?: React.ReactNode
-  isAnimation?: boolean
+  isPodcast?: boolean
 }
 
 const PageTemplate: React.FC<PageTemplateProps> = ({
   title,
   subtitle,
   content,
-  videoSrc,
-  videoSrc2,
+  videoSources = [],
+  podcastUrl,
   carousel,
-  isAnimation = false,
+  isPodcast = false,
 }) => {
-  const videoRef1 = useRef(null)
-  const videoRef2 = useRef(null)
-  const [isPlaying1, setIsPlaying1] = useState(false)
-  const [isPlaying2, setIsPlaying2] = useState(false)
+  const videoRefs = useRef<HTMLVideoElement[]>([])
+  const [isPlaying, setIsPlaying] = useState<boolean[]>(
+    new Array(videoSources.length).fill(false)
+  )
 
-  const handleVideoClick1 = () => {
-    if (isPlaying1) {
-      // @ts-ignore
-      videoRef1.current.pause()
+  const handleVideoClick = (index: number) => {
+    const updatedIsPlaying = [...isPlaying]
+    if (isPlaying[index]) {
+      videoRefs.current[index].pause()
     } else {
-      // @ts-ignore
-      videoRef1.current.play()
+      videoRefs.current[index].play()
     }
-    setIsPlaying1(!isPlaying1)
-    if (isPlaying2) {
-      // @ts-ignore
-      videoRef2.current.pause()
-      setIsPlaying2(false)
-    }
-  }
+    updatedIsPlaying[index] = !isPlaying[index]
+    setIsPlaying(updatedIsPlaying)
 
-  const handleVideoClick2 = () => {
-    if (isPlaying2) {
-      // @ts-ignore
-      videoRef2.current.pause()
-    } else {
-      // @ts-ignore
-      videoRef2.current.play()
-    }
-    setIsPlaying2(!isPlaying2)
-    if (isPlaying1) {
-      // @ts-ignore
-      videoRef1.current.pause()
-      setIsPlaying1(false)
-    }
+    // Pause other videos
+    updatedIsPlaying.forEach((playing, i) => {
+      if (i !== index && playing) {
+        videoRefs.current[i].pause()
+        updatedIsPlaying[i] = false
+      }
+    })
+    setIsPlaying(updatedIsPlaying)
   }
 
   return (
@@ -109,37 +98,43 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
       >
         <VStack py="40px" spacing={10} alignItems="center" textAlign="center">
           {content}
-          <Stack flexFlow={{ base: " column", md: "row" }} gap={5}>
-            {videoSrc && (
+          <Stack flexFlow={{ base: "column", md: "row" }} gap={5}>
+            {videoSources.map((videoSrc, index) => (
               <Box
-                w={{ base: "auto", md: "600px" }}
+                key={index}
+                w={{ base: "auto", md: "auto" }}
                 maxW="600px"
                 mx={{ base: 8, md: "auto" }}
                 boxShadow="4px 4px 8px rgba(0, 0, 0, 0.9)"
               >
-                <VideoWrapper onClick={handleVideoClick1}>
-                  <Video ref={videoRef1} src={videoSrc} playsInline />
+                <VideoWrapper onClick={() => handleVideoClick(index)}>
+                  <Video
+                  // @ts-ignore
+                    ref={(el) => (videoRefs.current[index] = el)}
+                    src={videoSrc}
+                    playsInline
+                  />
                   {/* @ts-ignore */}
-                  <PlayButton isPlaying={isPlaying1}>
+                  <PlayButton isPlaying={isPlaying[index]}>
                     <PlayIcon />
                   </PlayButton>
                 </VideoWrapper>
               </Box>
-            )}
-            {videoSrc2 && isAnimation && (
+            ))}
+            {isPodcast && podcastUrl && (
               <Box
                 w={{ base: "auto", md: "600px" }}
                 maxW="600px"
                 mx={{ base: 8, md: "auto" }}
                 boxShadow="4px 4px 8px rgba(0, 0, 0, 0.9)"
+                h="400px"
               >
-                <VideoWrapper onClick={handleVideoClick2}>
-                  <Video ref={videoRef2} src={videoSrc2} playsInline />
-                  {/* @ts-ignore */}
-                  <PlayButton isPlaying={isPlaying2}>
-                    <PlayIcon />
-                  </PlayButton>
-                </VideoWrapper>
+                <ReactPlayer
+                  url={podcastUrl}
+                  width="100%"
+                  height="100%"
+                  controls
+                />
               </Box>
             )}
           </Stack>

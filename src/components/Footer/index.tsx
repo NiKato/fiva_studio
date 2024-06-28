@@ -134,6 +134,12 @@ export default function Footer() {
             <Text fontWeight={400}>
               <Link href={"/content-for-children"}>Content for Children</Link>
             </Text>
+            <Text fontWeight={400}>
+              <Link href={"/podcasts"}>Podcasts</Link>
+            </Text>
+            <Text fontWeight={400}>
+              <Link href={"/ecology-videos"}>Ecology Videos</Link>
+            </Text>
           </Stack>
           <Stack align={"flex-start"} gap={2}>
             <ListHeader>Contact Us</ListHeader>

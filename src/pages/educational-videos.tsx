@@ -10,7 +10,7 @@ const EducationalVideos = () => {
     <PageTemplate
       title="Educational Videos"
       subtitle="You need a video editor for your educational niche video content like courses, YouTube channel, or Instagram, Facebook, and TikTok? Our video editors are here to bring your vision to life and give your video the desired effect!"
-      videoSrc="https://fivastudio.b-cdn.net/online-german-language-lessons.mp4"
+      videoSources={["https://fivastudio.b-cdn.net/online-german-language-lessons.mp4"]}
       content={
         <>
           <Text id="text" as="p" fontSize="lg">

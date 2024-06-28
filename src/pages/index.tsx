@@ -2,12 +2,9 @@ import React, { useEffect, useState } from "react"
 import "./global.css"
 import {
   Box,
-  Button,
   ColorModeScript,
   useColorMode,
-  CircularProgress,
   Flex,
-  Spinner,
 } from "@chakra-ui/react"
 import { useTranslation } from "react-i18next"
 import Hero from "../components/Hero"
@@ -21,9 +18,7 @@ import BasicStatistics from "../components/LongForm"
 import CustomGrid from "../components/CustomGrid"
 import FAQ from "../components/FAQ"
 import { faqData } from "../constants/faqData"
-import Testimonials from "../components/organisms/Testimonials"
-import { HEADINGS_SORT_ITEMS, getHeadingById } from "../constants/headings"
-import { ping } from "ldrs"
+import { getHeadingById } from "../constants/headings"
 import styled from "styled-components"
 
 // import Geolocation from "../components/LocationBased"
@@ -154,10 +149,11 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
             <Box id="anchor">
               <Carousel />
             </Box>
+            <Box mb={10}>
             {renderHeading(2)}
-            <BasicStatistics />
-            {renderHeading(3)}
             <CustomGrid />
+            </Box>
+            <BasicStatistics />
             <Box id="faq">{renderHeading(5)}</Box>
             {/* @ts-ignore */}
             <FAQ props={faqData} />

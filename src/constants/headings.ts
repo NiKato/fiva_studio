@@ -17,7 +17,7 @@ export const HEADINGS_SORT_ITEMS: HeadingsSortItem[] = [
     id: 2,
     spanTitle: "TOP RATED",
     title: "Long Form Content",
-    text: "Transform your video content with our expert tips to captivate, engage, and retain your audience from start to finish.",
+    text: "Discover a variety of videos, including corporate videos, 2D animations, food and hospitality videos, cartoons, educational content and wedding highlights. Transform your video content with our expert tips to captivate, engage, and retain your audience from start to finish.",
   },
   {
     id: 3,

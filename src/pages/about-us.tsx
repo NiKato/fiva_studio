@@ -27,7 +27,7 @@ import { SEO } from "../components/Seo"
 const About = () => (
   <>
     <Layout>
-      <Box position="relative" height={{ base: "100vh", md: "80vh" }}>
+      <Box position="relative" height={{ base: "100vh", md: "60vh" }}>
         <StaticImage
           alt="Placeholder Image"
           src="../images/about.webp"
