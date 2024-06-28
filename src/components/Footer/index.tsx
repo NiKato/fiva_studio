@@ -105,16 +105,16 @@ export default function Footer() {
           <Stack align={"flex-start"}>
             <ListHeader>Fiva Studio</ListHeader>
             <Text fontWeight={400}>
-              <Link href={"#"}>About us</Link>
+              <Link href={"/about-us"}>About us</Link>
             </Text>
             <Text fontWeight={400}>
-              <Link href={"#"}>Contact us</Link>
+              <Link href={"/contact-us"}>Contact us</Link>
             </Text>
             <Text fontWeight={400}>
-              <Link href={"#"}>Pricing</Link>
+              <Link href={"/contact-us"}>Pricing</Link>
             </Text>
             <Text fontWeight={400}>
-              <Link href={"#"}>Questions</Link>
+              <Link href={"/#faq"}>Questions</Link>
             </Text>
           </Stack>
           <Stack align={"flex-start"}>
@@ -126,13 +126,13 @@ export default function Footer() {
               <Link href={"/educational-videos"}>Educational Videos</Link>
             </Text>
             <Text fontWeight={400}>
-              <Link href={"#"}>2D Animations</Link>
+              <Link href={"/2d-animations"}>2D Animations</Link>
             </Text>
             <Text fontWeight={400}>
-              <Link href={"#"}>Meme Videos</Link>
+              <Link href={"/meme-videos"}>Meme Videos</Link>
             </Text>
             <Text fontWeight={400}>
-              <Link href={"#"}>Content for Children</Link>
+              <Link href={"/content-for-children"}>Content for Children</Link>
             </Text>
           </Stack>
           <Stack align={"flex-start"} gap={2}>

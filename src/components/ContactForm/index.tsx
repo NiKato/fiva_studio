@@ -19,6 +19,8 @@ import {
   Text,
   Container,
   Image,
+  Link,
+  Divider,
 } from "@chakra-ui/react"
 
 // Import the Bg component here
@@ -71,7 +73,15 @@ export default function ContactForm() {
   return (
     <>
       {/* Bg component as background */}
-      <Box pos="absolute" top="0" left="0" zIndex="-1" width="100%" height="100%" filter={"blur(1px)"}>
+      <Box
+        pos="absolute"
+        top="0"
+        left="0"
+        zIndex="-1"
+        width="100%"
+        height="100%"
+        filter={"blur(1px)"}
+      >
         <Bg />
       </Box>
 
@@ -97,9 +107,26 @@ export default function ContactForm() {
             <Text fontSize="xl" mb={4}>
               Email us:
             </Text>
-            <Text fontSize="lg" mb={2}>
+            <Link
+              fontWeight={600}
+              href="mailto: info@fivastudio.com"
+              fontSize="lg"
+              mb={2}
+            >
               info@fivastudio.com
+            </Link>
+            <Divider my={4} bg="#3377FF" />
+            <Text fontSize="xl" mb={4}>
+              or Text us at:
             </Text>
+            <Link
+              fontWeight={600}
+              fontSize="lg"
+              mb={2}
+              href="tel: +381621537032"
+            >
+              +38162 153 70 32
+            </Link>
             <Text fontSize="xl" mt={6}>
               Feel free to contact us!
             </Text>

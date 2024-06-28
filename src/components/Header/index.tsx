@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from "react"
 import {
-  Avatar,
   Box,
   Button,
   ButtonGroup,
-  Container,
   Flex,
   HStack,
-  Icon,
   IconButton,
   Image,
-  Input,
-  InputGroup,
-  InputLeftElement,
   Link,
   useColorMode,
 } from "@chakra-ui/react"
@@ -22,7 +16,6 @@ import { MobileDrawer } from "./MobileDrawer"
 import LanguageSwitcher from "../LanguageSwitcher"
 import { MoonIcon, SunIcon } from "@chakra-ui/icons"
 import { useTranslation } from "react-i18next"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -45,9 +38,10 @@ export const Header = () => {
 
   const links = [
     { href: "/", label: t("header.home") },
+    { href: "#", label: "", component: <DocumentPopover /> },
     { href: "/about-us", label: t("header.aboutUs") },
     { href: "https://fiva-studio.vercel.app/#faq", label: t("header.questions") },
-    { href: "/contact-us", label: "Contact Us"},
+    { href: "/contact-us", label: t("header.contactUs") },
   ]
 
   return (
@@ -88,20 +82,26 @@ export const Header = () => {
             display={{ base: "none", lg: "flex" }}
           >
             {links.map((link, index) => (
-              <Link key={index} href={link.href}>
-                <Button
-                  bg={"none"}
-                  p={2}
-                  fontSize={"md"}
-                  fontWeight={600}
-                  _hover={{ textDecoration: "underline", color: "#3377FF" }}
-                >
-                  {link.label}
-                </Button>
-              </Link>
+              <React.Fragment key={index}>
+                {link.component ? (
+                  <Box ml={4}>
+                    {link.component}
+                  </Box>
+                ) : (
+                  <Link href={link.href}>
+                    <Button
+                      bg={"none"}
+                      p={2}
+                      fontSize={"md"}
+                      fontWeight={600}
+                      _hover={{ textDecoration: "underline", color: "#3377FF" }}
+                    >
+                      {link.label}
+                    </Button>
+                  </Link>
+                )}
+              </React.Fragment>
             ))}
-            <DocumentPopover />
-          
           </ButtonGroup>
         </Flex>
         <HStack spacing={{ base: "2", md: "4" }}>
@@ -122,21 +122,21 @@ export const Header = () => {
               aria-label={"Toggle Dark/Light Mode"}
               className="color-mode-button"
             />
-            {/* <LanguageSwitcher /> */}
+            <LanguageSwitcher />
             <Link href="/contact-us">
-            <Button
-              as={"a"}
-              display={{ base: "none", md: "inline-flex" }}
-              fontSize={"md"}
-              fontWeight={600}
-              color={"white"}
-              bg={"#477EEB"}
-              _hover={{
-                bg: "#33333",
-              }}
-            >
-              {t("header.contactUs")}
-            </Button>
+              <Button
+                as={"a"}
+                display={{ base: "none", md: "inline-flex" }}
+                fontSize={"md"}
+                fontWeight={600}
+                color={"white"}
+                bg={"#477EEB"}
+                _hover={{
+                  bg: "#33333",
+                }}
+              >
+                {t("header.contactUs")}
+              </Button>
             </Link>
           </ButtonGroup>
         </HStack>

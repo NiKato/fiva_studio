@@ -27,12 +27,21 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Poppins\:400,700`
+        ],
+        display: 'swap',
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {
-        offset: -100
+        offset: -200
       }
     },
     {

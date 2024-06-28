@@ -42,11 +42,14 @@ export const PageHero = ({ title, subtitle }: any) => {
           textAlign="center"
           backgroundColor="rgba(0, 0, 0, 0.5)"
           borderRadius="24px"
-          p={4}
+          px={10}
+          py={4}
         >
           <Stack spacing="3" pos="relative">
             <Heading
-              size={{ base: "xl", md: "3xl" }}
+              as="h1"
+              fontFamily={"PoppinsBlack"}
+              size={{ base: "xl", md: "2xl" }}
               fontWeight="semibold"
               color="white"
               p={2}
@@ -56,6 +59,7 @@ export const PageHero = ({ title, subtitle }: any) => {
             </Heading>
           </Stack>
           <Text
+            fontFamily={"PoppinsLight"}
             fontSize={{ base: "md", md: "xl" }}
             maxW="3xl"
             color="white"
@@ -67,9 +71,12 @@ export const PageHero = ({ title, subtitle }: any) => {
           <AnchorLink to="#text">
             <Button
               size={{ base: "md", md: "lg" }}
-              color="#BB7954"
+              fontFamily="PoppinsLight"
+              color="#fff"
               variant="ghost"
               rightIcon={<MdKeyboardArrowDown />}
+              border="1px solid #fff"
+              borderRadius="24px"
             >
               Find Out More
             </Button>

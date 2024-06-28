@@ -1,23 +1,31 @@
-import React from "react"
-import { Box, Container, Flex, HStack, Text } from "@chakra-ui/react"
-import VideoBg from "../Video/VideoBg"
+import React from "react";
+import { Box, Container, Flex, HStack, Text } from "@chakra-ui/react";
+import VideoBg from "../Video/VideoBg";
+import placeholder from "../../images/fiva.svg"
 
-// Define your video URLs
-const videoUrls = {
-  video1: "https://fivastudio.b-cdn.net/2D%20animation.mp4",
-  video2: "https://fivastudio.b-cdn.net/wedding-video.mp4",
-  video3: "https://fivastudio.b-cdn.net/hotel-pool-bar.mp4",
-  video4: "https://fivastudio.b-cdn.net/Baby%20video.mp4",
-}
-const textStyles = {
-  pos: "absolute",
-  bg: "rgba(0, 0, 0, 0.5)",
-  p: 4,
-  mb: 2,
-  borderRadius: "2xl",
-  fontSize: { base: "md", md: "xl" },
-  fontWeight: "bold",
-}
+// Define your video URLs and placeholders
+const videoData = [
+  {
+    src: "https://fivastudio.b-cdn.net/2D%20animation.mp4",
+    placeholder: placeholder,
+    label: "2D animation / Meme video"
+  },
+  {
+    src: "https://fivastudio.b-cdn.net/wedding-video.mp4",
+    placeholder: placeholder,
+    label: "Wedding video"
+  },
+  {
+    src: "https://fivastudio.b-cdn.net/hotel-pool-bar.mp4",
+    placeholder: placeholder,
+    label: "Promo video"
+  },
+  {
+    src: "https://fivastudio.b-cdn.net/Baby%20video.mp4",
+    placeholder: placeholder,
+    label: "Content for Children"
+  },
+];
 
 const CustomGrid = () => {
   return (
@@ -51,7 +59,7 @@ const CustomGrid = () => {
             position="relative"
             overflow="hidden"
           >
-            <VideoBg src={videoUrls.video1} />
+            <VideoBg src={videoData[0].src} placeholder={videoData[0].placeholder} />
             <Text
               pos="absolute"
               bg="rgba(0, 0, 0, 0.5)"
@@ -62,7 +70,7 @@ const CustomGrid = () => {
               fontSize={{ base: "md", md: "xl" }}
               fontWeight="bold"
             >
-              2D animation / Meme video
+              {videoData[0].label}
             </Text>
           </Box>
           <Flex
@@ -84,7 +92,7 @@ const CustomGrid = () => {
                 position="relative"
                 overflow="hidden"
               >
-                <VideoBg src={videoUrls.video2} />
+                <VideoBg src={videoData[1].src} placeholder={videoData[1].placeholder} />
                 <Text
                   pos="absolute"
                   bg="rgba(0, 0, 0, 0.5)"
@@ -95,7 +103,7 @@ const CustomGrid = () => {
                   fontSize={{ base: "md", md: "xl" }}
                   fontWeight="bold"
                 >
-                  Wedding video
+                  {videoData[1].label}
                 </Text>
               </Box>
               <Box
@@ -112,7 +120,7 @@ const CustomGrid = () => {
                 position="relative"
                 overflow="hidden"
               >
-                <VideoBg src={videoUrls.video3} />
+                <VideoBg src={videoData[2].src} placeholder={videoData[2].placeholder} />
                 <Text
                   pos="absolute"
                   bg="rgba(0, 0, 0, 0.5)"
@@ -123,7 +131,7 @@ const CustomGrid = () => {
                   fontSize={{ base: "md", md: "xl" }}
                   fontWeight="bold"
                 >
-                  Promo video
+                  {videoData[2].label}
                 </Text>
               </Box>
             </HStack>
@@ -138,7 +146,7 @@ const CustomGrid = () => {
               position="relative"
               overflow="hidden"
             >
-              <VideoBg src={videoUrls.video4} />
+              <VideoBg src={videoData[3].src} placeholder={videoData[3].placeholder} />
               <Text
                 pos="absolute"
                 bg="rgba(0, 0, 0, 0.5)"
@@ -149,7 +157,7 @@ const CustomGrid = () => {
                 fontSize={{ base: "md", md: "xl" }}
                 fontWeight="bold"
               >
-                Content for Children
+                {videoData[3].label}
               </Text>
             </Box>
           </Flex>
@@ -159,4 +167,4 @@ const CustomGrid = () => {
   )
 }
 
-export default CustomGrid
+export default CustomGrid;

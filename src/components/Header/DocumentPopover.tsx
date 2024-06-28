@@ -52,7 +52,7 @@ export const DocumentPopover = () => {
         p="2"
         maxW="fit-content"
         backdropFilter={scrolled ? "blur(10px)" : "none"}
-        backgroundColor={"rgba(0, 0, 0, 0.5)"}
+        backgroundColor={"rgba(0, 0, 0, 1)"}
         boxShadow={
           scrolled
             ? "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
@@ -63,8 +63,8 @@ export const DocumentPopover = () => {
           {[
             { label: "Short Form", href: "/short-form" },
             { label: "Educational Videos", href: "/educational-videos" },
-            { label: "2d Animation", href: "/2d-animations-meme-videos" },
-            { label: "Meme Videos", href: "/2d-animations-meme-videos" },
+            { label: "2d Animation", href: "/2d-animations" },
+            { label: "Meme Videos", href: "/meme-videos" },
             { label: "Content for Children", href: "/content-for-children" },
           ].map(item =>
             typeof item === "string" ? (
