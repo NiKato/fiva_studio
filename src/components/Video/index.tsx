@@ -35,7 +35,7 @@ const PlayIcon = styled(MdOutlinePlayCircle)`
   height: 100%;
 `;
 
-const VideoPlayer = ({ src, onPlay, stopPlaying }: any) => {
+const VideoPlayer = ({ src, onPlay, stopPlaying, isCarousel }: any) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -83,7 +83,7 @@ const VideoPlayer = ({ src, onPlay, stopPlaying }: any) => {
 
   return (
     <VideoWrapper onClick={handleVideoClick}>
-      <Video ref={videoRef} src={src} playsInline autoPlay />
+      <Video ref={videoRef} src={src} playsInline autoPlay={!isCarousel} />
       {/* @ts-ignore */}
       <PlayButton isPlaying={isPlaying}>
         <PlayIcon />

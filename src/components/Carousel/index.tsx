@@ -33,6 +33,7 @@ const Carousel = () => {
       centeredSlides={true}
       loop={true}
       pagination={false}
+      autoplay={true}
       className="mySwiper"
       initialSlide={2}
       breakpoints={{
@@ -69,6 +70,7 @@ const Carousel = () => {
             onPlay={() => handlePlay(index)}
             isPlaying={currentVideoIndex === index}
             stopPlaying={handleStop}
+            isCarousel={true}
           />
         </SwiperSlide>
       ))}

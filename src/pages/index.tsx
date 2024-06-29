@@ -151,6 +151,7 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
             </Box>
             <Box mb={10}>
             {renderHeading(2)}
+            <Box  id="work"></Box>
             <CustomGrid />
             </Box>
             <LongForm />
