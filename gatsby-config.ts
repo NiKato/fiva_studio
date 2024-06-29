@@ -20,11 +20,22 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-plugin-minify`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    'gatsby-plugin-preload-fonts',
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['Poppins:n4,n7'],
+          urls: ['/styles/fonts.css'],
+        },
       },
     },
     {
@@ -34,6 +45,12 @@ module.exports = {
           `Poppins\:400,700`
         ],
         display: 'swap',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
     `gatsby-transformer-sharp`,
@@ -47,8 +64,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `fiva-studio`,
+        short_name: `fivastudio`,
         start_url: `/`,
         background_color: `#663399`,
         display: `minimal-ui`,

@@ -68,7 +68,7 @@ export const PageHero = ({ title, subtitle }: any) => {
           >
             {subtitle}
           </Text>
-          <AnchorLink to="#text">
+          <AnchorLink to="#text" stripHash>
             <Button
               size={{ base: "md", md: "lg" }}
               fontFamily="PoppinsLight"

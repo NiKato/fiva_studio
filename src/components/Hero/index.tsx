@@ -5,12 +5,11 @@ import {
   Container,
   Flex,
   Heading,
-  Image,
   Stack,
   Text,
 } from "@chakra-ui/react"
-import hero from "../../images/hero.webp"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function Hero({ title, text, cta, cta2 }: any) {
   return (
@@ -31,12 +30,17 @@ export default function Hero({ title, text, cta, cta2 }: any) {
         >
           <Stack spacing={6} w={"full"} maxW={"600px"}>
             <Heading
+              as="h1"
               fontSize={{ base: "3xl", md: "4xl", lg: "3.2rem" }}
               fontWeight={700}
             >
               {title}
             </Heading>
-            <Text fontSize={{ base: "md", lg: "2xl" }} lineHeight={"175%"}>
+            <Text
+              as="p"
+              fontSize={{ base: "md", lg: "2xl" }}
+              lineHeight={"175%"}
+            >
               {text}
             </Text>
             <Stack direction={{ base: "column", md: "row" }} spacing={4}>
@@ -53,31 +57,24 @@ export default function Hero({ title, text, cta, cta2 }: any) {
                 </Button>
               </AnchorLink>
               <AnchorLink to="/#work" stripHash>
-              <Button borderRadius={4} bg="#477EEB" color="#fff">
-                {cta2}
-              </Button>
+                <Button borderRadius={4} bg="#477EEB" color="#fff">
+                  {cta2}
+                </Button>
               </AnchorLink>
             </Stack>
           </Stack>
         </Flex>
         <Flex flex={1} position="relative">
-          <Image
-            w="744px"
-            h={{ base: "343px", md: "100%" }}
+          <StaticImage
+            style={{ width: "100%", height: "100%", borderRadius: "24px" }}
+            loading="eager"
             alt={"hero"}
+            placeholder="blurred"
+            layout="fullWidth"
+            quality={80}
             objectFit={"cover"}
-            src={hero}
-            borderRadius={24}
+            src={"../../images/hero.webp"}
           />
-          {/* <Box
-          position="absolute"
-          top={0}
-          left={0}
-          w="100%"
-          h="100%"
-          bg="rgba(71, 126, 235, 0.1)" 
-          borderRadius={24}
-        /> */}
         </Flex>
       </Stack>
     </Container>
