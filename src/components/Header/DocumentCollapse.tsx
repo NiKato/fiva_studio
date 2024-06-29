@@ -19,10 +19,16 @@ export const DocumentCollapse = () => {
         <Stack spacing="1" alignItems="stretch" ps="4">
           {[
             { label: "Short Form", href: "/short-form" },
+            { label: "Podcasts", href: "/podcasts" },
+            { label: "Meme Videos", href: "/meme-videos" },
             { label: "Educational Videos", href: "/educational-videos" },
-            { label: "2d Animation", href: "/2d-animations-meme-videos" },
-            { label: "Meme Videos", href: "/2d-animations-meme-videos" },
+            { label: "Corporate Videos", href: "/" },
             { label: "Content for Children", href: "/content-for-children" },
+            { label: "Food and Hospitality", href: "/" },
+            { label: "Film / Documentary", href: "/" },
+            { label: "2d Animation", href: "/2d-animations" },
+            { label: "Ecology Videos", href: "/ecology-videos" },
+            { label: "Wedding Videos", href: "/" },
           ].map(item =>
             typeof item === "string" ? (
               <Button
