@@ -14,8 +14,8 @@ import Benefits from "../components/Benefits"
 import Headings from "../components/Headings"
 import { SEO } from "../components/Seo"
 import { HeadProps } from "gatsby"
-import BasicStatistics from "../components/LongForm"
 import CustomGrid from "../components/CustomGrid"
+import LongForm from "../components/LongForm"
 import FAQ from "../components/FAQ"
 import { faqData } from "../constants/faqData"
 import { getHeadingById } from "../constants/headings"
@@ -153,7 +153,7 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
             {renderHeading(2)}
             <CustomGrid />
             </Box>
-            <BasicStatistics />
+            <LongForm />
             <Box id="faq">{renderHeading(5)}</Box>
             {/* @ts-ignore */}
             <FAQ props={faqData} />

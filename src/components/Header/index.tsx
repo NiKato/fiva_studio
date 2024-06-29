@@ -37,11 +37,14 @@ export const Header = () => {
   }, [])
 
   const links = [
-    { href: "/", label: t("header.home") },
-    { href: "#", label: "", component: <DocumentPopover /> },
-    { href: "/about-us", label: t("header.aboutUs") },
-    { href: "https://fiva-studio.vercel.app/#faq", label: t("header.questions") },
-    { href: "/contact-us", label: t("header.contactUs") },
+    { href: "/", label:"Home" },
+    { href: "#", label: "Services", component: <DocumentPopover /> },
+    { href: "/about-us", label: "About Us" },
+    {
+      href: "https://fivastudio.com/#faq",
+      label: "Questions",
+    },
+    { href: "/contact-us", label: "Contact Us" },
   ]
 
   return (
@@ -70,8 +73,10 @@ export const Header = () => {
       >
         <Flex>
           <HStack spacing="3">
-            <MobileDrawer links={links} />
-            <Link href="/"><Image width="72px" h="36px" src={logo} /></Link>
+            <MobileDrawer />
+            <Link href="/">
+              <Image width="72px" h="36px" src={logo} />
+            </Link>
           </HStack>
           <ButtonGroup
             size="sm"
@@ -84,9 +89,7 @@ export const Header = () => {
             {links.map((link, index) => (
               <React.Fragment key={index}>
                 {link.component ? (
-                  <Box ml={4}>
-                    {link.component}
-                  </Box>
+                  <Box ml={4}>{link.component}</Box>
                 ) : (
                   <Link href={link.href}>
                     <Button
@@ -122,7 +125,7 @@ export const Header = () => {
               aria-label={"Toggle Dark/Light Mode"}
               className="color-mode-button"
             />
-            <LanguageSwitcher />
+            {/* <LanguageSwitcher /> */}
             <Link href="/contact-us">
               <Button
                 as={"a"}

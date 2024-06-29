@@ -14,7 +14,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export default function Hero({ title, text, cta, cta2 }: any) {
   return (
-    <Container maxW={{ base: "100%", md: "7xl" }} my={20}>
+    <Container maxW={{ base: "100%", md: "7xl" }} my={{ base: 5, md: 20 }}>
       <Stack
         pt={"80px"}
         minH={"100%"}
@@ -36,24 +36,21 @@ export default function Hero({ title, text, cta, cta2 }: any) {
             >
               {title}
             </Heading>
-            <Text
-              fontSize={{ base: "md", lg: "2xl" }}
-              lineHeight={"175%"}
-            >
+            <Text fontSize={{ base: "md", lg: "2xl" }} lineHeight={"175%"}>
               {text}
             </Text>
             <Stack direction={{ base: "column", md: "row" }} spacing={4}>
               <AnchorLink to="/#anchor">
-              <Button
-                borderRadius={4}
-                bg={"#333333"}
-                color={"white"}
-                _hover={{
-                  bg: "blue.500",
-                }}
-              >
-                {cta}
-              </Button>
+                <Button
+                  borderRadius={4}
+                  bg={"#333333"}
+                  color={"white"}
+                  _hover={{
+                    bg: "blue.500",
+                  }}
+                >
+                  {cta}
+                </Button>
               </AnchorLink>
               <Button borderRadius={4} bg="#477EEB" color="#fff">
                 {cta2}

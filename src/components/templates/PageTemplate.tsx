@@ -16,7 +16,7 @@ const VideoWrapper = ({ onClick, children }: any) => (
 const Video = React.forwardRef(({ src, playsInline }: any, ref) => (
   <video
     // @ts-ignore
-    ref={ref}
+    ref={ref} 
     src={src}
     playsInline
   />
@@ -112,6 +112,8 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
                   // @ts-ignore
                     ref={(el) => (videoRefs.current[index] = el)}
                     src={videoSrc}
+                    autoPlay 
+                    muted
                     playsInline
                   />
                   {/* @ts-ignore */}

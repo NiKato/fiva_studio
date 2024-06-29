@@ -58,7 +58,7 @@ function StatsCard(props: StatsCardProps) {
         />
         <StatLabel
           color="#fff"
-          fontSize="2xl"
+          fontSize="xl"
           pb={"24px"}
           fontWeight={700}
           isTruncated
@@ -71,7 +71,8 @@ function StatsCard(props: StatsCardProps) {
           pos="relative"
           zIndex="999"
           color="#fff"
-          fontSize={"md"}
+          fontSize={"sm"}
+          px={2}
           fontWeight={300}
         >
           {stat}
@@ -81,9 +82,9 @@ function StatsCard(props: StatsCardProps) {
   )
 }
 
-export default function BasicStatistics() {
+export default function LongForm() {
   return (
-    <Box maxW="1280px" mx={"auto"} pt={5} px={{ base: 2, sm: 12, md: 17 }}>
+    <Box maxW="1280px" mx={"auto"} mt={{base: 0, md: "-10px"}} px={{ base: 2, sm: 12, md: 8 }}>
       <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 5, lg: 4 }}>
         {statsData.map((data, index) => (
           <StatsCard

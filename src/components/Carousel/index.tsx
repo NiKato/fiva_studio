@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import VideoPlayer from '../Video';
+import React, { useState } from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import VideoPlayer from "../Video"
 import "swiper/css"
 import "swiper/css/pagination"
 import "./styles.css"
@@ -16,15 +16,15 @@ const videoUrls = [
 ]
 
 const Carousel = () => {
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(null);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(null)
 
   const handlePlay = (index: any) => {
-    setCurrentVideoIndex(index);
-  };
+    setCurrentVideoIndex(index)
+  }
 
   const handleStop = () => {
-    setCurrentVideoIndex(null);
-  };
+    setCurrentVideoIndex(null)
+  }
 
   return (
     <Swiper
@@ -54,7 +54,7 @@ const Carousel = () => {
         },
         1440: {
           slidesPerView: 4.2,
-          spaceBetween: 40,
+          spaceBetween: 10,
         },
         1920: {
           slidesPerView: 5.1,
@@ -73,7 +73,7 @@ const Carousel = () => {
         </SwiperSlide>
       ))}
     </Swiper>
-  );
-};
+  )
+}
 
-export default Carousel;
+export default Carousel

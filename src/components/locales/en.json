@@ -7,8 +7,8 @@
   },
   "header": {
     "home": "Home",
-    "aboutUs": "About Us",
     "services": "Services",
+    "aboutUs": "About Us",
     "questions": "Questions",
     "contactUs": "Contact Us"
   },

@@ -1,6 +1,6 @@
-import React from "react";
-import { Box, Container, Flex, HStack, Text } from "@chakra-ui/react";
-import VideoBg from "../Video/VideoBg";
+import React from "react"
+import { Box, Container, Flex, HStack, Text } from "@chakra-ui/react"
+import VideoBg from "../Video/VideoBg"
 import placeholder from "../../images/fiva.svg"
 
 // Define your video URLs and placeholders
@@ -8,28 +8,32 @@ const videoData = [
   {
     src: "https://fivastudio.b-cdn.net/2D%20animation.mp4",
     placeholder: placeholder,
-    label: "2D animation / Meme video"
+    label: "2D animations / Meme videos",
+    href: "/2d-animations",
   },
   {
     src: "https://fivastudio.b-cdn.net/wedding-video.mp4",
     placeholder: placeholder,
-    label: "Wedding video"
+    label: "Wedding videos",
+    href: "/wedding-videos",
   },
   {
     src: "https://fivastudio.b-cdn.net/hotel-pool-bar.mp4",
     placeholder: placeholder,
-    label: "Promo video"
+    label: "Food | Hospitality videos",
+    href: "/",
   },
   {
     src: "https://fivastudio.b-cdn.net/Baby%20video.mp4",
     placeholder: placeholder,
-    label: "Content for Children"
+    label: "Content for Children",
+    href: "/content-for-children",
   },
-];
+]
 
 const CustomGrid = () => {
   return (
-    <Container maxW={{ base: "100%", md: "7xl" }} pb={{base: 0, md: 10}}>
+    <Container maxW={{ base: "100%", md: "7xl" }} pb={0}>
       <Flex
         direction="column"
         w="100%"
@@ -47,8 +51,8 @@ const CustomGrid = () => {
         >
           <Box
             w={{ base: "100%", md: "650px" }}
-            h={{base: "156px", md: "auto"}}
-            minH={{base: "156px", md: "auto"}}
+            h={{ base: "156px", md: "auto" }}
+            minH={{ base: "156px", md: "auto" }}
             flex={1}
             bg="gray.700"
             borderRadius="2xl"
@@ -59,19 +63,23 @@ const CustomGrid = () => {
             position="relative"
             overflow="hidden"
           >
-            <VideoBg src={videoData[0].src} placeholder={videoData[0].placeholder} />
-            <Text
-              pos="absolute"
-              bg="rgba(0, 0, 0, 0.5)"
-              px={4}
-              py={2.5}
-              mb={2}
-              borderRadius="2xl"
-              fontSize={{ base: "md", md: "xl" }}
-              fontWeight="bold"
-            >
-              {videoData[0].label}
-            </Text>
+              <VideoBg
+                src={videoData[0].src}
+                placeholder={videoData[0].placeholder}
+                href={videoData[0].href}
+              />
+              <Text
+                pos="absolute"
+                bg="rgba(0, 0, 0, 0.5)"
+                px={4}
+                py={2.5}
+                mb={2}
+                borderRadius="2xl"
+                fontSize={{ base: "md", md: "xl" }}
+                fontWeight="bold"
+              >
+                {videoData[0].label}
+              </Text>
           </Box>
           <Flex
             w={{ base: "100%", md: "650px" }}
@@ -92,7 +100,11 @@ const CustomGrid = () => {
                 position="relative"
                 overflow="hidden"
               >
-                <VideoBg src={videoData[1].src} placeholder={videoData[1].placeholder} />
+                <VideoBg
+                  src={videoData[1].src}
+                  placeholder={videoData[1].placeholder}
+                  href={videoData[1].href}
+                />
                 <Text
                   pos="absolute"
                   bg="rgba(0, 0, 0, 0.5)"
@@ -120,7 +132,11 @@ const CustomGrid = () => {
                 position="relative"
                 overflow="hidden"
               >
-                <VideoBg src={videoData[2].src} placeholder={videoData[2].placeholder} />
+                <VideoBg
+                  src={videoData[2].src}
+                  placeholder={videoData[2].placeholder}
+                  href={videoData[2].href}
+                />
                 <Text
                   pos="absolute"
                   bg="rgba(0, 0, 0, 0.5)"
@@ -146,7 +162,11 @@ const CustomGrid = () => {
               position="relative"
               overflow="hidden"
             >
-              <VideoBg src={videoData[3].src} placeholder={videoData[3].placeholder} />
+              <VideoBg
+                src={videoData[3].src}
+                placeholder={videoData[3].placeholder}
+                href={videoData[3].href}
+              />
               <Text
                 pos="absolute"
                 bg="rgba(0, 0, 0, 0.5)"
@@ -167,4 +187,4 @@ const CustomGrid = () => {
   )
 }
 
-export default CustomGrid;
+export default CustomGrid

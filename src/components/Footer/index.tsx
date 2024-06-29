@@ -66,6 +66,21 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 }
 
 export default function Footer() {
+  const footerLinks = [
+    { label: "Short Form", href: "/short-form" },
+    { label: "Podcasts", href: "/podcasts" },
+    { label: "Meme Videos", href: "/meme-videos" },
+    { label: "2d Animation", href: "/2d-animations" },
+    { label: "Youtube Videos", href: "/" },
+    { label: "Educational Videos", href: "/educational-videos" },
+    { label: "Corporate Videos", href: "/" },
+    { label: "Content for Children", href: "/content-for-children" },
+    { label: "Food and Hospitality", href: "/" },
+    { label: "Film / Documentary", href: "/" },
+    { label: "Ecology Videos", href: "/ecology-videos" },
+    { label: "Wedding Videos", href: "/" },
+  ]
+
   return (
     <Box
       bg={useColorModeValue("gray.50", "gray.900")}
@@ -88,15 +103,15 @@ export default function Footer() {
             </Box>
             <Text fontSize={"sm"}>© 2024 Fiva Studio. All rights reserved</Text>
             <Stack direction={"row"} spacing={6}>
-              <SocialButton label={"TikTok"} href={"#"}>
+              <SocialButton label={"Instagram"} href={"https://www.instagram.com/fiva_studio/"}>
                 <FaInstagram />
               </SocialButton>
               <SocialButton label={"YouTube"} href={"#"}>
                 <FaYoutube />
               </SocialButton>
               <SocialButton
-                label={"Instagram"}
-                href={"https://www.instagram.com/fiva_studio/"}
+                label={"Tik Tok"}
+                href={""}
               >
                 <FaTiktok />
               </SocialButton>
@@ -119,27 +134,13 @@ export default function Footer() {
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Services</ListHeader>
-            <Text fontWeight={400}>
-              <Link href={"/short-form"}>Short Form</Link>
-            </Text>
-            <Text fontWeight={400}>
-              <Link href={"/educational-videos"}>Educational Videos</Link>
-            </Text>
-            <Text fontWeight={400}>
-              <Link href={"/2d-animations"}>2D Animations</Link>
-            </Text>
-            <Text fontWeight={400}>
-              <Link href={"/meme-videos"}>Meme Videos</Link>
-            </Text>
-            <Text fontWeight={400}>
-              <Link href={"/content-for-children"}>Content for Children</Link>
-            </Text>
-            <Text fontWeight={400}>
-              <Link href={"/podcasts"}>Podcasts</Link>
-            </Text>
-            <Text fontWeight={400}>
-              <Link href={"/ecology-videos"}>Ecology Videos</Link>
-            </Text>
+            <Stack>
+              {footerLinks.map((link, index) => (
+                <Text key={index} fontWeight={400}>
+                  <Link href={link.href}>{link.label}</Link>
+                </Text>
+              ))}
+            </Stack>
           </Stack>
           <Stack align={"flex-start"} gap={2}>
             <ListHeader>Contact Us</ListHeader>

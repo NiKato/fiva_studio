@@ -15,9 +15,18 @@ import { MdClose } from "react-icons/md"
 import { DocumentCollapse } from "./DocumentCollapse"
 import { ToggleButton } from "./ToggleButton"
 import logo from "../../images/logo.png"
+import { useTranslation } from "react-i18next"
 
-export const MobileDrawer = ({ links }: any) => {
+export const MobileDrawer = () => {
   const { isOpen, onToggle, onClose } = useDisclosure()
+
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "#", label: "Services", component: <DocumentCollapse /> },
+    { href: "/about-us", label: "About Us" },
+    { href: "https://fivastudio.com/#faq", label: "Questions" },
+    { href: "/contact-us", label: "Contact Us" },
+  ]
 
   return (
     <>
@@ -35,9 +44,9 @@ export const MobileDrawer = ({ links }: any) => {
             alignItems="center"
           >
             <IconButton
-            mx={0}
-            p={0}
-            size="24px"
+              mx={0}
+              p={0}
+              size="24px"
               bg="transparent"
               _hover={{ bg: "transparent " }}
               icon={<MdClose />}
@@ -50,19 +59,22 @@ export const MobileDrawer = ({ links }: any) => {
           </DrawerHeader>
           <DrawerBody p={2}>
             <Stack spacing="1">
-              {links.map((link: any, index: any) => (
-                <Button
-                  key={index}
-                  size="lg"
-                  variant="tertiary"
-                  justifyContent="start"
-                  as="a"
-                  href={link.href}
-                >
-                  {link.label}
-                </Button>
+              {links.map((link, index) => (
+                link.label === "Services" ? (
+                  <DocumentCollapse key={index} />
+                ) : (
+                  <Button
+                    key={index}
+                    size="lg"
+                    variant="tertiary"
+                    justifyContent="start"
+                    as="a"
+                    href={link.href}
+                  >
+                    {link.label}
+                  </Button>
+                )
               ))}
-              <DocumentCollapse />
             </Stack>
           </DrawerBody>
         </DrawerContent>

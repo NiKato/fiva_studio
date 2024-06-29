@@ -53,7 +53,7 @@ const Feature = ({ title, text, icon, linkText, linkUrl }: FeatureProps) => {
 export default function Benefits() {
   const { t } = useTranslation()
   return (
-    <Box py={20}>
+    <Box py={5}>
       <SimpleGrid columns={{ base: 1, md: 4 }} spacing={10}>
         <Feature
           icon={<Icon as={MdOutlineLocalMovies} width={6} height={6} />}

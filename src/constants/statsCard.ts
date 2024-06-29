@@ -12,27 +12,27 @@ interface StatData {
 
 export const statsData: StatData[] = [
   {
-    title: "Wedding Videos",
-    stat: "Capture the magic and joy of your special day with our professional wedding videography",
+    title: "Podcast Videos",
+    stat: " Reach a wider audience and boost your brand with our high-quality podcast video services",
+    imageSrc: stat4,
+    href: "/podcasts",
+  },
+  {
+    title: "Meme Videos",
+    stat: "Capture the magic and joy of your special day with our professional meme videography",
     imageSrc: stat3,
-    href: "/wedding-videos",
+    href: "/meme-videos",
+  },
+  {
+    title: "Film | Documentary Videos",
+    stat: "Bring your cinematic vision to life with our movie production services",
+    imageSrc: stat1,
+    href: "/",
   },
   {
     title: "Corporate Videos",
     stat: "Enhance your brand's image with our high-quality corporate videos",
     imageSrc: stat2,
-    href: "/corporate-videos",
-  },
-  {
-    title: "Movie Videos",
-    stat: "Bring your cinematic vision to life with our movie production services",
-    imageSrc: stat1,
-    href: "/movie-videos",
-  },
-  {
-    title: "Podcast Video",
-    stat: " Reach a wider audience and boost your brand with our high-quality podcast video services",
-    imageSrc: stat4,
-    href: "/podcasts",
+    href: "/",
   },
 ]
