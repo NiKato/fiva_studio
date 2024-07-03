@@ -23,7 +23,6 @@ import {
   Divider,
 } from "@chakra-ui/react"
 
-// Import the Bg component here
 import { Bg } from "../Bg"
 
 export default function ContactForm() {
