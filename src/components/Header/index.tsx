@@ -37,7 +37,7 @@ export const Header = () => {
   }, [])
 
   const links = [
-    { href: "/", label:"Home" },
+    { href: "/", label: "Home" },
     { href: "#", label: "Services", component: <DocumentPopover /> },
     { href: "/about-us", label: "About Us" },
     {

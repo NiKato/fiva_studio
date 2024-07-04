@@ -134,7 +134,7 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
         </Div>
       ) : (
         <>
-          <ColorModeScript initialColorMode="light" />
+          <ColorModeScript initialColorMode="dark" />
           <Layout>
             <Box px={{ base: 4, md: 20 }} h="100%">
               <Hero

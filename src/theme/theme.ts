@@ -1,12 +1,10 @@
-import { extendTheme } from "@chakra-ui/react"
-import "../styles/fonts.css"
+import { extendTheme } from "@chakra-ui/react";
+import "../styles/fonts.css";
 
 const theme = extendTheme({
   config: {
-    initialColorMode:
-      typeof window !== "undefined"
-        ? localStorage.getItem("chakra-ui-color-mode") || "dark"
-        : "dark",
+    initialColorMode: "dark",
+    useSystemColorMode: false,
   },
   fonts: {
     body: "'PoppinsBlack', sans-serif",
@@ -39,12 +37,11 @@ const theme = extendTheme({
       Text: {
         fontFamily: "'PoppinsLight', sans-serif",
       },
-
       p: {
         fontFamily: "'PoppinsLight', sans-serif",
       },
     },
   },
-})
+});
 
-export default theme
+export default theme;
