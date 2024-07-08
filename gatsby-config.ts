@@ -54,6 +54,7 @@ module.exports = {
         offset: -200,
       },
     },
+    
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
