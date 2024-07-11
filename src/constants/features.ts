@@ -15,7 +15,7 @@ const features = {
     {
       title: "Free consultation",
       text: "We discuss your project with you and find the best solution together.",
-      linkText: "Book your free appointment now.",
+      linkText: " Book your free appointment now.",
       linkUrl: "/contact-us",
       icon: MdOutlineLocalFireDepartment,
     },
