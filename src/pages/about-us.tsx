@@ -20,7 +20,7 @@ import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { MdKeyboardArrowDown } from "react-icons/md"
-import bgImg from "../images/hero.webp"
+
 import { HeadProps } from "gatsby"
 import { SEO } from "../components/Seo"
 
@@ -91,7 +91,7 @@ const About = () => (
               marginLeft={{ base: "0", sm: "5%" }}
               marginTop="5%"
             >
-              <Image src={bgImg} w={{ base: "100%", sm: "540px" }} filter="blur(10px)" />
+              <Image src={"https://fivastudio.b-cdn.net/hero.webp"} w={{ base: "100%", sm: "540px" }} filter="blur(10px)" />
             </Box>
             <Box
               zIndex="1"

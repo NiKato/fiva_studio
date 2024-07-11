@@ -5,6 +5,7 @@ import {
   Container,
   Flex,
   Heading,
+  Image,
   Stack,
   Text,
 } from "@chakra-ui/react"
@@ -65,15 +66,14 @@ export default function Hero({ title, text, cta, cta2 }: any) {
           </Stack>
         </Flex>
         <Flex flex={1} position="relative" w="100%" h="100%">
-          <StaticImage
-            style={{ width: "100%", height: "100%", borderRadius: "24px" }}
-            loading="eager"
+          <Image
+            src="https://fivastudio.b-cdn.net/hero.webp"
             alt="Fiva Studio your trusted video editor"
-            placeholder="blurred"
-            layout="fullWidth"
-            quality={100}
-            objectFit={"cover"}
-            src={"../../images/hero.webp"}
+            loading="lazy"
+            borderRadius="24px"
+            objectFit="cover"
+            htmlWidth="100%"
+            htmlHeight="100%"
           />
         </Flex>
       </Stack>
