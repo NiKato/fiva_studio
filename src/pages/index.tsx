@@ -116,23 +116,7 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
 
   return (
     <>
-      {loading ? (
-        <Div>
-          <Flex
-            align="center"
-            justify="center"
-            height="100vh"
-            width="100vw"
-            position="fixed"
-            top="0"
-            left="0"
-            bg="#1A202C"
-            zIndex="9999"
-          >
-            <div className="container"></div>
-          </Flex>
-        </Div>
-      ) : (
+        
         <>
           <ColorModeScript initialColorMode="dark" />
           <Layout>
@@ -162,7 +146,6 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
             <Testimonials /> */}
           </Layout>
         </>
-      )}
     </>
   )
 }

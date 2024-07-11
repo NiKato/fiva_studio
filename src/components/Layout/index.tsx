@@ -17,12 +17,18 @@ const Layout = ({ children }: any) => {
 
   return (
     <ChakraProvider theme={theme}>
-      <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-          rel="preload"
-        />
-      </Helmet>
+       <Helmet>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+        rel="preload"
+        as="style"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet"
+        media="print"
+      />
+    </Helmet>
       <ColorModeProvider>
         <Header />
         {children}

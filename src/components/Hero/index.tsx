@@ -64,14 +64,14 @@ export default function Hero({ title, text, cta, cta2 }: any) {
             </Stack>
           </Stack>
         </Flex>
-        <Flex flex={1} position="relative">
+        <Flex flex={1} position="relative" w="100%" h="100%">
           <StaticImage
             style={{ width: "100%", height: "100%", borderRadius: "24px" }}
             loading="eager"
-            alt={"hero"}
+            alt="Fiva Studio your trusted video editor"
             placeholder="blurred"
             layout="fullWidth"
-            quality={80}
+            quality={100}
             objectFit={"cover"}
             src={"../../images/hero.webp"}
           />
