@@ -78,7 +78,7 @@ export default function Footer() {
     { label: "Food and Hospitality", href: "/" },
     { label: "Film / Documentary", href: "/" },
     { label: "Ecology Videos", href: "/ecology-videos" },
-    { label: "Wedding Videos", href: "/" },
+    { label: "Wedding Videos", href: "/wedding-videos" },
   ]
 
   return (
