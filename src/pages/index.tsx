@@ -107,9 +107,9 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
       <Headings
         key={headingData.id}
         id={headingData.id}
-        spanTitle={headingData.spanTitle}
-        title={headingData.title}
-        text={headingData.text}
+        spanTitle={t(headingData.spanTitle)}
+        title={t(headingData.title)}
+        text={t(headingData.text)}
       />
     ) : null
   }
@@ -130,12 +130,12 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
               <Benefits />
               {renderHeading(1)}
             </Box>
-            <Box id="anchor">
+            <Box id="work">
               <Carousel />
             </Box>
             <Box mb={10}>
             {renderHeading(2)}
-            <Box  id="work"></Box>
+            <Box></Box>
             <CustomGrid />
             </Box>
             <LongForm />

@@ -95,6 +95,7 @@ export const Header = () => {
                     <Button
                       bg={"none"}
                       p={2}
+                      fontFamily={"PoppinsBlack"}
                       fontSize={"md"}
                       fontWeight={600}
                       _hover={{ textDecoration: "underline", color: "#3377FF" }}
@@ -130,6 +131,7 @@ export const Header = () => {
               <Button
                 as={"a"}
                 display={{ base: "none", md: "inline-flex" }}
+                fontFamily={"PoppinsBlack"}
                 fontSize={"md"}
                 fontWeight={600}
                 color={"white"}

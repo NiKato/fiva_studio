@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import {
   Container,
   Accordion,
@@ -6,10 +6,19 @@ import {
   AccordionIcon,
   AccordionItem,
   AccordionPanel,
-} from "@chakra-ui/react"
-import bgImg from "../../images/fiva.svg"
+} from "@chakra-ui/react";
+import bgImg from "../../images/fiva.svg";
+import { useTranslation } from "react-i18next";
+import { ReactNode } from 'react';
 
 const FAQ = ({ props }: FAQProps) => {
+  const { t } = useTranslation();
+
+  // Helper function to determine if an item is a React element
+  const isReactElement = (element: any): element is ReactNode => {
+    return React.isValidElement(element);
+  };
+
   return (
     <Container
       maxW={{ base: "100%", md: "4xl" }}
@@ -40,26 +49,26 @@ const FAQ = ({ props }: FAQProps) => {
               fontSize={{ base: "lg", md: "xl" }}
               _hover={{ background: "transparent" }}
             >
-              {item.question}
+              {t(item.question)}
               <AccordionIcon width="1.88rem" height="1.88rem" color="#3377FF" />
             </AccordionButton>
             <AccordionPanel mx={2} fontSize="sm" fontWeight={400}>
-              {item.answer}
+              {isReactElement(item.answer) ? item.answer : t(item.answer)}
             </AccordionPanel>
           </AccordionItem>
         ))}
       </Accordion>
     </Container>
-  )
-}
+  );
+};
 
 type FAQProps = {
   props: {
     questionsrepeater: {
-      question: string
-      answer: string
-    }[]
-  }
-}
+      question: string;
+      answer: string | ReactNode;
+    }[];
+  };
+};
 
-export default FAQ
+export default FAQ;

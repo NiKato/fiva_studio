@@ -1,28 +1,83 @@
 {
   "hero": {
-    "title": "Ослободите снагу 2д видео анимација",
-    "subtitle": "Стварамо невероватна решења за ваше проблеме",
-    "cta": "Контактирајте нас",
-    "cta2": "Прикажи радове"
+    "title": "Vaš video editor",
+    "subtitle": "Stvaramo personalizovane video zapise za Vaše klijente ili Vaše projekte. Ostvarite Vašu viziju sa nama",
+    "cta": "Kontaktirajte nas",
+    "cta2": "Prikaži radove"
   },
   "header": {
-    "home": "Почетна",
-    "aboutUs": "О нама",
-    "services": "Услуге",
-    "questions": "Питања",
-    "contactUs": "Контакт"
+    "home": "Početna",
+    "aboutUs": "O nama",
+    "services": "Usluge",
+    "questions": "Pitanja",
+    "contactUs": "Kontakt"
   },
   "features": {
-    "title": "Подршка за цео живот",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "title": "Personalizovani Video Zapisi",
+    "text": "Pravimo video zapise koji oživljavaju suštinu projekta",
 
-    "title2": "Неограничене донације",
-    "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "title2": "Besplatne konsultacije",
+    "text2": "Razgovaramo o Vašem projektu sa Vama i nalazimo zajedno najbolj rešenje. ",
+    "linkText": " Zakažite Vašu besplatnu konsultaciju odmah.",
+    "linkUrl": "/contact-us",
 
-    "title3": "Брза испорука",
-    "text3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "title3": "Pouzdanost",
+    "text3": "Kao neko ko dolazi iz sveta marketinga i SMM-a, razumemo važnost rokova i planiranja Vašeg sadržaja.",
 
-    "title4": "Брза испорука",
-    "text4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "title4": "Odabrani editori",
+    "text4": "Pažljivo biramo editore za Vaš projekat koji najbolje rade u toj niši."
+  },
+  "headings": {
+    "spanTitle": "NAJPOPULARNIJE",
+    "title": "Šort Form Video zapisi",
+    "text": "Listaj na levo ili desno da pogledaš videe. Uživaj!",
+
+    "spanTitle2": "NAJTRAŽENIJE",
+    "title2": "Duži Format",
+    "text2": "Otkrijte raznovrsne video zapise, korporative videe, 2D animacije, video zapisi o hrani i ugostiteljstvu, edukativni sadržaj, najvažniji venčanja i ostali. Transformišite Vaš video sadržaj sa našim savetima kako da ugrabite pažnju, izazovete interakciju i osvojite publiku od početka do kraja.",
+
+    "spanTitle3": "AND MORE",
+    "title3": "Mixed videos",
+    "text3": "Discover a variety of videos, including wedding highlights, promotional clips, cartoons, and educational content",
+
+    "spanTitle4": "TESTIMONIALS",
+    "title4": "What did people say?",
+    "text4": "Discover what people are saying about us in their own words.",
+
+    "spanTitle5": "NAJPITANIJE",
+    "title5": "Često postavljana pitanja",
+    "text5": "Istražite odgovore na uobičajena pitanja da biste brzo i lako dobili informacije koje su vam potrebne."
+  },
+  "cardTitles": {
+    "2dAnimations": "2D animacije / Mim video",
+    "wedding": "Video Venčanja",
+    "food": "Hrana | Ugostiteljstvo",
+    "contentFC": "Sadržaj za decu",
+    "podcast": "Podkast videi",
+    "meme": "Mim videi",
+    "film": "Film | Dokumentarni videi",
+    "corporate": "Korporativni videi",
+
+    "podcastSub": "Dosegnite do veće publike i unapredite kvalitet Vašeg podkasta.",
+    "memeSub": "Povećajte angažman publike pomoću mimova",
+    "filmSub": "Oživite svoju bioskopsku viziju uz naše usluge filmske produkcije",
+    "corporateSub": "Poboljšajte imidž svog brenda pomoću naših visokokvalitetnih korporativnih video zapisa"
+  },
+  "faq": {
+    "question": "Kako proces funkcioniše?",
+    "answer": "Prilikom konsultacija o vašem projektu naš tim će raditi sa vama kako bi razumeli vašu viziju i kreirali kvalitetan finalni proizvod, koji će profesionalno urediti odabrani editori.",
+    "question2": "Koliko dugo traje proces uređivanja?",
+    "answer2": "U zavisnosti od složenosti projekta i obima posla naših urednika, to može da varira od jednog dana do nekoliko dana, ali nikada kasnije od dogovorenog roka.",
+    "question3": "Kako ću primiti moj video?",
+    "answer3": "Kada se editovanje završi, isporučićemo video preko bezbednog linka za preuzimanje.",
+    "question4": "Koje načine plaćanja prihvatate?",
+    "answer4": "Prihvatamo sve glavne kreditne kartice, PayPal i bankovni transfer. Mogućnost fakurisanja usluga.",
+    "question5": "Šta ako želim nešto da promenim u videu koji ste poslali?",
+    "answer5": "Nije neuobičajeno imati male izmene ili ispravke s vremena na vreme. One su besplatne, ali ako zahtevate da se video u potpunosti prepravi u odnosu na ono što je dogovoreno, zadržavamo pravo da naplatimo razuman iznos za dodatni rad ili ne prihvatimo zahtev.",
+    "question6": "Koliko video snimaka možete da obradite?",
+    "answer6": "Možemo da obradimo veći broj video zapisa. Kada je reč o kratkim video zapisima, u proseku snimamo 60 video snimaka mesečno po klijentu, ali možemo da isporučimo i više.",
+    "question7": "Kako da kontaktiram vaš tim za korisničku podršku?",
+    "answer7": "Možete kontaktirati naš tim za korisničku podršku putem e-pošte na",
+    "answerSub": "ili još bolje poslati nam poruku direktno na WhatsApp ili Viber"
   }
 }

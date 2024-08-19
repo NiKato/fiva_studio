@@ -26,5 +26,59 @@
 
     "title4": "Selected editors",
     "text4": "We carefully chose editors for your projects that work best in your niche."
+  },
+
+  "headings": {
+    "spanTitle": "MOST POPULAR",
+    "title": "Short Form Content",
+    "text": "Swipe to explore more videos. Enjoy the journey!",
+
+    "spanTitle2": "TOP RATED",
+    "title2": "Long Form Content",
+    "text2": "Discover a variety of videos, including corporate videos, 2D animations, food and hospitality videos, cartoons, educational content and wedding highlights. Transform your video content with our expert tips to captivate, engage, and retain your audience from start to finish.",
+
+    "spanTitle3": "AND MORE",
+    "title3": "Mixed videos",
+    "text3": "Discover a variety of videos, including wedding highlights, promotional clips, cartoons, and educational content",
+
+    "spanTitle4": "TESTIMONIALS",
+    "title4": "What did people say?",
+    "text4": "Discover what people are saying about us in their own words.",
+
+    "spanTitle5": "MOST ASKED",
+    "title5": "Frequently asked questions",
+    "text5": "Explore answers to common questions to get the information you need quickly and easily."
+  },
+  "cardTitles": {
+    "2dAnimations": "2D animations / Meme videos",
+    "wedding": "Wedding videos",
+    "food": "Food | Hospitality videos",
+    "contentFC": "Content for Children",
+    "podcast": "Podcast Videos",
+    "meme": "Meme Videos",
+    "film": "Film | Documentary Videos",
+    "corporate": "Corporate Videos",
+
+    "podcastSub": "Reach a wider audience and boost your brand with our high-quality podcast video services",
+    "memeSub": "Boost your engagement on Social Media with memes, our editors will craft memes for your social media.",
+    "filmSub": "Bring your cinematic vision to life with our movie production services",
+    "corporateSub": "Enhance your brand's image with our high-quality corporate videos"
+  },
+  "faq": {
+        "question": "How does the process work?",
+        "answer": "Upon consultations about your project and enrolling it, our team will work with you to understand your vision and create a high-quality final product, professionally edited by our experienced editors.",
+        "question2": "How long does the editing process take?",
+        "answer2": "Depending on the complexity of the project and the workload of our editors, this can vary from one day to several days but never later than the agreed deadline.",
+        "question3": "How will I receive my edited video?",
+        "answer3": "Once your edit is complete, we'll deliver it to you via a secure download link.",
+        "question4": "What payment methods do you accept?",
+        "answer4": "We accept all major credit cards, PayPal, and bank transfer. Client covers the transfer fee.",
+        "question5": "What if I need something changed in the video that you have delivered?",
+        "answer5": "It is not unusual to have small changes or corrections now and then. These ones are free of charge, however if you request a video to be remade entirely from what was agreed we reserve the right to charge a reasonable amount for extra work or not accept the request.",
+        "question6": "How many videos can you process?",
+        "answer6": "We can process a larger number of videos. When it comes to short form vids, on average we take 60 videos monthly per client, however we can deliver more.",
+        "question7": "How do I contact your customer support team?",
+        "answer7": "You can contact our customer support team via email at",
+        "answerSub": "or even better message us directly on WhatsApp or Viber"
   }
 }

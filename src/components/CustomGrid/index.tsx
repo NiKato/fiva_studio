@@ -1,37 +1,39 @@
-import React from "react"
-import { Box, Container, Flex, HStack, Text } from "@chakra-ui/react"
-import VideoBg from "../Video/VideoBg"
-import placeholder from "../../images/fiva.svg"
-
-// Define your video URLs and placeholders
-const videoData = [
-  {
-    src: "https://fivastudio.b-cdn.net/2D%20animation.mp4",
-    placeholder: placeholder,
-    label: "2D animations / Meme videos",
-    href: "/2d-animations",
-  },
-  {
-    src: "https://fivastudio.b-cdn.net/wedding-video.mp4",
-    placeholder: placeholder,
-    label: "Wedding videos",
-    href: "/wedding-videos",
-  },
-  {
-    src: "https://fivastudio.b-cdn.net/hotel-pool-bar.mp4",
-    placeholder: placeholder,
-    label: "Food | Hospitality videos",
-    href: "/",
-  },
-  {
-    src: "https://fivastudio.b-cdn.net/Baby%20video.mp4",
-    placeholder: placeholder,
-    label: "Content for Children",
-    href: "/content-for-children",
-  },
-]
+import React from "react";
+import { Box, Container, Flex, HStack, Text } from "@chakra-ui/react";
+import VideoBg from "../Video/VideoBg";
+import placeholder from "../../images/fiva.svg";
+import { useTranslation } from "react-i18next";
 
 const CustomGrid = () => {
+  const { t } = useTranslation(); // Initialize the translation hook
+
+  const videoData = [
+    {
+      src: "https://fivastudio.b-cdn.net/2D%20animation.mp4",
+      placeholder: placeholder,
+      label: t("cardTitles.2dAnimations"), // Use t function for translation
+      href: "/2d-animations",
+    },
+    {
+      src: "https://fivastudio.b-cdn.net/wedding-video.mp4",
+      placeholder: placeholder,
+      label: t("cardTitles.wedding"),
+      href: "/wedding-videos",
+    },
+    {
+      src: "https://fivastudio.b-cdn.net/hotel-pool-bar.mp4",
+      placeholder: placeholder,
+      label: t("cardTitles.food"),
+      href: "/",
+    },
+    {
+      src: "https://fivastudio.b-cdn.net/Baby%20video.mp4",
+      placeholder: placeholder,
+      label: t("cardTitles.contentFC"),
+      href: "/content-for-children",
+    },
+  ];
+
   return (
     <Container maxW={{ base: "100%", md: "7xl" }} pb={0}>
       <Flex
@@ -63,23 +65,23 @@ const CustomGrid = () => {
             position="relative"
             overflow="hidden"
           >
-              <VideoBg
-                src={videoData[0].src}
-                placeholder={videoData[0].placeholder}
-                href={videoData[0].href}
-              />
-              <Text
-                pos="absolute"
-                bg="rgba(0, 0, 0, 0.5)"
-                px={4}
-                py={2.5}
-                mb={2}
-                borderRadius="2xl"
-                fontSize={{ base: "md", md: "xl" }}
-                fontWeight="bold"
-              >
-                {videoData[0].label}
-              </Text>
+            <VideoBg
+              src={videoData[0].src}
+              placeholder={videoData[0].placeholder}
+              href={videoData[0].href}
+            />
+            <Text
+              pos="absolute"
+              bg="rgba(0, 0, 0, 0.5)"
+              px={4}
+              py={2.5}
+              mb={2}
+              borderRadius="2xl"
+              fontSize={{ base: "md", md: "xl" }}
+              fontWeight="bold"
+            >
+              {videoData[0].label} {/* Translated label */}
+            </Text>
           </Box>
           <Flex
             w={{ base: "100%", md: "650px" }}
@@ -184,7 +186,7 @@ const CustomGrid = () => {
         </Flex>
       </Flex>
     </Container>
-  )
-}
+  );
+};
 
-export default CustomGrid
+export default CustomGrid;

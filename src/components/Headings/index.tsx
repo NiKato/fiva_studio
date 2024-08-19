@@ -13,6 +13,7 @@ const Headings: React.FC<HeadingsProps> = ({ id, spanTitle, title, text }) => {
     <VStack py={{base: 10, md: 20 }} alignItems="center" gap={0}>
       <Text
         as="span"
+        fontFamily={"PoppinsBlack"}
         fontSize={{ base: "lg", md: "xl" }}
         fontWeight={700}
         textTransform={"uppercase"}
@@ -24,6 +25,7 @@ const Headings: React.FC<HeadingsProps> = ({ id, spanTitle, title, text }) => {
         as="h2"
         textAlign={"center"}
         p={0}
+        fontFamily={"PoppinsBlack"}
         fontSize={{ base: "30px", md: "42px" }}
         fontWeight={700}
         my={3}

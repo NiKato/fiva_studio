@@ -5,37 +5,36 @@ export type HeadingsSortItem = {
   title: string
   text: string
 }
-
 export const HEADINGS_SORT_ITEMS: HeadingsSortItem[] = [
   {
     id: 1,
-    spanTitle: "MOST POPULAR",
-    title: "Short Form Content",
-    text: "Swipe to explore more videos. Enjoy the journey!",
+    spanTitle: "headings.spanTitle",
+    title: "headings.title",
+    text: "headings.text",
   },
   {
     id: 2,
-    spanTitle: "TOP RATED",
-    title: "Long Form Content",
-    text: "Discover a variety of videos, including corporate videos, 2D animations, food and hospitality videos, cartoons, educational content and wedding highlights. Transform your video content with our expert tips to captivate, engage, and retain your audience from start to finish.",
+    spanTitle: "headings.spanTitle2",
+    title: "headings.title2",
+    text: "headings.text2",
   },
   {
     id: 3,
-    spanTitle: "AND MORE",
-    title: "Mixed videos",
-    text: "Discover a variety of videos, including wedding highlights, promotional clips, cartoons, and educational content",
+    spanTitle: "headings.spanTitle3",
+    title: "headings.title3",
+    text: "headings.text3",
   },
   {
     id: 4,
-    spanTitle: "TESTIMONIALS",
-    title: "What did people say?",
-    text: "Discover what people are saying about us in their own words.",
+    spanTitle: "headings.spanTitle4",
+    title: "headings.title4",
+    text: "headings.text4",
   },
   {
     id: 5,
-    spanTitle: "MOST ASKED",
-    title: "Frequently asked questions",
-    text: "Explore answers to common questions to get the information you need quickly and easily.",
+    spanTitle: "headings.spanTitle5",
+    title: "headings.title5",
+    text: "headings.text5",
   },
 ]
 

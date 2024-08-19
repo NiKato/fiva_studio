@@ -41,6 +41,7 @@ export const DocumentPopover = () => {
       <PopoverTrigger>
         <Button
           p={2}
+          fontFamily={"PoppinsBlack"}
           fontSize={"md"}
           fontWeight={600}
           rightIcon={<PopoverIcon isOpen={isOpen} />}
@@ -87,6 +88,7 @@ export const DocumentPopover = () => {
               <a key={item.label} href={item.href} rel="noopener noreferrer">
                 <Button
                   variant="tertiary"
+                  fontFamily={"PoppinsBlack"}
                   justifyContent="start"
                   _hover={{ textDecoration: "underline", color: "#3377FF" }}
                 >

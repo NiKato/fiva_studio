@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next"
 import {
   MdOutlineFlag,
   MdOutlineLocalFireDepartment,
@@ -8,28 +9,28 @@ import {
 const features = {
   features: [
     {
-      title: "Tailored videos",
-      text: "We craft videos that bring project's essence to surface.",
+      title: "features.title",
+      text: "features.text",
       icon: MdOutlineLocalMovies,
     },
     {
-      title: "Free consultation",
-      text: "We discuss your project with you and find the best solution together.",
-      linkText: " Book your free appointment now.",
+      title: "features.title2",
+      text: "features.text2",
+      linkText: "features.linkText",
       linkUrl: "/contact-us",
       icon: MdOutlineLocalFireDepartment,
     },
     {
-      title: "Reliability",
-      text: "As someone who worked in marketing and smm, we understand importance of deadlines and planning your content.",
+      title: "features.title3",
+      text: "features.text3",
       icon: MdOutlineFlag,
     },
     {
-      title: "Selected editors",
-      text: "We carefully chose editors for your projects that work best in your niche.",
+      title: "features.title4",
+      text: "features.text4",
       icon: MdLightbulbOutline,
     },
   ],
 }
 
-export default features;
+export default features

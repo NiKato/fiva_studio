@@ -31,6 +31,7 @@ export default function Hero({ title, text, cta, cta2 }: any) {
           <Stack spacing={6} w={"full"} maxW={"600px"}>
             <Heading
               as="h1"
+              fontFamily={"PoppinsBlack"} 
               fontSize={{ base: "3xl", md: "4xl", lg: "3.2rem" }}
               fontWeight={700}
             >

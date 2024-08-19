@@ -59,7 +59,7 @@ const SocialButton = ({
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
-    <Text color="#3377FF" fontWeight={700} fontSize={"lg"} mb={2}>
+    <Text color="#3377FF" fontFamily={"PoppinsBlack"} fontWeight={700} fontSize={"lg"} mb={2}>
       {children}
     </Text>
   )

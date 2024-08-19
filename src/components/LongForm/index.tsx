@@ -10,6 +10,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 import { statsData } from "../../constants/statsCard"
+import { useTranslation } from "react-i18next"
 
 interface StatsCardProps {
   title: string
@@ -20,6 +21,7 @@ interface StatsCardProps {
 
 function StatsCard(props: StatsCardProps) {
   const { title, stat, imageSrc, href } = props
+  const { t } = useTranslation()
   return (
     <Link href={href}>
       <Stat
@@ -65,7 +67,7 @@ function StatsCard(props: StatsCardProps) {
           pos="relative"
           zIndex="999"
         >
-          {title}
+          {t(title)}
         </StatLabel>
         <StatNumber
           pos="relative"
@@ -75,7 +77,7 @@ function StatsCard(props: StatsCardProps) {
           px={2}
           fontWeight={300}
         >
-          {stat}
+          {t(stat)}
         </StatNumber>
       </Stat>
     </Link>
@@ -84,7 +86,12 @@ function StatsCard(props: StatsCardProps) {
 
 export default function LongForm() {
   return (
-    <Box maxW="1280px" mx={"auto"} mt={{base: 0, md: "-10px"}} px={{ base: 2, sm: 12, md: 8 }}>
+    <Box
+      maxW="1280px"
+      mx={"auto"}
+      mt={{ base: 0, md: "-10px" }}
+      px={{ base: 2, sm: 12, md: 8 }}
+    >
       <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 5, lg: 4 }}>
         {statsData.map((data, index) => (
           <StatsCard

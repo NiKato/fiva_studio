@@ -1,7 +1,9 @@
+/* src/styles/fonts.css */
 @font-face {
     font-family: 'Poppins';
     src: url('../fonts/Poppins/Poppins-Black.woff2') format('woff2'),
          url('../fonts/Poppins/Poppins-Black.woff') format('woff');
+    /* Add other font formats if available */
     font-weight: normal;
     font-style: normal;
   }

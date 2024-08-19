@@ -54,20 +54,21 @@ const About = () => (
           <VStack textAlign="center" alignItems="center">
             <Heading
               w={{ base: "90%", md: "600px" }}
-              size={{ base: "2xl", md: "4xl" }}
+              size={{ base: "2xl", md: "3xl" }}
+              fontFamily={"PoppinsBlack"}
               mb="8"
               color={useColorModeValue("#fff", "#fff")}
             >
               About Fiva Studio
             </Heading>
-            <AnchorLink to="#about">
+            <AnchorLink to="#about" stripHash>
               <MdKeyboardArrowDown color="#fff" size="40px" />
             </AnchorLink>
           </VStack>
         </Container>
       </Box>
       <Container maxW="container.xl" p={{ base: "4", md: "12" }}>
-        <Heading as="h2" pb={5}>
+        <Heading as="h2" fontFamily={"PoppinsBlack"} pb={5}>
           Our Story
         </Heading>
         <Box
@@ -123,6 +124,7 @@ const About = () => (
                 textDecoration="none"
                 fontSize="4xl"
                 _hover={{ textDecoration: "none" }}
+                fontFamily={"PoppinsBlack"}
               >
                 We're a team of experienced video editors
               </Link>
@@ -142,7 +144,7 @@ const About = () => (
         <Divider marginTop="5" />
 
         <VStack paddingTop="40px" spacing={10} alignItems="flex-start">
-          <Heading as="h2">Who are we</Heading>
+          <Heading as="h2" fontFamily={"PoppinsBlack"}>Who are we</Heading>
           <Text as="p" fontSize="lg">
             We're a team of experienced video editors who also have experience
             in managing social media accounts, digital marketing and content

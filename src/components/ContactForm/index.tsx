@@ -100,7 +100,7 @@ export default function ContactForm() {
             bg="rgba(255, 255, 255, 0.2)"
             boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
           >
-            <Heading as="h2" size="lg" mb={4}>
+            <Heading as="h2" fontFamily={"PoppinsBlack"} size="lg" mb={4}>
               Need Anything?
             </Heading>
             <Text fontSize="xl" mb={4}>
@@ -134,7 +134,7 @@ export default function ContactForm() {
             <form onSubmit={handleSubmit}>
               <VStack spacing={4} align="stretch">
                 <Box textAlign="center" mb={4}>
-                  <Heading as="h2" size="lg">
+                  <Heading as="h2" fontFamily={"PoppinsBlack"} size="lg">
                     Contact Us
                   </Heading>
                 </Box>
