@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react"
 import { statsData } from "../../constants/statsCard"
 import { useTranslation } from "react-i18next"
+import LocalizedLink from "../LocalizedLink"
 
 interface StatsCardProps {
   title: string
@@ -23,7 +24,7 @@ function StatsCard(props: StatsCardProps) {
   const { title, stat, imageSrc, href } = props
   const { t } = useTranslation()
   return (
-    <Link href={href}>
+    <LocalizedLink to={`.${href}`}>
       <Stat
         display="flex"
         flexFlow="column"
@@ -80,7 +81,7 @@ function StatsCard(props: StatsCardProps) {
           {t(stat)}
         </StatNumber>
       </Stat>
-    </Link>
+    </LocalizedLink>
   )
 }
 

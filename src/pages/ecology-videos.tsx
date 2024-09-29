@@ -5,45 +5,28 @@ import { Heading, Image, Text } from "@chakra-ui/react"
 import { HeadProps } from "gatsby"
 import { SEO } from "../components/Seo"
 import ecologyImg from "../images/ecology.webp"
+import { useTranslation } from "react-i18next"
 
 const Ecology = () => {
+  const { t } = useTranslation()
   return (
     <PageTemplate
-      title="Ecology Videos"
-      subtitle="Transform your podcast into a professionally produced audio or video experience with our expert podcast editing services"
+      title={t("ecology.title")}
+      subtitle={t("ecology.subtitle")}
       content={
         <>
-          <Heading as="h2">
-            Raise Awareness for Environmental Issues with Compelling Video
-            Content
-          </Heading>
+          <Heading as="h2">{t("ecology.heading")}</Heading>
           <Text as="p" fontSize="lg">
-            At FIVA Studio, we believe that visual storytelling has the power to
-            inspire change and drive meaningful action. That's why we offer
-            specialized video editing services tailored to the ecological
-            community. Our team of experienced editors and producers are
-            dedicated to creating high-quality, eco-friendly videos that raise
-            awareness about environmental issues and promote sustainable living.
+            {t("ecology.text")}
           </Text>
           <Text as="p" fontSize="lg">
-            Wildlife conservation documentaries Environmental advocacy campaigns
-            Educational videos for eco-awareness Corporate sustainability
-            reports Nature-inspired short films
+            {t("ecology.text2")}
           </Text>
           <Text as="p" fontSize="lg">
-            Our eco-friendly approach to video production ensures that every
-            project is designed to minimize its carbon footprint while
-            maximizing its impact.
+            {t("ecology.text3")}
           </Text>
           <Text as="p" fontSize="lg">
-            From script to screen, we'll work closely with you to craft a
-            narrative that inspires audiences to take action and make a
-            difference.
-          </Text>
-          <Text as="p" fontSize="lg">
-            Ready to bring your ecological message to life? Contact us today to
-            discuss your project and learn more about our eco-friendly video
-            editing services.
+            {t("ecology.text4")}
           </Text>
           <Image src={ecologyImg} w="600px" h="400px" objectFit="contain" />
         </>

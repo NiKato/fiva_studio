@@ -1,9 +1,11 @@
 import React from "react"
 import { Button, Collapse, Stack, Text, useDisclosure } from "@chakra-ui/react"
 import { PopoverIcon } from "./PopoverIcon"
+import LocalizedLink from "../LocalizedLink"
 
 export const DocumentCollapse = () => {
   const { isOpen, onToggle } = useDisclosure()
+
   return (
     <>
       <Button
@@ -41,7 +43,7 @@ export const DocumentCollapse = () => {
                 {item}
               </Button>
             ) : (
-              <a key={item.label} href={item.href} rel="noopener noreferrer">
+              <LocalizedLink key={item.label} to={`.${item.href}`}>
                 <Button
                   variant="tertiary"
                   justifyContent="start"
@@ -49,7 +51,7 @@ export const DocumentCollapse = () => {
                 >
                   {item.label}
                 </Button>
-              </a>
+              </LocalizedLink>
             )
           )}
         </Stack>

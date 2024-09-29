@@ -6,8 +6,10 @@ import { VStack, Heading, Container, Box, Stack } from "@chakra-ui/react"
 import { MdOutlinePlayCircle } from "react-icons/md"
 import styled from "styled-components"
 import Cta from "../Cta"
+import { useTranslation } from "react-i18next"
 
 const VideoWrapper = ({ onClick, children }: any) => (
+
   <div onClick={onClick} style={{ position: "relative", cursor: "pointer" }}>
     {children}
   </div>
@@ -88,6 +90,8 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
     setIsPlaying(updatedIsPlaying)
   }
 
+  const { t } = useTranslation()
+
   return (
     <Layout>
       <PageHero title={title} subtitle={subtitle} />
@@ -148,10 +152,10 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
         p={{ base: "4", md: "12" }}
         mb={{ base: 10, md: 0 }}
       >
-        <VStack py="40px" spacing={10} alignItems="center" textAlign="center">
-          <Heading as="h2">What is the process?</Heading>
+        <Stack py="40px" spacing={10} alignItems="center" textAlign="center">
+          <Heading as="h2">{t("pageHero.process")}</Heading>
           <Cta />
-        </VStack>
+        </Stack>
       </Container>
     </Layout>
   )

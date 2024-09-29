@@ -7,7 +7,7 @@ import { SEO } from "../components/Seo"
 const Contact = () => {
   return (
     <Layout>
-      <ContactForm />
+      <ContactForm showBackground={true} />
     </Layout>
   )
 }

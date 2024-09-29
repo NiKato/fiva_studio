@@ -65,20 +65,140 @@
     "corporateSub": "Enhance your brand's image with our high-quality corporate videos"
   },
   "faq": {
-        "question": "How does the process work?",
-        "answer": "Upon consultations about your project and enrolling it, our team will work with you to understand your vision and create a high-quality final product, professionally edited by our experienced editors.",
-        "question2": "How long does the editing process take?",
-        "answer2": "Depending on the complexity of the project and the workload of our editors, this can vary from one day to several days but never later than the agreed deadline.",
-        "question3": "How will I receive my edited video?",
-        "answer3": "Once your edit is complete, we'll deliver it to you via a secure download link.",
-        "question4": "What payment methods do you accept?",
-        "answer4": "We accept all major credit cards, PayPal, and bank transfer. Client covers the transfer fee.",
-        "question5": "What if I need something changed in the video that you have delivered?",
-        "answer5": "It is not unusual to have small changes or corrections now and then. These ones are free of charge, however if you request a video to be remade entirely from what was agreed we reserve the right to charge a reasonable amount for extra work or not accept the request.",
-        "question6": "How many videos can you process?",
-        "answer6": "We can process a larger number of videos. When it comes to short form vids, on average we take 60 videos monthly per client, however we can deliver more.",
-        "question7": "How do I contact your customer support team?",
-        "answer7": "You can contact our customer support team via email at",
-        "answerSub": "or even better message us directly on WhatsApp or Viber"
+    "question": "How does the process work?",
+    "answer": "Upon consultations about your project and enrolling it, our team will work with you to understand your vision and create a high-quality final product, professionally edited by our experienced editors.",
+    "question2": "How long does the editing process take?",
+    "answer2": "Depending on the complexity of the project and the workload of our editors, this can vary from one day to several days but never later than the agreed deadline.",
+    "question3": "How will I receive my edited video?",
+    "answer3": "Once your edit is complete, we'll deliver it to you via a secure download link.",
+    "question4": "What payment methods do you accept?",
+    "answer4": "We accept all major credit cards, PayPal, and bank transfer. Client covers the transfer fee.",
+    "question5": "What if I need something changed in the video that you have delivered?",
+    "answer5": "It is not unusual to have small changes or corrections now and then. These ones are free of charge, however if you request a video to be remade entirely from what was agreed we reserve the right to charge a reasonable amount for extra work or not accept the request.",
+    "question6": "How many videos can you process?",
+    "answer6": "We can process a larger number of videos. When it comes to short form vids, on average we take 60 videos monthly per client, however we can deliver more.",
+    "question7": "How do I contact your customer support team?",
+    "answer7": "You can contact our customer support team via email at",
+    "answerSub": "or even better message us directly on WhatsApp or Viber"
+  },
+  "pageHero": {
+    "btn": "Find out more",
+    "process": "How does the procedure work?",
+    "question": "Have questions? Just ",
+    "question2": "reach out to us ",
+    "question3": "and we'd be happy to discuss details with you, free of charge!"
+  },
+  "aboutPage": {
+    "title": "About Fiva Studio",
+    "heading": "Our Story",
+    "heading2": "We're a team of experienced video editors",
+    "text": "You own a marketing agency, or you're SMM or a content creator that needs someone to process their content and deliver tailored short form videos for yourself or your clients?",
+    "headingTitle": "Who are we",
+    "headingText": "We're a team of experienced video editors who also have experience in managing social media accounts, digital marketing and content creation, so we understand your needs and importance of having a reliable editor who understands the vision behind your or your client's project.",
+    "headingText2": "We're here to process your videos for you and deliver them under agreed deadlines. How does the process work?",
+    "headingText3": "We organize a quick meeting where we discuss video content that needs to be made, how it should look like, project specifics like general vibe, quantity, price, deadlines etc.",
+    "headingText4": "Upon our meeting, if the type of project is something that we do and if we can accommodate and commit to it, we assign best editors for your project / niche.",
+    "headingText5": "Our edits may vary from what we call 'industry standard' to 'next level edits', thus we can accommodate different request, lower or higher budget",
+    "headingText6": "Reach out to us now, lets discuss your project and ideas"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "heading": "Need Anything?",
+    "email": "Email us:",
+    "text": "or text us at:",
+    "contactUs": "Feel free to contact us!",
+    "heading2": "Contact Us",
+    "fullname": "Full Name",
+    "fplaceholder": "Your name",
+    "mail": "Email",
+    "phone": "Phone number",
+    "eplaceholder": "Your email",
+    "textarea": "Message",
+    "tplaceholder": "Write to us",
+    "btn": "Send Message"
+  },
+  "ecology": {
+    "title": "Ecology Videos",
+    "subtitle": "Enhance your ecology videos with our expert editing. Transform your footage into a captivating, professional visual experience.",
+    "heading": "Raise Awareness for Environmental Issues with Compelling Video Content",
+    "text": "At FIVA Studio, we believe that visual storytelling has the power to inspire change and drive meaningful action. That's why we offer specialized video editing services tailored to the ecological community. Our team of experienced editors and producers are dedicated to creating high-quality nature and ecology videos that raise awareness about environmental issues and promote sustainable living.",
+    "text2": "Wildlife conservation documentaries, environmental advocacy campaigns, educational videos for eco-awareness. corporate sustainability reports nature-inspired short films",
+    "text3": "Our eco-friendly approach to video production ensures that every project is designed to minimize its carbon footprint while maximizing its impact.",
+    "text4": "Sole editing or from script to screen, we'll work closely with you to craft a narrative that inspires audiences to take action and make a difference. Ready to bring your ecological message to life? Contact us today to discuss your project!"
+  },
+  "corporate": {
+    "title": "Corporate Videos",
+    "subtitle": "Elevate Your Corporate Video with Professional Video Editing Services",
+
+    "text": "As a business, creating high-quality corporate videos is essential for communicating your message, engaging with your audience, and showcasing your brand.",
+    "text2": "We will edit your client's video and deliver high-quality and stunning visuals that will leave a lasting impression on the client's audience. Whether you're looking to create a promotional video, training video, or company culture film, our video editing services will help you achieve your goals and exceed your expectations.",
+    "text3": "Reach out to us now and let's discuss your project together!"
+  },
+  "food": {
+    "title": "Food and Hospitality",
+    "subtitle": "In the competitive world of food, hospitality, and restaurants, a high-quality video can make all the difference. Our expert video editing services can help you create a visual feast that drives engagement, increases sales, and sets your brand apart from the competition.",
+    "heading": "Hotels, restaurants, cooking, food - video editing service",
+    "text": "With expertise in food, hotel, and restaurant editing, we'll work closely with you to develop a compelling brand story that showcases your unique personality and style. From attention-grabbing sizzle reels to promotional videos that drive sales, our team of experienced editors will craft a visual narrative that resonates with your audience.",
+    "text2": "Get Ready to Serve Up a Visual Feast",
+    "text3": "Partner with us to take your brand to the next level. Contact us today to learn more about our video editing services and let's start creating a mouth-watering video that will leave your audience wanting more!"
+  },
+  "contentFC": {
+    "title": "Content for children",
+    "subtitle": "Spark Imagination & Learning with Our Child-Friendly Video Editing Services",
+
+    "text": "Help little minds grow with our expert video editing services designed specifically for children's content.",
+    "text2": "Our team creates engaging, entertaining, and educational videos that captivate young audiences and make learning fun.",
+    "text3": "From nursery rhymes to educational series, our editors bring your vision to life with:",
+    "text4": "Colorful visuals and animations that capture their attention",
+    "text5": "Catchy music and sound effects that stimulate their senses",
+    "text6": "Clear storytelling and easy-to-follow narration",
+    "text7": "Interactive elements that encourage participation and curiosity",
+    "text8": "Partner with us to create high-quality content that: Entertains and educates small children, Builds brand awareness and loyalty, Develops social skills and emotional intelligence",
+    "text9": "Let us help you bring your child-friendly video ideas to life. Contact us today to learn more about our video editing services and let's start creating a world of wonder for young viewers!"
+  },
+  "podcast": {
+    "title": "Podcasts",
+    "subtitle": "Reach a wider audience and boost your brand with our high-quality podcast video services",
+    "text": "Are you tired of sifting through hours of raw audio or video, trying to make sense of it all? Look no further! Our team of skilled podcast editors is here to help you transform your content into a polished, engaging, and professional-grade production. With our podcast editing services, you can rest assured that your show will sound and look its absolute best."
+  },
+  "shortForm": {
+    "title": "Short Form",
+    "subtitle": "You own a marketing agency, or you're SMM or a content creator that needs someone to process their content and deliver tailored videos for yourself or your clients?",
+    "text": "We're here to process the footage or create video from scratch and deliver.",
+    "text2": "We're a team of experienced editors who also have experience in managing social media accounts, digital marketing, and content creation, so we understand your needs and the importance of having a reliable editor who understands the vision behind your or your client's project."
+  },
+  "memeVideos": {
+    "title": "Meme Videos",
+    "subtitle": "Boost your engagement on Social Media with memes, our editors will craft memes for your social media.",
+    "text": "Meme content, for business? Let’s be honest, barely anyone bothers to engage with generative and business themed posts on social media today! People are not on the internet to watch ads, aren’t they? That is why meme content for business Instagram, Tiktok, Facebook or Yotube is a rising trend.",
+    "text2": "Businesses get more organic engagement, reach and leads when they successfully play their meme cards as a part of their online communication strategy.",
+    "text3": "Now what is the trick? Not just anyone can go and create good memes especially for a business profile without coming of as ‘cringe’, ‘sus’, ‘big L’. Many small and large business try this and yet they fail and hurt their brand. For this you need someone with meme mindset and loads of experience in the field so that these simpler yet very effective meme videos are done right.",
+    "text4": "Meme videos are bold and great way to build your brand image online, correspond to both older and especially upcoming generations.",
+    "text5": "This is a rising trend and you should catch the train before it goes mainstream.",
+    "text6": "For long time we have dwelled amongst the dark threads on the internet and we have accumulated great knowledge through memes and about memes, regardless of the type of meme and niche, we speak the language! We create reels, tiktoks, yt shorts memes for social media as well as 2D animated meme videos to present your story, scenario for Youtube channel, or even a TV show.",
+    "text7": "We understand the audience for each meme and your vision in the project.",
+    "text8": "Reach out to us now so that we can discuss your project, free of charge!",
+    "text9": "Please see some of our references:"
+  },
+  "animation": {
+    "title": "2d Animation",
+    "subtitle": "You own a marketing agency, or you're SMM or a content creator that needs someone to process their content and deliver tailored videos for yourself or your clients?",
+    "text": "Transform your brand with stunning 2D animation videos! Our expert team provides high-quality video editing services for content creators, crafting engaging stories and captivating visuals that drive audience engagement and brand awareness."
+  },
+  "education": {
+    "title": "Educational videos",
+    "subtitle": "You need a video editor for your educational niche video content like courses, YouTube channel, or Instagram, Facebook, and TikTok? Our video editors are here to bring your vision to life and give your video the desired effect!",
+    "text": "Instagram, Facebook, and TikTok? Our video editors are here to bring your vision to life and give your video the desired effect!",
+    "text2": "We work with you closely so that we can come up with the best visual solution according to your vision. Upon reaching the desired aesthetics, visuals, sounds, and melody - standard of your videos, we take on the projects and build your show, channel, or internet course.",
+    "text3": "Here is an example of a client that wanted to sell language course online, she was very specific about every detail in her video and we helped her bring her vision to life and improved on her original version:"
+  },
+  "wedding": {
+    "title": "Wedding Videos",
+    "subtitle": "You need a video editor for your educational niche video content like courses, YouTube channel, or Instagram, Facebook, and TikTok? Our video editors are here to bring your vision to life and give your video the desired effect!",
+    "text": "At Fiva Studio, we collaborate closely with you to create a wedding video that perfectly captures your vision. From the initial concept to the final edit, we focus on every detail—visuals, sound, and music—to ensure your special day is portrayed with elegance and emotion. Once we align on the desired look and feel, we meticulously craft a beautiful film that showcases your love story and memories.",
+    "text2": "For example, we recently worked with a couple who wanted a timeless video of their wedding day. They had specific ideas for how they wanted their ceremony and celebrations depicted. We took their detailed vision and enhanced it with our cinematic expertise, resulting in a stunning video that beautifully captured their unique love story."
+  },
+  "footer": {
+    "copyright": "© 2024 Fiva Studio. All rights reserved"
   }
 }

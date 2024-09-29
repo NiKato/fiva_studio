@@ -18,14 +18,15 @@ import {
   Flex,
   Text,
   Container,
-  Image,
   Link,
   Divider,
 } from "@chakra-ui/react"
 
 import { Bg } from "../Bg"
+import { useTranslation } from "react-i18next"
 
-export default function ContactForm() {
+export default function ContactForm({ showBackground = false }) {
+  const { t } = useTranslation()
   var toast = useToast()
 
   const [state, handleSubmit] = useForm("xwpeekpd")
@@ -37,7 +38,6 @@ export default function ContactForm() {
     })
   }
 
-  // Initial values + setting new ones by typing in input
   const [formValues, setFormValues] = useState({
     fullName: "",
     phone: "",
@@ -45,21 +45,19 @@ export default function ContactForm() {
     message: "",
   })
 
-  // Error fields
   const [formErrors, setFormErrors] = useState({})
   const [isSubmit, setIsSubmit] = useState(false)
 
   const handleChange = (input: any) => (e: any) => {
     const value = e.currentTarget.value
 
-    setFormValues(prevState => ({
+    setFormValues((prevState) => ({
       ...prevState,
       [input]: value,
     }))
   }
 
   useEffect(() => {
-    console.log(formErrors)
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       // Handle form submission here if needed
     }
@@ -71,18 +69,19 @@ export default function ContactForm() {
 
   return (
     <>
-      {/* Bg component as background */}
-      <Box
-        pos="absolute"
-        top="0"
-        left="0"
-        zIndex="-1"
-        width="100%"
-        height="100%"
-        filter={"blur(1px)"}
-      >
-        <Bg />
-      </Box>
+      {showBackground && (
+        <Box
+          pos="absolute"
+          top="0"
+          left="0"
+          zIndex="-1"
+          width="100%"
+          height="100%"
+          filter={"blur(1px)"}
+        >
+          <Bg />
+        </Box>
+      )}
 
       <Container maxW="7xl" py={20} pos="relative">
         <Flex
@@ -101,10 +100,10 @@ export default function ContactForm() {
             boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
           >
             <Heading as="h2" fontFamily={"PoppinsBlack"} size="lg" mb={4}>
-              Need Anything?
+              {t("contact.heading")}
             </Heading>
             <Text fontSize="xl" mb={4}>
-              Email us:
+            {t("contact.email")}
             </Text>
             <Link
               fontWeight={600}
@@ -116,7 +115,7 @@ export default function ContactForm() {
             </Link>
             <Divider my={4} bg="#3377FF" />
             <Text fontSize="xl" mb={4}>
-              or Text us at:
+            {t("contact.text")}
             </Text>
             <Link
               fontWeight={600}
@@ -127,7 +126,7 @@ export default function ContactForm() {
               +38162 153 70 32
             </Link>
             <Text fontSize="xl" mt={6}>
-              Feel free to contact us!
+            {t("contact.contactUs")}
             </Text>
           </Box>
           <Box flex="2" p={4}>
@@ -135,12 +134,12 @@ export default function ContactForm() {
               <VStack spacing={4} align="stretch">
                 <Box textAlign="center" mb={4}>
                   <Heading as="h2" fontFamily={"PoppinsBlack"} size="lg">
-                    Contact Us
+                  {t("contact.title")}
                   </Heading>
                 </Box>
 
                 <FormControl isRequired>
-                  <FormLabel>Full Name</FormLabel>
+                  <FormLabel>{t("contact.fullname")}</FormLabel>
                   <InputGroup
                     display="flex"
                     alignItems="center"
@@ -154,7 +153,7 @@ export default function ContactForm() {
                     <Input
                       variant="outline"
                       size="lg"
-                      placeholder="Your name"
+                      placeholder={t("contact.fplaceholder")}
                       id="fullName"
                       name="fullName"
                       type="text"
@@ -170,7 +169,7 @@ export default function ContactForm() {
                 </FormControl>
 
                 <FormControl>
-                  <FormLabel>Phone Number</FormLabel>
+                  <FormLabel>{t("contact.phone")}</FormLabel>
                   <InputGroup>
                     <InputLeftElement
                       pt={2}
@@ -196,7 +195,7 @@ export default function ContactForm() {
                 </FormControl>
 
                 <FormControl isRequired>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>{t("contact.mail")}</FormLabel>
                   <InputGroup>
                     <InputLeftElement
                       pt={2}
@@ -209,7 +208,7 @@ export default function ContactForm() {
                       name="email"
                       variant="outline"
                       size="lg"
-                      placeholder="your@email.com"
+                      placeholder={t("contact.eplaceholder")}
                       defaultValue={formValues.email}
                       onChange={handleChange("email")}
                     />
@@ -222,13 +221,13 @@ export default function ContactForm() {
                 </FormControl>
 
                 <FormControl isRequired>
-                  <FormLabel>Message</FormLabel>
+                  <FormLabel>{t("contact.textarea")}</FormLabel>
                   <Textarea
                     id="message"
                     name="message"
                     variant="outline"
                     size="lg"
-                    placeholder="Write to us"
+                    placeholder={t("contact.tplaceholder")}
                     defaultValue={formValues.message}
                     onChange={handleChange("message")}
                   />
@@ -239,24 +238,13 @@ export default function ContactForm() {
                   />
                 </FormControl>
 
-                <Box
-                  className="g-recaptcha"
-                  data-sitekey="6LejFiskAAAAAKBm9Bbgcl_b3kQrYtrgpjbyXF2W"
-                >
-                  <ValidationError
-                    prefix="Captcha"
-                    field="captcha"
-                    errors={state.errors}
-                  />
-                </Box>
-
                 <Button
                   variant="solid"
                   colorScheme="blue"
                   type="submit"
                   isLoading={state.submitting}
                 >
-                  Send Message
+                  {t("contact.btn")}
                 </Button>
               </VStack>
             </form>

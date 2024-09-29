@@ -23,8 +23,13 @@ import { MdKeyboardArrowDown } from "react-icons/md"
 
 import { HeadProps } from "gatsby"
 import { SEO } from "../components/Seo"
+import LocalizedLink from "../components/LocalizedLink"
+import ContactForm from "../components/ContactForm"
+import { useTranslation } from "react-i18next"
 
-const About = () => (
+const About = () => {
+  const { t } = useTranslation()
+  return (
   <>
     <Layout>
       <Box position="relative" height={{ base: "100vh", md: "60vh" }}>
@@ -59,7 +64,7 @@ const About = () => (
               mb="8"
               color={useColorModeValue("#fff", "#fff")}
             >
-              About Fiva Studio
+              {t("aboutPage.title")}
             </Heading>
             <AnchorLink to="#about" stripHash>
               <MdKeyboardArrowDown color="#fff" size="40px" />
@@ -69,7 +74,7 @@ const About = () => (
       </Box>
       <Container maxW="container.xl" p={{ base: "4", md: "12" }}>
         <Heading as="h2" fontFamily={"PoppinsBlack"} pb={5}>
-          Our Story
+        {t("aboutPage.heading")}
         </Heading>
         <Box
           marginTop={{ base: "1", sm: "5" }}
@@ -92,7 +97,11 @@ const About = () => (
               marginLeft={{ base: "0", sm: "5%" }}
               marginTop="5%"
             >
-              <Image src={"https://fivastudio.b-cdn.net/hero.webp"} w={{ base: "100%", sm: "540px" }} filter="blur(10px)" />
+              <Image
+                src={"https://fivastudio.b-cdn.net/hero.webp"}
+                w={{ base: "100%", sm: "540px" }}
+                filter="blur(10px)"
+              />
             </Box>
             <Box
               zIndex="1"
@@ -119,24 +128,17 @@ const About = () => (
             justifyContent="center"
             marginTop={{ base: "3", sm: "0" }}
           >
-            <Heading marginTop="1">
-              <Link
-                textDecoration="none"
-                fontSize="4xl"
-                _hover={{ textDecoration: "none" }}
-                fontFamily={"PoppinsBlack"}
-              >
-                We're a team of experienced video editors
-              </Link>
-            </Heading>
-            <Text
-              as="p"
-              marginTop="2"
-              fontSize="lg"
+            <Heading
+              marginTop="1"
+              textDecoration="none"
+              fontSize="4xl"
+              _hover={{ textDecoration: "none" }}
+              fontFamily={"PoppinsBlack"}
             >
-              You own a marketing agency, or you're SMM or a content creator
-              that needs someone to process their content and deliver tailored
-              short form videos for yourself or your clients?
+               {t("aboutPage.heading2")}
+            </Heading>
+            <Text as="p" marginTop="2" fontSize="lg">
+            {t("aboutPage.text")}
             </Text>
           </Box>
         </Box>
@@ -144,38 +146,32 @@ const About = () => (
         <Divider marginTop="5" />
 
         <VStack paddingTop="40px" spacing={10} alignItems="flex-start">
-          <Heading as="h2" fontFamily={"PoppinsBlack"}>Who are we</Heading>
+          <Heading as="h2" fontFamily={"PoppinsBlack"}>
+          {t("aboutPage.headingTitle")}
+          </Heading>
           <Text as="p" fontSize="lg">
-            We're a team of experienced video editors who also have experience
-            in managing social media accounts, digital marketing and content
-            creation, so we understand your needs and importance of having a
-            reliable editor who understands the vision behind your or your
-            client's project.
+          {t("aboutPage.headingText")}
           </Text>
           <Text as="p" fontSize="lg">
-            We're here to process your videos for you and deliver them under
-            agreed deadlines. How does the process work?
+          {t("aboutPage.headingText2")}
           </Text>
           <Text as="p" fontSize="lg">
-            We organize a quick meeting where we discuss video content that
-            needs to be made, how it should look like, project specifics like
-            general vibe, quantity, price, deadlines etc.
+            {t("aboutPage.headingText3")}
           </Text>
           <Text as="p" fontSize="lg">
-            Upon our meeting, if the type of project is something that we do and
-            if we can accommodate and commit to it, we assign best editors for
-            your project / niche.
+          {t("aboutPage.headingText4")}
           </Text>
           <Text as="p" fontSize="lg">
-            Our edits may vary from what we call 'industry standard' to 'next
-            level edits', thus we can accommodate different request, lower or
-            higher budget. Please see below some of our edits:
+          {t("aboutPage.headingText5")}
           </Text>
+          <Text  as="p" fontSize="lg"> {t("aboutPage.headingText6")}</Text>
         </VStack>
+        <ContactForm showBackground={false} />
       </Container>
     </Layout>
   </>
-)
+  )
+}
 
 export default About
 

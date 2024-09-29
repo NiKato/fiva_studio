@@ -16,6 +16,7 @@ import { MobileDrawer } from "./MobileDrawer"
 import LanguageSwitcher from "../LanguageSwitcher"
 import { MoonIcon, SunIcon } from "@chakra-ui/icons"
 import { useTranslation } from "react-i18next"
+import LocalizedLink from "../LocalizedLink"
 
 export const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -37,14 +38,14 @@ export const Header = () => {
   }, [])
 
   const links = [
-    { href: "/", label: "Home" },
-    { href: "#", label: "Services", component: <DocumentPopover /> },
-    { href: "/about-us", label: "About Us" },
+    { href: "/", label: t("header.home") },
+    { href: "#", label: t("header.services") , component: <DocumentPopover /> },
+    { href: "/about-us", label: t("header.aboutUs") },
     {
-      href: "https://fivastudio.com/#faq",
-      label: "Questions",
+      href: "/#faq",
+      label: t("header.questions") ,
     },
-    { href: "/contact-us", label: "Contact Us" },
+    { href: "/contact-us", label: t("header.contactUs") },
   ]
 
   return (
@@ -74,9 +75,9 @@ export const Header = () => {
         <Flex>
           <HStack spacing="3">
             <MobileDrawer />
-            <Link href="/">
+            <LocalizedLink to="">
               <Image width="72px" h="36px" src={logo} />
-            </Link>
+            </LocalizedLink>
           </HStack>
           <ButtonGroup
             size="sm"
@@ -91,7 +92,7 @@ export const Header = () => {
                 {link.component ? (
                   <Box ml={4}>{link.component}</Box>
                 ) : (
-                  <Link href={link.href}>
+                  <LocalizedLink to={`.${link.href}`}>
                     <Button
                       bg={"none"}
                       p={2}
@@ -102,7 +103,7 @@ export const Header = () => {
                     >
                       {link.label}
                     </Button>
-                  </Link>
+                  </LocalizedLink>
                 )}
               </React.Fragment>
             ))}
@@ -126,8 +127,8 @@ export const Header = () => {
               aria-label={"Toggle Dark/Light Mode"}
               className="color-mode-button"
             />
-            {/* <LanguageSwitcher /> */}
-            <Link href="/contact-us">
+            <LanguageSwitcher />
+            <LocalizedLink to="contact-us">
               <Button
                 as={"a"}
                 display={{ base: "none", md: "inline-flex" }}
@@ -142,7 +143,7 @@ export const Header = () => {
               >
                 {t("header.contactUs")}
               </Button>
-            </Link>
+            </LocalizedLink>
           </ButtonGroup>
         </HStack>
       </Flex>

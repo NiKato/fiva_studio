@@ -16,6 +16,7 @@ import { DocumentCollapse } from "./DocumentCollapse"
 import { ToggleButton } from "./ToggleButton"
 import logo from "../../images/logo.png"
 import { useTranslation } from "react-i18next"
+import LocalizedLink from "../LocalizedLink"
 
 export const MobileDrawer = () => {
   const { isOpen, onToggle, onClose } = useDisclosure()
@@ -53,9 +54,9 @@ export const MobileDrawer = () => {
               aria-label="Close menu"
               onClick={onClose}
             />
-            <Link href="/">
+            <LocalizedLink to="">
               <Image width="72px" height="36px" src={logo} alt="Logo" />
-            </Link>
+            </LocalizedLink>
           </DrawerHeader>
           <DrawerBody p={2}>
             <Stack spacing="1">

@@ -1,5 +1,6 @@
 import { Stack, useColorMode, Flex, Text, Heading, Link } from "@chakra-ui/react";
 import React from "react";
+import LocalizedLink from "../LocalizedLink";
 
 const Feature = ({ title, text, icon, linkText, linkUrl }: any) => {
   const { colorMode } = useColorMode();
@@ -14,9 +15,9 @@ const Feature = ({ title, text, icon, linkText, linkUrl }: any) => {
       <Text as="p" mx="auto" textAlign="center" fontSize="lg">
         {text}
         {linkText && linkUrl && (
-          <Link rel="preload" href={linkUrl} color="#477EEB">
-            {linkText}
-          </Link>
+          <LocalizedLink rel="preload" to="contact-us">
+            <Text color="#477EEB">{linkText}</Text>
+          </LocalizedLink>
         )}
       </Text>
     </Stack>

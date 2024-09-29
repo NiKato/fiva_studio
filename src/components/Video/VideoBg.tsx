@@ -1,6 +1,7 @@
 import { Link } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import LocalizedLink from "../LocalizedLink";
 
 const VideoWrapper = styled.div`
   position: relative;
@@ -29,7 +30,7 @@ const VideoBg = ({ src, placeholder, href }: { src: string, placeholder: string,
 
   return (
     <VideoWrapper>
-      <Link href={href}>
+      <LocalizedLink to={`.${href}`}>
         {!videoLoaded && <PlaceholderImage src={placeholder} alt="Video Placeholder" />}
         <VideoBackground
           src={src}
@@ -39,7 +40,7 @@ const VideoBg = ({ src, placeholder, href }: { src: string, placeholder: string,
           loop
           onLoadedData={() => setVideoLoaded(true)}
         />
-      </Link>
+      </LocalizedLink>
     </VideoWrapper>
   );
 };

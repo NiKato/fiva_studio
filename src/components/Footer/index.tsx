@@ -9,11 +9,9 @@ import {
   Stack,
   Text,
   VisuallyHidden,
-  Input,
-  IconButton,
-  useColorModeValue,
   VStack,
   HStack,
+  useColorModeValue,
 } from "@chakra-ui/react"
 import logo from "../../images/logo.png"
 import {
@@ -24,6 +22,9 @@ import {
   FaWhatsapp,
   FaEnvelope,
 } from "react-icons/fa"
+import LocalizedLink from "../LocalizedLink"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { useTranslation } from "react-i18next"
 
 const SocialButton = ({
   children,
@@ -66,19 +67,19 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 }
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   const footerLinks = [
-    { label: "Short Form", href: "/short-form" },
-    { label: "Podcasts", href: "/podcasts" },
-    { label: "Meme Videos", href: "/meme-videos" },
-    { label: "2d Animation", href: "/2d-animations" },
-    { label: "Youtube Videos", href: "/" },
-    { label: "Educational Videos", href: "/educational-videos" },
-    { label: "Corporate Videos", href: "/" },
-    { label: "Content for Children", href: "/content-for-children" },
-    { label: "Food and Hospitality", href: "/" },
-    { label: "Film / Documentary", href: "/" },
-    { label: "Ecology Videos", href: "/ecology-videos" },
-    { label: "Wedding Videos", href: "/wedding-videos" },
+    { label: t("shortForm.title"), href: "short-form" },
+    { label: t("podcast.title"), href: "podcasts" },
+    { label: t("cardTitles.meme"), href: "meme-videos" },
+    { label: t("animation.title"), href: "2d-animations" },
+    { label: t("education.title"), href: "educational-videos" },
+    { label: t("corporate.title"), href: "corporate-videos" },
+    { label: t("contentFC.title"), href: "content-for-children" },
+    { label: t("food.title"), href: "food-and-hospitality" },
+    { label: t("ecology.title"), href: "ecology-videos" },
+    { label: t("wedding.title"), href: "wedding-videos" },
   ]
 
   return (
@@ -101,7 +102,7 @@ export default function Footer() {
             <Box>
               <Image width="116px" h="48px" src={logo} />
             </Box>
-            <Text fontSize={"sm"}>© 2024 Fiva Studio. All rights reserved</Text>
+            <Text fontSize={"sm"}>{t("footer.copyright")}</Text>
             <Stack direction={"row"} spacing={6}>
               <SocialButton label={"Instagram"} href={"https://www.instagram.com/fiva_studio/"}>
                 <FaInstagram />
@@ -120,30 +121,30 @@ export default function Footer() {
           <Stack align={"flex-start"}>
             <ListHeader>Fiva Studio</ListHeader>
             <Text fontWeight={400}>
-              <Link href={"/about-us"}>About us</Link>
+              <LocalizedLink to={"about-us"}>{t("header.aboutUs")}</LocalizedLink>
             </Text>
             <Text fontWeight={400}>
-              <Link href={"/contact-us"}>Contact us</Link>
+              <LocalizedLink to={"contact-us"}>{t("header.contactUs")}</LocalizedLink>
             </Text>
             <Text fontWeight={400}>
-              <Link href={"/contact-us"}>Pricing</Link>
+              <LocalizedLink to={"contact-us"}>{t("header.services")}</LocalizedLink>
             </Text>
             <Text fontWeight={400}>
-              <Link href={"/#faq"}>Questions</Link>
+              <AnchorLink to={"/#faq"}>{t("header.questions")}</AnchorLink>
             </Text>
           </Stack>
           <Stack align={"flex-start"}>
-            <ListHeader>Services</ListHeader>
+            <ListHeader>{t("header.aboutUs")}</ListHeader>
             <Stack>
               {footerLinks.map((link, index) => (
                 <Text key={index} fontWeight={400}>
-                  <Link href={link.href}>{link.label}</Link>
+                  <LocalizedLink to={`${link.href}`}>{link.label}</LocalizedLink>
                 </Text>
               ))}
             </Stack>
           </Stack>
           <Stack align={"flex-start"} gap={2}>
-            <ListHeader>Contact Us</ListHeader>
+            <ListHeader>{t("header.contactUs")}</ListHeader>
             <VStack alignItems="flex-start">
               <HStack>
                 <FaWhatsapp

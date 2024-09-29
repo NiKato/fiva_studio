@@ -79,5 +79,125 @@
     "question7": "Kako da kontaktiram vaš tim za korisničku podršku?",
     "answer7": "Možete kontaktirati naš tim za korisničku podršku putem e-pošte na",
     "answerSub": "ili još bolje poslati nam poruku direktno na WhatsApp ili Viber"
+  },
+  "pageHero": {
+    "btn": "Otkrijte više",
+    "process": "Kakva je procedura?",
+    "question": "Imate pitanje? Jednostavno ",
+    "question2": "nas kontaktirajte ",
+    "question3": "i biće nam drago da sa vama razgovaramo o detaljima, potpuno besplatno!"
+  },
+  "aboutPage": {
+    "title": "O Fiva Studiu",
+    "heading": "Naša priča",
+    "heading2": "Mi smo tim iskusnih montažera videa",
+    "text": "Imate marketinšku agenciju, ili ste SMM menadžer ili kreator sadržaja kome je potreban neko ko će obraditi njihov sadržaj i isporučiti prilagođene kratke video zapise za vas ili vaše klijente?",
+    "headingTitle": "Ko smo mi",
+    "headingText": "Mi smo tim iskusnih montažera videa koji takođe imaju iskustva u vođenju naloga na društvenim mrežama, digitalnom marketingu i kreiranju sadržaja, tako da razumemo vaše potrebe i važnost pouzdanog montažera koji shvata viziju vašeg ili projekta vašeg klijenta.",
+    "headingText2": "Ovde smo da obradimo vaše video zapise i isporučimo ih u dogovorenim rokovima. Kako funkcioniše proces?",
+    "headingText3": "Organizujemo brzi sastanak na kojem razgovaramo o video sadržaju koji treba da se napravi, kako treba da izgleda, specifičnostima projekta kao što su opšti stil, količina, cena, rokovi itd.",
+    "headingText4": "Nakon sastanka, ukoliko je tip projekta nešto što mi radimo i možemo da se prilagodimo i posvetimo istom, dodeljujemo najbolje montažere za vaš projekat ili nišu.",
+    "headingText5": "Naše montaže mogu varirati od onoga što nazivamo 'industrijskim standardom' do 'montaža na sledećem nivou', te se možemo prilagoditi različitim zahtevima, nižim ili višim budžetima.",
+    "headingText6": "Kontaktirajte nas sada, hajde da razgovaramo o vašem projektu i idejama."
+  },
+  "contact": {
+    "title": "Kontaktirajte nas",
+    "heading": "Treba vam nešto?",
+    "email": "Pošaljite nam email:",
+    "text": "ili nam pošaljite poruku na:",
+    "contactUs": "Slobodno nas kontaktirajte!",
+    "heading2": "Kontaktirajte nas",
+    "fullname": "Ime i prezime",
+    "fplaceholder": "Vaše ime",
+    "mail": "Email",
+    "phone": "Broj telefona",
+    "eplaceholder": "Vaš email",
+    "textarea": "Poruka",
+    "tplaceholder": "Pišite nam",
+    "btn": "Pošaljite poruku"
+  },
+  "ecology": {
+    "title": "Videi o ekologiji",
+    "subtitle": "Poboljšajte svoje ekološke video snimke uz našu stručnu montažu. Pretvorite materijal u očaravajuće, profesionalno vizuelno iskustvo.",
+    "heading": "Podignite svest o pitanjima životne sredine uz našu pomoć!",
+    "text": "U FIVA Studiju verujemo da vizuelno pripovedanje ima moć da inspiriše promene i podstakne ljude na delovanje. Zato nudimo specijalizovane usluge video montaže za podizanjve svesti o životnoj sredini i ključnim globalnim, lokalnim ili nacionalnim pitanjima,. Naš tim iskusnih video editora i producenata posvećen je stvaranju visokokvalitetnih, eco-friendly video zapisa koji podižu svest o pitanjima životne sredine i promovišu održivi život",
+    "text2": "Dokumentarni filmovi o očuvanju divljih životinja, kampanje zaštite životne sredine obrazovni video snimci za ekološku svest, izveštaji o korporativnoj održivosti, kratki filmovi inspirisani prirodom.",
+    "text3": "Spremni da oživite svoju ekološku poruku?",
+    "text4": "Kontaktirajte nas danas da biste razgovarali o Vašem projektu i saznali više o našim uslugama video montaže video zapisa ili priloga na temu ekologije i prirode."
+  },
+  "corporate": {
+    "title": "Korporativni Videi",
+    "subtitle": "Podignite svoj korporativni video uz profesionalne usluge video montaže",
+
+    "text": "Za svaki ozbiljan biznis, kreiranje visokokvalitetnih korporativnih video zapisa je od suštinskog značaja za prenošenje Vaše poruke, interakciju sa publikom i predstavljanje vašeg brenda.",
+    "text2": "Mi ćemo montirati video vašeg klijenta i isporučiti visokokvalitetne i kreativne vizuelne prikaze koji će ostaviti trajan utisak na klijentovoj publiki.",
+    "text3": "Bez obzira da li želite da napravite promotivni video, trening video za osoblje ili film o kulturi kompanije, naše usluge video montaže će Vam pomoći da postignete svoje ciljeve i premašite očekivanja. Javite nam se već odmah za besplatne konsultacije!"
+  },
+  "food": {
+    "title": "Hrana i ugostiteljstvo",
+    "subtitle": "U svetu konkurencije hrane, gostoprimstva i restorana, video visokog kvaliteta može da napravi veliku razliku.",
+    "heading": "Hoteli, restorani, kuvanje, hrana - usluga video montaže",
+    "text": "Naše  usluge video montaže Vam mogu pomoći da napravite vizuelnu gozbu koja podstiče angažovanje publike, povećava prodaju i izdvaja vaš brend od konkurencije.",
+    "text2": "Sa velikim iskustvo u editovanju video zapise hrane, hotela i promo klipova restorana, blisko ćemo sarađivati sa Vama kako bismo razvili ubedljivu priču o brendu koja prikazuje Vašu jedinstvenu ličnost i stil.",
+    "text3": "Pripremite se da poslužite vizuelnu gozbu! Kontaktirajte nas već danas da biste saznali više o našim uslugama za uređivanje video zapisa na temu hrane, restorana i hotela!"
+  },
+  "contentFC": {
+    "title": "Sadržaj za decu",
+    "subtitle": "Podstaknite maštu i učenje kod dece uz naše usluge video montaže",
+
+    "text": "Pomozite malim umovima da rastu pomoću naših stručnih usluga za uređivanje videa dizajniranih posebno za sadržaj za decu.",
+    "text2": "Naš tim stvara zanimljive, zabavne i edukativne video snimke koji očaravaju mladu publiku i čine učenje zabavnim.",
+    "text3": "Od dečijih pesama do edukativnih serija, naši video editori oživljavaju vašu viziju koristeći:",
+    "text4": "Šarene slike i animacije koje privlače njihovu pažnju",
+    "text5": "Ritmična muzika i zvučni efekti koji stimulišu njihova čula",
+    "text6": "Jasno pripovedanje i naracija koja se lako prati",
+    "text7": "Interaktivni elementi koji podstiču reakciju i radoznalost",
+    "text8": "Udružite se sa nama kako biste kreirali sadržaj visokog kvaliteta koji zabavlja i obrazuje mališane, gradi svest o brendu i lojalnost, razvija socijalne veštine i emocionalnu inteligenciju.",
+    "text9": "Dozvolite nam da Vam pomognemo da oživite svoje video ideje prilagođene deci. Kontaktirajte nas danas da biste saznali više o našim uslugama za uređivanje video zapisa i hajde da počnemo da stvaramo svet čuda za mlade gledaoce!"
+  },
+  "podcast": {
+    "title": "Podkasti",
+    "subtitle": "Pretvorite svoj podkast u kvalitetno audio i video iskustvo pomoću naše usluge editovanja podcasta",
+    "text": "Da li ste umorni od pregledavanja sati sirovog audio ili video materijala, pokušavajući da sve to shvatite? Naš tim video editora je tu da vam pomogne da transformišete svoj sadržaj u uglađenu, zanimljivu produkciju profesionalnog nivoa. Uz naše usluge uređivanja podkasta, možete biti sigurni da će vaša emisija zvučati i izgledati apsolutno najbolje."
+  },
+  "shortForm": {
+    "title": "Short Form",
+    "subtitle": "Imate marketinšku agenciju, ili ste SMM ili kontent kreator kome je potreban neko da obradi njihov sadržaj i isporuči video zapis po meri za Vas ili Vaše klijente?",
+    "text": "Tu smo da editujemo snimak ili napravimo video od nule i isporučimo.",
+    "text2": "Mi smo tim iskusnih video editora koji takođe imaju iskustvo u upravljanju nalozima na društvenim mrežama, digitalnom marketingu i kreiranju sadržaja, tako da razumemo Vaše potrebe i važnost pouzdanog video montažera koji razume viziju Vašeg ili projekta Vašeg klijenta."
+  },
+  "memeVideos": {
+    "title": "Video Mimovi",
+    "subtitle": "Povećajte angažovanje na društvenim mrežama uz mimove – naši montažeri će kreirati mimove za vaše profile na društvenim mrežama.",
+    "text": "Mim sadržaj, za poslovanje? Budimo iskreni, retko ko je danas zainteresovan da se zanima generativnim sadržajem i poslovnim temama na društvenim mrežama! Ljudi nisu na internetu da bi gledali oglase, zar ne? Zato je mim sadržaj za poslovne Instagram, Tiktok, Facebook ili yotube naloge trend u usponu.",
+    "text2": "Preduzeća dobijaju više organskog angažovanja publike, dosega i potencijalnih klijenata kada uspešno odigraju svoje mim karte kao deo svoje strategije onlajn komunikacije.",
+    "text3": "U čemu je trik? Ne može svako da napravi dobre mimove posebno za poslovni profil, a da se ne ispadne kao „krindž“, „sus“, „Big L“ i tako dalje. Mnoga mala i velika preduzeća pokušavaju ovo, a ipak ne uspevaju i nanose štetu svom brendu. Za ovo vam je potreban neko sa mimeričnim načinom razmišljanja i velikim iskustvom na terenu, kako bi ovi jednostavniji, ali veoma efikasni mim video snimci bili urađeni kako treba.",
+    "text4": "Meme video snimci su hrabar i odličan način da izgradite imidž vašeg brenda na mreži, odgovaraju i starijim, a posebno nadolazećim generacijama.",
+    "text5": "Ovo je rastući trend i treba bi da uhvatite voz na vreme.",
+    "text6": "Dugo smo obitavali među raznim nitima na internetu i akumulirali smo veliko znanje o mimovima, bez obzira na vrstu mima i nišu. Editujemo rilse, tiktokove, yt shortse i ostali mim sadržaj za društvene mreže kao i animirane 2D video zapise a predstavimo vašu priču, scenario za Ioutube kanal, ili čak TV emisiju.",
+    "text7": "Razumemo mim ukuse publike u svakoj niši.",
+    "text8": "Kontaktirajte nas odmah i zakažite besplatnu konsultaciju za Vaš projekat.",
+    "text9": "Pogledajte neke od naših referenci:Razumemo publiku za svaki mem i vašu viziju u projektu. Obratite nam se sada da bismo mogli besplatno razgovarati o vašem projektu! Pogledajte neke od naših referenci:"
+  },
+  "animation": {
+    "title": "2d Animacije",
+    "subtitle": "Imate marketinšku agenciju, ili ste SMM menadžer ili kreator sadržaja kome je potreban neko ko će obraditi njihov sadržaj i isporučiti prilagođene video zapise za vas ili vaše klijente?",
+    "text": "Transformišite svoj brend uz zapanjujuće 2D animacije! Naš tim pruža visokokvalitetne usluge uređivanja videa za kreatore sadržaja, praveći zanimljive priče i zadivljujuće vizuelne elemente koji podstiču angažovanje publike"
+  },
+  "education": {
+    "title": "Obrazovni video zapisi",
+    "subtitle": "Potreban vam je video editor za vaš obrazovni video sadržaj kao što su kursevi, youtube kanal ili za instagram reels i Tiktok? Naši video editori su tu da ožive Vašu viziju i daju Vašem videu željeni efekat.",
+    "text": "Instagram, Facebook i TikTok? Naši video uređivači su tu da ožive vašu viziju i daju vašem videu željeni efekat!",
+    "text2": "Blisko radimo sa Vama kako bismo došli do najboljeg vizuelnog rešenja prema Vašoj viziji. Kada postignemo željenu estetiku, vizuelni prikaz, zvuk i melodiju - standard vaših video zapisa, krećemo sa obradom video zapisa gradimo vašu emisiju, kanal ili internet kurs.",
+    "text3": "Evo primera klijenta koji je želeo da proda kurs iz stranog jezika na internetu, bila je veoma konkretna o svakom detalju u svom videu i pomogli smo joj da oživi svoju viziju i poboljšali njenu originalnu verziju:"
+  },
+  "wedding": {
+    "title": "Videi Venčanja",
+    "subtitle": "Treba vam montažer videa za vaš edukativni sadržaj poput kurseva, YouTube kanala, ili Instagrama, Facebook-a i TikToka? Naši montažeri videa su ovde da ožive vašu viziju i daju vašem videu željeni efekat!",
+    "text": "U Fiva Studiju blisko sarađujemo s vama kako bismo kreirali venčani video koji savršeno oslikava vašu viziju. Od početne ideje do konačne montaže, fokusiramo se na svaki detalj—vizuale, zvuk i muziku—kako bismo osigurali da vaš poseban dan bude prikazan s elegancijom i emocijom. Kada se usaglasimo oko željenog izgleda i atmosfere, pažljivo kreiramo prelepi film koji prikazuje vašu ljubavnu priču i uspomene.",
+    "text2": "Na primer, nedavno smo radili s parom koji je želeo bezvremenski video svog venčanja. Imali su specifične ideje o tome kako su želeli da njihova ceremonija i proslave budu prikazane. Uzimajući u obzir njihovu detaljnu viziju, obogatili smo je našom filmskom stručnošću, što je rezultiralo zapanjujućim videom koji je prelepo uhvatio njihovu jedinstvenu ljubavnu priču."
+  },
+  "footer": {
+    "copyright": "© 2024 Fiva Studio. Sva prava zadržana"
   }
 }

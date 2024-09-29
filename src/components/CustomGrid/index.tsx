@@ -1,33 +1,35 @@
 import React from "react";
-import { Box, Container, Flex, HStack, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, HStack, Text, Image } from "@chakra-ui/react";
 import VideoBg from "../Video/VideoBg";
 import placeholder from "../../images/fiva.svg";
 import { useTranslation } from "react-i18next";
+import { Link } from "gatsby";
+import LocalizedLink from "../LocalizedLink";
 
 const CustomGrid = () => {
-  const { t } = useTranslation(); // Initialize the translation hook
+  const { t } = useTranslation();
 
   const videoData = [
     {
-      src: "https://fivastudio.b-cdn.net/2D%20animation.mp4",
+      src: "https://fivastudio.b-cdn.net/2D%20character%20animation%20meme%20animation.gif",
       placeholder: placeholder,
-      label: t("cardTitles.2dAnimations"), // Use t function for translation
+      label: t("cardTitles.2dAnimations"),
       href: "/2d-animations",
     },
     {
-      src: "https://fivastudio.b-cdn.net/wedding-video.mp4",
+      src: "https://fivastudio.b-cdn.net/Fiva%20studio%20Wedding%20gif%20for%20homepage.gif",
       placeholder: placeholder,
       label: t("cardTitles.wedding"),
       href: "/wedding-videos",
     },
     {
-      src: "https://fivastudio.b-cdn.net/hotel-pool-bar.mp4",
+      src: "https://fivastudio.b-cdn.net/Hospitaltiy%20hotel%20food.gif",
       placeholder: placeholder,
       label: t("cardTitles.food"),
       href: "/",
     },
     {
-      src: "https://fivastudio.b-cdn.net/Baby%20video.mp4",
+      src: "https://fivastudio.b-cdn.net/Kids%20animation%202d%20Animation.gif",
       placeholder: placeholder,
       label: t("cardTitles.contentFC"),
       href: "/content-for-children",
@@ -65,11 +67,15 @@ const CustomGrid = () => {
             position="relative"
             overflow="hidden"
           >
-            <VideoBg
+            <LocalizedLink to={`.${videoData[0].href}`}>
+            <Image
+              h={{ base: "156px", md: "450px" }}
+              minH={{ base: "156px", md: "450px" }}
               src={videoData[0].src}
               placeholder={videoData[0].placeholder}
-              href={videoData[0].href}
+              
             />
+            </LocalizedLink>
             <Text
               pos="absolute"
               bg="rgba(0, 0, 0, 0.5)"
@@ -80,7 +86,7 @@ const CustomGrid = () => {
               fontSize={{ base: "md", md: "xl" }}
               fontWeight="bold"
             >
-              {videoData[0].label} {/* Translated label */}
+              {videoData[0].label}
             </Text>
           </Box>
           <Flex
@@ -102,11 +108,14 @@ const CustomGrid = () => {
                 position="relative"
                 overflow="hidden"
               >
-                <VideoBg
+                <LocalizedLink to={`.${videoData[1].href}`}>
+                <Image
+                  h="225px"
                   src={videoData[1].src}
                   placeholder={videoData[1].placeholder}
-                  href={videoData[1].href}
+                  
                 />
+                </LocalizedLink>
                 <Text
                   pos="absolute"
                   bg="rgba(0, 0, 0, 0.5)"
@@ -134,11 +143,14 @@ const CustomGrid = () => {
                 position="relative"
                 overflow="hidden"
               >
-                <VideoBg
+                <LocalizedLink to={`.${videoData[2].href}`}>
+                <Image
+                  h="225px"
+                  w={{ base: "100%", md: "280px" }}
                   src={videoData[2].src}
                   placeholder={videoData[2].placeholder}
-                  href={videoData[2].href}
                 />
+                </LocalizedLink>
                 <Text
                   pos="absolute"
                   bg="rgba(0, 0, 0, 0.5)"
@@ -164,11 +176,12 @@ const CustomGrid = () => {
               position="relative"
               overflow="hidden"
             >
-              <VideoBg
+              <LocalizedLink to={`.${videoData[3].href}`}>
+              <Image
                 src={videoData[3].src}
                 placeholder={videoData[3].placeholder}
-                href={videoData[3].href}
               />
+              </LocalizedLink>
               <Text
                 pos="absolute"
                 bg="rgba(0, 0, 0, 0.5)"

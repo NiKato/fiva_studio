@@ -3,8 +3,11 @@ import { Box, Container, Heading, Stack, Text, Button } from "@chakra-ui/react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { MdKeyboardArrowDown } from "react-icons/md"
 import otherHero from "../../images/pageHero.webp"
+import { useTranslation } from "react-i18next"
 
 export const PageHero = ({ title, subtitle }: any) => {
+  const { t } = useTranslation()
+
   return (
     <Box
       as="section"
@@ -78,7 +81,7 @@ export const PageHero = ({ title, subtitle }: any) => {
               border="1px solid #fff"
               borderRadius="24px"
             >
-              Find Out More
+              {t("pageHero.btn")}
             </Button>
           </AnchorLink>
         </Stack>

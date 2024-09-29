@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { StaticImage } from "gatsby-plugin-image"
+import LocalizedLink from "../LocalizedLink"
 
 export default function Hero({ title, text, cta, cta2 }: any) {
   return (
@@ -45,7 +46,7 @@ export default function Hero({ title, text, cta, cta2 }: any) {
               {text}
             </Text>
             <Stack direction={{ base: "column", md: "row" }} spacing={4}>
-              <AnchorLink to="/#anchor" stripHash>
+              <LocalizedLink to="about-us" stripHash>
                 <Button
                   borderRadius={4}
                   bg={"#333333"}
@@ -56,7 +57,7 @@ export default function Hero({ title, text, cta, cta2 }: any) {
                 >
                   {cta}
                 </Button>
-              </AnchorLink>
+              </LocalizedLink>
               <AnchorLink to="/#work" stripHash>
                 <Button borderRadius={4} bg="#477EEB" color="#fff">
                   {cta2}

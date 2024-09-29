@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react"
 import { PopoverIcon } from "./PopoverIcon"
 import { useTranslation } from "react-i18next"
+import LocalizedLink from "../LocalizedLink"
 
 export const DocumentPopover = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -62,18 +63,16 @@ export const DocumentPopover = () => {
       >
         <Stack spacing="0" alignItems="stretch">
           {[
-            { label: "Short Form", href: "/short-form" },
-            { label: "Podcasts", href: "/podcasts" },
-            { label: "Meme Videos", href: "/meme-videos" },
-            { label: "2d Animation", href: "/2d-animations" },
-            { label: "Youtube Videos", href: "/" },
-            { label: "Educational Videos", href: "/educational-videos" },
-            { label: "Corporate Videos", href: "/" },
-            { label: "Content for Children", href: "/content-for-children" },
-            { label: "Food and Hospitality", href: "/" },
-            { label: "Film / Documentary", href: "/" },
-            { label: "Ecology Videos", href: "/ecology-videos" },
-            { label: "Wedding Videos", href: "/wedding-videos" },
+            { label: t("shortForm.title"), href: "short-form" },
+            { label: t("podcast.title"), href: "podcasts" },
+            { label: t("cardTitles.meme"), href: "meme-videos" },
+            { label: t("animation.title"), href: "2d-animations" },
+            { label: t("education.title"), href: "educational-videos" },
+            { label: t("corporate.title"), href: "corporate-videos" },
+            { label: t("contentFC.title"), href: "content-for-children" },
+            { label: t("food.title"), href: "food-and-hospitality" },
+            { label: t("ecology.title"), href: "ecology-videos" },
+            { label: t("wedding.title"), href: "wedding-videos" },
           ].map(item =>
             typeof item === "string" ? (
               <Button
@@ -85,7 +84,7 @@ export const DocumentPopover = () => {
                 {item}
               </Button>
             ) : (
-              <a key={item.label} href={item.href} rel="noopener noreferrer">
+              <LocalizedLink key={item.label} to={`${item.href}`}>
                 <Button
                   variant="tertiary"
                   fontFamily={"PoppinsBlack"}
@@ -94,7 +93,7 @@ export const DocumentPopover = () => {
                 >
                   {item.label}
                 </Button>
-              </a>
+              </LocalizedLink>
             )
           )}
         </Stack>

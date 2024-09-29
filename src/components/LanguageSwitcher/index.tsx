@@ -1,65 +1,55 @@
-import React, { FC } from "react"
-import {
-  Button,
-  HStack,
-  useColorModeValue,
-} from "@chakra-ui/react"
-import { Link } from "gatsby"
-import { useTranslation } from "react-i18next"
+import React, { FC } from "react";
+import { Button, HStack, useColorModeValue } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
+
+const languages = [
+  { code: "en", label: "EN" },
+  { code: "sr", label: "SR" },
+];
 
 const LanguageSwitcher: FC = () => {
-  const { i18n } = useTranslation()
+  const { i18n } = useTranslation();
 
-  // Get the currently selected language from localStorage
-  const selectedLanguage =
-    typeof window !== "undefined" && window.localStorage.getItem("language")
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
 
-  const changeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang)
-    // Store selected language in local storage
-    localStorage.setItem("language", lang)
-  }
+    const urlParams = new URLSearchParams(window.location.search);
+    if (lng !== "en") {
+      urlParams.set("lang", lng);
+    } else {
+      urlParams.delete("lang");
+    }
 
-  const linkColor = useColorModeValue("#666666", "#ffffff")
+    const newQueryString = urlParams.toString();
+    const newUrl = newQueryString
+      ? `${window.location.pathname}?${newQueryString}`
+      : window.location.pathname;
+
+    window.history.replaceState({}, "", newUrl);
+  };
+
+  const linkColor = useColorModeValue("#666666", "#ffffff");
 
   return (
-    <>
-      <HStack gap={0}>
-       
+    <HStack gap={0}>
+      {languages.map((language) => (
         <Button
-          as={Link}
+          key={language.code}
           size="sm"
-          to="/sr"
-          onClick={() => changeLanguage("sr")}
-          textDecoration={selectedLanguage === "sr" ? "underline" : "none"}
-          color={selectedLanguage === "sr" ? linkColor : "#666666"}
+          onClick={() => changeLanguage(language.code)}
           bg="none"
-          _hover={{
-            bg: "none",
-          }}
-          borderRight="1px solid #666666"
+          _hover={{ bg: "none" }}
+          borderRight={language.code !== "en" ? "1px solid #666666" : "none"}
           h="11px"
           borderRadius={0}
+          color={i18n.language === language.code ? linkColor : "#666666"}
+          textDecoration={i18n.language === language.code ? "underline" : "none"}
         >
-          SR
+          {language.label}
         </Button>
-        <Button
-          as={Link}
-          size="sm"
-          to="/"
-          onClick={() => changeLanguage("en")}
-          textDecoration={selectedLanguage === "en" ? "underline" : "none"}
-          color={selectedLanguage === "en" ? linkColor : "#666666"}
-          bg="none"
-          _hover={{
-            bg: "none",
-          }}
-        >
-          EN
-        </Button>
-      </HStack>
-    </>
-  )
-}
+      ))}
+    </HStack>
+  );
+};
 
-export default LanguageSwitcher
+export default LanguageSwitcher;

@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ChakraProvider, ColorModeProvider, useColorMode } from "@chakra-ui/react";
 import theme from "../../theme/theme";
 import { Header } from "../Header";
 import Footer from "../Footer";
 import { Helmet } from "react-helmet";
+import Preloader from "../Loading";
 
 const Layout = ({ children }: any) => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -14,6 +15,20 @@ const Layout = ({ children }: any) => {
       toggleColorMode();
     }
   }, [colorMode, toggleColorMode]);
+
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 500)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (isLoading) {
+    return <Preloader />
+  }
 
   return (
     <ChakraProvider theme={theme}>

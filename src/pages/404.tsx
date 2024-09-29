@@ -4,6 +4,7 @@ import { HeadProps, Link } from "gatsby";
 import { SEO } from "../components/Seo";
 import { Bg } from "../components/Bg";
 import { Box, Button, Container, Heading, Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import LocalizedLink from "../components/LocalizedLink";
 
 const Contact = () => {
   const buttonBg = useColorModeValue("blue.500", "blue.200");
@@ -41,11 +42,11 @@ const Contact = () => {
             Looks like this video didn't make the final cut. <br /> Don't worry,
             there's plenty more to see:
           </Text>
-          <Link to="/">
+          <LocalizedLink to="">
             <Button mt={4} bg={buttonBg} color={buttonColor}>
               Return to Home Page
             </Button>
-          </Link>
+          </LocalizedLink>
         </Stack>
       </Container>
     </Layout>

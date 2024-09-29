@@ -4,23 +4,20 @@ import PageTemplate from "../components/templates/PageTemplate"
 import { Text } from "@chakra-ui/react"
 import { HeadProps } from "gatsby"
 import { SEO } from "../components/Seo"
+import { useTranslation } from "react-i18next"
 
 const Podcasts = () => {
+  const { t } = useTranslation()
   return (
     <PageTemplate
-      title="Podcasts"
-      subtitle="Transform your podcast into a professionally produced audio or video experience with our expert podcast editing services"
+      title={t("podcast.title")}
+      subtitle={t("podcast.subtitle")}
       podcastUrl="https://www.youtube.com/watch?v=KAyDcaRFU4Y&ab_channel=RelaxingRainSounds"
       isPodcast
       content={
         <>
           <Text as="p" fontSize="lg">
-            Are you tired of sifting through hours of raw audio or video, trying
-            to make sense of it all? Look no further! Our team of skilled
-            podcast editors is here to help you transform your content into a
-            polished, engaging, and professional-grade production. With our
-            podcast editing services, you can rest assured that your show will
-            sound and look its absolute best.
+            {t('podcast.text')}
           </Text>
         </>
       }
