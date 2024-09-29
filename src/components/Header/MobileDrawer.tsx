@@ -19,14 +19,15 @@ import { useTranslation } from "react-i18next"
 import LocalizedLink from "../LocalizedLink"
 
 export const MobileDrawer = () => {
+  const { t } = useTranslation()
   const { isOpen, onToggle, onClose } = useDisclosure()
 
   const links = [
-    { href: "/", label: "Home" },
-    { href: "#", label: "Services", component: <DocumentCollapse /> },
-    { href: "/about-us", label: "About Us" },
-    { href: "https://fivastudio.com/#faq", label: "Questions" },
-    { href: "/contact-us", label: "Contact Us" },
+    { href: "/", label: t("header.home") },
+    { href: "#", label: t("header.services"), component: <DocumentCollapse /> },
+    { href: "/about-us", label: t("header.aboutUs") },
+    { href: "https://fivastudio.com/#faq", label: t("header.questions") },
+    { href: "/contact-us", label: t("header.contactUs") },
   ]
 
   return (
@@ -61,7 +62,7 @@ export const MobileDrawer = () => {
           <DrawerBody p={2}>
             <Stack spacing="1">
               {links.map((link, index) => (
-                link.label === "Services" ? (
+                link.label === t("header.services") ? (
                   <DocumentCollapse key={index} />
                 ) : (
                   <Button
