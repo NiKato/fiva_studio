@@ -13,19 +13,12 @@ const LanguageSwitcher: FC = () => {
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
 
-    const urlParams = new URLSearchParams(window.location.search);
-    if (lng !== "en") {
-      urlParams.set("lang", lng);
-    } else {
-      urlParams.delete("lang");
-    }
+    // Get the current path and remove the language segment if present.
+    const currentPath = window.location.pathname.split('/').slice(2).join('/');
+    const newPath = lng === "en" ? `/${currentPath}` : `/${lng}/${currentPath}`;
 
-    const newQueryString = urlParams.toString();
-    const newUrl = newQueryString
-      ? `${window.location.pathname}?${newQueryString}`
-      : window.location.pathname;
-
-    window.history.replaceState({}, "", newUrl);
+    // Update the URL without refreshing the page.
+    window.history.pushState({}, "", newPath);
   };
 
   const linkColor = useColorModeValue("#666666", "#ffffff");

@@ -26,7 +26,7 @@ const CustomGrid = () => {
       src: "https://fivastudio.b-cdn.net/Hospitaltiy%20hotel%20food.gif",
       placeholder: placeholder,
       label: t("cardTitles.food"),
-      href: "/",
+      href: "/food-and-hospitality",
     },
     {
       src: "https://fivastudio.b-cdn.net/Kids%20animation%202d%20Animation.gif",

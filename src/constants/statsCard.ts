@@ -33,6 +33,6 @@ export const statsData: StatData[] = [
     title: "cardTitles.corporate",
     stat: "cardTitles.corporateSub",
     imageSrc: stat2,
-    href: "/",
+    href: "/corporate-videos",
   },
 ]

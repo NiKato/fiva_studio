@@ -20,6 +20,7 @@ import FAQ from "../components/FAQ"
 import { faqData } from "../constants/faqData"
 import { getHeadingById } from "../constants/headings"
 import styled from "styled-components"
+import ContactForm from "../components/ContactForm"
 
 // import Geolocation from "../components/LocationBased"
 
@@ -120,7 +121,7 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
         <>
           <ColorModeScript initialColorMode="dark" />
           <Layout>
-            <Box px={{ base: 4, md: 20 }} h="100%">
+            <Box px={{ base: 4, md: 10 }} h="100%">
               <Hero
                 title={t("hero.title")}
                 text={t("hero.subtitle")}
@@ -144,6 +145,7 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
             <FAQ props={faqData} />
             {/* {renderHeading(4)}
             <Testimonials /> */}
+            <ContactForm showBackground={false} />
           </Layout>
         </>
     </>

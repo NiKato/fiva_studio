@@ -1,5 +1,3 @@
-// gatsby-node.js
-
 exports.createPages = async ({ actions }) => {
   const { createPage } = actions;
 

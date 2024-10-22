@@ -5,14 +5,14 @@ import LocalizedLink from "../LocalizedLink";
 const Feature = ({ title, text, icon, linkText, linkUrl }: any) => {
   const { colorMode } = useColorMode();
   return (
-    <Stack>
-      <Flex align={"center"} justify={"center"} rounded={"full"} mb={1} gap={2}>
+    <Stack alignItems="flex-start" justifyContent="flex-start">
+      <Flex align={"center"} justifyContent={"flex-start"} rounded={"full"} mb={1} gap={2}>
         <Text color="#477EEB">{icon}</Text>
-        <Heading as="h3" fontSize={"2xl"} fontWeight={700}>
+        <Heading as="h3" fontSize={"lg"} fontWeight={700} letterSpacing="-0.88px" textAlign="left">
           {title}
         </Heading>
       </Flex>
-      <Text as="p" mx="auto" textAlign="center" fontSize="lg">
+      <Text as="p" mx="auto" textAlign="left" fontSize="sm">
         {text}
         {linkText && linkUrl && (
           <LocalizedLink rel="preload" to="contact-us">

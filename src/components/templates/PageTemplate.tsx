@@ -2,14 +2,20 @@ import React, { useRef, useState } from "react"
 import ReactPlayer from "react-player"
 import { PageHero } from "../PageHero"
 import Layout from "../Layout"
-import { VStack, Heading, Container, Box, Stack } from "@chakra-ui/react"
+import {
+  VStack,
+  Heading,
+  Container,
+  Box,
+  Stack,
+  Text,
+} from "@chakra-ui/react"
 import { MdOutlinePlayCircle } from "react-icons/md"
 import styled from "styled-components"
 import Cta from "../Cta"
 import { useTranslation } from "react-i18next"
 
 const VideoWrapper = ({ onClick, children }: any) => (
-
   <div onClick={onClick} style={{ position: "relative", cursor: "pointer" }}>
     {children}
   </div>
@@ -18,7 +24,7 @@ const VideoWrapper = ({ onClick, children }: any) => (
 const Video = React.forwardRef(({ src, playsInline }: any, ref) => (
   <video
     // @ts-ignore
-    ref={ref} 
+    ref={ref}
     src={src}
     playsInline
   />
@@ -52,8 +58,10 @@ interface PageTemplateProps {
   content: React.ReactNode
   videoSources?: string[]
   podcastUrl?: string
+  realEstateUrl?: string
   carousel?: React.ReactNode
   isPodcast?: boolean
+  isRealEstate?: boolean
 }
 
 const PageTemplate: React.FC<PageTemplateProps> = ({
@@ -62,8 +70,10 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
   content,
   videoSources = [],
   podcastUrl,
+  realEstateUrl,
   carousel,
   isPodcast = false,
+  isRealEstate = false,
 }) => {
   const videoRefs = useRef<HTMLVideoElement[]>([])
   const [isPlaying, setIsPlaying] = useState<boolean[]>(
@@ -113,10 +123,10 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
               >
                 <VideoWrapper onClick={() => handleVideoClick(index)}>
                   <Video
-                  // @ts-ignore
-                    ref={(el) => (videoRefs.current[index] = el)}
+                    // @ts-ignore
+                    ref={el => (videoRefs.current[index] = el)}
                     src={videoSrc}
-                    autoPlay 
+                    autoPlay
                     muted
                     playsInline
                   />
@@ -142,6 +152,34 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
                   controls
                 />
               </Box>
+            )}
+            {isRealEstate && podcastUrl && (
+              <Stack
+                flexFlow={{ base: "column", md: "row" }}
+                w={{ base: "auto", md: "1100px" }}
+                maxW="1100px"
+                mx={{ base: 8, md: "auto" }}
+                boxShadow="4px 4px 8px rgba(0, 0, 0, 0.9)"
+                h="400px"
+                gap={10}
+                mb={{base: 20, md: 0}}
+              >
+                <VStack w="100%" h="400px">
+                <Text>Color Grading Real Estate Video</Text>
+                <ReactPlayer
+                  url={podcastUrl}
+                  width="100%"
+                  height="400px"
+                  controls
+                />
+                </VStack>
+                <ReactPlayer
+                  url={realEstateUrl}
+                  width="100%"
+                  height="100%"
+                  controls
+                />
+              </Stack>
             )}
           </Stack>
         </VStack>

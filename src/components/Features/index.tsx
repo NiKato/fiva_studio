@@ -9,7 +9,7 @@ const Benefits = () => {
 
   return (
     <Box py={5}>
-      <SimpleGrid columns={{ base: 1, md: 4 }} spacing={10}>
+      <SimpleGrid columns={{ base: 1, md: 4 }} spacing={5}>
         {features.features.map((feature, index) => (
           <Feature
             key={index}

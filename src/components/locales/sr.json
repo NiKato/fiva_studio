@@ -16,9 +16,9 @@
     "title": "Personalizovani Video Zapisi",
     "text": "Pravimo video zapise koji oživljavaju suštinu projekta",
 
-    "title2": "Besplatne konsultacije",
-    "text2": "Razgovaramo o Vašem projektu sa Vama i nalazimo zajedno najbolj rešenje. ",
-    "linkText": " Zakažite Vašu besplatnu konsultaciju odmah.",
+    "title2": "Program partnerstva sa SMMA i kreatorima sadržaja",
+    "text2": "Dogovori o partnerstvu i pogodnosti sa SMMA agencijama i kreatorima sadržaja.",
+    "linkText": "Kontaktirajte nas za više detalja.",
     "linkUrl": "/contact-us",
 
     "title3": "Pouzdanost",
@@ -158,7 +158,7 @@
   "podcast": {
     "title": "Podkasti",
     "subtitle": "Pretvorite svoj podkast u kvalitetno audio i video iskustvo pomoću naše usluge editovanja podcasta",
-    "text": "Da li ste umorni od pregledavanja sati sirovog audio ili video materijala, pokušavajući da sve to shvatite? Naš tim video editora je tu da vam pomogne da transformišete svoj sadržaj u uglađenu, zanimljivu produkciju profesionalnog nivoa. Uz naše usluge uređivanja podkasta, možete biti sigurni da će vaša emisija zvučati i izgledati apsolutno najbolje."
+    "text": "Da li ste umorni od pregledavanja sati sirovog audio ili video materijala, pokušavajući da sve to ukomponujete? Naš tim video editora je tu da vam pomogne da transformišete svoj sadržaj u uglađenu, zanimljivu produkciju profesionalnog nivoa. Uz naše usluge uređivanja podkasta, možete biti sigurni da će vaša emisija zvučati i izgledati apsolutno najbolje."
   },
   "shortForm": {
     "title": "Short Form",
@@ -196,6 +196,13 @@
     "subtitle": "Treba vam montažer videa za vaš edukativni sadržaj poput kurseva, YouTube kanala, ili Instagrama, Facebook-a i TikToka? Naši montažeri videa su ovde da ožive vašu viziju i daju vašem videu željeni efekat!",
     "text": "U Fiva Studiju blisko sarađujemo s vama kako bismo kreirali venčani video koji savršeno oslikava vašu viziju. Od početne ideje do konačne montaže, fokusiramo se na svaki detalj—vizuale, zvuk i muziku—kako bismo osigurali da vaš poseban dan bude prikazan s elegancijom i emocijom. Kada se usaglasimo oko željenog izgleda i atmosfere, pažljivo kreiramo prelepi film koji prikazuje vašu ljubavnu priču i uspomene.",
     "text2": "Na primer, nedavno smo radili s parom koji je želeo bezvremenski video svog venčanja. Imali su specifične ideje o tome kako su želeli da njihova ceremonija i proslave budu prikazane. Uzimajući u obzir njihovu detaljnu viziju, obogatili smo je našom filmskom stručnošću, što je rezultiralo zapanjujućim videom koji je prelepo uhvatio njihovu jedinstvenu ljubavnu priču."
+  },
+  "estate": {
+    "estate": "Nekretnine",
+    "title": "Profesionalne usluge montaže video materijala za nišu nekretnina",
+    "subtitle": "Da li ste agent za nekretnine ili agencija, ili fotograf/videograf za nekretnine i treba vam neko da stilizuje vaše video snimke?",
+    "text": "Kroz moć kolor korekcije, vektorskih slika, tekstova i prelepih kompilacija koje ističu suštinu nekretnine, kreiramo video snimke nekretnina u pejzažnom i vertikalnom formatu koji se mogu koristiti kao prikazi i za društvene mreže agencije ili agenta za nekretnine. Obezbedite najbolji vizuelni kvalitet za enterijer i eksterijer koji pružaju pravi osećaj nekretnine i naglašavaju njihovu autentičnost.",
+    "text2": "Kontaktirajte nas sada i započnimo vaš projekat kako bismo kreirali očaravajuće video snimke nekretnina."
   },
   "footer": {
     "copyright": "© 2024 Fiva Studio. Sva prava zadržana"

@@ -16,7 +16,7 @@ export default function Hero({ title, text, cta, cta2 }: any) {
   return (
     <Container maxW={{ base: "100%", md: "7xl" }} my={{ base: 5, md: 20 }}>
       <Stack
-        pt={"80px"}
+        // pt={"80px"}
         minH={"100%"}
         direction={{ base: "column", md: "row" }}
         alignItems="center"
