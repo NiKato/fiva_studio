@@ -11,7 +11,7 @@ export const Sidebar = () => {
   const links = [
     { href: "/", label: t("header.home") },
     { href: "/about-us", label: t("header.aboutUs") },
-    { href: "/#faq", label: t("header.questions") },
+    { href: "/faq", label: t("header.questions") },
     { href: "/contact-us", label: t("header.contactUs") },
   ];
 

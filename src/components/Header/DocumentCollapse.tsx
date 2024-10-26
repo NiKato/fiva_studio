@@ -24,6 +24,7 @@ export const DocumentCollapse = () => {
           {[
             { label: t("shortForm.title"), href: "short-form" },
             { label: t("podcast.title"), href: "podcasts" },
+            { label: t("estate.estate"), href: "real-estate" },
             { label: t("cardTitles.meme"), href: "meme-videos" },
             { label: t("animation.title"), href: "2d-animations" },
             { label: t("education.title"), href: "educational-videos" },

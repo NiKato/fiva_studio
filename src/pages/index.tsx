@@ -1,11 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
+
 import "./global.css"
-import {
-  Box,
-  ColorModeScript,
-  useColorMode,
-  Flex,
-} from "@chakra-ui/react"
+import { Box, ColorModeScript, useColorMode } from "@chakra-ui/react"
 import { useTranslation } from "react-i18next"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
@@ -82,25 +78,36 @@ const Div = styled.div`
   }
 `
 
-const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
+const HomePage: React.FC = () => {
+  const faqRef = useRef<HTMLDivElement>(null) // ref za FAQ sekciju
   const [loading, setLoading] = useState(true)
+  const { colorMode } = useColorMode()
+  const { t, i18n } = useTranslation()
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false)
     }, 3000)
-
     return () => clearTimeout(timeout)
   }, [])
 
-  const { colorMode, toggleColorMode } = useColorMode()
-  const { t, i18n } = useTranslation()
+  // Funkcija za skrolovanje do ref-a
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }
 
   useEffect(() => {
-    if (pageContext.language) {
-      i18n.changeLanguage(pageContext.language)
+    if (typeof window !== "undefined") {
+      if (
+        window.location.hash === "/#faq" &&
+        window.location.pathname === "/"
+      ) {
+        scrollToSection(faqRef)
+      }
     }
-  }, [pageContext.language, i18n])
+  }, [])
 
   const renderHeading = (id: number) => {
     const headingData = getHeadingById(id)
@@ -117,37 +124,36 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
 
   return (
     <>
-        
-        <>
-          <ColorModeScript initialColorMode="dark" />
-          <Layout>
-            <Box px={{ base: 4, md: 10 }} h="100%">
-              <Hero
-                title={t("hero.title")}
-                text={t("hero.subtitle")}
-                cta={t("hero.cta")}
-                cta2={t("hero.cta2")}
-              />
-              <Benefits />
-              {renderHeading(1)}
-            </Box>
-            <Box id="work">
-              <Carousel />
-            </Box>
-            <Box mb={10}>
+      <>
+        <ColorModeScript initialColorMode="dark" />
+        <Layout>
+          <Box px={{ base: 4, md: 10 }} h="100%">
+            <Hero
+              title={t("hero.title")}
+              text={t("hero.subtitle")}
+              cta={t("hero.cta")}
+              cta2={t("hero.cta2")}
+            />
+            <Benefits />
+            {renderHeading(1)}
+          </Box>
+          <Box id="work">
+            <Carousel />
+          </Box>
+          <Box mb={10}>
             {renderHeading(2)}
             <Box></Box>
             <CustomGrid />
-            </Box>
-            <LongForm />
-            <Box id="faq">{renderHeading(5)}</Box>
-            {/* @ts-ignore */}
-            <FAQ props={faqData} />
-            {/* {renderHeading(4)}
+          </Box>
+          <LongForm />
+          <Box>{renderHeading(5)}</Box>
+          {/* @ts-ignore */}
+          <FAQ id="faq" ref={faqRef} props={faqData} />
+          {/* {renderHeading(4)}
             <Testimonials /> */}
-            <ContactForm showBackground={false} />
-          </Layout>
-        </>
+          <ContactForm showBackground={false} />
+        </Layout>
+      </>
     </>
   )
 }

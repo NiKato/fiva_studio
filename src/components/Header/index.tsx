@@ -42,7 +42,7 @@ export const Header = () => {
     { href: "#", label: t("header.services") , component: <DocumentPopover /> },
     { href: "/about-us", label: t("header.aboutUs") },
     {
-      href: "/#faq",
+      href: "/faq",
       label: t("header.questions") ,
     },
     { href: "/contact-us", label: t("header.contactUs") },

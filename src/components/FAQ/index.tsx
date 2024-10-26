@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {
   Container,
   Accordion,
@@ -6,24 +6,25 @@ import {
   AccordionIcon,
   AccordionItem,
   AccordionPanel,
-} from "@chakra-ui/react";
-import bgImg from "../../images/fiva.svg";
-import { useTranslation } from "react-i18next";
-import { ReactNode } from 'react';
+  Heading,
+} from "@chakra-ui/react"
+import bgImg from "../../images/fiva.svg"
+import { useTranslation } from "react-i18next"
+import { ReactNode } from "react"
 
-const FAQ = ({ props }: FAQProps) => {
-  const { t } = useTranslation();
+const FAQ = ({ props, isFaqPage }: FAQProps) => {
+  const { t } = useTranslation()
 
   // Helper function to determine if an item is a React element
   const isReactElement = (element: any): element is ReactNode => {
-    return React.isValidElement(element);
-  };
+    return React.isValidElement(element)
+  }
 
   return (
     <Container
       maxW={{ base: "100%", md: "4xl" }}
-      mt={5}
-      mb={20}
+      pt={5}
+      pb={10}
       position="relative"
       _before={{
         content: '""',
@@ -41,6 +42,19 @@ const FAQ = ({ props }: FAQProps) => {
         overflow: "hidden",
       }}
     >
+      {isFaqPage && (
+        <Heading
+          as="h2"
+          textAlign={"center"}
+          p={0}
+          fontFamily={"PoppinsBlack"}
+          fontSize={{ base: "30px", md: "42px" }}
+          fontWeight={700}
+          my={10}
+        >
+          {t("headings.title5")}
+        </Heading>
+      )}
       <Accordion w="100%" defaultIndex={[0]} allowToggle position="relative">
         {props.questionsrepeater?.map((item, index) => (
           <AccordionItem w="100%" key={index}>
@@ -59,16 +73,17 @@ const FAQ = ({ props }: FAQProps) => {
         ))}
       </Accordion>
     </Container>
-  );
-};
+  )
+}
 
 type FAQProps = {
   props: {
     questionsrepeater: {
-      question: string;
-      answer: string | ReactNode;
-    }[];
-  };
-};
+      question: string
+      answer: string | ReactNode
+    }[]
+  }
+  isFaqPage?: boolean
+}
 
-export default FAQ;
+export default FAQ

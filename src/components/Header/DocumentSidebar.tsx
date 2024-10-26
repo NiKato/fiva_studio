@@ -11,6 +11,7 @@ export const DocumentSidebar = () => {
   const location = useLocation()
 
   const toggleMenu = () => setIsOpen(!isOpen)
+  
 
   const submenuItems = [
     { label: t("shortForm.title"), href: "short-form" },

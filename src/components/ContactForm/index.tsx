@@ -20,10 +20,12 @@ import {
   Container,
   Link,
   Divider,
+  HStack,
 } from "@chakra-ui/react"
 
 import { Bg } from "../Bg"
 import { useTranslation } from "react-i18next"
+import { FaWhatsapp, FaViber } from "react-icons/fa"
 
 export default function ContactForm({ showBackground = false }) {
   const { t } = useTranslation()
@@ -51,7 +53,7 @@ export default function ContactForm({ showBackground = false }) {
   const handleChange = (input: any) => (e: any) => {
     const value = e.currentTarget.value
 
-    setFormValues((prevState) => ({
+    setFormValues(prevState => ({
       ...prevState,
       [input]: value,
     }))
@@ -83,7 +85,7 @@ export default function ContactForm({ showBackground = false }) {
         </Box>
       )}
 
-      <Container maxW="7xl" py={20} pos="relative">
+      <Container maxW="7xl" py={10} pos="relative">
         <Flex
           direction={{ base: "column", md: "row" }}
           p={8}
@@ -103,7 +105,7 @@ export default function ContactForm({ showBackground = false }) {
               {t("contact.heading")}
             </Heading>
             <Text fontSize="xl" mb={4}>
-            {t("contact.email")}
+              {t("contact.email")}
             </Text>
             <Link
               fontWeight={600}
@@ -115,7 +117,7 @@ export default function ContactForm({ showBackground = false }) {
             </Link>
             <Divider my={4} bg="#3377FF" />
             <Text fontSize="xl" mb={4}>
-            {t("contact.text")}
+              {t("contact.text")}
             </Text>
             <Link
               fontWeight={600}
@@ -123,10 +125,43 @@ export default function ContactForm({ showBackground = false }) {
               mb={2}
               href="tel: +381621537032"
             >
-              +38162 153 70 32
+              <PhoneIcon style={{ marginRight: "16px" }} /> +38162 153 70 32
             </Link>
+            <HStack fontWeight={600} fontSize="lg" mt={2}>
+              <FaWhatsapp
+                fill="#48C355"
+                size={24}
+                style={{ marginRight: "8px" }}
+              />
+              <Link
+                fontWeight={600}
+                fontSize="lg"
+                mb={2}
+                href="https://wa.me/381621537032" // WhatsApp link
+                isExternal // Otvara se u WhatsApp aplikaciji ili na vebu
+              >
+                +38162 153 70 32
+              </Link>
+            </HStack>
+            <HStack mb={2}>
+              <FaViber
+                fill="#7360f2"
+                size={24}
+                style={{ marginRight: "8px" }}
+              />
+              <Link
+                fontWeight={600}
+                fontSize="lg"
+                mb={2}
+                href="viber://chat?number=381621537032" // Viber link
+                isExternal // Otvara se u Viber aplikaciji
+              >
+                +38162 153 70 32
+              </Link>
+            </HStack>
+
             <Text fontSize="xl" mt={6}>
-            {t("contact.contactUs")}
+              {t("contact.contactUs")}
             </Text>
           </Box>
           <Box flex="2" p={4}>
@@ -134,7 +169,7 @@ export default function ContactForm({ showBackground = false }) {
               <VStack spacing={4} align="stretch">
                 <Box textAlign="center" mb={4}>
                   <Heading as="h2" fontFamily={"PoppinsBlack"} size="lg">
-                  {t("contact.title")}
+                    {t("contact.title")}
                   </Heading>
                 </Box>
 

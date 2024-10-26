@@ -14,7 +14,7 @@ import LocalizedLink from "../LocalizedLink"
 
 export default function Hero({ title, text, cta, cta2 }: any) {
   return (
-    <Container maxW={{ base: "100%", md: "7xl" }} my={{ base: 5, md: 20 }}>
+    <Container maxW={{ base: "100%", md: "7xl" }} my={{ base: 20, md: 10 }}>
       <Stack
         // pt={"80px"}
         minH={"100%"}

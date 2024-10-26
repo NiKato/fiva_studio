@@ -66,18 +66,28 @@ const Layout = ({ children }: any) => {
       <Sidebar />
       <Box ml={{ base: 0, md: 64 }} w="auto" overflowX="hidden">
         <Box
-          pt={8}
+          pt={{ base: 4, md: 8 }}
           pb={4}
           px={0}
-          backdropFilter={scrolled ? "blur(10px)" : "none"}
-          backgroundColor={
-            scrolled ? "rgba(255, 255, 255, 0.1)" : "transparent"
-          }
-          boxShadow={
-            scrolled
+          top={0}
+          zIndex={1000}
+          transition="opacity 0.5s ease-in-out"
+          position={{ base: "fixed", md: "relative" }}
+          width="100%"
+          backdropFilter={{
+            base: scrolled ? "blur(10px)" : "none",
+            md: "none",
+          }}
+          backgroundColor={{
+            base: scrolled ? "rgba(255, 255, 255, 0.1)" : "transparent",
+            md: "transparent",
+          }}
+          boxShadow={{
+            base: scrolled
               ? "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-              : "none"
-          }
+              : "none",
+            md: "none",
+          }}
           m={0}
         >
           <HStack
@@ -133,6 +143,7 @@ const Layout = ({ children }: any) => {
             </ButtonGroup>
           </HStack>
         </Box>
+
         {children}
         <Footer />
       </Box>

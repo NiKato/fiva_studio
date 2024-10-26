@@ -26,7 +26,7 @@ export const MobileDrawer = () => {
     { href: "/", label: t("header.home") },
     { href: "#", label: t("header.services"), component: <DocumentCollapse /> },
     { href: "/about-us", label: t("header.aboutUs") },
-    { href: "https://fivastudio.com/#faq", label: t("header.questions") },
+    { href: "/faq", label: t("header.questions") },
     { href: "/contact-us", label: t("header.contactUs") },
   ]
 

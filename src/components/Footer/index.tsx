@@ -131,7 +131,7 @@ export default function Footer() {
               <LocalizedLink to={"contact-us"}>{t("header.services")}</LocalizedLink>
             </Text>
             <Text fontWeight={400}>
-              <AnchorLink to={"/#faq"}>{t("header.questions")}</AnchorLink>
+              <AnchorLink to={"/faq"}>{t("header.questions")}</AnchorLink>
             </Text>
           </Stack>
           <Stack align={"flex-start"}>
