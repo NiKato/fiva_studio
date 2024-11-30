@@ -15,6 +15,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-minify`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -54,7 +55,7 @@ module.exports = {
         offset: -200,
       },
     },
-    
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -82,4 +83,4 @@ module.exports = {
       },
     },
   ],
-}
+};

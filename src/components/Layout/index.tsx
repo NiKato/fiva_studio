@@ -54,15 +54,24 @@ const Layout = ({ children }: any) => {
       <Helmet>
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-          rel="preload"
-          as="style"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
           rel="stylesheet"
-          media="print"
+        />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-11139973355"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-11139973355');
+      `,
+          }}
         />
       </Helmet>
+
       <Sidebar />
       <Box ml={{ base: 0, md: 64 }} w="auto" overflowX="hidden">
         <Box
