@@ -61,12 +61,17 @@ const Layout = ({ children }: any) => {
           src="https://www.googletagmanager.com/gtag/js?id=AW-11139973355"
         ></script>
         <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-JLTLQD7YNX"
+        ></script>
+        <script
           dangerouslySetInnerHTML={{
             __html: `
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'AW-11139973355');
+        gtag('config', 'G-JLTLQD7YNX');
       `,
           }}
         />
