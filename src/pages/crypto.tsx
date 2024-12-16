@@ -5,18 +5,18 @@ import { HeadProps } from "gatsby"
 import { SEO } from "../components/Seo"
 import { useTranslation } from "react-i18next"
 
-const Film = () => {
+const Crypto = () => {
   const { t } = useTranslation()
   return (
     <PageTemplate
-      title={t("film.title")}
-      subtitle={t("film.subtitle")}
-      podcastUrl="https://www.youtube.com/watch?v=vJXejwviAVQ"
+      title={t("crypto.title")}
+      subtitle={t("crypto.subtitle")}
+      podcastUrl="https://www.youtube.com/watch?v=ou0GpiTqVG8"
       isPodcast
       content={
         <>
           <Text id="text" as="p" fontSize="lg">
-            {t("film.text")}
+            {t("crypto.text")}
           </Text>
         </>
       }
@@ -24,13 +24,13 @@ const Film = () => {
   )
 }
 
-export default Film
+export default Crypto
 
 export function Head(props: HeadProps) {
   return (
     <SEO
-      title="Fiva Studio | Film - Documentary Videos"
-      description="Transform your educational content with our expert video editing services. Our team of skilled editors will enhance your videos with engaging visuals, sound design, and storytelling techniques to captivate your audience."
+      title="Fiva Studio | Crypto - Finance"
+      description="rofessional video editing for finance and crypto topics, focused on clarity, precision, and engagement."
     />
   )
 }

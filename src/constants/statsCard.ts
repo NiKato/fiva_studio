@@ -1,13 +1,13 @@
-import stat1 from "../images/reel4.webp"
-import stat2 from "../images/reel3.webp"
-import stat3 from "../images/reel2.webp"
-import stat4 from "../images/reel.webp"
+import stat1 from "../images/reel4.webp";
+import stat2 from "../images/reel3.webp";
+import stat3 from "../images/reel2.webp";
+import stat4 from "../images/reel.webp";
 
 interface StatData {
-  title: string
-  stat: string
-  imageSrc: any
-  href: any
+  title: string;
+  stat: string;
+  imageSrc: any;
+  href: any;
 }
 
 export const statsData: StatData[] = [
@@ -18,16 +18,16 @@ export const statsData: StatData[] = [
     href: "/podcasts",
   },
   {
-    title: "cardTitles.meme",
-    stat: "cardTitles.memeSub",
+    title: "cardTitles.realestate",
+    stat: "cardTitles.realestateSub",
     imageSrc: stat3,
-    href: "/meme-videos",
+    href: "/real-estate",
   },
   {
     title: "cardTitles.film",
     stat: "cardTitles.filmSub",
     imageSrc: stat1,
-    href: "/",
+    href: "/film-videos",
   },
   {
     title: "cardTitles.corporate",
@@ -35,4 +35,4 @@ export const statsData: StatData[] = [
     imageSrc: stat2,
     href: "/corporate-videos",
   },
-]
+];

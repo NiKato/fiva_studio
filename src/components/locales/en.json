@@ -56,11 +56,12 @@
     "contentFC": "Content for Children",
     "podcast": "Podcast Videos",
     "meme": "Meme Videos",
+    "realestate": "Real Estate",
     "film": "Film | Documentary Videos",
     "corporate": "Corporate Videos",
 
     "podcastSub": "Reach a wider audience and boost your brand with our high-quality podcast video services",
-    "memeSub": "Boost your engagement on Social Media with memes, our editors will craft memes for your social media.",
+    "realestateSub": "Start creating mesmerizing real estate videos",
     "filmSub": "Bring your cinematic vision to life with our movie production services",
     "corporateSub": "Enhance your brand's image with our high-quality corporate videos"
   },
@@ -204,6 +205,16 @@
     "subtitle": "Are you a real estate agent or agency, or a real estate photographer/videographer and need someone to edit the videos in style?",
     "text": "Through power of color grading, vector images, texts and beautiful compilations that bring out the essence of the property we create real estate videos in landscape and vertical format that can be used as displays and for social media of the real estate agency or agent. Get best visual quality for enterior and exterior footage that give the vibe to the property and highlight their authenticity.",
     "text2": "Reach out to us now and let's enroll your project and start creating mesmerizing real estate videos."
+  },
+  "film": {
+    "title": "Film / Documentary Videos",
+    "subtitle": "Creating unforgettable stories through documentary and film video content",
+    "text": "At Fiva Studio, we transform raw footage into compelling narratives that captivate and inform audiences. Our documentary editing services are tailored to highlight the essence of your story, ensuring that every frame resonates emotionally and intellectually. With a keen eye for detail and a passion for storytelling, our experienced editors work closely with you to craft a polished final product that reflects your vision. From structuring interviews to enhancing visuals and sound, we are committed to bringing your documentary to life with professionalism and creativity. Let us help you share your message with the world—one frame at a time."
+  },
+  "crypto": {
+    "title": "Crypto / Finance",
+    "subtitle": "Professional video editing for finance and crypto topics, focused on clarity, precision, and engagement.",
+    "text": "At Fiva Studio we understand that conveying complex financial and cryptocurrency topics requires clarity, precision, and engagement. Our finance and crypto video editing services are designed to present your content in a way that captivates your audience while simplifying intricate concepts. Whether you need sleek explainer videos, in-depth tutorials, or dynamic market analyses, our skilled editors collaborate with you to create polished, professional videos that enhance your brand’s credibility. With a focus on maintaining the integrity of your message while utilizing cutting-edge visuals and animations, we ensure your voice stands out in this fast-paced industry. Trust us to help you communicate your ideas effectively and make an impact in the finance and crypto space."
   },
   "footer": {
     "copyright": "© 2024 Fiva Studio. All rights reserved"

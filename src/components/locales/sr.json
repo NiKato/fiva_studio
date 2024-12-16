@@ -55,11 +55,12 @@
     "contentFC": "Sadržaj za decu",
     "podcast": "Podkast videi",
     "meme": "Mim videi",
+    "realestate": "Nekretnine",
     "film": "Film | Dokumentarni videi",
     "corporate": "Korporativni videi",
 
     "podcastSub": "Dosegnite do veće publike i unapredite kvalitet Vašeg podkasta.",
-    "memeSub": "Povećajte angažman publike pomoću mimova",
+    "realestateSub": "Započnimo kreiranje očaravajućih video snimaka nekretnina",
     "filmSub": "Oživite svoju bioskopsku viziju uz naše usluge filmske produkcije",
     "corporateSub": "Poboljšajte imidž svog brenda pomoću naših visokokvalitetnih korporativnih video zapisa"
   },
@@ -203,6 +204,16 @@
     "subtitle": "Da li ste agent za nekretnine ili agencija, ili fotograf/videograf za nekretnine i treba vam neko da stilizuje vaše video snimke?",
     "text": "Kroz moć kolor korekcije, vektorskih slika, tekstova i prelepih kompilacija koje ističu suštinu nekretnine, kreiramo video snimke nekretnina u pejzažnom i vertikalnom formatu koji se mogu koristiti kao prikazi i za društvene mreže agencije ili agenta za nekretnine. Obezbedite najbolji vizuelni kvalitet za enterijer i eksterijer koji pružaju pravi osećaj nekretnine i naglašavaju njihovu autentičnost.",
     "text2": "Kontaktirajte nas sada i započnimo vaš projekat kako bismo kreirali očaravajuće video snimke nekretnina."
+  },
+  "film": {
+    "title": "Film / Dokumentarni videi",
+    "subtitle": "Stvaranje nezaboravnih priča kroz dokumentarni i filmski video sadržaj",
+    "text": "U Fiva Studiju mi transformišemo sirov materijal u vizualno putovanje koje očarava i informiše publiku. Naše usluge montaže dokumentarnih filmova su prilagođene da istaknu suštinu vaše priče, osiguravajući da svaki kadar emocionalno i intelektualno rezonuje. Sa oštrim okom za detalje i strašću za pripovedanjem, naši iskusni urednici blisko sarađuju sa vama na izradi uglađenog finalnog proizvoda koji odražava vašu viziju. Od strukturiranja intervjua do poboljšanja vizuelnog i zvuka, posvećeni smo tome da vaš dokumentarni film oživimo profesionalizmom i kreativnošću. Dozvolite nam da vam pomognemo da svoju poruku podelite sa svetom – jedan po jedan kadar."
+  },
+  "crypto": {
+    "title": "Kripto / Finansije",
+    "subtitle": "Profesionalno uređivanje video sadržaja za financijske i kripto teme, s naglaskom na jasnoću, preciznost i angažman.",
+    "text": "U Fiva Studiju razumemo da prenošenje složenih finansijskih i kriptovaluta tema zahteva jasnoću, preciznost i angažovanje. Naše finansijske i kripto usluge uređivanja videa su dizajnirane da predstave Vaš sadržaj na način koji očara Vašu publiku dok pojednostavljuju složene koncepte. Bez obzira da li su Vam potrebni uglađeni video snimci sa objašnjenjima, detaljni tutorijali ili dinamičke analize tržišta, naši vešti urednici sarađuju sa vama da kreiraju uglađene, profesionalne video snimke koji povećavaju kredibilitet vašeg brenda. Sa fokusom na očuvanje integriteta vaše poruke uz korišćenje najsavremenijih vizuelnih prikaza i animacija, osiguravamo da se vaš glas ističe u ovoj industriji koja se brzo razvija. Verujte nam da ćemo vam pomoći da efikasno saopštavate svoje ideje i utičete na finansije i kripto prostor."
   },
   "footer": {
     "copyright": "© 2024 Fiva Studio. Sva prava zadržana"

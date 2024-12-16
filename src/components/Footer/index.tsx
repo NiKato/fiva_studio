@@ -60,18 +60,25 @@ const SocialButton = ({
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
-    <Text color="#3377FF" fontFamily={"PoppinsBlack"} fontWeight={700} fontSize={"lg"} mb={2}>
+    <Text
+      color="#3377FF"
+      fontFamily={"PoppinsBlack"}
+      fontWeight={700}
+      fontSize={"lg"}
+      mb={2}
+    >
       {children}
     </Text>
   )
 }
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   const footerLinks = [
     { label: t("shortForm.title"), href: "short-form" },
     { label: t("podcast.title"), href: "podcasts" },
+    { label: t("estate.estate"), href: "real-estate" },
     { label: t("cardTitles.meme"), href: "meme-videos" },
     { label: t("animation.title"), href: "2d-animations" },
     { label: t("education.title"), href: "educational-videos" },
@@ -79,6 +86,8 @@ export default function Footer() {
     { label: t("contentFC.title"), href: "content-for-children" },
     { label: t("food.title"), href: "food-and-hospitality" },
     { label: t("ecology.title"), href: "ecology-videos" },
+    { label: t("film.title"), href: "film-videos" },
+    { label: t("crypto.title"), href: "crypto" },
     { label: t("wedding.title"), href: "wedding-videos" },
   ]
 
@@ -87,7 +96,6 @@ export default function Footer() {
       bg={useColorModeValue("gray.50", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
-      
       <Container
         as={Stack}
         mx={{ base: 6, md: "auto" }}
@@ -105,16 +113,16 @@ export default function Footer() {
             </Box>
             <Text fontSize={"sm"}>{t("footer.copyright")}</Text>
             <Stack direction={"row"} spacing={6}>
-              <SocialButton label={"Instagram"} href={"https://www.instagram.com/fiva_studio/"}>
+              <SocialButton
+                label={"Instagram"}
+                href={"https://www.instagram.com/fiva_studio/"}
+              >
                 <FaInstagram />
               </SocialButton>
               <SocialButton label={"YouTube"} href={"#"}>
                 <FaYoutube />
               </SocialButton>
-              <SocialButton
-                label={"Tik Tok"}
-                href={""}
-              >
+              <SocialButton label={"Tik Tok"} href={""}>
                 <FaTiktok />
               </SocialButton>
             </Stack>
@@ -122,13 +130,19 @@ export default function Footer() {
           <Stack align={"flex-start"}>
             <ListHeader>Fiva Studio</ListHeader>
             <Text fontWeight={400}>
-              <LocalizedLink to={"about-us"}>{t("header.aboutUs")}</LocalizedLink>
+              <LocalizedLink to={"about-us"}>
+                {t("header.aboutUs")}
+              </LocalizedLink>
             </Text>
             <Text fontWeight={400}>
-              <LocalizedLink to={"contact-us"}>{t("header.contactUs")}</LocalizedLink>
+              <LocalizedLink to={"contact-us"}>
+                {t("header.contactUs")}
+              </LocalizedLink>
             </Text>
             <Text fontWeight={400}>
-              <LocalizedLink to={"contact-us"}>{t("header.services")}</LocalizedLink>
+              <LocalizedLink to={"contact-us"}>
+                {t("header.services")}
+              </LocalizedLink>
             </Text>
             <Text fontWeight={400}>
               <AnchorLink to={"/faq"}>{t("header.questions")}</AnchorLink>
@@ -139,7 +153,9 @@ export default function Footer() {
             <Stack>
               {footerLinks.map((link, index) => (
                 <Text key={index} fontWeight={400}>
-                  <LocalizedLink to={`${link.href}`}>{link.label}</LocalizedLink>
+                  <LocalizedLink to={`${link.href}`}>
+                    {link.label}
+                  </LocalizedLink>
                 </Text>
               ))}
             </Stack>

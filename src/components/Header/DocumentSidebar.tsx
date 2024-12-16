@@ -11,7 +11,6 @@ export const DocumentSidebar = () => {
   const location = useLocation()
 
   const toggleMenu = () => setIsOpen(!isOpen)
-  
 
   const submenuItems = [
     { label: t("shortForm.title"), href: "short-form" },
@@ -24,6 +23,8 @@ export const DocumentSidebar = () => {
     { label: t("contentFC.title"), href: "content-for-children" },
     { label: t("food.title"), href: "food-and-hospitality" },
     { label: t("ecology.title"), href: "ecology-videos" },
+    { label: t("film.title"), href: "film-videos" },
+    { label: t("crypto.title"), href: "crypto" },
     { label: t("wedding.title"), href: "wedding-videos" },
   ]
 
