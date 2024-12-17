@@ -1,12 +1,12 @@
-import React from "react";
-import { Button, Collapse, Stack, Text, useDisclosure } from "@chakra-ui/react";
-import { PopoverIcon } from "./PopoverIcon";
-import LocalizedLink from "../LocalizedLink";
-import { useTranslation } from "react-i18next";
+import React from "react"
+import { Button, Collapse, Stack, Text, useDisclosure } from "@chakra-ui/react"
+import { PopoverIcon } from "./PopoverIcon"
+import LocalizedLink from "../LocalizedLink"
+import { useTranslation } from "react-i18next"
 
 export const DocumentCollapse = () => {
-  const { t } = useTranslation();
-  const isOpen = true; 
+  const { t } = useTranslation()
+  const isOpen = true
 
   return (
     <>
@@ -14,7 +14,7 @@ export const DocumentCollapse = () => {
         justifyContent="space-between"
         variant="tertiary"
         size="lg"
-        disabled 
+        disabled
       >
         <Text as="span">{t("header.services")}</Text>
         <PopoverIcon isOpen={isOpen} />
@@ -25,15 +25,17 @@ export const DocumentCollapse = () => {
             { label: t("shortForm.title"), href: "short-form" },
             { label: t("podcast.title"), href: "podcasts" },
             { label: t("estate.estate"), href: "real-estate" },
-            { label: t("cardTitles.meme"), href: "meme-videos" },
+            { label: t("crypto.title"), href: "crypto" },
+            // { label: t("cardTitles.meme"), href: "meme-videos" },
             { label: t("animation.title"), href: "2d-animations" },
             { label: t("education.title"), href: "educational-videos" },
             { label: t("corporate.title"), href: "corporate-videos" },
             { label: t("contentFC.title"), href: "content-for-children" },
             { label: t("food.title"), href: "food-and-hospitality" },
             { label: t("ecology.title"), href: "ecology-videos" },
+            { label: t("film.title"), href: "film-videos" },
             { label: t("wedding.title"), href: "wedding-videos" },
-          ].map((item) => (
+          ].map(item => (
             <LocalizedLink key={item.label} to={`${item.href}`}>
               <Button
                 variant="tertiary"
@@ -47,5 +49,5 @@ export const DocumentCollapse = () => {
         </Stack>
       </Collapse>
     </>
-  );
-};
+  )
+}
