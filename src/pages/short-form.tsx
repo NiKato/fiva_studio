@@ -17,10 +17,10 @@ const ShortForm = () => {
       content={
         <>
           <Text id="text" as="p" fontSize="lg">
-          {t("shortForm.text")}
+            {t("shortForm.text")}
           </Text>
           <Text as="p" fontSize="lg">
-          {t("shortForm.text2")}
+            {t("shortForm.text2")}
           </Text>
           {/* <SimpleGrid columns={{ base: 1, md: 2 }} spacing="40px" mx="auto">
             {videos.map((videoSrc, index) => (
@@ -31,7 +31,7 @@ const ShortForm = () => {
           </SimpleGrid> */}
         </>
       }
-      carousel={<Carousel />}
+      // carousel={<Carousel />}
     />
   )
 }

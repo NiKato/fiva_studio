@@ -1,5 +1,12 @@
-import React from "react";
-import { Link, Text } from "@chakra-ui/react";
+import React from "react"
+import { Link, Text } from "@chakra-ui/react"
+
+const path =
+  typeof window !== "undefined" &&
+  (window.location.pathname.includes("/sr/") ||
+    new URLSearchParams(window.location.search).has("sr"))
+    ? "sr"
+    : "en"
 
 export const faqData = {
   questionsrepeater: [
@@ -29,20 +36,42 @@ export const faqData = {
     },
     {
       question: "faq.question7",
-      answer: (
-        <>
-          <Text fontWeight={400} fontSize="sm" fontFamily={"PoppinsBlack, sans-serif"}>
-          You can contact our customer support team via email at {" "}
-            <Link href="mailto:info@fivastudio.com" color="blue.500">
-              info@fivastudio.com
-            </Link>{" "}
-            or even better message us directly on WhatsApp or Viber {" "}
-            <Link href="tel:+381621537032" color="blue.500">
-              +381 62 1537032
-            </Link>
-          </Text>
-        </>
-      ),
+      answer:
+        path === "en" ? (
+          <>
+            <Text
+              fontWeight={400}
+              fontSize="sm"
+              fontFamily={"PoppinsBlack, sans-serif"}
+            >
+              You can contact our customer support team via email at{" "}
+              <Link href="mailto:info@fivastudio.com" color="blue.500">
+                info@fivastudio.com
+              </Link>{" "}
+              or even better message us directly on WhatsApp or Viber{" "}
+              <Link href="tel:+381621537032" color="blue.500">
+                +381 62 1537032
+              </Link>
+            </Text>
+          </>
+        ) : (
+          <>
+            <Text
+              fontWeight={400}
+              fontSize="sm"
+              fontFamily={"PoppinsBlack, sans-serif"}
+            >
+              Možete kontaktirati naš tim za korisničku podršku putem emaila na{" "}
+              <Link href="mailto:info@fivastudio.com" color="blue.500">
+                info@fivastudio.com
+              </Link>{" "}
+              ili još bolje, porukom direktno putem WhatsApp-a ili Vibera na{" "}
+              <Link href="tel:+381621537032" color="blue.500">
+                +381 62 1537032
+              </Link>
+            </Text>
+          </>
+        ),
     },
   ],
-};
+}

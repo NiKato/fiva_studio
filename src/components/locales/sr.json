@@ -49,7 +49,7 @@
     "text5": "Istražite odgovore na uobičajena pitanja da biste brzo i lako dobili informacije koje su vam potrebne."
   },
   "cardTitles": {
-    "2dAnimations": "2D animacije / Mim video",
+    "2dAnimations": "2D animacije",
     "crypto": "Kripto / Finansije",
     "wedding": "Video Venčanja",
     "food": "Hrana | Ugostiteljstvo",
@@ -63,12 +63,13 @@
     "podcastSub": "Dosegnite do veće publike i unapredite kvalitet Vašeg podkasta.",
     "realestateSub": "Započnimo kreiranje očaravajućih video snimaka nekretnina",
     "filmSub": "Oživite svoju bioskopsku viziju uz naše usluge filmske produkcije",
-    "corporateSub": "Poboljšajte imidž svog brenda pomoću naših visokokvalitetnih korporativnih video zapisa"
+    "corporateSub": "Poboljšajte imidž svog brenda pomoću naših visokokvalitetnih korporativnih video zapisa",
+    "foodSub": "U svetu konkurencije hrane, gostoprimstva i restorana, video visokog kvaliteta može da napravi veliku razliku."
   },
   "faq": {
     "question": "Kako proces funkcioniše?",
     "answer": "Prilikom konsultacija o vašem projektu naš tim će raditi sa vama kako bi razumeli vašu viziju i kreirali kvalitetan finalni proizvod, koji će profesionalno urediti odabrani editori.",
-    "question2": "Koliko dugo traje proces uređivanja?",
+    "question2": "Koliko dugo traje proces izrade?",
     "answer2": "U zavisnosti od složenosti projekta i obima posla naših urednika, to može da varira od jednog dana do nekoliko dana, ali nikada kasnije od dogovorenog roka.",
     "question3": "Kako ću primiti moj video?",
     "answer3": "Kada se editovanje završi, isporučićemo video preko bezbednog linka za preuzimanje.",
@@ -77,7 +78,7 @@
     "question5": "Šta ako želim nešto da promenim u videu koji ste poslali?",
     "answer5": "Nije neuobičajeno imati male izmene ili ispravke s vremena na vreme. One su besplatne, ali ako zahtevate da se video u potpunosti prepravi u odnosu na ono što je dogovoreno, zadržavamo pravo da naplatimo razuman iznos za dodatni rad ili ne prihvatimo zahtev.",
     "question6": "Koliko video snimaka možete da obradite?",
-    "answer6": "Možemo da obradimo veći broj video zapisa. Kada je reč o kratkim video zapisima, u proseku snimamo 60 video snimaka mesečno po klijentu, ali možemo da isporučimo i više.",
+    "answer6": "Možemo da obradimo veći broj video zapisa. Kada je reč o kratkim video zapisima, u proseku obrađujemo 60 video snimaka mesečno po klijentu, ali možemo da isporučimo i više.",
     "question7": "Kako da kontaktiram vaš tim za korisničku podršku?",
     "answer7": "Možete kontaktirati naš tim za korisničku podršku putem e-pošte na",
     "answerSub": "ili još bolje poslati nam poruku direktno na WhatsApp ili Viber"

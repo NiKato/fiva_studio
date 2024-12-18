@@ -1,19 +1,19 @@
-import React from "react";
-import { Box, Container, Flex, HStack, Text, Image } from "@chakra-ui/react";
-import VideoBg from "../Video/VideoBg";
-import placeholder from "../../images/fiva.svg";
-import { useTranslation } from "react-i18next";
-import { Link } from "gatsby";
-import LocalizedLink from "../LocalizedLink";
+import React from "react"
+import { Box, Container, Flex, HStack, Text, Image } from "@chakra-ui/react"
+import VideoBg from "../Video/VideoBg"
+import placeholder from "../../images/fiva.svg"
+import { useTranslation } from "react-i18next"
+import { Link } from "gatsby"
+import LocalizedLink from "../LocalizedLink"
 
 const CustomGrid = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   const videoData = [
     {
-      src: "https://fivastudio.b-cdn.net/2D%20character%20animation%20meme%20animation.gif",
+      src: "https://fivastudio.b-cdn.net/soko-skele.gif",
       placeholder: placeholder,
-      label: t("cardTitles.2dAnimations"),
+      label: t("cardTitles.corporate"),
       href: "/2d-animations",
     },
     {
@@ -23,10 +23,10 @@ const CustomGrid = () => {
       href: "/wedding-videos",
     },
     {
-      src: "https://fivastudio.b-cdn.net/Hospitaltiy%20hotel%20food.gif",
+      src: "https://fivastudio.b-cdn.net/2D%20character%20animation%20meme%20animation.gif",
       placeholder: placeholder,
-      label: t("cardTitles.food"),
-      href: "/food-and-hospitality",
+      label: t("cardTitles.2dAnimations"),
+      href: "/2d-animations",
     },
     {
       src: "https://fivastudio.b-cdn.net/Kids%20animation%202d%20Animation.gif",
@@ -34,7 +34,7 @@ const CustomGrid = () => {
       label: t("cardTitles.contentFC"),
       href: "/content-for-children",
     },
-  ];
+  ]
 
   return (
     <Container maxW={{ base: "100%", md: "7xl" }} pb={0}>
@@ -68,13 +68,12 @@ const CustomGrid = () => {
             overflow="hidden"
           >
             <LocalizedLink to={`.${videoData[0].href}`}>
-            <Image
-              h={{ base: "156px", md: "450px" }}
-              minH={{ base: "156px", md: "450px" }}
-              src={videoData[0].src}
-              placeholder={videoData[0].placeholder}
-              
-            />
+              <Image
+                h={{ base: "156px", md: "450px" }}
+                minH={{ base: "156px", md: "450px" }}
+                src={videoData[0].src}
+                placeholder={videoData[0].placeholder}
+              />
             </LocalizedLink>
             <Text
               pos="absolute"
@@ -109,12 +108,11 @@ const CustomGrid = () => {
                 overflow="hidden"
               >
                 <LocalizedLink to={`.${videoData[1].href}`}>
-                <Image
-                  h="225px"
-                  src={videoData[1].src}
-                  placeholder={videoData[1].placeholder}
-                  
-                />
+                  <Image
+                    h="225px"
+                    src={videoData[1].src}
+                    placeholder={videoData[1].placeholder}
+                  />
                 </LocalizedLink>
                 <Text
                   pos="absolute"
@@ -144,12 +142,12 @@ const CustomGrid = () => {
                 overflow="hidden"
               >
                 <LocalizedLink to={`.${videoData[2].href}`}>
-                <Image
-                  h="225px"
-                  w={{ base: "100%", md: "280px" }}
-                  src={videoData[2].src}
-                  placeholder={videoData[2].placeholder}
-                />
+                  <Image
+                    h="225px"
+                    w={{ base: "100%", md: "280px" }}
+                    src={videoData[2].src}
+                    placeholder={videoData[2].placeholder}
+                  />
                 </LocalizedLink>
                 <Text
                   pos="absolute"
@@ -177,10 +175,10 @@ const CustomGrid = () => {
               overflow="hidden"
             >
               <LocalizedLink to={`.${videoData[3].href}`}>
-              <Image
-                src={videoData[3].src}
-                placeholder={videoData[3].placeholder}
-              />
+                <Image
+                  src={videoData[3].src}
+                  placeholder={videoData[3].placeholder}
+                />
               </LocalizedLink>
               <Text
                 pos="absolute"
@@ -199,7 +197,7 @@ const CustomGrid = () => {
         </Flex>
       </Flex>
     </Container>
-  );
-};
+  )
+}
 
-export default CustomGrid;
+export default CustomGrid

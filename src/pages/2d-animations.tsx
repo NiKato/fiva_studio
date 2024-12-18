@@ -7,7 +7,7 @@ import { SEO } from "../components/Seo"
 import { useTranslation } from "react-i18next"
 
 const Animations = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <PageTemplate
       title={t("animation.title")}
@@ -15,11 +15,12 @@ const Animations = () => {
       videoSources={[
         "https://fivastudio.b-cdn.net/2D%20animation.mp4",
         "https://fivastudio.b-cdn.net/Baby%20video.mp4",
+        "https://fivastudio.b-cdn.net/Ninja%20Final%20Cut%20Fiva.mp4",
       ]}
       content={
         <>
           <Text id="text" as="p" fontSize="lg">
-          {t("animation.text")}
+            {t("animation.text")}
           </Text>
         </>
       }

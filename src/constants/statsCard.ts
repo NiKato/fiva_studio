@@ -1,5 +1,5 @@
 import stat1 from "../images/reel4.webp";
-import stat2 from "../images/reel3.webp";
+import stat2 from "../images/food.webp";
 import stat3 from "../images/reel2.webp";
 import stat4 from "../images/reel.webp";
 
@@ -30,9 +30,9 @@ export const statsData: StatData[] = [
     href: "/film-videos",
   },
   {
-    title: "cardTitles.corporate",
-    stat: "cardTitles.corporateSub",
+    title: "cardTitles.food",
+    stat: "cardTitles.foodSub",
     imageSrc: stat2,
-    href: "/corporate-videos",
+    href: "/food-and-hospitality",
   },
 ];

@@ -50,7 +50,7 @@
     "text5": "Explore answers to common questions to get the information you need quickly and easily."
   },
   "cardTitles": {
-    "2dAnimations": "2D animations / Meme videos",
+    "2dAnimations": "2D animations",
     "crypto": "Crypto / Finance",
     "wedding": "Wedding videos",
     "food": "Food | Hospitality videos",
@@ -64,7 +64,8 @@
     "podcastSub": "Reach a wider audience and boost your brand with our high-quality podcast video services",
     "realestateSub": "Start creating mesmerizing real estate videos",
     "filmSub": "Bring your cinematic vision to life with our movie production services",
-    "corporateSub": "Enhance your brand's image with our high-quality corporate videos"
+    "corporateSub": "Enhance your brand's image with our high-quality corporate videos",
+    "foodSub": "In the competitive world of food, hospitality, and restaurants, a high-quality video can make all the difference."
   },
   "faq": {
     "question": "How does the process work?",

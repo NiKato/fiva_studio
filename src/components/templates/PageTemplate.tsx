@@ -2,14 +2,7 @@ import React, { useRef, useState } from "react"
 import ReactPlayer from "react-player"
 import { PageHero } from "../PageHero"
 import Layout from "../Layout"
-import {
-  VStack,
-  Heading,
-  Container,
-  Box,
-  Stack,
-  Text,
-} from "@chakra-ui/react"
+import { VStack, Heading, Container, Box, Stack, Text } from "@chakra-ui/react"
 import { MdOutlinePlayCircle } from "react-icons/md"
 import styled from "styled-components"
 import Cta from "../Cta"
@@ -112,11 +105,15 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
       >
         <VStack py="40px" spacing={10} alignItems="center" textAlign="center">
           {content}
-          <Stack flexFlow={{ base: "column", md: "row" }} gap={5}>
+          <Stack
+            flexFlow={{ base: "column", md: "row" }}
+            gap={5}
+            flexWrap="wrap"
+          >
             {videoSources.map((videoSrc, index) => (
               <Box
                 key={index}
-                w={{ base: "auto", md: "auto" }}
+                w={{ base: "343px", md: "100%" }}
                 maxW="600px"
                 mx={{ base: 8, md: "auto" }}
                 boxShadow="4px 4px 8px rgba(0, 0, 0, 0.9)"
@@ -162,16 +159,16 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
                 boxShadow="4px 4px 8px rgba(0, 0, 0, 0.9)"
                 h="400px"
                 gap={10}
-                mb={{base: 20, md: 0}}
+                mb={{ base: 20, md: 0 }}
               >
                 <VStack w="100%" h="400px">
-                <Text>Color Grading Real Estate Video</Text>
-                <ReactPlayer
-                  url={podcastUrl}
-                  width="100%"
-                  height="400px"
-                  controls
-                />
+                  <Text>Color Grading Real Estate Video</Text>
+                  <ReactPlayer
+                    url={podcastUrl}
+                    width="100%"
+                    height="400px"
+                    controls
+                  />
                 </VStack>
                 <ReactPlayer
                   url={realEstateUrl}
