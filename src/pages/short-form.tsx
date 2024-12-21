@@ -31,7 +31,7 @@ const ShortForm = () => {
           </SimpleGrid> */}
         </>
       }
-      // carousel={<Carousel />}
+      carousel={<Carousel />}
     />
   )
 }

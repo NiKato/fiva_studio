@@ -6,10 +6,9 @@ import "swiper/css/pagination"
 import "./styles.css"
 
 const videoUrls = [
-  "https://fivastudio.b-cdn.net/Iman-Gadzhi-Short.mp4",
-  "https://fivastudio.b-cdn.net/james-1.mp4",
-  "https://fivastudio.b-cdn.net/james-3.mp4",
-  "https://fivastudio.b-cdn.net/instagram-vertical.mp4",
+  "https://fivastudio.b-cdn.net/1.%20Badem%20Media%20reel%20no3.mp4",
+  "https://fivastudio.b-cdn.net/2.%20Lambo%20calculator.mp4",
+  "https://fivastudio.b-cdn.net/Descript%20Video.mp4",
   "https://fivastudio.b-cdn.net/1.%20Badem%20Media%20reel%20no3.mp4",
   "https://fivastudio.b-cdn.net/2.%20Lambo%20calculator.mp4",
   "https://fivastudio.b-cdn.net/Descript%20Video.mp4",

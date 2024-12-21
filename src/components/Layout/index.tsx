@@ -52,27 +52,31 @@ const Layout = ({ children }: any) => {
   return (
     <ChakraProvider theme={theme}>
       <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
+        {/* Google Tag Script */}
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=AW-11139973355"
         ></script>
         <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-JLTLQD7YNX"
-        ></script>
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-11139973355');
+            `,
+          }}
+        />
+        {/* Event Snippet for Conversion */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-11139973355');
-        gtag('config', 'G-JLTLQD7YNX');
-      `,
+              gtag('event', 'conversion', {
+                'send_to': 'AW-11139973355/2dw2CIip_PAZEOuB-r8p',
+                'value': 1.0,
+                'currency': 'USD'
+              });
+            `,
           }}
         />
       </Helmet>

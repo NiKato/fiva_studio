@@ -135,14 +135,14 @@ const HomePage: React.FC = () => {
               cta2={t("hero.cta2")}
             />
             <Benefits />
-            {/* {renderHeading(1)} */}
+            {renderHeading(1)}
           </Box>
-          {/* <Box>
+          <Box id="work">
             <Carousel />
-          </Box> */}
+          </Box>
           <Box mb={10}>
             {renderHeading(2)}
-            <Box id="work"></Box>
+            <Box></Box>
             <CustomGrid />
           </Box>
           <LongForm />
