@@ -133,7 +133,10 @@ export default function Footer() {
               <Box>
                 <Image width="116px" h="48px" src={logo} />
               </Box>
-              <Text fontSize={"sm"}>{t("footer.copyright")}</Text>
+              <Text fontSize={"sm"}>
+                © {new Date().getFullYear()} Fiva Studio.{" "}
+                {t("footer.copyright")}
+              </Text>
               <Stack direction={"row"} spacing={6}>
                 <SocialButton
                   label={"Instagram"}
