@@ -19,6 +19,41 @@ export const faqData = {
       answer: "faq.answer2",
     },
     {
+      question: "faq.question8",
+      answer:
+        path === "en" ? (
+          <>
+            <Text
+              fontWeight={400}
+              fontSize="sm"
+              fontFamily={"PoppinsBlack, sans-serif"}
+            >
+              Price of the video depends on its complexity, please send us an
+              example of how you would want your video to look like and we will
+              give you an estimated price or just reach out to us{" "}
+              <Link href="/contact-us" color="blue.500">
+                here
+              </Link>
+            </Text>
+          </>
+        ) : (
+          <>
+            <Text
+              fontWeight={400}
+              fontSize="sm"
+              fontFamily={"PoppinsBlack, sans-serif"}
+            >
+              Cena zavisi od kompleksnosti samog videa, pošalji nam primer kako
+              želiš da tvoj video izgleda ili nas kontaktiraj kako bi nam
+              predstavio tvoju ideju{" "}
+              <Link href="/contact-us" color="blue.500">
+                ovde.
+              </Link>
+            </Text>
+          </>
+        ),
+    },
+    {
       question: "faq.question3",
       answer: "faq.answer3",
     },

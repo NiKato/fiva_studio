@@ -2,7 +2,6 @@
   "hero": {
     "title": "Vaš video editor",
     "subtitle": "Stvaramo personalizovane video zapise za Vaše klijente ili Vaše projekte. Ostvarite Vašu viziju sa nama",
-    "cta": "Kontaktirajte nas",
     "cta2": "Prikaži radove"
   },
   "header": {
@@ -29,7 +28,7 @@
   },
   "headings": {
     "spanTitle": "NAJPOPULARNIJE",
-    "title": "Šort Form Video zapisi",
+    "title": "Videi za društvene mreže - Šort Form Videi",
     "text": "Listaj na levo ili desno da pogledaš videe. Uživaj!",
 
     "spanTitle2": "NAJTRAŽENIJE",
@@ -71,6 +70,8 @@
     "answer": "Prilikom konsultacija o vašem projektu naš tim će raditi sa vama kako bi razumeli vašu viziju i kreirali kvalitetan finalni proizvod, koji će profesionalno urediti odabrani editori.",
     "question2": "Koliko dugo traje proces izrade?",
     "answer2": "U zavisnosti od složenosti projekta i obima posla naših urednika, to može da varira od jednog dana do nekoliko dana, ali nikada kasnije od dogovorenog roka.",
+    "question8": "Cena?",
+    "answer8": "Cena zavisi od kompleksnosti samog videa, pošalji nam primer kako želiš da tvoj video izgleda ili nas kontaktiraj kako bi nam predstavio tvoju ideju",
     "question3": "Kako ću primiti moj video?",
     "answer3": "Kada se editovanje završi, isporučićemo video preko bezbednog linka za preuzimanje.",
     "question4": "Koje načine plaćanja prihvatate?",
@@ -164,7 +165,7 @@
     "text": "Da li ste umorni od pregledavanja sati sirovog audio ili video materijala, pokušavajući da sve to ukomponujete? Naš tim video editora je tu da vam pomogne da transformišete svoj sadržaj u uglađenu, zanimljivu produkciju profesionalnog nivoa. Uz naše usluge uređivanja podkasta, možete biti sigurni da će vaša emisija zvučati i izgledati apsolutno najbolje."
   },
   "shortForm": {
-    "title": "Short Form",
+    "title": "Društvene Mreže",
     "subtitle": "Imate marketinšku agenciju, ili ste SMM ili kontent kreator kome je potreban neko da obradi njihov sadržaj i isporuči video zapis po meri za Vas ili Vaše klijente?",
     "text": "Tu smo da editujemo snimak ili napravimo video od nule i isporučimo.",
     "text2": "Mi smo tim iskusnih video editora koji takođe imaju iskustvo u upravljanju nalozima na društvenim mrežama, digitalnom marketingu i kreiranju sadržaja, tako da razumemo Vaše potrebe i važnost pouzdanog video montažera koji razume viziju Vašeg ili projekta Vašeg klijenta."
@@ -195,10 +196,15 @@
     "text3": "Evo primera klijenta koji je želeo da proda kurs iz stranog jezika na internetu, bila je veoma konkretna o svakom detalju u svom videu i pomogli smo joj da oživi svoju viziju i poboljšali njenu originalnu verziju:"
   },
   "wedding": {
-    "title": "Videi Venčanja",
-    "subtitle": "Treba vam montažer videa za vaš edukativni sadržaj poput kurseva, YouTube kanala, ili Instagrama, Facebook-a i TikToka? Naši montažeri videa su ovde da ožive vašu viziju i daju vašem videu željeni efekat!",
-    "text": "U Fiva Studiju blisko sarađujemo s vama kako bismo kreirali venčani video koji savršeno oslikava vašu viziju. Od početne ideje do konačne montaže, fokusiramo se na svaki detalj—vizuale, zvuk i muziku—kako bismo osigurali da vaš poseban dan bude prikazan s elegancijom i emocijom. Kada se usaglasimo oko željenog izgleda i atmosfere, pažljivo kreiramo prelepi film koji prikazuje vašu ljubavnu priču i uspomene.",
-    "text2": "Na primer, nedavno smo radili s parom koji je želeo bezvremenski video svog venčanja. Imali su specifične ideje o tome kako su želeli da njihova ceremonija i proslave budu prikazane. Uzimajući u obzir njihovu detaljnu viziju, obogatili smo je našom filmskom stručnošću, što je rezultiralo zapanjujućim videom koji je prelepo uhvatio njihovu jedinstvenu ljubavnu priču."
+    "title": "Venčanja i Svadbe",
+    "subtitle": "Editovanje za snimatelje i fotografe venčanja i svadbi.",
+    "text": "Da li ste wedding videograph koji ima mnogo rezervacija i ne može da održava ravnotežu između posla i privatnog života jer stalno sedite za računarom kada ne snimate?",
+    "text2": "Ovde u Fiva Studiju montiramo vaše snimke sa venčanja i isporučujemo Vam jedinstvene filmove venčanja ili mladenaca spremni da ih prosledite vašim klijentima.",
+    "text3": "Mi se prilagođavamo vašem stilu ili kreiramo sopstveni i omogućavamo Vam da proširite svoje poslovanje i rezervišete mnogo više klijenata mesečno.",
+    "text4": "Budite zapaženi wedding videograph sa našim rešenjima.",
+    "text5": "NAPOMENA: Možemo da radimo samo sa određenim brojem snimatelja venčanja, obratite nam se sada dok još ima mesta za Vaše projekte.",
+    "text6": "Sarađujemo samo fotografima  / videografima koji imaju najmanje 4 snimanja venčanja mesečno tokom sezone venčanja.",
+    "text7": "Kontaktiraj nas odmah"
   },
   "estate": {
     "estate": "Nekretnine",

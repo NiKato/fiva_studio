@@ -32,7 +32,7 @@ export default function Hero({ title, text, cta, cta2 }: any) {
           <Stack spacing={6} w={"full"} maxW={"600px"}>
             <Heading
               as="h1"
-              fontFamily={"PoppinsBlack"} 
+              fontFamily={"PoppinsBlack"}
               fontSize={{ base: "3xl", md: "4xl", lg: "3.2rem" }}
               fontWeight={700}
             >
@@ -46,7 +46,7 @@ export default function Hero({ title, text, cta, cta2 }: any) {
               {text}
             </Text>
             <Stack direction={{ base: "column", md: "row" }} spacing={4}>
-              <LocalizedLink to="about-us" stripHash>
+              {/* <LocalizedLink to="about-us" stripHash>
                 <Button
                   borderRadius={4}
                   bg={"#333333"}
@@ -57,7 +57,7 @@ export default function Hero({ title, text, cta, cta2 }: any) {
                 >
                   {cta}
                 </Button>
-              </LocalizedLink>
+              </LocalizedLink> */}
               <AnchorLink to="/#work" stripHash>
                 <Button borderRadius={4} bg="#477EEB" color="#fff">
                   {cta2}

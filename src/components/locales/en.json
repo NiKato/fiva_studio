@@ -1,8 +1,8 @@
 {
   "hero": {
     "title": "Your trusted video editor",
-    "subtitle": "We create tailored videos for your clients or your projects. Bring your vision to life with us.",
-    "cta": "About us",
+    "subtitle": "Video editing and video production services.Professional, reliable and creative solutions.Grow your business in partnership with us.",
+
     "cta2": "Show work"
   },
   "header": {
@@ -16,13 +16,13 @@
     "title": "Tailored videos",
     "text": "We craft videos that bring project's essence to surface.",
 
-    "title2": "SMMA and CC Partnership Programme",
-    "text2": "Partnership deals and benefits with SMMs and Content Creators. ",
-    "linkText": " Reach out to us for more details.",
+    "title2": "Partnership benefits for SMMA, Videographers and Content Creators",
+    "text2": "Get better deals on larger qty of videos. B2B cooperation, long term partnership for fruitful mutual co-op. Reach out to us for more details ",
+    "linkText": " here.",
     "linkUrl": "/contact-us",
 
     "title3": "Reliability",
-    "text3": "As someone who worked in marketing and smm, we understand importance of deadlines and planning your content.",
+    "text3": "Receive your videos on time, within agreed deadline and plan your content calendar with ease.",
 
     "title4": "Selected editors",
     "text4": "We carefully chose editors for your projects that work best in your niche."
@@ -30,7 +30,7 @@
 
   "headings": {
     "spanTitle": "MOST POPULAR",
-    "title": "Short Form Content",
+    "title": "Social Media Videos - Short Form Content",
     "text": "Swipe to explore more videos. Enjoy the journey!",
 
     "spanTitle2": "TOP RATED",
@@ -72,6 +72,8 @@
     "answer": "Upon consultations about your project and enrolling it, our team will work with you to understand your vision and create a high-quality final product, professionally edited by our experienced editors.",
     "question2": "How long does the editing process take?",
     "answer2": "Depending on the complexity of the project and the workload of our editors, this can vary from one day to several days but never later than the agreed deadline.",
+    "question8": "Price?",
+    "answer8": "Price of the video depends on its complexity, please send us an example of how you would want your video to look like and we will give you an estimated price or just reach out to us",
     "question3": "How will I receive my edited video?",
     "answer3": "Once your edit is complete, we'll deliver it to you via a secure download link.",
     "question4": "What payment methods do you accept?",
@@ -165,7 +167,7 @@
     "text": "Are you tired of sifting through hours of raw audio or video, trying to make sense of it all? Look no further! Our team of skilled podcast editors is here to help you transform your content into a polished, engaging, and professional-grade production. With our podcast editing services, you can rest assured that your show will sound and look its absolute best."
   },
   "shortForm": {
-    "title": "Short Form",
+    "title": "Social Media Videos",
     "subtitle": "You own a marketing agency, or you're SMM or a content creator that needs someone to process their content and deliver tailored videos for yourself or your clients?",
     "text": "We're here to process the footage or create video from scratch and deliver.",
     "text2": "We're a team of experienced editors who also have experience in managing social media accounts, digital marketing, and content creation, so we understand your needs and the importance of having a reliable editor who understands the vision behind your or your client's project."
@@ -197,9 +199,14 @@
   },
   "wedding": {
     "title": "Wedding Videos",
-    "subtitle": "You need a video editor for your educational niche video content like courses, YouTube channel, or Instagram, Facebook, and TikTok? Our video editors are here to bring your vision to life and give your video the desired effect!",
-    "text": "At Fiva Studio, we collaborate closely with you to create a wedding video that perfectly captures your vision. From the initial concept to the final edit, we focus on every detail—visuals, sound, and music—to ensure your special day is portrayed with elegance and emotion. Once we align on the desired look and feel, we meticulously craft a beautiful film that showcases your love story and memories.",
-    "text2": "For example, we recently worked with a couple who wanted a timeless video of their wedding day. They had specific ideas for how they wanted their ceremony and celebrations depicted. We took their detailed vision and enhanced it with our cinematic expertise, resulting in a stunning video that beautifully captured their unique love story."
+    "subtitle": "Solutions for wedding videographers and photographers",
+    "text": "Are you a wedding videographer that has lots of booking and cannot maintain work-life balance because you are constantly sitting at the computer when you are not filming?",
+    "text2": "Here at Fiva Studio we edit your wedding footage and deliver to you beautifully crafted wedding films ready to be forwarded to your clients.",
+    "text3": "We match your video style or create our own and enable you to scale your business and book many more clients per month.",
+    "text4": "Get recognized as a wedding videographer in the area with our wedding films.",
+    "text5": "NOTE: We can only work with a certain number of wedding videographers, reach out to us now while there’s still room to enroll you.",
+    "text6": "We only take wedding videographers that have a minimum of 4 wedding shootings per month during the weddings season.",
+    "text7": "Reach out to us now"
   },
   "estate": {
     "estate": "Real Estate",

@@ -131,7 +131,7 @@ const HomePage: React.FC = () => {
             <Hero
               title={t("hero.title")}
               text={t("hero.subtitle")}
-              cta={t("hero.cta")}
+              // cta={t("hero.cta")}
               cta2={t("hero.cta2")}
             />
             <Benefits />

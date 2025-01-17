@@ -5,6 +5,7 @@ import { Text } from "@chakra-ui/react"
 import { HeadProps } from "gatsby"
 import { SEO } from "../components/Seo"
 import { useTranslation } from "react-i18next"
+import LocalizedLink from "../components/LocalizedLink"
 
 const Wedding = () => {
   const { t } = useTranslation()
@@ -17,10 +18,25 @@ const Wedding = () => {
       content={
         <>
           <Text id="text" as="p" fontSize="lg">
-          {t("wedding.text")}
+            {t("wedding.text")}
           </Text>
           <Text as="p" fontSize="lg">
-          {t("wedding.text2")}
+            {t("wedding.text2")}
+          </Text>
+          <Text id="text" as="p" fontSize="lg">
+            {t("wedding.text3")}
+          </Text>
+          <Text as="p" fontSize="lg">
+            {t("wedding.text4")}
+          </Text>
+          <Text id="text" as="p" fontSize="lg">
+            {t("wedding.text5")}
+          </Text>
+          <Text as="p" fontSize="lg">
+            {t("wedding.text6")}
+          </Text>
+          <Text as="p" color="#3377FF" textDecor="underline" fontSize="lg">
+            <LocalizedLink to="contact-us">{t("wedding.text7")}</LocalizedLink>
           </Text>
         </>
       }

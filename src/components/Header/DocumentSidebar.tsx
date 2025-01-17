@@ -16,6 +16,7 @@ export const DocumentSidebar = () => {
     { label: t("shortForm.title"), href: "short-form" },
     { label: t("podcast.title"), href: "podcasts" },
     { label: t("estate.estate"), href: "real-estate" },
+    { label: t("wedding.title"), href: "wedding-videos" },
     { label: t("crypto.title"), href: "crypto" },
     // { label: t("cardTitles.meme"), href: "meme-videos" },
     { label: t("animation.title"), href: "2d-animations" },
@@ -25,7 +26,6 @@ export const DocumentSidebar = () => {
     { label: t("food.title"), href: "food-and-hospitality" },
     { label: t("ecology.title"), href: "ecology-videos" },
     { label: t("film.title"), href: "film-videos" },
-    { label: t("wedding.title"), href: "wedding-videos" },
   ]
 
   return (
