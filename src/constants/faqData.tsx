@@ -21,7 +21,7 @@ export const faqData = {
     {
       question: "faq.question8",
       answer:
-        path === "en" ? (
+        path == "en" ? (
           <>
             <Text
               fontWeight={400}
@@ -45,7 +45,7 @@ export const faqData = {
             >
               Cena zavisi od kompleksnosti samog videa, pošalji nam primer kako
               želiš da tvoj video izgleda ili nas kontaktiraj kako bi nam
-              predstavio tvoju ideju{" "}
+              predstavio svoju ideju{" "}
               <Link href="/contact-us" color="blue.500">
                 ovde.
               </Link>
@@ -72,7 +72,7 @@ export const faqData = {
     {
       question: "faq.question7",
       answer:
-        path === "en" ? (
+        path == "en" ? (
           <>
             <Text
               fontWeight={400}

@@ -92,108 +92,107 @@ export default function Footer() {
   ]
 
   return (
-    <Box
-      bg={useColorModeValue("gray.50", "gray.900")}
-      color={useColorModeValue("gray.700", "gray.200")}
-    >
-      <Container
-        as={Stack}
-        mx={{ base: 6, md: "auto" }}
-        w={{ base: "auto", md: "100%" }}
-        maxW={{ base: "auto", md: "100%" }}
-        py={10}
-      >
-        <SimpleGrid
-          templateColumns={{ sm: "1fr 1fr", md: "4fr 3fr 1fr 1fr" }}
-          spacing={8}
+    <>
+      <Box>
+        <Container
+          as={Stack}
+          mx={{ base: 6, md: "auto" }}
+          w={{ base: "auto", md: "100%" }}
+          maxW={{ base: "auto", md: "100%" }}
+          py={10}
         >
-          <VStack alignItems="flex-start" ml={6}>
-            <Stack align={"flex-start"}>
-              <ListHeader>Fiva Studio</ListHeader>
-              <Text fontWeight={400}>
-                <LocalizedLink to={"about-us"}>
-                  {t("header.aboutUs")}
-                </LocalizedLink>
-              </Text>
-              <Text fontWeight={400}>
-                <LocalizedLink to={"contact-us"}>
-                  {t("header.contactUs")}
-                </LocalizedLink>
-              </Text>
-              <Text fontWeight={400}>
-                <LocalizedLink to={"contact-us"}>
-                  {t("header.services")}
-                </LocalizedLink>
-              </Text>
-              <Text fontWeight={400}>
-                <AnchorLink to={"/faq"}>{t("header.questions")}</AnchorLink>
-              </Text>
-            </Stack>
-            <Stack mt={6} spacing={6}>
-              <Box>
-                <Image width="116px" h="48px" src={logo} />
-              </Box>
-              <Text fontSize={"sm"}>
-                © {new Date().getFullYear()} Fiva Studio.{" "}
-                {t("footer.copyright")}
-              </Text>
-              <Stack direction={"row"} spacing={6}>
-                <SocialButton
-                  label={"Instagram"}
-                  href={"https://www.instagram.com/fiva_studio/"}
-                >
-                  <FaInstagram />
-                </SocialButton>
-                <SocialButton label={"YouTube"} href={"#"}>
-                  <FaYoutube />
-                </SocialButton>
-                <SocialButton label={"Tik Tok"} href={""}>
-                  <FaTiktok />
-                </SocialButton>
-              </Stack>
-            </Stack>
-          </VStack>
-          <Stack align={"flex-start"}>
-            <ListHeader>{t("header.aboutUs")}</ListHeader>
-            <Stack>
-              {footerLinks.map((link, index) => (
-                <Text key={index} fontWeight={400}>
-                  <LocalizedLink to={`${link.href}`}>
-                    {link.label}
+          <SimpleGrid
+            templateColumns={{ sm: "1fr 1fr", md: "4fr 3fr 1fr 1fr" }}
+            spacing={8}
+          >
+            <VStack alignItems="flex-start" ml={6}>
+              <Stack align={"flex-start"}>
+                <ListHeader>Fiva Studio</ListHeader>
+                <Text fontWeight={400}>
+                  <LocalizedLink to={"about-us"}>
+                    {t("header.aboutUs")}
                   </LocalizedLink>
                 </Text>
-              ))}
-            </Stack>
-          </Stack>
-          <Stack align={"flex-start"} gap={2}>
-            <ListHeader>{t("header.contactUs")}</ListHeader>
-            <VStack alignItems="flex-start">
-              <HStack>
-                <FaWhatsapp
-                  fill="#48C355"
-                  size={24}
-                  style={{ marginRight: "8px" }}
-                />
-                <Text>+381 62 1537032</Text>
-              </HStack>
-              <HStack>
-                <FaViber
-                  fill="#7360f2"
-                  size={24}
-                  style={{ marginRight: "8px" }}
-                />
-                <Text>+381 62 1537032</Text>
-              </HStack>
-              <HStack>
-                <FaEnvelope size={24} style={{ marginRight: "8px" }} />
-                <Link href="mailto:info@fivastudio.com">
-                  info@fivastudio.com
-                </Link>
-              </HStack>
+                <Text fontWeight={400}>
+                  <LocalizedLink to={"contact-us"}>
+                    {t("header.contactUs")}
+                  </LocalizedLink>
+                </Text>
+                <Text fontWeight={400}>
+                  <LocalizedLink to={"contact-us"}>
+                    {t("header.services")}
+                  </LocalizedLink>
+                </Text>
+                <Text fontWeight={400}>
+                  <AnchorLink to={"/faq"}>{t("header.questions")}</AnchorLink>
+                </Text>
+              </Stack>
+              <Stack mt={6} spacing={6}>
+                <Box>
+                  <Image width="116px" h="48px" src={logo} />
+                </Box>
+                <Text fontSize={"sm"}>
+                  © {new Date().getFullYear()} Fiva Studio.{" "}
+                  {t("footer.copyright")}
+                </Text>
+                <Stack direction={"row"} spacing={6}>
+                  <SocialButton
+                    label={"Instagram"}
+                    href={"https://www.instagram.com/fiva_studio/"}
+                  >
+                    <FaInstagram />
+                  </SocialButton>
+                  <SocialButton label={"YouTube"} href={"#"}>
+                    <FaYoutube />
+                  </SocialButton>
+                  <SocialButton label={"Tik Tok"} href={""}>
+                    <FaTiktok />
+                  </SocialButton>
+                </Stack>
+              </Stack>
             </VStack>
-          </Stack>
-        </SimpleGrid>
-      </Container>
-    </Box>
+            <Stack align={"flex-start"}>
+              <ListHeader>{t("header.aboutUs")}</ListHeader>
+              <Stack>
+                {footerLinks.map((link, index) => (
+                  <Text key={index} fontWeight={400}>
+                    <LocalizedLink to={`${link.href}`}>
+                      {link.label}
+                    </LocalizedLink>
+                  </Text>
+                ))}
+              </Stack>
+            </Stack>
+            <Stack align={"flex-start"} gap={2}>
+              <ListHeader>{t("header.contactUs")}</ListHeader>
+              <VStack alignItems="flex-start">
+                <HStack>
+                  <FaWhatsapp
+                    fill="#48C355"
+                    size={24}
+                    style={{ marginRight: "8px" }}
+                  />
+                  <Text>+381 62 1537032</Text>
+                </HStack>
+                <HStack>
+                  <FaViber
+                    fill="#7360f2"
+                    size={24}
+                    style={{ marginRight: "8px" }}
+                  />
+                  <Text>+381 62 1537032</Text>
+                </HStack>
+                <HStack>
+                  <FaEnvelope size={24} style={{ marginRight: "8px" }} />
+                  <Link href="mailto:info@fivastudio.com">
+                    info@fivastudio.com
+                  </Link>
+                </HStack>
+              </VStack>
+            </Stack>
+          </SimpleGrid>
+        </Container>
+      </Box>
+    </>
   )
 }
