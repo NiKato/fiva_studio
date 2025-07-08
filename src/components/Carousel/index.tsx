@@ -15,9 +15,11 @@ const videoUrls = [
 ]
 
 const Carousel = () => {
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(null)
+  const [currentVideoIndex, setCurrentVideoIndex] = useState<number | null>(
+    null
+  )
 
-  const handlePlay = (index: any) => {
+  const handlePlay = (index: number) => {
     setCurrentVideoIndex(index)
   }
 
@@ -32,7 +34,7 @@ const Carousel = () => {
       centeredSlides={true}
       loop={true}
       pagination={false}
-      autoplay={true}
+      autoplay={false} // autoplay isključen jer ručno startuješ
       className="mySwiper"
       initialSlide={2}
       breakpoints={{
@@ -67,8 +69,8 @@ const Carousel = () => {
           <VideoPlayer
             src={videoUrl}
             onPlay={() => handlePlay(index)}
-            isPlaying={currentVideoIndex === index}
             stopPlaying={handleStop}
+            isPlaying={currentVideoIndex === index}
             isCarousel={true}
           />
         </SwiperSlide>
