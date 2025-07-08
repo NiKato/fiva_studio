@@ -42,7 +42,7 @@ export function Head(props: HeadProps) {
   return (
     <SEO
       title="Fiva Studio | Short Form"
-      description="Transform your short-form content with our expert video editing services. From social media clips to YouTube videos, we'll elevate your brand's visual storytelling and engagement with our fast-paced, high-quality edits."
+      description="Transform your short-form content with our expert video editing services. From social media clips to YouTube videos, we'll elevate your brand's visual storytelling and engagement with our fast-paced, high-quality edits. "
     />
   )
 }
