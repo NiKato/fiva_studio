@@ -1,11 +1,19 @@
-import React, { useRef, useEffect, useState } from "react"
+// components/VideoPlayer.tsx
+import React, { useRef, useEffect } from "react"
 import styled from "styled-components"
 import { MdOutlinePlayCircle } from "react-icons/md"
+
+type Props = {
+  src: string
+  onPlay: () => void
+  stopPlaying: () => void
+  isPlaying: boolean
+  isCarousel?: boolean
+}
 
 const VideoWrapper = styled.div`
   position: relative;
   max-width: 100%;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -15,7 +23,10 @@ const Video = styled.video`
   width: 100%;
   height: auto;
   max-width: 800px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
 `
 
 const PlayButton = styled.div<{ isPlaying: boolean }>`
@@ -30,18 +41,16 @@ const PlayButton = styled.div<{ isPlaying: boolean }>`
 `
 
 const PlayIcon = styled(MdOutlinePlayCircle)`
-  color: #fff;
   width: 100%;
   height: 100%;
+  color: #fff;
+
+  [data-theme="light"] & {
+    color: #000;
+  }
 `
 
-const VideoPlayer = ({
-  src,
-  onPlay,
-  stopPlaying,
-  isPlaying,
-  isCarousel,
-}: any) => {
+const VideoPlayer = ({ src, onPlay, stopPlaying, isPlaying }: Props) => {
   const videoRef = useRef<HTMLVideoElement>(null)
 
   const handleVideoClick = () => {
@@ -50,10 +59,10 @@ const VideoPlayer = ({
     if (videoRef.current.paused) {
       pauseAllVideos()
       videoRef.current.play()
-      onPlay?.()
+      onPlay()
     } else {
       videoRef.current.pause()
-      stopPlaying?.()
+      stopPlaying()
     }
   }
 
@@ -67,20 +76,13 @@ const VideoPlayer = ({
   }
 
   useEffect(() => {
-    const handleEnded = () => {
-      stopPlaying?.()
-    }
-
     const current = videoRef.current
+    const handleEnded = () => stopPlaying()
     current?.addEventListener("ended", handleEnded)
-
-    return () => {
-      current?.removeEventListener("ended", handleEnded)
-    }
+    return () => current?.removeEventListener("ended", handleEnded)
   }, [stopPlaying])
 
   useEffect(() => {
-    // Pauziraj kad je `isPlaying` false
     if (!isPlaying && videoRef.current) {
       videoRef.current.pause()
     }
