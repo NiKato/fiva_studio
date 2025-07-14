@@ -12,6 +12,10 @@ const Film = () => {
       title={t("film.title")}
       subtitle={t("film.subtitle")}
       podcastUrl="https://www.youtube.com/watch?v=vJXejwviAVQ"
+      videoSources={[
+        "https://fivastudio.b-cdn.net/Documentary%20Style%20Edit.mp4",
+        "https://fivastudio.b-cdn.net/Intro%20for%20WWII%20Documentary.mp4%20OVAJ%20DZ%CC%8CONI%2C%20Documentary%2C%20Film.mp4",
+      ]}
       isPodcast
       content={
         <>

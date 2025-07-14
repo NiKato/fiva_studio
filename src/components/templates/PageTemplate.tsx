@@ -2,7 +2,15 @@ import React, { useRef, useState } from "react"
 import ReactPlayer from "react-player"
 import { PageHero } from "../PageHero"
 import Layout from "../Layout"
-import { VStack, Heading, Container, Box, Stack, Text } from "@chakra-ui/react"
+import {
+  VStack,
+  Heading,
+  Container,
+  Box,
+  Stack,
+  Text,
+  Flex,
+} from "@chakra-ui/react"
 import { MdOutlinePlayCircle } from "react-icons/md"
 import styled from "styled-components"
 import Cta from "../Cta"
@@ -105,10 +113,11 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
       >
         <VStack py="40px" spacing={10} alignItems="center" textAlign="center">
           {content}
-          <Stack
-            flexFlow={{ base: "column", md: "row" }}
+          <Flex
+            direction={{ base: "column", md: "row" }}
             gap={5}
-            flexWrap="wrap"
+            wrap="wrap"
+            justify="center"
           >
             {videoSources.map((videoSrc, index) => (
               <Box
@@ -178,7 +187,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
                 />
               </Stack>
             )}
-          </Stack>
+          </Flex>
         </VStack>
       </Container>
       {carousel}

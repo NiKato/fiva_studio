@@ -16,6 +16,7 @@ const Animations = () => {
         "https://fivastudio.b-cdn.net/2D%20animation.mp4",
         "https://fivastudio.b-cdn.net/Baby%20video.mp4",
         "https://fivastudio.b-cdn.net/Ninja%20Final%20Cut%20Fiva.mp4",
+        "https://fivastudio.b-cdn.net/Adult%20Cartoon%202D%20Animation%20(Fully%20produced%20by%20FIVA).mp4",
       ]}
       content={
         <>

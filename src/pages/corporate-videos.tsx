@@ -12,7 +12,13 @@ const Corporate = () => {
     <PageTemplate
       title={t("corporate.title")}
       subtitle={t("corporate.subtitle")}
-      videoSources={['https://fivastudio.b-cdn.net/Fiva%20Studio%20Corporate%20Video.mp4']}
+      videoSources={[
+        "https://fivastudio.b-cdn.net/Fiva%20Studio%20Corporate%20Video.mp4",
+        "https://fivastudio.b-cdn.net/Construction%20_%20Scaffolding%20video%20standard%20form.mp4",
+        "https://fivastudio.b-cdn.net/Color%20Grading%20Preview.mp4",
+        "https://fivastudio.b-cdn.net/Gym%20Hype%20H.mp4",
+        "https://fivastudio.b-cdn.net/Brennan%20Moore%20VBC%20Horizontal%20Final.mp4",
+      ]}
       content={
         <>
           <Text id="text" as="p" fontSize="lg">
