@@ -138,7 +138,7 @@ const HomePage: React.FC = () => {
             {renderHeading(1)}
           </Box>
           <Box id="work">
-            <Carousel />
+            <Carousel limit={8} />
           </Box>
           <Box mb={10}>
             {renderHeading(2)}
