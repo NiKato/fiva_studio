@@ -47,8 +47,9 @@ const videoUrls = [
 
 interface CarouselProps {
   limit?: number
+  isShortForm?: boolean
 }
-const Carousel: React.FC<CarouselProps> = ({ limit }) => {
+const Carousel: React.FC<CarouselProps> = ({ limit, isShortForm }) => {
   const { t } = useTranslation()
   const [currentVideoIndex, setCurrentVideoIndex] = useState<number | null>(
     null
@@ -57,7 +58,6 @@ const Carousel: React.FC<CarouselProps> = ({ limit }) => {
   const handlePlay = (index: number) => setCurrentVideoIndex(index)
   const handleStop = () => setCurrentVideoIndex(null)
 
-  // 👉 primeni limit ako je prosleđen
   const displayUrls = limit ? videoUrls.slice(0, limit) : videoUrls
 
   return (
@@ -96,20 +96,33 @@ const Carousel: React.FC<CarouselProps> = ({ limit }) => {
         <button className="custom-prev">←</button>
         <button className="custom-next">→</button>
       </div>
-
-      <Button
-        as={Link}
-        href="/short-form"
-        width="240px"
-        variant="ghost"
-        bg="#3377FF"
-        _hover={{ bg: "#000" }}
-        color="#fff"
-        mx="auto"
-        mt={16}
-      >
-        {t("shortForm.btn")}
-      </Button>
+      {isShortForm ? (
+        <Button
+          width="240px"
+          variant="ghost"
+          bg="#3377FF"
+          _hover={{ bg: "#000" }}
+          color="#fff"
+          mx="auto"
+          mt={16}
+        >
+          {t("shortForm.btn2")}
+        </Button>
+      ) : (
+        <Button
+          as={Link}
+          href="/short-form"
+          width="240px"
+          variant="ghost"
+          bg="#3377FF"
+          _hover={{ bg: "#000" }}
+          color="#fff"
+          mx="auto"
+          mt={16}
+        >
+          {t("shortForm.btn")}
+        </Button>
+      )}
     </Box>
   )
 }
