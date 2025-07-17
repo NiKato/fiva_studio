@@ -13,18 +13,17 @@ export const SEO = ({
   const {
     title: defaultTitle,
     description: defaultDescription,
-    image,
+    image: defaultImage,
     siteUrl,
     twitterUsername,
   } = useSiteMetadata()
 
   const seo = {
     title: title || defaultTitle,
-    description: description,
+    description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
-    image: `src/images/favicon.png`,
+    image: featuredImage || "https://fivastudio.b-cdn.net/og.png",
     twitterUsername,
-    featuredImage: featuredImage,
     content: content || "website",
     // schema: schema || null,
   }
@@ -32,19 +31,27 @@ export const SEO = ({
   return (
     <>
       <title>{seo.title}</title>
-      <meta property="og:locale" content="en_US" />
+
+      {/* Basic Meta */}
       <meta name="description" content={seo.description} />
-      <meta name="image" content="src/images/favicon-32x32.png" />
+      <meta name="image" content={seo.image} />
+
+      {/* Open Graph Meta */}
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:url" content={seo.url} />
+      <meta property="og:type" content={seo.content} />
+      <meta property="og:image" content={seo.image} />
+
+      {/* Twitter Meta */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
-      <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:creator" content={seo.twitterUsername} />
+      <meta name="twitter:image" content={seo.image} />
+      <meta name="twitter:url" content={seo.url} />
 
-      <meta name="og:image" content={seo.featuredImage} />
-      <meta name="og:title" content={seo.title} />
-      <meta name="og:url" content={seo.url} />
-      <meta name="og:type" content={seo.content} />
       {children}
     </>
   )
