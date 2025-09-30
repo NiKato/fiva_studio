@@ -1,4 +1,3 @@
-// src/pages/educational-videos.tsx
 import React from "react"
 import PageTemplate from "../components/templates/PageTemplate"
 import { Text } from "@chakra-ui/react"
@@ -14,7 +13,11 @@ const Wedding = () => {
     <PageTemplate
       title={t("wedding.title")}
       subtitle={t("wedding.subtitle")}
-      videoSources={["https://fivastudio.b-cdn.net/wedding-video.mp4"]}
+      isRealEstate
+      videoSources={[
+        "https://fivastudio.b-cdn.net/Wedding%20Film.mp4",
+        "https://fivastudio.b-cdn.net/wedding-video.mp4",
+      ]}
       content={
         <>
           <Text id="text" as="p" fontSize="lg">

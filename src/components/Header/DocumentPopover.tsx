@@ -64,7 +64,8 @@ export const DocumentPopover = () => {
         <Stack spacing="0" alignItems="stretch">
           {[
             { label: t("shortForm.title"), href: "short-form" },
-            { label: t("podcast.title"), href: "podcasts" },
+            // { label: t("podcast.title"), href: "podcasts" },
+            { label: t("youtube.title"), href: "youtube" },
             { label: t("cardTitles.meme"), href: "meme-videos" },
             { label: t("animation.title"), href: "2d-animations" },
             { label: t("education.title"), href: "educational-videos" },

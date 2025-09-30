@@ -7,9 +7,10 @@ import {
   AccordionItem,
   AccordionPanel,
   Heading,
+  Link,
 } from "@chakra-ui/react"
 import bgImg from "../../images/fiva.svg"
-import { useTranslation } from "react-i18next"
+import { Trans, useTranslation } from "react-i18next"
 import { ReactNode } from "react"
 
 const FAQ = ({ props, isFaqPage }: FAQProps) => {
@@ -67,7 +68,17 @@ const FAQ = ({ props, isFaqPage }: FAQProps) => {
               <AccordionIcon width="1.88rem" height="1.88rem" color="#3377FF" />
             </AccordionButton>
             <AccordionPanel mx={2} fontSize="sm" fontWeight={400}>
-              {isReactElement(item.answer) ? item.answer : t(item.answer)}
+              {isReactElement(item.answer) ? (
+                item.answer
+              ) : (
+                <Trans
+                  i18nKey={item.answer}
+                  components={{
+                    1: <Link href="/contact-us" color="blue.500" />,
+                    3: <Link href="tel:+381621537032" color="blue.500" />,
+                  }}
+                />
+              )}
             </AccordionPanel>
           </AccordionItem>
         ))}

@@ -24,8 +24,8 @@
     "title3": "Reliability",
     "text3": "Receive your videos on time, within agreed deadline and plan your content calendar with ease.",
 
-    "title4": "Selected editors",
-    "text4": "We carefully chose editors for your projects that work best in your niche."
+    "title4": "Content Development",
+    "text4": "We are able to develop a new creative style for you or your clients."
   },
 
   "headings": {
@@ -55,25 +55,27 @@
     "wedding": "Wedding videos",
     "food": "Food | Hospitality videos",
     "contentFC": "Content for Children",
-    "podcast": "Podcast Videos",
+    "podcast": "Youtube Editors",
     "meme": "Meme Videos",
     "realestate": "Real Estate",
     "film": "Film | Documentary Videos",
     "corporate": "Corporate Videos",
 
-    "podcastSub": "Reach a wider audience and boost your brand with our high-quality podcast video services",
+    "podcastSub": "Relay your post production to a reliable, responsible and creative team. Establish a long term partnership.",
+    "youtubeSub": "Reach a wider audience and boost your brand with our high-quality podcast video services",
     "realestateSub": "Start creating mesmerizing real estate videos",
     "filmSub": "Bring your cinematic vision to life with our movie production services",
     "corporateSub": "Enhance your brand's image with our high-quality corporate videos",
     "foodSub": "In the competitive world of food, hospitality, and restaurants, a high-quality video can make all the difference."
   },
+
   "faq": {
     "question": "How does the process work?",
     "answer": "Upon consultations about your project and enrolling it, our team will work with you to understand your vision and create a high-quality final product, professionally edited by our experienced editors.",
     "question2": "How long does the editing process take?",
     "answer2": "Depending on the complexity of the project and the workload of our editors, this can vary from one day to several days but never later than the agreed deadline.",
     "question8": "Price?",
-    "answer8": "Price of the video depends on its complexity, please send us an example of how you would want your video to look like and we will give you an estimated price or just reach out to us",
+    "answer8": "Price of the video depends on its complexity, please send us an example of how you would want your video to look like and we will give you an estimated price or just reach out to us  <1> here</1>.",
     "question3": "How will I receive my edited video?",
     "answer3": "Once your edit is complete, we'll deliver it to you via a secure download link.",
     "question4": "What payment methods do you accept?",
@@ -82,9 +84,8 @@
     "answer5": "It is not unusual to have small changes or corrections now and then. These ones are free of charge, however if you request a video to be remade entirely from what was agreed we reserve the right to charge a reasonable amount for extra work or not accept the request.",
     "question6": "How many videos can you process?",
     "answer6": "We can process a larger number of videos. When it comes to short form vids, on average we take 60 videos monthly per client, however we can deliver more.",
-    "question7": "How do I contact your customer support team?",
-    "answer7": "You can contact our customer support team via email at",
-    "answerSub": "or even better message us directly on WhatsApp or Viber"
+    "question7": "How can I contact you?",
+    "answer7": "You can email us at <1>info@fivastudio.com</1> or message us on WhatsApp/Viber <3>+381 62 1537032</3>."
   },
   "pageHero": {
     "btn": "Find out more",
@@ -165,6 +166,12 @@
     "title": "Podcasts",
     "subtitle": "Reach a wider audience and boost your brand with our high-quality podcast video services",
     "text": "Are you tired of sifting through hours of raw audio or video, trying to make sense of it all? Look no further! Our team of skilled podcast editors is here to help you transform your content into a polished, engaging, and professional-grade production. With our podcast editing services, you can rest assured that your show will sound and look its absolute best."
+  },
+  "youtube": {
+    "title": "Youtube Editors",
+    "subtitle": "Relay your post production to a reliable, responsible and creative team. Establish a long term partnership.",
+    "text": "Our goal at Fiva Studio is to be your reliable post production partner. You send the footage and we process it, polish it and deliver it to you ahead of schedule. We can adapt to a specific style that you like or build your own style whatever the niche you are in.",
+    "text2": "We are actively seeking long term partnership to provide video editing services too. Reach out now and lets discuss your project."
   },
   "shortForm": {
     "title": "Social Media Videos",

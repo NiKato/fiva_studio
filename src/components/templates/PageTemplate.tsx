@@ -2,19 +2,11 @@ import React, { useRef, useState } from "react"
 import ReactPlayer from "react-player"
 import { PageHero } from "../PageHero"
 import Layout from "../Layout"
-import {
-  VStack,
-  Heading,
-  Container,
-  Box,
-  Stack,
-  Text,
-  Flex,
-} from "@chakra-ui/react"
+import { VStack, Container, Box, Stack, Flex } from "@chakra-ui/react"
 import { MdOutlinePlayCircle } from "react-icons/md"
 import styled from "styled-components"
-import Cta from "../Cta"
 import { useTranslation } from "react-i18next"
+import ContactForm from "../ContactForm"
 
 const VideoWrapper = ({ onClick, children }: any) => (
   <div onClick={onClick} style={{ position: "relative", cursor: "pointer" }}>
@@ -159,7 +151,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
                 />
               </Box>
             )}
-            {isRealEstate && podcastUrl && (
+            {isRealEstate && (
               <Stack
                 flexFlow={{ base: "column", md: "row" }}
                 w={{ base: "auto", md: "1100px" }}
@@ -170,15 +162,6 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
                 gap={10}
                 mb={{ base: 20, md: 0 }}
               >
-                <VStack w="100%" h="400px">
-                  <Text>Color Grading Real Estate Video</Text>
-                  <ReactPlayer
-                    url={podcastUrl}
-                    width="100%"
-                    height="400px"
-                    controls
-                  />
-                </VStack>
                 <ReactPlayer
                   url={realEstateUrl}
                   width="100%"
@@ -197,8 +180,9 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
         mb={{ base: 10, md: 0 }}
       >
         <Stack py="40px" spacing={10} alignItems="center" textAlign="center">
-          <Heading as="h2">{t("pageHero.process")}</Heading>
-          <Cta />
+          {/* <Heading as="h2">{t("pageHero.process")}</Heading> */}
+          {/* <Cta /> */}
+          <ContactForm showBackground={false} />
         </Stack>
       </Container>
     </Layout>

@@ -1,14 +1,33 @@
-import { Stack, useColorMode, Flex, Text, Heading, Link } from "@chakra-ui/react";
-import React from "react";
-import LocalizedLink from "../LocalizedLink";
+import {
+  Stack,
+  useColorMode,
+  Flex,
+  Text,
+  Heading,
+  Link,
+} from "@chakra-ui/react"
+import React from "react"
+import LocalizedLink from "../LocalizedLink"
 
 const Feature = ({ title, text, icon, linkText, linkUrl }: any) => {
-  const { colorMode } = useColorMode();
+  const { colorMode } = useColorMode()
   return (
     <Stack alignItems="flex-start" justifyContent="flex-start">
-      <Flex align={"center"} justifyContent={"flex-start"} rounded={"full"} mb={1} gap={2}>
+      <Flex
+        align={"flex-start"}
+        justifyContent={"flex-start"}
+        rounded={"full"}
+        mb={1}
+        gap={2}
+      >
         <Text color="#477EEB">{icon}</Text>
-        <Heading as="h3" fontSize={"lg"} fontWeight={700} letterSpacing="-0.88px" textAlign="left">
+        <Heading
+          as="h3"
+          fontSize={"lg"}
+          fontWeight={700}
+          letterSpacing="-0.88px"
+          textAlign="left"
+        >
           {title}
         </Heading>
       </Flex>
@@ -21,7 +40,7 @@ const Feature = ({ title, text, icon, linkText, linkUrl }: any) => {
         )}
       </Text>
     </Stack>
-  );
-};
+  )
+}
 
-export default Feature;
+export default Feature

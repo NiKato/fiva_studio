@@ -1,17 +1,24 @@
 {
-    "compilerOptions": {
-      "target": "esnext",
-      "lib": ["dom", "esnext"],
-      "jsx": "react-jsx",
-      "module": "esnext",
-      
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "forceConsistentCasingInFileNames": true,
-  
-      "strict": true,
-      "skipLibCheck": true
-    },
-    
-    "include": ["./src/**/*", "./typings.d.ts", "gatsby-node.js", "./gatsby-config.ts", "./plugins/**/*"]
-  }
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["dom", "esnext"],
+    "jsx": "react-jsx",
+    "module": "esnext",
+
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "strict": true,
+    "skipLibCheck": true
+  },
+
+  "include": [
+    "./src/**/*",
+    "./typings.d.ts",
+    "gatsby-node.js",
+    "./gatsby-config.ts",
+    "./plugins/**/*",
+    "scripts"
+  ]
+}

@@ -1,15 +1,22 @@
-// src/pages/short-form.tsx
-import React from "react"
+import React, { useState } from "react"
 import PageTemplate from "../components/templates/PageTemplate"
 import { Text, SimpleGrid, Box } from "@chakra-ui/react"
 import VideoPlayer from "../components/Video"
-import Carousel from "../components/Carousel"
 import { HeadProps } from "gatsby"
 import { SEO } from "../components/Seo"
 import { useTranslation } from "react-i18next"
+import videoUrls from "../data/videos.json"
 
 const ShortForm = () => {
   const { t } = useTranslation()
+  const totalVideos = videoUrls.length
+  // const columns = Math.ceil(totalVideos / 2)
+  const [currentVideoIndex, setCurrentVideoIndex] = useState<number | null>(
+    null
+  )
+
+  const handlePlay = (index: number) => setCurrentVideoIndex(index)
+  const handleStop = () => setCurrentVideoIndex(null)
   return (
     <PageTemplate
       title={t("shortForm.title")}
@@ -19,19 +26,35 @@ const ShortForm = () => {
           <Text id="text" as="p" fontSize="lg">
             {t("shortForm.text")}
           </Text>
-          <Text as="p" fontSize="lg">
+          <Text as="p" fontSize="lg" mb={10}>
             {t("shortForm.text2")}
           </Text>
-          {/* <SimpleGrid columns={{ base: 1, md: 2 }} spacing="40px" mx="auto">
-            {videos.map((videoSrc, index) => (
-              <Box key={index} w="400px" boxShadow="4px 4px 8px rgba(0, 0, 0, 0.9)">
-                <VideoPlayer src={videoSrc} />
-              </Box>
-            ))}
-          </SimpleGrid> */}
+
+          <SimpleGrid columns={{ base: 2, md: 4, lg: 6 }} spacing={6} mx="auto">
+            {videoUrls.map((videoSrc: string, index: number) => {
+              const thumbnail = `/thumbnails/thumb-${index + 1}.jpg`
+              return (
+                <Box
+                  key={index}
+                  w="100%"
+                  boxShadow="4px 4px 8px rgba(0, 0, 0, 0.3)"
+                  borderRadius="md"
+                  overflow="hidden"
+                >
+                  <VideoPlayer
+                    src={videoSrc}
+                    poster={thumbnail} // 👈 dodaš poster ovde
+                    onPlay={() => handlePlay(index)}
+                    stopPlaying={handleStop}
+                    isPlaying={currentVideoIndex === index}
+                    isCarousel
+                  />
+                </Box>
+              )
+            })}
+          </SimpleGrid>
         </>
       }
-      carousel={<Carousel isShortForm />}
     />
   )
 }

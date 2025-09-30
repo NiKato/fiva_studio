@@ -11,8 +11,11 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@ffprobe-installer/ffprobe": "^2.1.2",
     "@formspree/react": "^2.5.1",
     "@swiper/core": "^0.0.21",
+    "fluent-ffmpeg": "^2.1.3",
     "framer-motion": "^11.1.7",
     "fs-extra": "^11.2.0",
     "gatsby": "^5.13.3",
@@ -53,6 +56,8 @@
   ],
   "license": "0BSD",
   "scripts": {
+    "thumbnails": "node scripts/generate-thumbnails.js",
+    "prebuild": "npm run thumbnails",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
@@ -60,6 +65,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+
   },
   "repository": {
     "type": "git",

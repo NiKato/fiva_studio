@@ -23,7 +23,8 @@ export const DocumentCollapse = () => {
         <Stack spacing="1" alignItems="stretch" ps="4">
           {[
             { label: t("shortForm.title"), href: "short-form" },
-            { label: t("podcast.title"), href: "podcasts" },
+            // { label: t("podcast.title"), href: "podcasts" },
+            { label: t("youtube.title"), href: "youtube" },
             { label: t("estate.estate"), href: "real-estate" },
             { label: t("crypto.title"), href: "crypto" },
             // { label: t("cardTitles.meme"), href: "meme-videos" },

@@ -15,7 +15,7 @@ export const statsData: StatData[] = [
     title: "cardTitles.podcast",
     stat: "cardTitles.podcastSub",
     imageSrc: stat4,
-    href: "/podcasts",
+    href: "/youtube",
   },
   {
     title: "cardTitles.realestate",

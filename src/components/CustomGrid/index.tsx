@@ -41,27 +41,28 @@ const CustomGrid = () => {
       <Flex
         direction="column"
         w="100%"
-        h={{ base: "100%", md: "450px" }}
+        h={{ base: "auto", md: "450px" }} // 👈 auto na mobile
         p={4}
         gap={4}
         color="white"
       >
         <Flex
           gap={4}
-          h={{ base: "85vh", md: "450px" }}
-          minH={{ base: "85vh", md: "450px" }}
+          h={{ base: "auto", md: "450px" }} // 👈 auto na mobile
+          minH={{ base: "auto", md: "450px" }}
           w="100%"
-          flexFlow={{ base: "column", md: "row" }}
+          flexDir={{ base: "column", md: "row" }} // 👈 mobile = column
         >
+          {/* Levi veliki box */}
           <Box
-            w={{ base: "100%", md: "650px" }}
-            h={{ base: "156px", md: "auto" }}
-            minH={{ base: "156px", md: "auto" }}
+            w={{ base: "100%", md: "650px" }} // 👈 full width na mobile
+            h={{ base: "200px", md: "auto" }} // 👈 smanji visinu na mobile
+            minH={{ base: "200px", md: "auto" }}
             flex={1}
             bg="gray.700"
             borderRadius="2xl"
             display="flex"
-            flexFlow="column"
+            flexDir="column"
             alignItems="center"
             justifyContent="flex-end"
             position="relative"
@@ -69,10 +70,9 @@ const CustomGrid = () => {
           >
             <LocalizedLink to={`.${videoData[0].href}`}>
               <Image
-                h={{ base: "156px", md: "450px" }}
-                minH={{ base: "156px", md: "450px" }}
+                w="100%" // 👈 full width
+                h={{ base: "200px", md: "450px" }} // 👈 manja visina na mobile
                 src={videoData[0].src}
-                placeholder={videoData[0].placeholder}
               />
             </LocalizedLink>
             <Text
@@ -88,35 +88,35 @@ const CustomGrid = () => {
               {videoData[0].label}
             </Text>
           </Box>
+
+          {/* Desna strana */}
           <Flex
             w={{ base: "100%", md: "650px" }}
             flexDir="column"
             gap={4}
             h="100%"
           >
-            <HStack>
+            <HStack flexDir={{ base: "column", md: "row" }} gap={4}>
+              {/* Box 2 */}
               <Box
-                h="225px"
+                h={{ base: "200px", md: "225px" }}
+                w="100%" // 👈 na mobile 100%
                 flex={1}
                 bg="gray.700"
                 borderRadius="2xl"
                 display="flex"
-                flexFlow="column"
+                flexDir="column"
                 alignItems="center"
                 justifyContent="flex-end"
                 position="relative"
                 overflow="hidden"
               >
                 <LocalizedLink to={`.${videoData[1].href}`}>
-                  <Image
-                    h="225px"
-                    src={videoData[1].src}
-                    placeholder={videoData[1].placeholder}
-                  />
+                  <Image w="100%" h="100%" src={videoData[1].src} />
                 </LocalizedLink>
                 <Text
                   pos="absolute"
-                  bg="rgba(0, 0, 0, 0.5)"
+                  bg="rgba(0,0,0,0.5)"
                   px={4}
                   py={2.5}
                   mb={2}
@@ -127,31 +127,27 @@ const CustomGrid = () => {
                   {videoData[1].label}
                 </Text>
               </Box>
+
+              {/* Box 3 */}
               <Box
-                h="225px"
-                w={{ base: "100%", md: "280px" }}
-                maxW={{ base: "100%", md: "280px" }}
+                h={{ base: "200px", md: "225px" }}
+                w="100%" // 👈 na mobile 100%
                 flex={1}
                 bg="gray.700"
                 borderRadius="2xl"
                 display="flex"
-                flexFlow="column"
+                flexDir="column"
                 alignItems="center"
                 justifyContent="flex-end"
                 position="relative"
                 overflow="hidden"
               >
                 <LocalizedLink to={`.${videoData[2].href}`}>
-                  <Image
-                    h="225px"
-                    w={{ base: "100%", md: "280px" }}
-                    src={videoData[2].src}
-                    placeholder={videoData[2].placeholder}
-                  />
+                  <Image w="100%" h="100%" src={videoData[2].src} />
                 </LocalizedLink>
                 <Text
                   pos="absolute"
-                  bg="rgba(0, 0, 0, 0.5)"
+                  bg="rgba(0,0,0,0.5)"
                   px={4}
                   py={2.5}
                   mb={2}
@@ -163,26 +159,27 @@ const CustomGrid = () => {
                 </Text>
               </Box>
             </HStack>
+
+            {/* Box 4 */}
             <Box
               flex={1}
+              w="100%"
+              h={{ base: "200px", md: "auto" }}
               bg="gray.700"
               borderRadius="2xl"
               display="flex"
-              flexFlow="column"
+              flexDir="column"
               alignItems="center"
               justifyContent="flex-end"
               position="relative"
               overflow="hidden"
             >
               <LocalizedLink to={`.${videoData[3].href}`}>
-                <Image
-                  src={videoData[3].src}
-                  placeholder={videoData[3].placeholder}
-                />
+                <Image w="100%" h="100%" src={videoData[3].src} />
               </LocalizedLink>
               <Text
                 pos="absolute"
-                bg="rgba(0, 0, 0, 0.5)"
+                bg="rgba(0,0,0,0.5)"
                 px={4}
                 py={2.5}
                 mb={2}

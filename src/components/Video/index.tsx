@@ -4,6 +4,7 @@ import { MdOutlinePlayCircle } from "react-icons/md"
 
 type Props = {
   src: string
+  poster?: string
   onPlay: () => void
   stopPlaying: () => void
   isPlaying: boolean
@@ -51,7 +52,7 @@ const PlayButton = styled(MdOutlinePlayCircle)`
   }
 `
 
-const ThumbnailImage = styled.img`
+const ThumbnailImage = styled.img<{ isVisible: boolean }>`
   width: 100%;
   max-width: 800px;
   border-radius: 16px;
@@ -59,10 +60,19 @@ const ThumbnailImage = styled.img`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  transition: opacity 0.3s;
+  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  z-index: 1;
+  pointer-events: none;
 `
 
-const VideoPlayer = ({ src, onPlay, stopPlaying, isPlaying }: Props) => {
+const VideoPlayer = ({
+  src,
+  onPlay,
+  stopPlaying,
+  isPlaying,
+  poster,
+}: Props) => {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [localPlaying, setLocalPlaying] = useState(false)
   const [thumbnail, setThumbnail] = useState<string | null>(null)
@@ -135,12 +145,15 @@ const VideoPlayer = ({ src, onPlay, stopPlaying, isPlaying }: Props) => {
     <VideoWrapper onClick={handleVideoClick}>
       <Video
         ref={videoRef}
+        poster={poster}
         src={src}
         playsInline
         preload="auto"
         controls={false}
       />
-      {thumbnail && !localPlaying && <ThumbnailImage src={thumbnail} />}
+      {thumbnail && (
+        <ThumbnailImage src={thumbnail} isVisible={!localPlaying} />
+      )}
       <Overlay isPlaying={localPlaying}>
         {!localPlaying && <PlayButton />}
       </Overlay>

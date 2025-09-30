@@ -20,38 +20,7 @@ export const faqData = {
     },
     {
       question: "faq.question8",
-      answer:
-        path == "en" ? (
-          <>
-            <Text
-              fontWeight={400}
-              fontSize="sm"
-              fontFamily={"PoppinsBlack, sans-serif"}
-            >
-              Price of the video depends on its complexity, please send us an
-              example of how you would want your video to look like and we will
-              give you an estimated price or just reach out to us{" "}
-              <Link href="/contact-us" color="blue.500">
-                here
-              </Link>
-            </Text>
-          </>
-        ) : (
-          <>
-            <Text
-              fontWeight={400}
-              fontSize="sm"
-              fontFamily={"PoppinsBlack, sans-serif"}
-            >
-              Cena zavisi od kompleksnosti samog videa, pošalji nam primer kako
-              želiš da tvoj video izgleda ili nas kontaktiraj kako bi nam
-              predstavio svoju ideju{" "}
-              <Link href="/contact-us" color="blue.500">
-                ovde.
-              </Link>
-            </Text>
-          </>
-        ),
+      answer: "faq.answer8",
     },
     {
       question: "faq.question3",
@@ -71,42 +40,7 @@ export const faqData = {
     },
     {
       question: "faq.question7",
-      answer:
-        path == "en" ? (
-          <>
-            <Text
-              fontWeight={400}
-              fontSize="sm"
-              fontFamily={"PoppinsBlack, sans-serif"}
-            >
-              You can contact our customer support team via email at{" "}
-              <Link href="mailto:info@fivastudio.com" color="blue.500">
-                info@fivastudio.com
-              </Link>{" "}
-              or even better message us directly on WhatsApp or Viber{" "}
-              <Link href="tel:+381621537032" color="blue.500">
-                +381 62 1537032
-              </Link>
-            </Text>
-          </>
-        ) : (
-          <>
-            <Text
-              fontWeight={400}
-              fontSize="sm"
-              fontFamily={"PoppinsBlack, sans-serif"}
-            >
-              Možete kontaktirati naš tim za korisničku podršku putem emaila na{" "}
-              <Link href="mailto:info@fivastudio.com" color="blue.500">
-                info@fivastudio.com
-              </Link>{" "}
-              ili još bolje, porukom direktno putem WhatsApp-a ili Vibera na{" "}
-              <Link href="tel:+381621537032" color="blue.500">
-                +381 62 1537032
-              </Link>
-            </Text>
-          </>
-        ),
+      answer: "faq.answer7",
     },
   ],
 }

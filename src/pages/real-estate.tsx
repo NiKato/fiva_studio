@@ -14,9 +14,11 @@ const RealEstate = () => {
       title={t("estate.title")}
       subtitle={t("estate.subtitle")}
       isRealEstate
-      
-      podcastUrl="https://fivastudio.b-cdn.net/0925-1.mp4"
-      realEstateUrl="https://www.youtube.com/watch?v=M_F-Fk1g4LA"
+      realEstateUrl={"https://www.youtube.com/watch?v=M_F-Fk1g4LA"}
+      videoSources={[
+        "https://fivastudio.b-cdn.net/Ciao%20Andiamo%20Final%20(1).mp4",
+        "https://fivastudio.b-cdn.net/Switzerland%20Villa%20Slideshow.mp4",
+      ]}
       content={
         <>
           <Text id="text" as="p" fontSize="lg">
