@@ -15,7 +15,6 @@ const Corporate = () => {
       videoSources={[
         "https://fivastudio.b-cdn.net/Realtor%20Video%20Business%20Card.mp4",
         "https://fivastudio.b-cdn.net/Fiva%20Studio%20Corporate%20Video.mp4",
-        "https://fivastudio.b-cdn.net/Construction%20_%20Scaffolding%20video%20standard%20form.mp4",
         "https://fivastudio.b-cdn.net/Color%20Grading%20Preview.mp4",
         "https://fivastudio.b-cdn.net/Gym%20Hype%20H.mp4",
         "https://fivastudio.b-cdn.net/Brennan%20Moore%20VBC%20Horizontal%20Final.mp4",

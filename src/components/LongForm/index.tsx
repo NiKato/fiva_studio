@@ -45,8 +45,6 @@ function StatsCard(props: StatsCardProps) {
         rounded={"lg"}
         position="relative"
       >
-        {/* Gradient overlay */}
-
         <Box
           position="absolute"
           top="0"
@@ -64,7 +62,7 @@ function StatsCard(props: StatsCardProps) {
           fontSize="xl"
           pb={"24px"}
           fontWeight={700}
-          isTruncated
+          noOfLines={2}
           pos="relative"
           zIndex="999"
         >

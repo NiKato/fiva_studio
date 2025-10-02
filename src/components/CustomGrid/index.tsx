@@ -48,15 +48,14 @@ const CustomGrid = () => {
       >
         <Flex
           gap={4}
-          h={{ base: "auto", md: "450px" }} // 👈 auto na mobile
+          h={{ base: "auto", md: "450px" }}
           minH={{ base: "auto", md: "450px" }}
           w="100%"
-          flexDir={{ base: "column", md: "row" }} // 👈 mobile = column
+          flexDir={{ base: "column", md: "row" }}
         >
-          {/* Levi veliki box */}
           <Box
-            w={{ base: "100%", md: "650px" }} // 👈 full width na mobile
-            h={{ base: "200px", md: "auto" }} // 👈 smanji visinu na mobile
+            w={{ base: "100%", md: "650px" }}
+            h={{ base: "200px", md: "auto" }}
             minH={{ base: "200px", md: "auto" }}
             flex={1}
             bg="gray.700"
@@ -70,8 +69,8 @@ const CustomGrid = () => {
           >
             <LocalizedLink to={`.${videoData[0].href}`}>
               <Image
-                w="100%" // 👈 full width
-                h={{ base: "200px", md: "450px" }} // 👈 manja visina na mobile
+                w="100%"
+                h={{ base: "200px", md: "450px" }}
                 src={videoData[0].src}
               />
             </LocalizedLink>
@@ -97,10 +96,9 @@ const CustomGrid = () => {
             h="100%"
           >
             <HStack flexDir={{ base: "column", md: "row" }} gap={4}>
-              {/* Box 2 */}
               <Box
                 h={{ base: "200px", md: "225px" }}
-                w="100%" // 👈 na mobile 100%
+                w="100%"
                 flex={1}
                 bg="gray.700"
                 borderRadius="2xl"
@@ -128,10 +126,9 @@ const CustomGrid = () => {
                 </Text>
               </Box>
 
-              {/* Box 3 */}
               <Box
                 h={{ base: "200px", md: "225px" }}
-                w="100%" // 👈 na mobile 100%
+                w="100%"
                 flex={1}
                 bg="gray.700"
                 borderRadius="2xl"
@@ -160,7 +157,6 @@ const CustomGrid = () => {
               </Box>
             </HStack>
 
-            {/* Box 4 */}
             <Box
               flex={1}
               w="100%"

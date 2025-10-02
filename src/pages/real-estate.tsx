@@ -13,11 +13,9 @@ const RealEstate = () => {
     <PageTemplate
       title={t("estate.title")}
       subtitle={t("estate.subtitle")}
-      isRealEstate
-      realEstateUrl={"https://www.youtube.com/watch?v=M_F-Fk1g4LA"}
       videoSources={[
-        "https://fivastudio.b-cdn.net/Ciao%20Andiamo%20Final%20(1).mp4",
         "https://fivastudio.b-cdn.net/Switzerland%20Villa%20Slideshow.mp4",
+        "https://fivastudio.b-cdn.net/Ciao%20Andiamo%20Final%20(1).mp4",
       ]}
       content={
         <>

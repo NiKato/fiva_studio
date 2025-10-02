@@ -13,6 +13,7 @@ const Animations = () => {
       title={t("animation.title")}
       subtitle={t("animation.subtitle")}
       videoSources={[
+        "https://fivastudio.b-cdn.net/Troll%20Assassin.mp4",
         "https://fivastudio.b-cdn.net/2D%20animation.mp4",
         "https://fivastudio.b-cdn.net/Baby%20video.mp4",
         "https://fivastudio.b-cdn.net/Ninja%20Final%20Cut%20Fiva.mp4",

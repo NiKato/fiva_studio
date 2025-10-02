@@ -1,7 +1,7 @@
-import stat1 from "../images/reel4.webp";
-import stat2 from "../images/food.webp";
-import stat3 from "../images/reel2.webp";
-import stat4 from "../images/reel.webp";
+import stat1 from "../images/film-doc.jpeg";
+import stat2 from "../images/food.png";
+import stat3 from "../images/real-estate.png";
+import stat4 from "../images/yt.jpeg";
 
 interface StatData {
   title: string;

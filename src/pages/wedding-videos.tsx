@@ -15,7 +15,7 @@ const Wedding = () => {
       subtitle={t("wedding.subtitle")}
       isRealEstate
       videoSources={[
-        "https://fivastudio.b-cdn.net/Wedding%20Film.mp4",
+        "https://fivastudio.b-cdn.net/Wedding%20Highlights%20Insert%20Showreel.mp4",
         "https://fivastudio.b-cdn.net/wedding-video.mp4",
       ]}
       content={

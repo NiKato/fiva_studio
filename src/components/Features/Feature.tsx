@@ -20,7 +20,9 @@ const Feature = ({ title, text, icon, linkText, linkUrl }: any) => {
         mb={1}
         gap={2}
       >
-        <Text color="#477EEB">{icon}</Text>
+        <Text m={0} color="#477EEB">
+          {icon}
+        </Text>
         <Heading
           as="h3"
           fontSize={"lg"}
