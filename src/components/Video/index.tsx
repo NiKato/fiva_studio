@@ -40,30 +40,16 @@ const Overlay = styled.div<{ isPlaying: boolean }>`
   transition: opacity 0.3s;
   opacity: ${({ isPlaying }) => (isPlaying ? 0 : 1)};
   pointer-events: ${({ isPlaying }) => (isPlaying ? "none" : "auto")};
+  z-index: 2;
 `
 
 const PlayButton = styled(MdOutlinePlayCircle)`
   width: 80px;
   height: 80px;
   color: #fff;
-
   [data-theme="light"] & {
     color: #000;
   }
-`
-
-const ThumbnailImage = styled.img<{ isVisible: boolean }>`
-  width: 100%;
-  max-width: 800px;
-  border-radius: 16px;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 0.3s;
-  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
-  z-index: 1;
-  pointer-events: none;
 `
 
 const VideoPlayer = ({
@@ -75,26 +61,6 @@ const VideoPlayer = ({
 }: Props) => {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [localPlaying, setLocalPlaying] = useState(false)
-  const [thumbnail, setThumbnail] = useState<string | null>(null)
-
-  // Generisanje thumbnail-a prvog frejma
-  useEffect(() => {
-    const video = document.createElement("video")
-    video.src = src
-    video.crossOrigin = "anonymous"
-    video.preload = "metadata"
-
-    const captureThumbnail = () => {
-      const canvas = document.createElement("canvas")
-      canvas.width = video.videoWidth
-      canvas.height = video.videoHeight
-      const ctx = canvas.getContext("2d")
-      if (ctx) ctx.drawImage(video, 0, 0, canvas.width, canvas.height)
-      setThumbnail(canvas.toDataURL("image/jpeg"))
-    }
-
-    video.addEventListener("loadeddata", captureThumbnail)
-  }, [src])
 
   const handleVideoClick = () => {
     if (!videoRef.current) return
@@ -118,9 +84,7 @@ const VideoPlayer = ({
   const pauseAllVideos = () => {
     const videos = document.querySelectorAll("video")
     videos.forEach(video => {
-      if (video !== videoRef.current) {
-        video.pause()
-      }
+      if (video !== videoRef.current) video.pause()
     })
   }
 
@@ -150,10 +114,8 @@ const VideoPlayer = ({
         playsInline
         preload="auto"
         controls={false}
+        crossOrigin="anonymous"
       />
-      {thumbnail && (
-        <ThumbnailImage src={thumbnail} isVisible={!localPlaying} />
-      )}
       <Overlay isPlaying={localPlaying}>
         {!localPlaying && <PlayButton />}
       </Overlay>

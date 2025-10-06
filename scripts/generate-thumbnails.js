@@ -22,7 +22,7 @@ videoUrls.forEach((url, i) => {
             console.error(err)
         })
         .screenshots({
-            timestamps: ["2%"], // uzmi frame na ~2% videa
+            timestamps: ["2%"],
             filename: path.basename(outputPath),
             folder: path.dirname(outputPath),
             size: "640x?"

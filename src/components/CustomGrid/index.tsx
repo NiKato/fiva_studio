@@ -1,194 +1,108 @@
 import React from "react"
-import { Box, Container, Flex, HStack, Text, Image } from "@chakra-ui/react"
-import VideoBg from "../Video/VideoBg"
-import placeholder from "../../images/fiva.svg"
+import { Box, Container, SimpleGrid, Text, Image } from "@chakra-ui/react"
 import { useTranslation } from "react-i18next"
-import { Link } from "gatsby"
 import LocalizedLink from "../LocalizedLink"
+
+import stat1 from "../../images/film-doc.jpeg"
+import stat2 from "../../images/food.png"
+import stat3 from "../../images/real-estate.png"
+import stat4 from "../../images/yt.jpeg"
 
 const CustomGrid = () => {
   const { t } = useTranslation()
 
-  const videoData = [
+  const cards = [
     {
-      src: "https://fivastudio.b-cdn.net/soko-skele.gif",
-      placeholder: placeholder,
-      label: t("cardTitles.corporate"),
-      href: "/2d-animations",
+      label: t("cardTitles.youtube"),
+      src: stat4,
+      href: "./youtube",
     },
     {
-      src: "https://fivastudio.b-cdn.net/Fiva%20studio%20Wedding%20gif%20for%20homepage.gif",
-      placeholder: placeholder,
       label: t("cardTitles.wedding"),
-      href: "/wedding-videos",
+      src: "https://fivastudio.b-cdn.net/Fiva%20studio%20Wedding%20gif%20for%20homepage.gif",
+      href: "./wedding-videos",
     },
     {
-      src: "https://fivastudio.b-cdn.net/2D%20character%20animation%20meme%20animation.gif",
-      placeholder: placeholder,
-      label: t("cardTitles.2dAnimations"),
-      href: "/2d-animations",
+      label: t("cardTitles.corporate"),
+      src: "https://fivastudio.b-cdn.net/soko-skele.gif",
+      href: "./corporate-videos",
     },
     {
-      src: "https://fivastudio.b-cdn.net/Kids%20animation%202d%20Animation.gif",
-      placeholder: placeholder,
+      label: t("cardTitles.realestate"),
+      src: stat3,
+      href: "./real-estate",
+    },
+    {
+      label: t("cardTitles.film"),
+      src: stat1,
+      href: "./film-videos",
+    },
+    {
+      label: t("cardTitles.food"),
+      src: stat2,
+      href: "./food-and-hospitality",
+    },
+    {
       label: t("cardTitles.contentFC"),
-      href: "/content-for-children",
+      src: "https://fivastudio.b-cdn.net/Kids%20animation%202d%20Animation.gif",
+      href: "./content-for-children",
+    },
+    {
+      label: t("cardTitles.2dAnimations"),
+      src: "https://fivastudio.b-cdn.net/2D%20character%20animation%20meme%20animation.gif",
+      href: "./2d-animations",
     },
   ]
 
   return (
-    <Container maxW={{ base: "100%", md: "7xl" }} pb={0}>
-      <Flex
-        direction="column"
-        w="100%"
-        h={{ base: "auto", md: "450px" }} // 👈 auto na mobile
-        p={4}
-        gap={4}
-        color="white"
+    <Container maxW="7xl" py={10}>
+      <SimpleGrid
+        columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
+        spacing={{ base: 4, md: 6 }}
       >
-        <Flex
-          gap={4}
-          h={{ base: "auto", md: "450px" }}
-          minH={{ base: "auto", md: "450px" }}
-          w="100%"
-          flexDir={{ base: "column", md: "row" }}
-        >
-          <Box
-            w={{ base: "100%", md: "650px" }}
-            h={{ base: "200px", md: "auto" }}
-            minH={{ base: "200px", md: "auto" }}
-            flex={1}
-            bg="gray.700"
-            borderRadius="2xl"
-            display="flex"
-            flexDir="column"
-            alignItems="center"
-            justifyContent="flex-end"
-            position="relative"
-            overflow="hidden"
-          >
-            <LocalizedLink to={`.${videoData[0].href}`}>
-              <Image
-                w="100%"
-                h={{ base: "200px", md: "450px" }}
-                src={videoData[0].src}
-              />
-            </LocalizedLink>
-            <Text
-              pos="absolute"
-              bg="rgba(0, 0, 0, 0.5)"
-              px={4}
-              py={2.5}
-              mb={2}
-              borderRadius="2xl"
-              fontSize={{ base: "md", md: "xl" }}
-              fontWeight="bold"
-            >
-              {videoData[0].label}
-            </Text>
-          </Box>
-
-          {/* Desna strana */}
-          <Flex
-            w={{ base: "100%", md: "650px" }}
-            flexDir="column"
-            gap={4}
-            h="100%"
-          >
-            <HStack flexDir={{ base: "column", md: "row" }} gap={4}>
-              <Box
-                h={{ base: "200px", md: "225px" }}
-                w="100%"
-                flex={1}
-                bg="gray.700"
-                borderRadius="2xl"
-                display="flex"
-                flexDir="column"
-                alignItems="center"
-                justifyContent="flex-end"
-                position="relative"
-                overflow="hidden"
-              >
-                <LocalizedLink to={`.${videoData[1].href}`}>
-                  <Image w="100%" h="100%" src={videoData[1].src} />
-                </LocalizedLink>
-                <Text
-                  pos="absolute"
-                  bg="rgba(0,0,0,0.5)"
-                  px={4}
-                  py={2.5}
-                  mb={2}
-                  borderRadius="2xl"
-                  fontSize={{ base: "md", md: "xl" }}
-                  fontWeight="bold"
-                >
-                  {videoData[1].label}
-                </Text>
-              </Box>
-
-              <Box
-                h={{ base: "200px", md: "225px" }}
-                w="100%"
-                flex={1}
-                bg="gray.700"
-                borderRadius="2xl"
-                display="flex"
-                flexDir="column"
-                alignItems="center"
-                justifyContent="flex-end"
-                position="relative"
-                overflow="hidden"
-              >
-                <LocalizedLink to={`.${videoData[2].href}`}>
-                  <Image w="100%" h="100%" src={videoData[2].src} />
-                </LocalizedLink>
-                <Text
-                  pos="absolute"
-                  bg="rgba(0,0,0,0.5)"
-                  px={4}
-                  py={2.5}
-                  mb={2}
-                  borderRadius="2xl"
-                  fontSize={{ base: "md", md: "xl" }}
-                  fontWeight="bold"
-                >
-                  {videoData[2].label}
-                </Text>
-              </Box>
-            </HStack>
-
+        {cards.map((item, index) => (
+          <LocalizedLink key={index} to={item.href}>
             <Box
-              flex={1}
-              w="100%"
-              h={{ base: "200px", md: "auto" }}
-              bg="gray.700"
-              borderRadius="2xl"
-              display="flex"
-              flexDir="column"
-              alignItems="center"
-              justifyContent="flex-end"
               position="relative"
+              borderRadius="2xl"
               overflow="hidden"
+              h={{ base: "220px", md: "280px", lg: "300px" }}
+              cursor="pointer"
+              transition="all 0.3s ease"
+              _hover={{ transform: "scale(1.02)" }}
+              boxShadow="lg"
             >
-              <LocalizedLink to={`.${videoData[3].href}`}>
-                <Image w="100%" h="100%" src={videoData[3].src} />
-              </LocalizedLink>
-              <Text
-                pos="absolute"
-                bg="rgba(0,0,0,0.5)"
-                px={4}
-                py={2.5}
-                mb={2}
-                borderRadius="2xl"
-                fontSize={{ base: "md", md: "xl" }}
-                fontWeight="bold"
+              <Image
+                src={item.src}
+                alt={item.label}
+                w="100%"
+                h="100%"
+                objectFit="cover"
+              />
+
+              <Box
+                position="absolute"
+                bottom={0}
+                w="100%"
+                py={3}
+                px={2}
+                bgGradient="linear(to-t, rgba(0,0,0,0.9), rgba(0,0,0,0.4))"
+                backdropFilter="blur(2px)"
+                textAlign="center"
               >
-                {videoData[3].label}
-              </Text>
+                <Text
+                  fontSize={{ base: "md", md: "xl" }}
+                  fontWeight="600"
+                  color="white"
+                  textShadow="0 2px 6px rgba(0,0,0,0.8)"
+                >
+                  {item.label}
+                </Text>
+              </Box>
             </Box>
-          </Flex>
-        </Flex>
-      </Flex>
+          </LocalizedLink>
+        ))}
+      </SimpleGrid>
     </Container>
   )
 }

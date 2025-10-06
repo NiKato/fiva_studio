@@ -20,6 +20,7 @@ const Video = React.forwardRef(({ src, playsInline }: any, ref) => (
     ref={ref}
     src={src}
     playsInline
+    crossOrigin="anonymous"
   />
 ))
 
@@ -127,6 +128,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
                     autoPlay
                     muted
                     playsInline
+                    crossOrigin="anonymous"
                   />
                   {/* @ts-ignore */}
                   <PlayButton isPlaying={isPlaying[index]}>

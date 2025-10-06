@@ -4,9 +4,17 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/
  */
 
-/**
- * @type {import('gatsby').GatsbySSR['onRenderBody']}
- */
-exports.onRenderBody = ({ setHtmlAttributes }) => {
+const React = require("react")
+const { ColorModeScript } = require("@chakra-ui/react")
+const theme = require("./src/theme/theme").default
+
+exports.onRenderBody = ({ setHtmlAttributes, setPreBodyComponents }) => {
   setHtmlAttributes({ lang: `en` })
+
+  setPreBodyComponents([
+    <ColorModeScript
+      key="chakra-color-mode"
+      initialColorMode={theme.config.initialColorMode}
+    />,
+  ])
 }

@@ -60,6 +60,7 @@
     "realestate": "Real Estate",
     "film": "Film | Documentary Videos",
     "corporate": "Corporate Videos",
+    "youtube": "Youtube Editing",
 
     "podcastSub": "Relay your post production to a reliable, responsible and creative team. Establish a long term partnership.",
     "youtubeSub": "Reach a wider audience and boost your brand with our high-quality podcast video services",
@@ -179,7 +180,8 @@
     "text": "We're here to process the footage or create video from scratch and deliver.",
     "text2": "We're a team of experienced editors who also have experience in managing social media accounts, digital marketing, and content creation, so we understand your needs and the importance of having a reliable editor who understands the vision behind your or your client's project.",
     "btn": "See all short form videos",
-    "btn2": "Slide to see more videos"
+    "btn2": "Slide to see more videos",
+    "loadMore": "Show more"
   },
   "memeVideos": {
     "title": "Meme Videos",

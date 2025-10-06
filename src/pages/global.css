@@ -38,3 +38,10 @@ body {
 .custom-next {
   right: 8px;
 }
+
+@media screen and (max-width: 996px) {
+  .carousel-wrapper .swiper-slide {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}

@@ -3,14 +3,13 @@ import "../styles/fonts.css";
 
 const theme = extendTheme({
   config: {
-    initialColorMode: "dark", // Postavlja dark mod kao podrazumevani
-    useSystemColorMode: false, // Ne koristi sistemsku temu
+    initialColorMode: "dark",
+    useSystemColorMode: false, 
   },
   fonts: {
     body: "'PoppinsBlack', sans-serif",
     text: "'PoppinsLight', sans-serif",
     heading: "'PoppinsBold', sans-serif",
-    // Add more font styles as needed
   },
   colors: {
     light: {

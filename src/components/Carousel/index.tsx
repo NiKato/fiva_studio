@@ -36,7 +36,7 @@ const Carousel: React.FC<CarouselProps> = ({ limit, isShortForm }) => {
           spaceBetween={30}
           className="mySwiper"
           breakpoints={{
-            375: { slidesPerView: 1.7, centeredSlides: true, spaceBetween: 0 },
+            0: { slidesPerView: 1, centeredSlides: true, spaceBetween: 0 },
             640: { slidesPerView: 2, spaceBetween: 20 },
             768: { slidesPerView: 3, spaceBetween: 30 },
             1024: { slidesPerView: 4, spaceBetween: 40 },

@@ -58,6 +58,7 @@
     "realestate": "Nekretnine",
     "film": "Film | Dokumentarni videi",
     "corporate": "Korporativni videi",
+    "youtube": "Youtube Editovanje",
 
     "podcastSub": "Dosegnite do veće publike i unapredite kvalitet Vašeg videa.",
     "realestateSub": "Započnimo kreiranje očaravajućih video snimaka nekretnina",
@@ -177,7 +178,8 @@
     "text": "Tu smo da editujemo snimak ili napravimo video od nule i isporučimo.",
     "text2": "Mi smo tim iskusnih video editora koji takođe imaju iskustvo u upravljanju nalozima na društvenim mrežama, digitalnom marketingu i kreiranju sadržaja, tako da razumemo Vaše potrebe i važnost pouzdanog video montažera koji razume viziju Vašeg ili projekta Vašeg klijenta.",
     "btn": "Pogledaj sve videe",
-    "btn2": "Prevuci da vidiš više"
+    "btn2": "Prevuci da vidiš više",
+    "loadMore": "Prikaži još"
   },
   "memeVideos": {
     "title": "Video Mimovi",

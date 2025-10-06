@@ -138,14 +138,14 @@ const HomePage: React.FC = () => {
             {renderHeading(1)}
           </Box>
           <Box id="work">
-            <Carousel limit={8} />
+            <Carousel limit={10} />
           </Box>
           <Box mb={10}>
             {renderHeading(2)}
             <Box></Box>
             <CustomGrid />
           </Box>
-          <LongForm />
+          {/* <LongForm /> */}
           <Box>{renderHeading(5)}</Box>
           {/* @ts-ignore */}
           <FAQ id="faq" ref={faqRef} props={faqData} />
