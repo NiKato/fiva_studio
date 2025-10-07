@@ -52,47 +52,27 @@ const Layout = ({ children }: any) => {
   return (
     <ChakraProvider theme={theme}>
       <Helmet>
-        {/* Google Tag Script */}
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-11139973355"
+          src="https://www.googletagmanager.com/gtag/js?id=G-B58SBZ0SLG"
         ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-11139973355');
-            `,
-          }}
-        />
-        {/* Event Snippet for Conversion */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              gtag('event', 'conversion', {
-                'send_to': 'AW-11139973355/2dw2CIip_PAZEOuB-r8p',
-                'value': 1.0,
-                'currency': 'USD'
-              });
-            `,
-          }}
-        />
-        {/* G-Tag */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-JLTLQD7YNX"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-          gtag('config', 'G-JLTLQD7YNX');
-        `,
+        gtag('config', 'G-B58SBZ0SLG');
+
+        gtag('config', 'AW-11139973355');
+
+        gtag('event', 'conversion', {
+          'send_to': 'AW-11139973355/2dw2CIip_PAZEOuB-r8p',
+          'value': 1.0,
+          'currency': 'USD'
+        });
+      `,
           }}
         />
       </Helmet>
