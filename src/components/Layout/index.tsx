@@ -51,31 +51,6 @@ const Layout = ({ children }: any) => {
 
   return (
     <ChakraProvider theme={theme}>
-      <Helmet>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-JLTLQD7YNX"
-        ></script>
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-JLTLQD7YNX');
-        gtag('config', 'AW-11139973355');
-        gtag('event', 'conversion', {
-          'send_to': 'AW-11139973355/2dw2CIip_PAZEOuB-r8p',
-          'value': 1.0,
-          'currency': 'USD'
-        });
-      `,
-          }}
-        />
-      </Helmet>
-
-
       <Sidebar />
       <Box ml={{ base: 0, md: 64 }} w="auto" overflowX="hidden">
         <Box
