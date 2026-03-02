@@ -11,7 +11,6 @@ import {
 } from "@chakra-ui/react"
 import logo from "../../images/logo.png"
 import theme from "../../theme/theme"
-import { Helmet } from "react-helmet"
 import Preloader from "../Loading"
 import { Sidebar } from "../Header/Sidebar"
 import { SunIcon, MoonIcon } from "@chakra-ui/icons"

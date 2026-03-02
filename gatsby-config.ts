@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `Fiva Studio`,
     description: ``,
-    author: `@avoKato`,
+    author: `@KatoCode`,
     siteUrl: `https://www.fivastudio.com`,
     image: `src/images/favicon-32x32.png`,
   },

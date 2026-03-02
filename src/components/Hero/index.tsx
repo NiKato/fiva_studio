@@ -1,84 +1,66 @@
 import React from "react"
 import {
   Box,
-  Button,
   Container,
   Flex,
   Heading,
   Stack,
   Text,
+  Button,
 } from "@chakra-ui/react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-import { StaticImage } from "gatsby-plugin-image"
-import LocalizedLink from "../LocalizedLink"
 
-export default function Hero({ title, text, cta, cta2 }: any) {
+export default function Hero({ title, text, cta2 }: any) {
   return (
-    <Container maxW={{ base: "100%", md: "7xl" }} my={{ base: 20, md: 10 }}>
-      <Stack
-        // pt={"80px"}
-        minH={"100%"}
-        direction={{ base: "column", md: "row" }}
-        alignItems="center"
-        justifyContent="space-between"
-        gap={20}
+    <Box position="relative" py={28} overflow="hidden">
+      <Container
+        maxW={{ base: "100%", md: "7xl" }}
+        position="relative"
+        zIndex={1}
       >
         <Flex
-          p={{ base: 0, md: 8 }}
-          flex={1}
-          align={"center"}
-          justify={"center"}
+          direction="column"
+          align="center"
+          justify="center"
+          textAlign="center"
         >
-          <Stack spacing={6} w={"full"} maxW={"600px"}>
+          <Stack spacing={10} w="full" maxW="900px" align="center">
             <Heading
               as="h1"
-              fontFamily={"PoppinsBlack"}
-              fontSize={{ base: "3xl", md: "4xl", lg: "3.2rem" }}
+              fontFamily="PoppinsBlack"
+              fontSize={{ base: "5xl", md: "6xl", lg: "5.5rem" }}
               fontWeight={700}
+              lineHeight="1.1"
             >
               {title}
             </Heading>
             <Text
               as="p"
-              fontSize={{ base: "md", lg: "2xl" }}
-              lineHeight={"175%"}
+              fontSize={{ base: "xl", lg: "2xl" }}
+              lineHeight="170%"
+              fontWeight={400}
             >
               {text}
             </Text>
-            <Stack direction={{ base: "column", md: "row" }} spacing={4}>
-              {/* <LocalizedLink to="about-us" stripHash>
-                <Button
-                  borderRadius={4}
-                  bg={"#333333"}
-                  color={"white"}
-                  _hover={{
-                    bg: "blue.500",
-                  }}
-                >
-                  {cta}
-                </Button>
-              </LocalizedLink> */}
-              <AnchorLink to="/#work" stripHash>
-                <Button borderRadius={4} bg="#477EEB" color="#fff">
-                  {cta2}
-                </Button>
-              </AnchorLink>
-            </Stack>
+
+            <AnchorLink to="/#work" stripHash>
+              <Button
+                borderRadius={4}
+                bg="#477EEB"
+                color="white"
+                fontSize="lg"
+                px={8}
+                py={6}
+                _hover={{
+                  bg: "blue.600",
+                }}
+              >
+                {cta2}
+              </Button>
+            </AnchorLink>
           </Stack>
         </Flex>
-        <Flex flex={1} position="relative" w="100%" h="100%">
-          <StaticImage
-            style={{ width: "100%", height: "100%", borderRadius: "24px" }}
-            loading="eager"
-            alt="Fiva Studio your trusted video editor"
-            placeholder="blurred"
-            layout="fullWidth"
-            quality={100}
-            objectFit={"cover"}
-            src={"../../images/hero.webp"}
-          />
-        </Flex>
-      </Stack>
-    </Container>
+      </Container>
+    </Box>
   )
 }
