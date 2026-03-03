@@ -136,7 +136,6 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
               // cta={t("hero.cta")}
               cta2={t("hero.cta2")}
             />
-            {/* <Benefits /> */}
             {renderHeading(1)}
           </Box>
           <Box id="work" display="flex" flexFlow="column" gap={20}>
