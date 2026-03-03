@@ -9,10 +9,15 @@ import {
   Button,
 } from "@chakra-ui/react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { useTranslation } from "react-i18next"
 
 export default function Hero({ title, text, cta2 }: any) {
+  const { i18n } = useTranslation()
+
+  const anchorPath = i18n.language === "sr" ? "/sr/#work" : "/#work"
+
   return (
-    <Box position="relative" py={28} overflow="hidden">
+    <Box position="relative" py={28} pb={{ base: 0, md: 28 }} overflow="hidden">
       <Container
         maxW={{ base: "100%", md: "7xl" }}
         position="relative"
@@ -43,7 +48,7 @@ export default function Hero({ title, text, cta2 }: any) {
               {text}
             </Text>
 
-            <AnchorLink to="/#work" stripHash>
+            <AnchorLink to={anchorPath} stripHash>
               <Button
                 borderRadius={4}
                 bg="#477EEB"

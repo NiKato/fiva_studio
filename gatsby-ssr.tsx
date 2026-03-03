@@ -43,9 +43,6 @@ exports.onRenderBody = ({
   ])
 
   setPreBodyComponents([
-    <ColorModeScript
-      key="chakra-color-mode"
-      initialColorMode={theme.config.initialColorMode}
-    />,
+    <ColorModeScript key="chakra-color-mode" initialColorMode="dark" />,
   ])
 }

@@ -94,7 +94,6 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
     return () => clearTimeout(timeout)
   }, [])
 
-  // Funkcija za skrolovanje do ref-a
   const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth", block: "start" })
