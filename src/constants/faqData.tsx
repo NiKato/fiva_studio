@@ -14,10 +14,7 @@ export const faqData = {
       question: "faq.question",
       answer: "faq.answer",
     },
-    {
-      question: "faq.question2",
-      answer: "faq.answer2",
-    },
+    
     {
       question: "faq.question8",
       answer: "faq.answer8",

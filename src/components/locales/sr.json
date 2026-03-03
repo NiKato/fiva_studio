@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Usluga video montaže",
-    "subtitle": "Kreativan i profesionalan video edit za Vaše projekte - društvene mreže, jutjub, dokumentarce, wedding, AI video edit, korporativni i drugi",
+    "subtitle": "Kreativan i profesionalan video edit za Vaše projekte - društvene mreže, jutjub, dokumentarce, wedding, AI video edit, korporativni i drugi. Vi dostavite materijal a mi Vama obrađen video spreman za objavljivanje. Konsultacije su besplatne, pogledajte naše radove i pozovite nas za još informacija",
     "cta2": "Prikaži radove"
   },
   "header": {
@@ -53,12 +53,12 @@
     "wedding": "Video Venčanja",
     "food": "Hrana | Ugostiteljstvo",
     "contentFC": "Sadržaj za decu",
-    "podcast": "Youtube Editori",
+    "podcast": "Youtube Videi",
     "meme": "Mim videi",
     "realestate": "Nekretnine",
     "film": "Film | Dokumentarni videi",
     "corporate": "Korporativni videi",
-    "youtube": "Youtube Editovanje",
+    "youtube": "Youtube Videi",
 
     "podcastSub": "Dosegnite do veće publike i unapredite kvalitet Vašeg videa.",
     "realestateSub": "Započnimo kreiranje očaravajućih video snimaka nekretnina",
@@ -73,7 +73,7 @@
     "question2": "Koliko dugo traje proces izrade?",
     "answer2": "U zavisnosti od složenosti projekta i obima posla naših urednika, to može da varira od jednog dana do nekoliko dana, ali nikada kasnije od dogovorenog roka.",
     "question8": "Cena?",
-    "answer8": "Cena videa zavisi od složenosti videa, pošaljite nam primer kako biste želeli da vaš video izgleda i mi ćemo vam dati procenjenu cenu ili nas jednostavno kontaktirajte <1>ovde</1>.",
+    "answer8": "Cena se formiraju zavisnosti od stila i složenosti samih edita, <1>pozovi</1> nas kako bi napravili ponudu za tvoj projekat.",
     "question3": "Kako ću primiti moj video?",
     "answer3": "Kada se editovanje završi, isporučićemo video preko bezbednog linka za preuzimanje.",
     "question4": "Koje načine plaćanja prihvatate?",
@@ -167,7 +167,7 @@
     "text": "Da li ste umorni od pregledavanja sati sirovog audio ili video materijala, pokušavajući da sve to ukomponujete? Naš tim video editora je tu da vam pomogne da transformišete svoj sadržaj u uglađenu, zanimljivu produkciju profesionalnog nivoa. Uz naše usluge uređivanja podkasta, možete biti sigurni da će vaša emisija zvučati i izgledati apsolutno najbolje."
   },
   "youtube": {
-    "title": "Youtube Editori",
+    "title": "Youtube Videi",
     "subtitle": "Prepustite postprodukciju pouzdanom, odgovornom i kreativnom timu. Uspostavite dugoročnu saradnju.",
     "text": "Naš cilj u Fiva Studiju je da budemo vaš pouzdan partner za post produkciju. Vi šaljete video i audio zapise, a mi ih obrađujemo, doterujemo i isporučujemo Vam pre roka. Možemo se prilagoditi specifičnom stilu koji vam se sviđa ili izgraditi Vaš sopstveni stil, bez obzira na Vašu nišu.",
     "text2": "Aktivno tražimo dugoročna partnerstva za pružanje usluga video montaže. Kontaktirajte nas sada i razgovarajmo o vašem projektu"

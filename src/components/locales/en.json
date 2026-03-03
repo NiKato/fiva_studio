@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Video Editing Services",
-    "subtitle": "Creative and professional video editing for your projects – social media, YouTube, documentaries, weddings, AI video editing, corporate, and more",
+    "subtitle": "Creative and professional video editing for your projects – social media, YouTube, documentaries, weddings, AI video editing, corporate videos, and more.You provide the footage, and we deliver a fully edited video ready for publishing.Consultations are free, check out our work and contact us for more information.",
 
     "cta2": "Show work"
   },
@@ -55,12 +55,12 @@
     "wedding": "Wedding videos",
     "food": "Food | Hospitality videos",
     "contentFC": "Content for Children",
-    "podcast": "Youtube Editors",
+    "podcast": "Youtube Videos",
     "meme": "Meme Videos",
     "realestate": "Real Estate",
     "film": "Film | Documentary Videos",
     "corporate": "Corporate Videos",
-    "youtube": "Youtube Editing",
+    "youtube": "Youtube Videos",
 
     "podcastSub": "Relay your post production to a reliable, responsible and creative team. Establish a long term partnership.",
     "youtubeSub": "Reach a wider audience and boost your brand with our high-quality podcast video services",
@@ -169,7 +169,7 @@
     "text": "Are you tired of sifting through hours of raw audio or video, trying to make sense of it all? Look no further! Our team of skilled podcast editors is here to help you transform your content into a polished, engaging, and professional-grade production. With our podcast editing services, you can rest assured that your show will sound and look its absolute best."
   },
   "youtube": {
-    "title": "Youtube Editors",
+    "title": "Youtube Videos",
     "subtitle": "Relay your post production to a reliable, responsible and creative team. Establish a long term partnership.",
     "text": "Our goal at Fiva Studio is to be your reliable post production partner. You send the footage and we process it, polish it and deliver it to you ahead of schedule. We can adapt to a specific style that you like or build your own style whatever the niche you are in.",
     "text2": "We are actively seeking long term partnership to provide video editing services too. Reach out now and lets discuss your project."

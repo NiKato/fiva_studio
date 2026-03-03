@@ -12,12 +12,17 @@ const Corporate = () => {
     <PageTemplate
       title={t("corporate.title")}
       subtitle={t("corporate.subtitle")}
+      isPodcast
+      podcastUrl="https://www.youtube.com/watch?v=ebVzD9ytLEU"
+      ytUrl="https://www.youtube.com/watch?v=NjF4f1HTLdA"
       videoSources={[
         "https://fivastudio.b-cdn.net/Realtor%20Video%20Business%20Card.mp4",
         "https://fivastudio.b-cdn.net/Fiva%20Studio%20Corporate%20Video.mp4",
         "https://fivastudio.b-cdn.net/Color%20Grading%20Preview.mp4",
         "https://fivastudio.b-cdn.net/Gym%20Hype%20H.mp4",
         "https://fivastudio.b-cdn.net/Brennan%20Moore%20VBC%20Horizontal%20Final.mp4",
+        "https://fivastudio.b-cdn.net/Termosistem%20Corporate%20Promo%20Video%20Final.mp4",
+        "https://fivastudio.b-cdn.net/Elnara%20Ad%204k%2060fps%20.mp4"
       ]}
       content={
         <>

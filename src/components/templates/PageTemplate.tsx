@@ -51,6 +51,7 @@ interface PageTemplateProps {
   subtitle: string
   content: React.ReactNode
   videoSources?: string[]
+  ytUrl?: string
   podcastUrl?: string
   realEstateUrl?: string
   carousel?: React.ReactNode
@@ -63,6 +64,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
   subtitle,
   content,
   videoSources = [],
+  ytUrl,
   podcastUrl,
   realEstateUrl,
   carousel,
@@ -147,6 +149,22 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
               >
                 <ReactPlayer
                   url={podcastUrl}
+                  width="100%"
+                  height="100%"
+                  controls
+                />
+              </Box>
+            )}
+             {isPodcast && ytUrl && (
+              <Box
+                w={{ base: "auto", md: "600px" }}
+                maxW="600px"
+                mx={{ base: 8, md: "auto" }}
+                boxShadow="4px 4px 8px rgba(0, 0, 0, 0.9)"
+                h="400px"
+              >
+                <ReactPlayer
+                  url={ytUrl}
                   width="100%"
                   height="100%"
                   controls

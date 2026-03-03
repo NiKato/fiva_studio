@@ -13,6 +13,7 @@ const Youtube = () => {
       title={t("youtube.title")}
       subtitle={t("youtube.subtitle")}
       podcastUrl="https://youtu.be/2q0qoGSWhgk?si=IUfGvr5X-h4pHtnt"
+      videoSources={["https://fivastudio.b-cdn.net/Youtube%20documentary%20edit%2C%20dark%20suspensful.mp4", "https://fivastudio.b-cdn.net/3-Long%20Form%20Final.mp4"]}
       isPodcast
       content={
         <>

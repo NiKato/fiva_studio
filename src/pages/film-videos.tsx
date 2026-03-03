@@ -15,6 +15,7 @@ const Film = () => {
       videoSources={[
         "https://fivastudio.b-cdn.net/Documentary%20Style%20Edit.mp4",
         "https://fivastudio.b-cdn.net/Intro%20for%20WWII%20Documentary.mp4%20OVAJ%20DZ%CC%8CONI%2C%20Documentary%2C%20Film.mp4",
+        "https://fivastudio.b-cdn.net/Youtube%20documentary%20edit%2C%20dark%20suspensful.mp4",
       ]}
       isPodcast
       content={

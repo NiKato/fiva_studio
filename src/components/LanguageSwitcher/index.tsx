@@ -1,6 +1,7 @@
 import React, { FC } from "react"
 import { Button, HStack, useColorModeValue } from "@chakra-ui/react"
 import { useTranslation } from "react-i18next"
+import { navigate } from "gatsby"
 
 const languages = [
   { code: "en", label: "EN" },
@@ -11,19 +12,26 @@ const LanguageSwitcher: FC = () => {
   const { i18n } = useTranslation()
 
   const changeLanguage = (lng: string) => {
+    const currentPath = window.location.pathname
+      .split("/")
+      .slice(2)
+      .join("/")
+
+    const newPath =
+      lng === "en"
+        ? `/${currentPath}`
+        : `/${lng}/${currentPath}`
+
     i18n.changeLanguage(lng)
 
-    const currentPath = window.location.pathname.split("/").slice(2).join("/")
-    const newPath = lng === "en" ? `/${currentPath}` : `/${lng}/${currentPath}`
-
-    window.history.pushState({}, "", newPath)
+    navigate(newPath) // 🔥 OVO JE KLJUČ
   }
 
   const linkColor = useColorModeValue("#666666", "#ffffff")
 
   return (
     <HStack gap={0}>
-      {languages.map(language => (
+      {languages.map((language) => (
         <Button
           key={language.code}
           size="sm"

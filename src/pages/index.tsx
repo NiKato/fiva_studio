@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import Carousel from "../components/Carousel"
+import srVideoUrls from "../data/videos-sr.json"
 import Benefits from "../components/Features"
 import Headings from "../components/Headings"
 import { SEO } from "../components/Seo"
@@ -78,8 +79,9 @@ const Div = styled.div`
   }
 `
 
-const HomePage: React.FC = () => {
-  const faqRef = useRef<HTMLDivElement>(null) // ref za FAQ sekciju
+const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
+  const currentLanguage = pageContext?.language
+  const faqRef = useRef<HTMLDivElement>(null)
   const [loading, setLoading] = useState(true)
   const { colorMode } = useColorMode()
   const { t, i18n } = useTranslation()
@@ -134,11 +136,15 @@ const HomePage: React.FC = () => {
               // cta={t("hero.cta")}
               cta2={t("hero.cta2")}
             />
-            <Benefits />
+            {/* <Benefits /> */}
             {renderHeading(1)}
           </Box>
-          <Box id="work">
-            <Carousel limit={10} />
+          <Box id="work" display="flex" flexFlow="column" gap={20}>
+            {currentLanguage === "sr" && (
+              <Carousel videos={srVideoUrls} thumbPrefix="sr" hideButton />
+            )}
+
+            <Carousel limit={10} thumbPrefix="en" />
           </Box>
           <Box mb={10}>
             {renderHeading(2)}
