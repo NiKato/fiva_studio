@@ -18,6 +18,7 @@ import { faqData } from "../constants/faqData"
 import { getHeadingById } from "../constants/headings"
 import styled from "styled-components"
 import ContactForm from "../components/ContactForm"
+import VideoGrid from "../components/VideoGrid"
 
 // import Geolocation from "../components/LocationBased"
 
@@ -148,7 +149,7 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
           </Box>
           <Box mb={10}>
             {renderHeading(2)}
-            <Box></Box>
+            <VideoGrid />
             <CustomGrid />
           </Box>
           {/* <LongForm /> */}
