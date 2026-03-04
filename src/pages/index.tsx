@@ -133,14 +133,13 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
             <Hero
               title={t("hero.title")}
               text={t("hero.subtitle")}
-              // cta={t("hero.cta")}
               cta2={t("hero.cta2")}
             />
             {renderHeading(1)}
           </Box>
           <Box id="work" display="flex" flexFlow="column" gap={20}>
             {currentLanguage === "sr" && (
-              <Carousel videos={srVideoUrls} thumbPrefix="sr" hideButton />
+              <Carousel limit={7} videos={srVideoUrls} thumbPrefix="sr" hideButton />
             )}
 
             <Carousel limit={10} thumbPrefix="en" />
