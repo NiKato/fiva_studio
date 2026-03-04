@@ -22,7 +22,7 @@ export const Sidebar = () => {
       left={0}
       top={0}
       bottom={0}
-      w="260px"
+      w="280px"
       p={4}
       boxShadow="2xl"
       zIndex={1000}
@@ -50,6 +50,7 @@ export const Sidebar = () => {
             <LocalizedLink to={`.${link.href}`}>
               <Button
                 variant="ghost"
+                fontSize="14px"
                 justifyContent="start"
                 w="full"
                 fontWeight={600}

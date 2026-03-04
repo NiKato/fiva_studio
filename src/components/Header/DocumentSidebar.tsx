@@ -36,6 +36,7 @@ export const DocumentSidebar = () => {
         variant="ghost"
         justifyContent="start"
         w="full"
+        fontSize="12px"
         fontWeight={600}
         onClick={toggleMenu}
         colorScheme="black"
@@ -55,6 +56,7 @@ export const DocumentSidebar = () => {
                   variant="ghost"
                   justifyContent="start"
                   w="full"
+                  fontSize="14px"
                   fontWeight={500}
                   colorScheme="black"
                   bg={isActive ? "rgba(51, 119, 255, .5)" : "transparent"}
