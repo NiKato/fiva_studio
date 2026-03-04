@@ -14,6 +14,7 @@ export const DocumentSidebar = () => {
 
   const submenuItems = [
     { label: t("shortForm.title"), href: "short-form" },
+    { label: t("drone.title"), href: "drone-services" },
     // { label: t("podcast.title"), href: "podcasts" },
     { label: t("youtube.title"), href: "youtube" },
     { label: t("wedding.title"), href: "wedding-videos" },

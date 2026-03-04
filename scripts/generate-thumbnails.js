@@ -3,6 +3,7 @@ const ffmpegPath = require("ffmpeg-static")
 const ffprobePath = require("ffprobe-static").path
 const path = require("path")
 const fs = require("fs")
+const os = require("os")
 
 ffmpeg.setFfmpegPath(ffmpegPath)
 ffmpeg.setFfprobePath(ffprobePath)
@@ -19,48 +20,30 @@ const gridVideos = [
   "https://fivastudio.b-cdn.net/3-Long%20Form%20Final.mp4"
 ]
 
-/**
- * Osiguraj da thumbnails folder postoji
- */
 if (!fs.existsSync(thumbnailsDir)) {
   fs.mkdirSync(thumbnailsDir, { recursive: true })
 }
 
-/**
- * Obriši stare thumbnails
- */
-const cleanOldThumbnails = () => {
-  const files = fs.readdirSync(thumbnailsDir)
-
-  files.forEach(file => {
-    if (
-      file.startsWith("en-thumb") ||
-      file.startsWith("sr-thumb") ||
-      file.startsWith("grid-")
-    ) {
-      fs.unlinkSync(path.join(thumbnailsDir, file))
-      console.log("🗑 Removed:", file)
-    }
-  })
+const isVideo = (url) => {
+  return url.startsWith("http") && !url.includes("youtube")
 }
 
-/**
- * Generiši thumbnail
- */
 const generateThumbnail = (url, outputPath, timestamp = "2%") => {
   return new Promise((resolve, reject) => {
+
+    if (fs.existsSync(outputPath)) {
+      console.log("⏭ Skip existing:", path.basename(outputPath))
+      return resolve()
+    }
+
     ffmpeg(url)
       .on("start", () => {
-        console.log("▶ Generating:", outputPath)
+        console.log("▶", path.basename(outputPath))
       })
-      .on("end", () => {
-        console.log("✔ Saved:", outputPath)
-        resolve()
-      })
+      .on("end", () => resolve())
       .on("error", err => {
-        console.error("✖ Error processing:", url)
-        console.error(err.message)
-        reject(err)
+        console.log("⚠ Failed:", url)
+        resolve() // skip instead of crash
       })
       .screenshots({
         timestamps: [timestamp],
@@ -71,57 +54,58 @@ const generateThumbnail = (url, outputPath, timestamp = "2%") => {
   })
 }
 
-/**
- * Generiši thumbnails za listu videa
- */
-const generateThumbs = async (videos, prefix) => {
-  const uniqueVideos = [...new Set(videos)]
+const generateList = async (videos, prefix) => {
 
-  for (let i = 0; i < uniqueVideos.length; i++) {
-    const url = uniqueVideos[i]
-    const outputPath = path.join(
+  const unique = [...new Set(videos)].filter(isVideo)
+
+  const tasks = unique.map((url, i) => {
+
+    const output = path.join(
       thumbnailsDir,
-      `${prefix}-thumb-${i + 1}.jpg`
+      `${prefix}-thumb-${i + 1}.webp`
     )
 
-    await generateThumbnail(url, outputPath)
-  }
+    return generateThumbnail(url, output)
+
+  })
+
+  await Promise.all(tasks)
 }
 
-/**
- * Generiši grid thumbnails
- */
-const generateGridThumbs = async () => {
-  const uniqueVideos = [...new Set(gridVideos)]
+const generateGrid = async () => {
 
-  for (let i = 0; i < uniqueVideos.length; i++) {
-    const url = uniqueVideos[i]
-    const outputPath = path.join(
+  const unique = [...new Set(gridVideos)]
+
+  const tasks = unique.map((url, i) => {
+
+    const output = path.join(
       thumbnailsDir,
-      `grid-${i + 1}.jpg`
+      `grid-${i + 1}.webp`
     )
 
-    await generateThumbnail(url, outputPath, "3%")
-  }
+    return generateThumbnail(url, output, "3%")
+
+  })
+
+  await Promise.all(tasks)
+
 }
 
-/**
- * Main runner
- */
 const run = async () => {
-  console.log("🧹 Cleaning old thumbnails...")
-  cleanOldThumbnails()
 
-  console.log("🎬 Generating EN thumbnails...")
-  await generateThumbs(enVideos, "en")
+  if (process.env.VERCEL) {
+    console.log("⚠ Skipping thumbnails on Vercel")
+    return
+  }
 
-  console.log("🎬 Generating SR thumbnails...")
-  await generateThumbs(srVideos, "sr")
+  console.log("\n🎬 Generating thumbnails...\n")
 
-  console.log("🎬 Generating GRID thumbnails...")
-  await generateGridThumbs()
+  await generateList(enVideos, "en")
+  await generateList(srVideos, "sr")
+  await generateGrid()
 
-  console.log("✅ All thumbnails generated")
+  console.log("\n✅ Done\n")
+
 }
 
 run()

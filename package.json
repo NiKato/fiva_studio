@@ -58,7 +58,7 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "thumbnails": "node scripts/generate-thumbnails.js",
+     "thumbs": "node scripts/generate-thumbnails.js",
     "prebuild": "npm run thumbnails",
     "build": "gatsby build",
     "develop": "gatsby develop",

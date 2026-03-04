@@ -67,7 +67,7 @@ const Carousel: React.FC<CarouselProps> = ({
           }}
         >
           {displayUrls.map((videoUrl: string, index: number) => {
-            const thumbnail = `/thumbnails/${thumbPrefix}-thumb-${index + 1}.jpg`
+            const thumbnail = `/thumbnails/${thumbPrefix}-thumb-${index + 1}.webp`
 
             return (
               <SwiperSlide key={`${thumbPrefix}-video-${index}`}>

@@ -5,62 +5,62 @@ const videos = [
   {
     type: "mp4",
     src: "https://fivastudio.b-cdn.net/Documentary%20Style%20Edit.mp4",
-    thumb: "/thumbnails/grid-1.jpg",
+    thumb: "/thumbnails/grid-1.webp",
   },
   {
     type: "mp4",
     src: "https://fivastudio.b-cdn.net/Elnara%20Ad%204k%2060fps%20.mp4",
-    thumb: "/thumbnails/grid-2.jpg",
+    thumb: "/thumbnails/grid-2.webp",
   },
   {
     type: "youtube",
     src: "https://www.youtube.com/embed/3azLwNjTN8A",
-    thumb: "https://img.youtube.com/vi/ebVzD9ytLEU/maxresdefault.jpg",
+    thumb: "https://img.youtube.com/vi/ebVzD9ytLEU/maxresdefault.webp",
   },
   {
     type: "youtube",
     src: "https://www.youtube.com/embed/NjF4f1HTLdA?start=12",
-    thumb: "https://img.youtube.com/vi/NjF4f1HTLdA/maxresdefault.jpg",
+    thumb: "https://img.youtube.com/vi/NjF4f1HTLdA/maxresdefault.webp",
   },
   {
     type: "mp4",
     src: "https://fivastudio.b-cdn.net/Termosistem%20Corporate%20Promo%20Video%20Final.mp4",
-    thumb: "/thumbnails/grid-4.jpg",
+    thumb: "/thumbnails/grid-4.webp",
   },
   {
     type: "youtube",
     src: "https://www.youtube.com/embed/ebVzD9ytLEU",
-    thumb: "https://img.youtube.com/vi/ebVzD9ytLEU/maxresdefault.jpg",
+    thumb: "https://img.youtube.com/vi/ebVzD9ytLEU/maxresdefault.webp",
   },
   {
     type: "youtube",
     src: "https://www.youtube.com/embed/zhDhUwfls6I",
-    thumb: "https://img.youtube.com/vi/zhDhUwfls6I/maxresdefault.jpg",
+    thumb: "https://img.youtube.com/vi/zhDhUwfls6I/maxresdefault.webp",
   },
   {
     type: "youtube",
     src: "https://www.youtube.com/embed/ffTcCc9KJ_w",
-    thumb: "https://img.youtube.com/vi/ffTcCc9KJ_w/maxresdefault.jpg",
+    thumb: "https://img.youtube.com/vi/ffTcCc9KJ_w/maxresdefault.webp",
   },
   {
     type: "mp4",
     src: "https://fivastudio.b-cdn.net/3-Long%20Form%20Final.mp4",
-    thumb: "/thumbnails/grid-5.jpg",
+    thumb: "/thumbnails/grid-5.webp",
   },
   {
     type: "youtube",
     src: "https://www.youtube.com/embed/ba4o2ady1qs",
-    thumb: "https://img.youtube.com/vi/ba4o2ady1qs/maxresdefault.jpg",
+    thumb: "https://img.youtube.com/vi/ba4o2ady1qs/maxresdefault.webp",
   },
   {
     type: "youtube",
     src: "https://www.youtube.com/embed/AYr15zgFGqM",
-    thumb: "https://img.youtube.com/vi/AYr15zgFGqM/maxresdefault.jpg",
+    thumb: "https://img.youtube.com/vi/AYr15zgFGqM/maxresdefault.webp",
   },
   {
     type: "youtube",
     src: "https://www.youtube.com/embed/rWo0362myzQ",
-    thumb: "https://img.youtube.com/vi/rWo0362myzQ/maxresdefault.jpg",
+    thumb: "https://img.youtube.com/vi/rWo0362myzQ/maxresdefault.webp",
   },
 ]
 
