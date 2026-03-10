@@ -3,47 +3,37 @@ const ffmpegPath = require("ffmpeg-static")
 const ffprobePath = require("ffprobe-static").path
 const path = require("path")
 const fs = require("fs")
-const os = require("os")
 
 ffmpeg.setFfmpegPath(ffmpegPath)
 ffmpeg.setFfprobePath(ffprobePath)
 
 const thumbnailsDir = path.resolve(__dirname, "../static/thumbnails")
 
-const enVideos = require("../src/data/videos.json")
-const srVideos = require("../src/data/videos-sr.json")
-
-const gridVideos = [
-  "https://fivastudio.b-cdn.net/Documentary%20Style%20Edit.mp4",
-  "https://fivastudio.b-cdn.net/Elnara%20Ad%204k%2060fps%20.mp4",
-  "https://fivastudio.b-cdn.net/Termosistem%20Corporate%20Promo%20Video%20Final.mp4",
-  "https://fivastudio.b-cdn.net/3-Long%20Form%20Final.mp4"
+const gridVideosMapping = [
+  { url: "https://fivastudio.b-cdn.net/Documentary%20Style%20Edit.mp4", fileName: "grid-1.webp" },
+  { url: "https://fivastudio.b-cdn.net/Elnara%20Ad%204k%2060fps%20.mp4", fileName: "grid-2.webp" },
+  { url: "https://fivastudio.b-cdn.net/Termosistem%20Corporate%20Promo%20Video%20Final.mp4", fileName: "grid-4.webp" },
+  { url: "https://fivastudio.b-cdn.net/3-Long%20Form%20Final.mp4", fileName: "grid-5.webp" }
 ]
 
 if (!fs.existsSync(thumbnailsDir)) {
   fs.mkdirSync(thumbnailsDir, { recursive: true })
 }
 
-const isVideo = (url) => {
-  return url.startsWith("http") && !url.includes("youtube")
-}
-
 const generateThumbnail = (url, outputPath, timestamp = "2%") => {
-  return new Promise((resolve, reject) => {
-
+  return new Promise((resolve) => {
     if (fs.existsSync(outputPath)) {
-      console.log("⏭ Skip existing:", path.basename(outputPath))
-      return resolve()
+      fs.unlinkSync(outputPath);
     }
 
     ffmpeg(url)
       .on("start", () => {
-        console.log("▶", path.basename(outputPath))
+        console.log("▶ Generating:", path.basename(outputPath))
       })
       .on("end", () => resolve())
       .on("error", err => {
-        console.log("⚠ Failed:", url)
-        resolve() // skip instead of crash
+        console.log("⚠ Failed:", url, err.message)
+        resolve()
       })
       .screenshots({
         timestamps: [timestamp],
@@ -54,41 +44,16 @@ const generateThumbnail = (url, outputPath, timestamp = "2%") => {
   })
 }
 
-const generateList = async (videos, prefix) => {
-
-  const unique = [...new Set(videos)].filter(isVideo)
-
-  const tasks = unique.map((url, i) => {
-
-    const output = path.join(
-      thumbnailsDir,
-      `${prefix}-thumb-${i + 1}.webp`
-    )
-
-    return generateThumbnail(url, output)
-
-  })
-
-  await Promise.all(tasks)
-}
-
 const generateGrid = async () => {
-
-  const unique = [...new Set(gridVideos)]
-
-  const tasks = unique.map((url, i) => {
-
-    const output = path.join(
-      thumbnailsDir,
-      `grid-${i + 1}.webp`
-    )
-
-    return generateThumbnail(url, output, "3%")
-
+  console.log("🎬 Generating Grid thumbnails...")
+  
+  const tasks = gridVideosMapping.map((video) => {
+    const output = path.join(thumbnailsDir, video.fileName)
+    const time = video.fileName === "grid-5.webp" ? "00:00:05" : "3%"
+    return generateThumbnail(video.url, output, time)
   })
 
   await Promise.all(tasks)
-
 }
 
 const run = async () => {
@@ -97,21 +62,16 @@ const run = async () => {
     return
   }
 
-  console.log("\n🎬 Cleaning old thumbnails...");
-  const files = fs.readdirSync(thumbnailsDir);
-  for (const file of files) {
-    if (file.endsWith(".webp")) {
-      fs.unlinkSync(path.join(thumbnailsDir, file));
+  const files = fs.readdirSync(thumbnailsDir)
+  files.forEach(file => {
+    if (file.startsWith("grid-") && file.endsWith(".webp")) {
+      fs.unlinkSync(path.join(thumbnailsDir, file))
     }
-  }
+  })
 
-  console.log("🎬 Generating thumbnails...\n")
-
-  await generateList(enVideos, "en")
-  await generateList(srVideos, "sr")
   await generateGrid()
 
-  console.log("\n✅ Done\n")
+  console.log("\n✅ Done! Proveri static/thumbnails folder.\n")
 }
 
 run()
