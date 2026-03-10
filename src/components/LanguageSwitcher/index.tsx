@@ -13,25 +13,19 @@ const LanguageSwitcher: FC = () => {
 
   const changeLanguage = (lng: string) => {
     const currentPath = window.location.pathname
-      .split("/")
-      .slice(2)
-      .join("/")
 
-    const newPath =
-      lng === "en"
-        ? `/${currentPath}`
-        : `/${lng}/${currentPath}`
+    const newUrl = lng === "sr" ? `${currentPath}?sr` : currentPath
 
-    i18n.changeLanguage(lng)
-
-    navigate(newPath) // 🔥 OVO JE KLJUČ
+    i18n.changeLanguage(lng).then(() => {
+      window.location.assign(newUrl)
+    })
   }
 
   const linkColor = useColorModeValue("#666666", "#ffffff")
 
   return (
     <HStack gap={0}>
-      {languages.map((language) => (
+      {languages.map(language => (
         <Button
           key={language.code}
           size="sm"

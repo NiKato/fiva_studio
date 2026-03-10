@@ -19,11 +19,24 @@ import LanguageSwitcher from "../LanguageSwitcher"
 import LocalizedLink from "../LocalizedLink"
 import { MobileDrawer } from "../Header/MobileDrawer"
 import Footer from "../Footer"
+import { useTranslation } from "react-i18next"
+import { navigate } from "gatsby"
 
 const Layout = ({ children }: any) => {
   const { colorMode, toggleColorMode } = useColorMode()
   const [isLoading, setIsLoading] = useState(true)
   const [scrolled, setScrolled] = useState(false)
+  const { i18n } = useTranslation()
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+
+    if (params.has("sr") && i18n.language !== "sr") {
+      i18n.changeLanguage("sr")
+    } else if (!params.has("sr") && i18n.language === "sr") {
+      i18n.changeLanguage("en")
+    }
+  }, [])
 
   useEffect(() => {
     const timer = setTimeout(() => {

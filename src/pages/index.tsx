@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
 
 import "./global.css"
-import { Box, ColorModeScript, useColorMode } from "@chakra-ui/react"
+import { Box, ColorModeScript } from "@chakra-ui/react"
 import { useTranslation } from "react-i18next"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
@@ -80,12 +80,11 @@ const Div = styled.div`
   }
 `
 
-const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
-  const currentLanguage = pageContext?.language
+const HomePage: React.FC<HomePageProps> = () => {
   const faqRef = useRef<HTMLDivElement>(null)
   const [loading, setLoading] = useState(true)
-  const { colorMode } = useColorMode()
   const { t, i18n } = useTranslation()
+  const currentLanguage = i18n.language
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -139,7 +138,12 @@ const HomePage: React.FC<HomePageProps> = ({ pageContext }) => {
           </Box>
           <Box id="work" display="flex" flexFlow="column" gap={20}>
             {currentLanguage === "sr" && (
-              <Carousel limit={7} videos={srVideoUrls} thumbPrefix="sr" hideButton />
+              <Carousel
+                limit={7}
+                videos={srVideoUrls}
+                thumbPrefix="sr"
+                hideButton
+              />
             )}
 
             <Carousel limit={10} thumbPrefix="en" />

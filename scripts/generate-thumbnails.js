@@ -92,20 +92,26 @@ const generateGrid = async () => {
 }
 
 const run = async () => {
-
   if (process.env.VERCEL) {
     console.log("⚠ Skipping thumbnails on Vercel")
     return
   }
 
-  console.log("\n🎬 Generating thumbnails...\n")
+  console.log("\n🎬 Cleaning old thumbnails...");
+  const files = fs.readdirSync(thumbnailsDir);
+  for (const file of files) {
+    if (file.endsWith(".webp")) {
+      fs.unlinkSync(path.join(thumbnailsDir, file));
+    }
+  }
+
+  console.log("🎬 Generating thumbnails...\n")
 
   await generateList(enVideos, "en")
   await generateList(srVideos, "sr")
   await generateGrid()
 
   console.log("\n✅ Done\n")
-
 }
 
 run()
