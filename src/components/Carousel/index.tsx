@@ -64,6 +64,7 @@ const Carousel: React.FC<CarouselProps> = ({
             1024: { slidesPerView: 4, spaceBetween: 40 },
             1440: { slidesPerView: 4.2, spaceBetween: 10 },
             1920: { slidesPerView: 5.1, spaceBetween: 0 },
+            2500: { slidesPerView: 8, spaceBetween: 20, centeredSlides: false },
           }}
         >
           {displayUrls.map((videoUrl: string, index: number) => {

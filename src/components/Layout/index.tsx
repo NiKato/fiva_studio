@@ -61,6 +61,12 @@ const Layout = ({ children }: any) => {
     return <Preloader />
   }
 
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (typeof window !== "undefined" && (window as any).gtag_report_conversion) {
+      (window as any).gtag_report_conversion();
+    }
+  }
+
   return (
     <ChakraProvider theme={theme}>
       <Sidebar />
@@ -133,6 +139,7 @@ const Layout = ({ children }: any) => {
                   fontWeight={600}
                   color="white"
                   bg="#477EEB"
+                  onClick={handleContactClick}
                   _hover={{
                     bg: "#33333",
                   }}
