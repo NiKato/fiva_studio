@@ -19,27 +19,32 @@ exports.onRenderBody = ({
     <script
       key="gtag-init"
       dangerouslySetInnerHTML={{
-        __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          
-          gtag('config', 'G-JLTLQD7YNX');
+  __html: `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-JLTLQD7YNX');
+    gtag('config', 'AW-11139973355');
 
-          gtag('config', 'AW-11139973355');
-          window.gtag_report_conversion = function(url) {
-            var callback = function () {
-              if (typeof(url) != 'undefined' && url !== null) {
-                window.location = url;
-              }
-            };
-           gtag('event', 'conversion', {
-             'send_to': 'AW-11139973355/2dw2CIip_PAZEOuB-r8p',
-             'value': 1.0,
-             'currency': 'USD'
-           });
-        `,
-      }}
+    window.gtag_report_conversion = function(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined' && url !== null) {
+          window.location = url;
+        }
+      };
+      
+      gtag('event', 'conversion', {
+        'send_to': 'AW-11139973355/2dw2CIip_PAZEOuB-r8p',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+      });
+
+      return false;
+    };
+  `,
+}}
     />,
   ])
 
